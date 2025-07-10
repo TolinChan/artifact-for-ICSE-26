@@ -1,0 +1,12 @@
+
+// Ensuring total villages count matches registered ones
+□(totalVillages(n) → n = count: villageExists(_, true))
+
+// Ensuring no negative balance of gems
+□(gemsBalance(p, n) → n ≥ 0)
+
+// Ensuring total gems count is consistent
+□(totalGems(n) → n = sum g: gemsBalance(_, g))
+
+// Ensuring money cannot be withdrawn beyond the balance
+□(withdrawMoney(p, a) → moneyBalance(p, m) ∧ m ≥ a)

@@ -1,0 +1,4 @@
+stakeToken(user=0x123456, planId=1, amount=1000, time=1710000000)@1;
+unstakeToken(user=0x123456, planId=1, amount=500, burnRate=10, time=1712592000)@2;
+claimRewards(user=0x123456, planId=1, burnRate=10, time=1715184000)@3;
+emergencyWithdraw(user=0x123456, planId=2, amount=500, time=1717776000)@4;

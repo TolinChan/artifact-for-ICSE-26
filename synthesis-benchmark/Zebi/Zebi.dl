@@ -1,0 +1,65 @@
+
+// Parameters
+.decl *totalSupply(n: uint)
+.decl *ethCap(n: uint)
+.decl *minTransAmount(n: uint)
+.decl *startTime(n: uint)
+.decl *endTime(n: uint)
+.decl *goldListPeriod(n: uint)
+.decl *postGoldPeriod(n: uint)
+.decl *goldPeriodCap(n: uint)
+.decl *zebiZCOShare(n: uint)
+.decl *crowdsaleZCOCap(n: uint)
+.decl *vestedMintStartTime(n: uint)
+.decl *calenderYearStart(n: uint)
+.decl *calenderYearEnd(n: uint)
+.decl balanceOf(p: address, n: uint)[0]
+
+// Transactions
+.decl buyTokens(beneficiary: address, weiAmount: uint)
+.decl addToGoldList(participant: address)
+.decl removeFromGoldList(participant: address)
+.decl addToKYCList(participant: address)
+.decl removeFromKYCList(participant: address)
+.decl enableRefundPeriod()
+.decl disableRefundPeriod()
+.decl refund(p: address)
+.decl forcedRefund(p: address)
+.decl mintvestedTokens(partner: address, zweitokens: uint)
+
+// Rules
+totalSupply(0).
+ethCap(0).
+minTransAmount(0).
+startTime(0).
+endTime(0).
+goldListPeriod(0).
+postGoldPeriod(0).
+goldPeriodCap(0).
+zebiZCOShare(0).
+crowdsaleZCOCap(0).
+vestedMintStartTime(0).
+calenderYearStart(0).
+calenderYearEnd(0).
+
+buyTokens(p, n) :- buyTokens(p, n).
+addToGoldList(p) :- addToGoldList(p).
+removeFromGoldList(p) :- removeFromGoldList(p).
+addToKYCList(p) :- addToKYCList(p).
+removeFromKYCList(p) :- removeFromKYCList(p).
+enableRefundPeriod() :- enableRefundPeriod().
+disableRefundPeriod() :- disableRefundPeriod().
+refund(p) :- refund(p).
+forcedRefund(p) :- forcedRefund(p).
+mintvestedTokens(p, n) :- mintvestedTokens(p, n).
+
+// Token minting logic
+.decl newTotalSupply(n: uint)
+newTotalSupply(s) :- buyTokens(p, e), totalSupply(t), 
+                     tokens := e * 5000, 
+                     s := t + tokens.
+
+.decl beneficiaryBalance(p: address, n: uint)
+beneficiaryBalance(p, b) :- buyTokens(p, e), balanceOf(p, x),
+                          tokens := e * 5000,
+                          b := x + tokens.

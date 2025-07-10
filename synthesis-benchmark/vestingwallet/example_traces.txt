@@ -1,0 +1,15 @@
+
+// Trace 1: Vesting release after duration
+recv_release()@0;
+recv_release()@1;
+
+// Trace 2: Partial vesting before full release
+recv_release()@0;
+recv_release()@1;
+recv_release()@2;
+
+// Trace 3: Full release after vesting period
+recv_release()@0;
+recv_release()@1;
+recv_release()@2;
+recv_release()@3;

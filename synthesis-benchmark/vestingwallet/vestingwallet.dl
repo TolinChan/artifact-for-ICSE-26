@@ -1,0 +1,26 @@
+
+// Parameters
+.decl *released(n: uint)
+.decl *beneficiary(p: address)
+.decl *start(t: uint)
+.decl *duration(t: uint)
+.decl balanceOf(p: address, n: uint)[0]
+
+// Transactions
+.decl release(n: uint)
+.decl recv_release()
+
+// Rules
+beneficiary(b) :- beneficiary(b).
+start(s) :- start(s).
+duration(d) :- duration(d).
+
+release(n) :- recv_release(), thisBalance(b), released(e), start(a), duration(d),
+              now(t), t > a + d, n := b - e, b > e, a < a + d, d < a + d.
+release(n) :- recv_release(), thisBalance(b), released(e), start(a), duration(d),
+              now(t), t > a, t < a + d, n := (b + e) * (t - a) / d - e, 
+              (b + e) * (t - a) / d > e, d > 0, a < a + d, d < a + d, b + e >= b, b + e >= e.
+
+send(b, n) :- release(n), n > 0, beneficiary(b).
+
+released(s) :- s = sum n: release(n).

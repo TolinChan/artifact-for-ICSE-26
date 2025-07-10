@@ -1,0 +1,1003 @@
+// Trace 1: 10 different operations
+payee(param1=90)@0;
+transfer(from=0xB2, to=0xA1, value=30)@1;
+transfer(from=0xC3, to=0xA1, value=20)@2;
+transfer(from=0xC3, to=0xA1, value=10)@3;
+totalShares()@4;
+released(param1=0xC3)@5;
+releasable(param1=0xA1)@6;
+totalReleased()@7;
+release(param1=0xA1)@8;
+shares(param1=0xA1)@9;
+totalReleased()@10;
+transfer(from=0xA1, to=0xD4, value=30)@11;
+transfer(from=0xC3, to=0xA1, value=10)@12;
+totalShares()@13;
+shares(param1=0xA1)@14;
+approve(owner=0xA1, spender=0xB2, amount=100)@15;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@16;
+
+// Trace 2: 11 different operations
+released(param1=0xC3)@0;
+payee(param1=96)@1;
+mint(account=0xB2, amount=500)@2;
+transfer(from=0xA1, to=0xB2, value=200)@3;
+burn(account=0xC3, amount=100)@4;
+releasable(param1=0xA1)@5;
+transfer(from=0xA1, to=0xD4, value=30)@6;
+transfer(from=0xA1, to=0xD4, value=20)@7;
+transfer(from=0xB2, to=0xA1, value=10)@8;
+shares(param1=0xB2)@9;
+release(param1=0xC3)@10;
+totalShares()@11;
+approve(owner=0xD4, spender=0xB2, amount=100)@12;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@13;
+
+// Trace 3: 10 different operations
+totalShares()@0;
+payee(param1=17)@1;
+approve(owner=0xC3, spender=0xC3, amount=100)@2;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@3;
+totalReleased()@4;
+shares(param1=0xD4)@5;
+release(param1=0xA1)@6;
+transfer(from=0xB2, to=0xC3, value=20)@7;
+transfer(from=0xD4, to=0xC3, value=10)@8;
+releasable(param1=0xC3)@9;
+released(param1=0xB2)@10;
+releasable(param1=0xB2)@11;
+payee(param1=1)@12;
+totalShares()@13;
+release(param1=0xD4)@14;
+shares(param1=0xA1)@15;
+approve(owner=0xC3, spender=0xA1, amount=100)@16;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@17;
+
+// Trace 4: 9 different operations
+totalShares()@0;
+releasable(param1=0xB2)@1;
+approve(owner=0xC3, spender=0xD4, amount=100)@2;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@3;
+released(param1=0xD4)@4;
+payee(param1=61)@5;
+release(param1=0xA1)@6;
+shares(param1=0xB2)@7;
+approve(owner=0xD4, spender=0xA1, amount=100)@8;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@9;
+totalReleased()@10;
+totalReleased()@11;
+
+// Trace 5: 10 different operations
+releasable(param1=0xC3)@0;
+totalReleased()@1;
+totalShares()@2;
+mint(account=0xC3, amount=500)@3;
+transfer(from=0xA1, to=0xB2, value=200)@4;
+burn(account=0xA1, amount=100)@5;
+payee(param1=1)@6;
+released(param1=0xD4)@7;
+shares(param1=0xB2)@8;
+transfer(from=0xA1, to=0xD4, value=30)@9;
+transfer(from=0xC3, to=0xD4, value=20)@10;
+transfer(from=0xB2, to=0xA1, value=10)@11;
+release(param1=0xC3)@12;
+totalShares()@13;
+transfer(from=0xD4, to=0xC3, value=30)@14;
+totalReleased()@15;
+
+// Trace 6: 12 different operations
+released(param1=0xD4)@0;
+mint(account=0xB2, amount=500)@1;
+burn(account=0xC3, amount=100)@2;
+payee(param1=29)@3;
+mint(account=0xD4, amount=500)@4;
+transfer(from=0xD4, to=0xA1, value=200)@5;
+burn(account=0xA1, amount=100)@6;
+totalReleased()@7;
+shares(param1=0xD4)@8;
+totalShares()@9;
+releasable(param1=0xA1)@10;
+transfer(from=0xD4, to=0xC3, value=30)@11;
+transfer(from=0xD4, to=0xC3, value=20)@12;
+release(param1=0xA1)@13;
+totalShares()@14;
+approve(owner=0xD4, spender=0xC3, amount=100)@15;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@16;
+
+// Trace 7: 8 different operations
+release(param1=0xC3)@0;
+transfer(from=0xC3, to=0xD4, value=30)@1;
+totalShares()@2;
+totalReleased()@3;
+mint(account=0xD4, amount=500)@4;
+transfer(from=0xA1, to=0xC3, value=200)@5;
+burn(account=0xB2, amount=100)@6;
+shares(param1=0xB2)@7;
+releasable(param1=0xA1)@8;
+mint(account=0xC3, amount=500)@9;
+transfer(from=0xC3, to=0xD4, value=200)@10;
+burn(account=0xC3, amount=100)@11;
+
+// Trace 8: 10 different operations
+totalShares()@0;
+release(param1=0xD4)@1;
+payee(param1=76)@2;
+released(param1=0xA1)@3;
+transfer(from=0xA1, to=0xB2, value=30)@4;
+transfer(from=0xB2, to=0xD4, value=20)@5;
+transfer(from=0xA1, to=0xD4, value=10)@6;
+totalReleased()@7;
+releasable(param1=0xA1)@8;
+shares(param1=0xB2)@9;
+approve(owner=0xC3, spender=0xC3, amount=100)@10;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@11;
+
+// Trace 9: 10 different operations
+payee(param1=40)@0;
+releasable(param1=0xD4)@1;
+totalReleased()@2;
+release(param1=0xD4)@3;
+shares(param1=0xD4)@4;
+mint(account=0xA1, amount=500)@5;
+transfer(from=0xA1, to=0xB2, value=200)@6;
+burn(account=0xC3, amount=100)@7;
+released(param1=0xD4)@8;
+totalShares()@9;
+shares(param1=0xC3)@10;
+released(param1=0xC3)@11;
+totalShares()@12;
+totalShares()@13;
+totalReleased()@14;
+
+// Trace 10: 8 different operations
+released(param1=0xA1)@0;
+release(param1=0xB2)@1;
+mint(account=0xB2, amount=500)@2;
+burn(account=0xA1, amount=100)@3;
+releasable(param1=0xB2)@4;
+totalReleased()@5;
+mint(account=0xA1, amount=500)@6;
+transfer(from=0xA1, to=0xB2, value=200)@7;
+burn(account=0xA1, amount=100)@8;
+totalShares()@9;
+mint(account=0xB2, amount=500)@10;
+transfer(from=0xB2, to=0xC3, value=200)@11;
+burn(account=0xD4, amount=100)@12;
+
+// Trace 11: 9 different operations
+payee(param1=90)@0;
+releasable(param1=0xA1)@1;
+released(param1=0xD4)@2;
+shares(param1=0xA1)@3;
+release(param1=0xC3)@4;
+totalShares()@5;
+totalReleased()@6;
+approve(owner=0xB2, spender=0xD4, amount=100)@7;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@8;
+totalShares()@9;
+
+// Trace 12: 12 different operations
+totalReleased()@0;
+released(param1=0xC3)@1;
+release(param1=0xA1)@2;
+approve(owner=0xA1, spender=0xA1, amount=100)@3;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@4;
+totalShares()@5;
+releasable(param1=0xA1)@6;
+shares(param1=0xB2)@7;
+payee(param1=80)@8;
+payee(param1=71)@9;
+shares(param1=0xD4)@10;
+mint(account=0xC3, amount=500)@11;
+transfer(from=0xB2, to=0xC3, value=200)@12;
+burn(account=0xB2, amount=100)@13;
+totalReleased()@14;
+release(param1=0xA1)@15;
+mint(account=0xA1, amount=500)@16;
+transfer(from=0xA1, to=0xC3, value=200)@17;
+burn(account=0xC3, amount=100)@18;
+
+// Trace 13: 10 different operations
+shares(param1=0xB2)@0;
+payee(param1=12)@1;
+totalShares()@2;
+releasable(param1=0xA1)@3;
+transfer(from=0xD4, to=0xC3, value=30)@4;
+transfer(from=0xB2, to=0xA1, value=20)@5;
+transfer(from=0xB2, to=0xC3, value=10)@6;
+released(param1=0xC3)@7;
+mint(account=0xB2, amount=500)@8;
+transfer(from=0xB2, to=0xD4, value=200)@9;
+burn(account=0xA1, amount=100)@10;
+release(param1=0xC3)@11;
+totalReleased()@12;
+release(param1=0xB2)@13;
+totalReleased()@14;
+releasable(param1=0xA1)@15;
+
+// Trace 14: 10 different operations
+shares(param1=0xB2)@0;
+totalReleased()@1;
+totalShares()@2;
+released(param1=0xB2)@3;
+mint(account=0xA1, amount=500)@4;
+transfer(from=0xA1, to=0xC3, value=200)@5;
+burn(account=0xA1, amount=100)@6;
+releasable(param1=0xA1)@7;
+release(param1=0xB2)@8;
+payee(param1=66)@9;
+totalShares()@10;
+totalShares()@11;
+mint(account=0xB2, amount=500)@12;
+transfer(from=0xB2, to=0xC3, value=200)@13;
+burn(account=0xD4, amount=100)@14;
+releasable(param1=0xA1)@15;
+
+// Trace 15: 10 different operations
+totalShares()@0;
+released(param1=0xA1)@1;
+release(param1=0xD4)@2;
+payee(param1=30)@3;
+shares(param1=0xD4)@4;
+totalReleased()@5;
+releasable(param1=0xA1)@6;
+totalReleased()@7;
+releasable(param1=0xB2)@8;
+releasable(param1=0xC3)@9;
+mint(account=0xD4, amount=500)@10;
+transfer(from=0xD4, to=0xC3, value=200)@11;
+burn(account=0xB2, amount=100)@12;
+
+// Trace 16: 8 different operations
+totalReleased()@0;
+released(param1=0xB2)@1;
+releasable(param1=0xD4)@2;
+payee(param1=76)@3;
+release(param1=0xA1)@4;
+transfer(from=0xD4, to=0xC3, value=30)@5;
+transfer(from=0xA1, to=0xC3, value=10)@6;
+shares(param1=0xA1)@7;
+totalShares()@8;
+release(param1=0xA1)@9;
+transfer(from=0xB2, to=0xC3, value=30)@10;
+transfer(from=0xC3, to=0xD4, value=20)@11;
+transfer(from=0xB2, to=0xC3, value=10)@12;
+
+// Trace 17: 10 different operations
+releasable(param1=0xC3)@0;
+mint(account=0xC3, amount=500)@1;
+transfer(from=0xB2, to=0xC3, value=200)@2;
+burn(account=0xA1, amount=100)@3;
+payee(param1=99)@4;
+release(param1=0xD4)@5;
+released(param1=0xC3)@6;
+totalReleased()@7;
+transfer(from=0xA1, to=0xD4, value=30)@8;
+transfer(from=0xA1, to=0xD4, value=20)@9;
+shares(param1=0xD4)@10;
+transfer(from=0xC3, to=0xD4, value=30)@11;
+transfer(from=0xD4, to=0xA1, value=20)@12;
+totalShares()@13;
+
+// Trace 18: 10 different operations
+payee(param1=32)@0;
+mint(account=0xD4, amount=500)@1;
+burn(account=0xA1, amount=100)@2;
+release(param1=0xC3)@3;
+totalShares()@4;
+shares(param1=0xD4)@5;
+releasable(param1=0xD4)@6;
+transfer(from=0xC3, to=0xB2, value=30)@7;
+transfer(from=0xA1, to=0xD4, value=20)@8;
+transfer(from=0xB2, to=0xA1, value=10)@9;
+released(param1=0xB2)@10;
+totalReleased()@11;
+
+// Trace 19: 11 different operations
+released(param1=0xA1)@0;
+releasable(param1=0xC3)@1;
+approve(owner=0xB2, spender=0xC3, amount=100)@2;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@3;
+totalReleased()@4;
+approve(owner=0xD4, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@6;
+payee(param1=93)@7;
+approve(owner=0xC3, spender=0xB2, amount=100)@8;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@9;
+shares(param1=0xA1)@10;
+release(param1=0xD4)@11;
+mint(account=0xA1, amount=500)@12;
+transfer(from=0xA1, to=0xD4, value=200)@13;
+burn(account=0xA1, amount=100)@14;
+
+// Trace 20: 8 different operations
+totalReleased()@0;
+transfer(from=0xC3, to=0xB2, value=30)@1;
+totalShares()@2;
+payee(param1=44)@3;
+shares(param1=0xB2)@4;
+releasable(param1=0xC3)@5;
+released(param1=0xA1)@6;
+release(param1=0xC3)@7;
+releasable(param1=0xC3)@8;
+release(param1=0xC3)@9;
+transfer(from=0xD4, to=0xC3, value=20)@10;
+transfer(from=0xB2, to=0xA1, value=10)@11;
+
+// Trace 21: 8 different operations
+releasable(param1=0xD4)@0;
+shares(param1=0xB2)@1;
+mint(account=0xD4, amount=500)@2;
+transfer(from=0xB2, to=0xC3, value=200)@3;
+burn(account=0xD4, amount=100)@4;
+totalShares()@5;
+payee(param1=42)@6;
+totalReleased()@7;
+transfer(from=0xD4, to=0xC3, value=30)@8;
+transfer(from=0xC3, to=0xD4, value=20)@9;
+
+// Trace 22: 8 different operations
+release(param1=0xC3)@0;
+totalReleased()@1;
+released(param1=0xD4)@2;
+payee(param1=4)@3;
+totalShares()@4;
+shares(param1=0xB2)@5;
+releasable(param1=0xA1)@6;
+released(param1=0xC3)@7;
+totalReleased()@8;
+transfer(from=0xC3, to=0xD4, value=30)@9;
+transfer(from=0xA1, to=0xC3, value=10)@10;
+released(param1=0xB2)@11;
+released(param1=0xD4)@12;
+
+// Trace 23: 10 different operations
+releasable(param1=0xB2)@0;
+mint(account=0xB2, amount=500)@1;
+burn(account=0xD4, amount=100)@2;
+totalShares()@3;
+payee(param1=97)@4;
+mint(account=0xA1, amount=500)@5;
+transfer(from=0xA1, to=0xB2, value=200)@6;
+burn(account=0xB2, amount=100)@7;
+shares(param1=0xD4)@8;
+release(param1=0xA1)@9;
+approve(owner=0xA1, spender=0xA1, amount=100)@10;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@11;
+
+// Trace 24: 9 different operations
+releasable(param1=0xB2)@0;
+approve(owner=0xB2, spender=0xB2, amount=100)@1;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@2;
+totalShares()@3;
+released(param1=0xA1)@4;
+totalReleased()@5;
+payee(param1=96)@6;
+release(param1=0xB2)@7;
+shares(param1=0xC3)@8;
+releasable(param1=0xC3)@9;
+payee(param1=66)@10;
+totalShares()@11;
+release(param1=0xB2)@12;
+
+// Trace 25: 9 different operations
+shares(param1=0xD4)@0;
+releasable(param1=0xB2)@1;
+approve(owner=0xD4, spender=0xD4, amount=100)@2;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@3;
+released(param1=0xD4)@4;
+payee(param1=58)@5;
+totalReleased()@6;
+release(param1=0xD4)@7;
+totalShares()@8;
+approve(owner=0xA1, spender=0xD4, amount=100)@9;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@10;
+totalReleased()@11;
+totalReleased()@12;
+releasable(param1=0xB2)@13;
+release(param1=0xD4)@14;
+
+// Trace 26: 10 different operations
+released(param1=0xA1)@0;
+transfer(from=0xD4, to=0xB2, value=30)@1;
+transfer(from=0xC3, to=0xD4, value=20)@2;
+shares(param1=0xD4)@3;
+totalReleased()@4;
+release(param1=0xC3)@5;
+releasable(param1=0xD4)@6;
+transfer(from=0xD4, to=0xB2, value=30)@7;
+totalShares()@8;
+payee(param1=47)@9;
+released(param1=0xB2)@10;
+totalShares()@11;
+approve(owner=0xC3, spender=0xD4, amount=100)@12;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@13;
+release(param1=0xA1)@14;
+totalReleased()@15;
+totalShares()@16;
+
+// Trace 27: 10 different operations
+release(param1=0xA1)@0;
+payee(param1=85)@1;
+transfer(from=0xA1, to=0xB2, value=30)@2;
+transfer(from=0xD4, to=0xA1, value=10)@3;
+totalShares()@4;
+totalReleased()@5;
+approve(owner=0xC3, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@7;
+shares(param1=0xB2)@8;
+transfer(from=0xB2, to=0xC3, value=30)@9;
+transfer(from=0xC3, to=0xA1, value=20)@10;
+releasable(param1=0xB2)@11;
+released(param1=0xC3)@12;
+
+// Trace 28: 10 different operations
+releasable(param1=0xC3)@0;
+transfer(from=0xC3, to=0xA1, value=20)@1;
+transfer(from=0xB2, to=0xA1, value=10)@2;
+release(param1=0xC3)@3;
+totalShares()@4;
+payee(param1=53)@5;
+shares(param1=0xB2)@6;
+totalReleased()@7;
+released(param1=0xD4)@8;
+shares(param1=0xD4)@9;
+release(param1=0xC3)@10;
+shares(param1=0xD4)@11;
+shares(param1=0xD4)@12;
+releasable(param1=0xC3)@13;
+approve(owner=0xB2, spender=0xA1, amount=100)@14;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@15;
+
+// Trace 29: 8 different operations
+shares(param1=0xC3)@0;
+totalReleased()@1;
+release(param1=0xD4)@2;
+totalShares()@3;
+released(param1=0xB2)@4;
+payee(param1=69)@5;
+releasable(param1=0xB2)@6;
+transfer(from=0xD4, to=0xC3, value=30)@7;
+transfer(from=0xB2, to=0xD4, value=20)@8;
+transfer(from=0xB2, to=0xD4, value=10)@9;
+released(param1=0xC3)@10;
+payee(param1=96)@11;
+
+// Trace 30: 11 different operations
+totalShares()@0;
+approve(owner=0xA1, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@2;
+release(param1=0xD4)@3;
+payee(param1=84)@4;
+shares(param1=0xC3)@5;
+transfer(from=0xA1, to=0xC3, value=20)@6;
+transfer(from=0xD4, to=0xB2, value=10)@7;
+releasable(param1=0xA1)@8;
+mint(account=0xB2, amount=500)@9;
+burn(account=0xB2, amount=100)@10;
+released(param1=0xC3)@11;
+
+// Trace 31: 10 different operations
+released(param1=0xC3)@0;
+totalShares()@1;
+shares(param1=0xB2)@2;
+payee(param1=45)@3;
+approve(owner=0xC3, spender=0xA1, amount=100)@4;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@5;
+releasable(param1=0xB2)@6;
+release(param1=0xB2)@7;
+totalReleased()@8;
+transfer(from=0xD4, to=0xA1, value=30)@9;
+
+// Trace 32: 12 different operations
+released(param1=0xC3)@0;
+releasable(param1=0xC3)@1;
+release(param1=0xC3)@2;
+payee(param1=33)@3;
+shares(param1=0xD4)@4;
+totalReleased()@5;
+totalShares()@6;
+approve(owner=0xB2, spender=0xC3, amount=100)@7;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@8;
+released(param1=0xD4)@9;
+transfer(from=0xD4, to=0xB2, value=30)@10;
+transfer(from=0xC3, to=0xA1, value=10)@11;
+totalShares()@12;
+mint(account=0xA1, amount=500)@13;
+transfer(from=0xC3, to=0xB2, value=200)@14;
+burn(account=0xC3, amount=100)@15;
+
+// Trace 33: 12 different operations
+payee(param1=18)@0;
+releasable(param1=0xD4)@1;
+release(param1=0xB2)@2;
+shares(param1=0xA1)@3;
+totalShares()@4;
+mint(account=0xB2, amount=500)@5;
+burn(account=0xC3, amount=100)@6;
+totalReleased()@7;
+released(param1=0xB2)@8;
+approve(owner=0xA1, spender=0xA1, amount=100)@9;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@10;
+payee(param1=67)@11;
+transfer(from=0xA1, to=0xC3, value=30)@12;
+transfer(from=0xB2, to=0xA1, value=20)@13;
+transfer(from=0xC3, to=0xD4, value=10)@14;
+
+// Trace 34: 12 different operations
+release(param1=0xA1)@0;
+released(param1=0xB2)@1;
+totalShares()@2;
+shares(param1=0xA1)@3;
+payee(param1=8)@4;
+releasable(param1=0xA1)@5;
+mint(account=0xA1, amount=500)@6;
+transfer(from=0xD4, to=0xA1, value=200)@7;
+burn(account=0xB2, amount=100)@8;
+totalReleased()@9;
+payee(param1=23)@10;
+releasable(param1=0xB2)@11;
+approve(owner=0xB2, spender=0xA1, amount=100)@12;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@13;
+
+// Trace 35: 12 different operations
+totalReleased()@0;
+totalShares()@1;
+releasable(param1=0xC3)@2;
+shares(param1=0xD4)@3;
+payee(param1=96)@4;
+release(param1=0xA1)@5;
+mint(account=0xC3, amount=500)@6;
+transfer(from=0xA1, to=0xC3, value=200)@7;
+burn(account=0xC3, amount=100)@8;
+released(param1=0xD4)@9;
+transfer(from=0xC3, to=0xA1, value=30)@10;
+transfer(from=0xC3, to=0xB2, value=20)@11;
+released(param1=0xA1)@12;
+totalReleased()@13;
+approve(owner=0xB2, spender=0xC3, amount=100)@14;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@15;
+
+// Trace 36: 12 different operations
+releasable(param1=0xD4)@0;
+release(param1=0xB2)@1;
+totalReleased()@2;
+totalShares()@3;
+released(param1=0xA1)@4;
+approve(owner=0xA1, spender=0xC3, amount=100)@5;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@6;
+payee(param1=40)@7;
+shares(param1=0xD4)@8;
+mint(account=0xA1, amount=500)@9;
+transfer(from=0xD4, to=0xC3, value=200)@10;
+burn(account=0xA1, amount=100)@11;
+shares(param1=0xC3)@12;
+approve(owner=0xB2, spender=0xC3, amount=100)@13;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@14;
+
+// Trace 37: 10 different operations
+totalShares()@0;
+totalReleased()@1;
+mint(account=0xD4, amount=500)@2;
+transfer(from=0xB2, to=0xA1, value=200)@3;
+burn(account=0xC3, amount=100)@4;
+shares(param1=0xA1)@5;
+releasable(param1=0xA1)@6;
+release(param1=0xC3)@7;
+released(param1=0xB2)@8;
+payee(param1=11)@9;
+totalReleased()@10;
+release(param1=0xA1)@11;
+mint(account=0xB2, amount=500)@12;
+transfer(from=0xA1, to=0xC3, value=200)@13;
+burn(account=0xB2, amount=100)@14;
+release(param1=0xB2)@15;
+release(param1=0xC3)@16;
+releasable(param1=0xD4)@17;
+
+// Trace 38: 12 different operations
+shares(param1=0xC3)@0;
+transfer(from=0xD4, to=0xB2, value=30)@1;
+transfer(from=0xB2, to=0xD4, value=10)@2;
+totalReleased()@3;
+released(param1=0xC3)@4;
+totalShares()@5;
+payee(param1=33)@6;
+mint(account=0xB2, amount=500)@7;
+burn(account=0xC3, amount=100)@8;
+releasable(param1=0xB2)@9;
+release(param1=0xA1)@10;
+payee(param1=44)@11;
+approve(owner=0xC3, spender=0xC3, amount=100)@12;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@13;
+totalShares()@14;
+releasable(param1=0xC3)@15;
+
+// Trace 39: 12 different operations
+released(param1=0xD4)@0;
+mint(account=0xA1, amount=500)@1;
+transfer(from=0xA1, to=0xD4, value=200)@2;
+burn(account=0xA1, amount=100)@3;
+release(param1=0xA1)@4;
+payee(param1=28)@5;
+mint(account=0xD4, amount=500)@6;
+transfer(from=0xC3, to=0xB2, value=200)@7;
+burn(account=0xD4, amount=100)@8;
+totalShares()@9;
+totalReleased()@10;
+shares(param1=0xD4)@11;
+approve(owner=0xC3, spender=0xA1, amount=100)@12;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@13;
+releasable(param1=0xB2)@14;
+transfer(from=0xD4, to=0xC3, value=10)@15;
+
+// Trace 40: 12 different operations
+released(param1=0xD4)@0;
+mint(account=0xD4, amount=500)@1;
+transfer(from=0xA1, to=0xB2, value=200)@2;
+burn(account=0xA1, amount=100)@3;
+release(param1=0xB2)@4;
+releasable(param1=0xA1)@5;
+totalShares()@6;
+payee(param1=16)@7;
+approve(owner=0xD4, spender=0xB2, amount=100)@8;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@9;
+shares(param1=0xC3)@10;
+totalReleased()@11;
+mint(account=0xC3, amount=500)@12;
+burn(account=0xC3, amount=100)@13;
+releasable(param1=0xB2)@14;
+
+// Trace 41: 11 different operations
+released(param1=0xD4)@0;
+mint(account=0xB2, amount=500)@1;
+transfer(from=0xA1, to=0xB2, value=200)@2;
+burn(account=0xD4, amount=100)@3;
+totalReleased()@4;
+release(param1=0xB2)@5;
+mint(account=0xD4, amount=500)@6;
+transfer(from=0xA1, to=0xB2, value=200)@7;
+burn(account=0xD4, amount=100)@8;
+payee(param1=83)@9;
+mint(account=0xD4, amount=500)@10;
+burn(account=0xC3, amount=100)@11;
+totalShares()@12;
+releasable(param1=0xB2)@13;
+approve(owner=0xD4, spender=0xA1, amount=100)@14;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@15;
+
+// Trace 42: 9 different operations
+shares(param1=0xA1)@0;
+releasable(param1=0xD4)@1;
+release(param1=0xC3)@2;
+transfer(from=0xD4, to=0xC3, value=30)@3;
+transfer(from=0xD4, to=0xA1, value=20)@4;
+transfer(from=0xC3, to=0xB2, value=10)@5;
+released(param1=0xA1)@6;
+approve(owner=0xB2, spender=0xD4, amount=100)@7;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@8;
+totalShares()@9;
+totalReleased()@10;
+transfer(from=0xA1, to=0xB2, value=30)@11;
+transfer(from=0xD4, to=0xA1, value=10)@12;
+
+// Trace 43: 10 different operations
+payee(param1=3)@0;
+totalReleased()@1;
+totalShares()@2;
+transfer(from=0xD4, to=0xA1, value=30)@3;
+transfer(from=0xB2, to=0xC3, value=20)@4;
+transfer(from=0xB2, to=0xD4, value=10)@5;
+shares(param1=0xA1)@6;
+released(param1=0xD4)@7;
+releasable(param1=0xC3)@8;
+release(param1=0xB2)@9;
+payee(param1=2)@10;
+shares(param1=0xB2)@11;
+approve(owner=0xB2, spender=0xA1, amount=100)@12;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@13;
+released(param1=0xB2)@14;
+releasable(param1=0xA1)@15;
+transfer(from=0xA1, to=0xD4, value=20)@16;
+transfer(from=0xC3, to=0xD4, value=10)@17;
+
+// Trace 44: 10 different operations
+releasable(param1=0xB2)@0;
+release(param1=0xB2)@1;
+payee(param1=60)@2;
+transfer(from=0xB2, to=0xA1, value=20)@3;
+released(param1=0xD4)@4;
+approve(owner=0xB2, spender=0xB2, amount=100)@5;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@6;
+totalReleased()@7;
+totalShares()@8;
+shares(param1=0xB2)@9;
+transfer(from=0xB2, to=0xA1, value=30)@10;
+transfer(from=0xC3, to=0xA1, value=20)@11;
+transfer(from=0xD4, to=0xA1, value=10)@12;
+
+// Trace 45: 9 different operations
+shares(param1=0xD4)@0;
+released(param1=0xC3)@1;
+totalReleased()@2;
+releasable(param1=0xC3)@3;
+payee(param1=74)@4;
+release(param1=0xC3)@5;
+approve(owner=0xC3, spender=0xA1, amount=100)@6;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@7;
+totalShares()@8;
+totalReleased()@9;
+shares(param1=0xB2)@10;
+payee(param1=85)@11;
+totalReleased()@12;
+shares(param1=0xB2)@13;
+approve(owner=0xC3, spender=0xB2, amount=100)@14;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@15;
+payee(param1=12)@16;
+
+// Trace 46: 8 different operations
+shares(param1=0xA1)@0;
+transfer(from=0xB2, to=0xA1, value=30)@1;
+transfer(from=0xC3, to=0xA1, value=20)@2;
+transfer(from=0xA1, to=0xC3, value=10)@3;
+totalReleased()@4;
+totalShares()@5;
+mint(account=0xD4, amount=500)@6;
+transfer(from=0xA1, to=0xB2, value=200)@7;
+burn(account=0xB2, amount=100)@8;
+release(param1=0xA1)@9;
+mint(account=0xA1, amount=500)@10;
+transfer(from=0xB2, to=0xA1, value=200)@11;
+burn(account=0xD4, amount=100)@12;
+payee(param1=2)@13;
+
+// Trace 47: 12 different operations
+totalReleased()@0;
+release(param1=0xC3)@1;
+payee(param1=48)@2;
+transfer(from=0xC3, to=0xB2, value=30)@3;
+transfer(from=0xC3, to=0xA1, value=20)@4;
+released(param1=0xC3)@5;
+mint(account=0xA1, amount=500)@6;
+burn(account=0xA1, amount=100)@7;
+shares(param1=0xB2)@8;
+totalShares()@9;
+approve(owner=0xA1, spender=0xA1, amount=100)@10;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@11;
+releasable(param1=0xC3)@12;
+mint(account=0xB2, amount=500)@13;
+transfer(from=0xD4, to=0xC3, value=200)@14;
+burn(account=0xA1, amount=100)@15;
+
+// Trace 48: 10 different operations
+totalShares()@0;
+release(param1=0xA1)@1;
+totalReleased()@2;
+shares(param1=0xD4)@3;
+releasable(param1=0xD4)@4;
+mint(account=0xD4, amount=500)@5;
+transfer(from=0xB2, to=0xA1, value=200)@6;
+burn(account=0xA1, amount=100)@7;
+released(param1=0xC3)@8;
+mint(account=0xD4, amount=500)@9;
+burn(account=0xC3, amount=100)@10;
+payee(param1=55)@11;
+
+// Trace 49: 9 different operations
+shares(param1=0xB2)@0;
+release(param1=0xC3)@1;
+released(param1=0xA1)@2;
+releasable(param1=0xB2)@3;
+totalReleased()@4;
+payee(param1=95)@5;
+approve(owner=0xB2, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@7;
+totalShares()@8;
+approve(owner=0xC3, spender=0xB2, amount=100)@9;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@10;
+releasable(param1=0xD4)@11;
+
+// Trace 50: 10 different operations
+release(param1=0xC3)@0;
+totalReleased()@1;
+mint(account=0xC3, amount=500)@2;
+transfer(from=0xD4, to=0xC3, value=200)@3;
+burn(account=0xD4, amount=100)@4;
+released(param1=0xA1)@5;
+totalShares()@6;
+shares(param1=0xA1)@7;
+payee(param1=87)@8;
+releasable(param1=0xA1)@9;
+payee(param1=90)@10;
+shares(param1=0xA1)@11;
+
+// Trace 51: 7 different operations
+released(param1=0xA1)@0;
+releasable(param1=0xC3)@1;
+totalShares()@2;
+totalReleased()@3;
+shares(param1=0xB2)@4;
+release(param1=0xD4)@5;
+payee(param1=49)@6;
+payee(param1=42)@7;
+releasable(param1=0xA1)@8;
+release(param1=0xA1)@9;
+payee(param1=100)@10;
+payee(param1=20)@11;
+release(param1=0xC3)@12;
+releasable(param1=0xA1)@13;
+
+// Trace 52: 10 different operations
+releasable(param1=0xC3)@0;
+payee(param1=18)@1;
+approve(owner=0xB2, spender=0xC3, amount=100)@2;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@3;
+release(param1=0xA1)@4;
+approve(owner=0xC3, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@6;
+totalReleased()@7;
+transfer(from=0xC3, to=0xB2, value=30)@8;
+transfer(from=0xD4, to=0xB2, value=20)@9;
+released(param1=0xC3)@10;
+totalShares()@11;
+approve(owner=0xC3, spender=0xA1, amount=100)@12;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@13;
+shares(param1=0xC3)@14;
+releasable(param1=0xB2)@15;
+
+// Trace 53: 10 different operations
+released(param1=0xB2)@0;
+totalShares()@1;
+releasable(param1=0xC3)@2;
+mint(account=0xA1, amount=500)@3;
+transfer(from=0xD4, to=0xA1, value=200)@4;
+burn(account=0xD4, amount=100)@5;
+totalReleased()@6;
+release(param1=0xB2)@7;
+payee(param1=18)@8;
+shares(param1=0xD4)@9;
+mint(account=0xA1, amount=500)@10;
+burn(account=0xB2, amount=100)@11;
+releasable(param1=0xC3)@12;
+releasable(param1=0xC3)@13;
+released(param1=0xD4)@14;
+
+// Trace 54: 12 different operations
+shares(param1=0xA1)@0;
+payee(param1=80)@1;
+mint(account=0xA1, amount=500)@2;
+transfer(from=0xA1, to=0xC3, value=200)@3;
+burn(account=0xC3, amount=100)@4;
+totalShares()@5;
+released(param1=0xA1)@6;
+approve(owner=0xB2, spender=0xC3, amount=100)@7;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@8;
+releasable(param1=0xC3)@9;
+release(param1=0xC3)@10;
+totalReleased()@11;
+
+// Trace 55: 8 different operations
+payee(param1=55)@0;
+release(param1=0xD4)@1;
+totalReleased()@2;
+released(param1=0xA1)@3;
+releasable(param1=0xD4)@4;
+transfer(from=0xD4, to=0xC3, value=20)@5;
+shares(param1=0xB2)@6;
+totalShares()@7;
+release(param1=0xA1)@8;
+totalReleased()@9;
+
+// Trace 56: 10 different operations
+payee(param1=33)@0;
+approve(owner=0xC3, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@2;
+totalShares()@3;
+transfer(from=0xA1, to=0xC3, value=30)@4;
+transfer(from=0xC3, to=0xA1, value=20)@5;
+transfer(from=0xA1, to=0xB2, value=10)@6;
+release(param1=0xD4)@7;
+totalReleased()@8;
+released(param1=0xB2)@9;
+approve(owner=0xB2, spender=0xA1, amount=100)@10;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@11;
+shares(param1=0xD4)@12;
+releasable(param1=0xC3)@13;
+
+// Trace 57: 8 different operations
+payee(param1=76)@0;
+releasable(param1=0xA1)@1;
+totalReleased()@2;
+totalShares()@3;
+transfer(from=0xC3, to=0xA1, value=30)@4;
+transfer(from=0xC3, to=0xD4, value=20)@5;
+transfer(from=0xD4, to=0xC3, value=10)@6;
+shares(param1=0xD4)@7;
+released(param1=0xC3)@8;
+release(param1=0xD4)@9;
+payee(param1=5)@10;
+
+// Trace 58: 10 different operations
+payee(param1=57)@0;
+totalReleased()@1;
+shares(param1=0xC3)@2;
+totalShares()@3;
+released(param1=0xD4)@4;
+releasable(param1=0xC3)@5;
+approve(owner=0xA1, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@7;
+release(param1=0xD4)@8;
+shares(param1=0xB2)@9;
+totalShares()@10;
+transfer(from=0xA1, to=0xC3, value=30)@11;
+transfer(from=0xC3, to=0xB2, value=10)@12;
+payee(param1=41)@13;
+released(param1=0xA1)@14;
+
+// Trace 59: 10 different operations
+payee(param1=59)@0;
+shares(param1=0xC3)@1;
+totalReleased()@2;
+approve(owner=0xD4, spender=0xA1, amount=100)@3;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@4;
+totalShares()@5;
+release(param1=0xD4)@6;
+released(param1=0xC3)@7;
+transfer(from=0xA1, to=0xB2, value=30)@8;
+transfer(from=0xB2, to=0xA1, value=10)@9;
+releasable(param1=0xC3)@10;
+payee(param1=74)@11;
+transfer(from=0xD4, to=0xC3, value=30)@12;
+transfer(from=0xD4, to=0xC3, value=20)@13;
+transfer(from=0xD4, to=0xC3, value=10)@14;
+
+// Trace 60: 10 different operations
+released(param1=0xC3)@0;
+approve(owner=0xC3, spender=0xD4, amount=100)@1;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@2;
+totalReleased()@3;
+totalShares()@4;
+releasable(param1=0xB2)@5;
+transfer(from=0xD4, to=0xC3, value=30)@6;
+transfer(from=0xB2, to=0xA1, value=20)@7;
+transfer(from=0xB2, to=0xC3, value=10)@8;
+release(param1=0xD4)@9;
+mint(account=0xA1, amount=500)@10;
+burn(account=0xA1, amount=100)@11;
+
+// Trace 61: 10 different operations
+release(param1=0xB2)@0;
+transfer(from=0xA1, to=0xB2, value=30)@1;
+transfer(from=0xC3, to=0xB2, value=10)@2;
+released(param1=0xA1)@3;
+shares(param1=0xA1)@4;
+totalShares()@5;
+payee(param1=53)@6;
+releasable(param1=0xD4)@7;
+mint(account=0xC3, amount=500)@8;
+transfer(from=0xC3, to=0xB2, value=200)@9;
+burn(account=0xC3, amount=100)@10;
+totalReleased()@11;
+released(param1=0xD4)@12;
+
+// Trace 62: 11 different operations
+totalReleased()@0;
+payee(param1=12)@1;
+shares(param1=0xB2)@2;
+releasable(param1=0xB2)@3;
+release(param1=0xA1)@4;
+totalShares()@5;
+released(param1=0xB2)@6;
+mint(account=0xA1, amount=500)@7;
+burn(account=0xC3, amount=100)@8;
+shares(param1=0xD4)@9;
+release(param1=0xA1)@10;
+payee(param1=73)@11;
+approve(owner=0xA1, spender=0xC3, amount=100)@12;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@13;
+
+// Trace 63: transfer, releasable
+releasable(param1=0xC3)@0;
+transfer(from=0xD4, to=0xA1, value=30)@1;
+transfer(from=0xD4, to=0xC3, value=20)@2;
+

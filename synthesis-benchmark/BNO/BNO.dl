@@ -1,0 +1,83 @@
+// Parameters
+.decl *owner(p: address)
+.decl *poolManager(p: address)
+.decl *stakeToken(p: address)
+.decl *rewardToken(p: address)
+.decl *nftContract(p: address)
+.decl *withdrawalFee(n: uint)
+.decl *rePledgeRate(n: uint)
+.decl *withdrawRate(n: uint)
+.decl constructor()
+
+// Views
+.decl balanceOf(p: address, n: uint)[0]
+.decl totalSupply(n: uint)[0]
+.decl pendingReward(p: address, n: uint)[0]
+
+// Staking Transactions
+.decl stake(p: address, amount: uint)
+.decl rePledge(p: address, amount: uint)
+.decl withdraw(p: address)
+.decl emergencyWithdraw(p: address)
+
+// NFT Transactions
+.decl stakeNFT(p: address, tokenId: uint)
+.decl unstakeNFT(p: address, tokenId: uint)
+
+// Admin Transactions
+.decl setParams(owner: address, stakeToken: address, rewardToken: address, nftContract: address, withdrawalFee: uint)
+.decl setRates(owner: address, rePledgeRate: uint, withdrawRate: uint)
+
+// Rules
+owner(s) :- constructor(), msgSender(s).
+poolManager(s) :- constructor(), msgSender(s).
+
+// Staking Logic
+stake(p, n) :-
+    msgSender(p),
+    balanceOf(p, bal),
+    bal >= n,
+    balanceOf(contract, totalBal),
+    totalSupply(supply),
+    newSupply := supply + n,
+    balanceOf(contract, totalBal + n),
+    totalSupply(newSupply).
+
+rePledge(p, n) :-
+    msgSender(p),
+    balanceOf(p, bal),
+    bal >= n,
+    totalSupply(supply),
+    newSupply := supply + n,
+    totalSupply(newSupply).
+
+withdraw(p) :-
+    msgSender(p),
+    pendingReward(p, r),
+    r > 0,
+    balanceOf(contract, totalBal),
+    totalSupply(supply),
+    newSupply := supply - r,
+    totalSupply(newSupply).
+
+emergencyWithdraw(p) :-
+    msgSender(p),
+    balanceOf(p, bal),
+    totalSupply(supply),
+    newSupply := supply - bal,
+    totalSupply(newSupply).
+
+// NFT Logic
+stakeNFT(p, tokenId) :-
+    msgSender(p),
+    balanceOf(contract, totalNFT),
+    totalSupply(nftSupply),
+    newSupply := nftSupply + 1,
+    totalSupply(newSupply).
+
+unstakeNFT(p, tokenId) :-
+    msgSender(p),
+    balanceOf(contract, totalNFT),
+    totalSupply(nftSupply),
+    newSupply := nftSupply - 1,
+    totalSupply(newSupply).

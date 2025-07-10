@@ -1,0 +1,13 @@
+□(stakeToken(user, planId, amount, _) → tokenBalance(stakingToken, user, b) → b < •b)
+
+□(stakeToken(user, planId, amount, _) → tokenBalance(stakingToken, address(this), b) → b > •b)
+
+□(unstakeToken(user, planId, amount, _, _) → tokenBalance(stakingToken, user, b) → b > •b)
+
+□(claimRewards(user, planId, _, _) → tokenBalance(stakingToken, user, b) → b > •b)
+
+□(claimRewards(user, planId, _, _) → tokenBalance(stakingToken, address(this), b) → b < •b)
+
+□(unstakeToken(user, planId, amount, burnRate, _) → burnAmount = amount * burnRate / 100 → tokenBalance(stakingToken, burnAddress, b) → b > •b)
+
+□(emergencyWithdraw(user, planId, amount, _) → burnAmount = amount * penalty / 100 → tokenBalance(stakingToken, burnAddress, b) → b > •b)

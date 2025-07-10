@@ -1,0 +1,9 @@
+
+// Ensuring total released payments do not exceed total received amount
+□(totalReleased(n) ∧ totalReceived(r) → n ≤ r)
+
+// Ensuring payments are proportional to shares
+□(release(p, n) → shares(p, s) ∧ totalShares(t) ∧ totalReceived(r) → n ≤ (r * s / t))
+
+// Ensuring no overpayment beyond calculated allocation
+□(overpaid(p, e) → e = 0)

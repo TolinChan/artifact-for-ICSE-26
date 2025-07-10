@@ -1,0 +1,16 @@
+
+// Trace 1: Crowdsale setup and opening
+setMaxSupply(newMax=1000000)@0;
+setCrowdsaleOpenTimerFor(minutesFromNow=10)@1;
+openCrowdsale()@2;
+
+// Trace 2: Buying tokens and ending crowdsale
+createTokens(recipient=0x123456, ethAmount=5)@0;
+createTokens(recipient=0xabcdef, ethAmount=10)@1;
+closeCrowdsale()@2;
+
+// Trace 3: Multiple buyers and changing decimals after crowdsale
+createTokens(recipient=0x998877, ethAmount=20)@0;
+createTokens(recipient=0x334455, ethAmount=15)@1;
+closeCrowdsale()@2;
+setDecimals(newDecimals=8)@3;

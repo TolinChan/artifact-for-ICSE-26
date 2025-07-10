@@ -1,0 +1,1002 @@
+// Trace 1: 13 different operations
+withdraw(bidder=63, amount=100)@0;
+mint(account=0xB2, amount=500)@1;
+transfer(from=0xA1, to=0xB2, value=200)@2;
+burn(account=0xC3, amount=100)@3;
+upgradeFarm(param1=75)@4;
+approve(owner=0xC3, spender=0xA1, amount=100)@5;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@6;
+register()@7;
+approve(owner=0xA1, spender=0xA1, amount=100)@8;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@9;
+setMarketWallet(param1=0xA1)@10;
+buyGems()@11;
+initialize()@12;
+approve(owner=0xC3, spender=0xB2, amount=100)@13;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@14;
+collectYield()@15;
+upgradeWarehouse()@16;
+
+// Trace 2: 12 different operations
+withdraw(bidder=83, amount=100)@0;
+upgradeWarehouse()@1;
+initialize()@2;
+upgradeFarm(param1=23)@3;
+collectYield()@4;
+setMarketWallet(param1=0xD4)@5;
+register()@6;
+transfer(from=0xA1, to=0xD4, value=10)@7;
+buyGems()@8;
+upgradeTruck()@9;
+register()@10;
+mint(account=0xB2, amount=500)@11;
+transfer(from=0xB2, to=0xA1, value=200)@12;
+burn(account=0xA1, amount=100)@13;
+withdraw(bidder=48, amount=100)@14;
+
+// Trace 3: 12 different operations
+upgradeFarm(param1=23)@0;
+approve(owner=0xC3, spender=0xD4, amount=100)@1;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@2;
+upgradeWarehouse()@3;
+mint(account=0xA1, amount=500)@4;
+transfer(from=0xA1, to=0xC3, value=200)@5;
+burn(account=0xB2, amount=100)@6;
+buyGems()@7;
+initialize()@8;
+upgradeTruck()@9;
+approve(owner=0xB2, spender=0xC3, amount=100)@10;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@11;
+register()@12;
+mint(account=0xB2, amount=500)@13;
+transfer(from=0xA1, to=0xD4, value=200)@14;
+burn(account=0xD4, amount=100)@15;
+withdraw(bidder=12, amount=100)@16;
+
+// Trace 4: 11 different operations
+setMarketWallet(param1=0xC3)@0;
+collectYield()@1;
+mint(account=0xA1, amount=500)@2;
+transfer(from=0xD4, to=0xC3, value=200)@3;
+burn(account=0xC3, amount=100)@4;
+upgradeFarm(param1=83)@5;
+register()@6;
+initialize()@7;
+upgradeTruck()@8;
+withdraw(bidder=14, amount=100)@9;
+mint(account=0xC3, amount=500)@10;
+burn(account=0xD4, amount=100)@11;
+buyGems()@12;
+mint(account=0xB2, amount=500)@13;
+transfer(from=0xA1, to=0xB2, value=200)@14;
+burn(account=0xA1, amount=100)@15;
+
+// Trace 5: 12 different operations
+setMarketWallet(param1=0xB2)@0;
+withdraw(bidder=97, amount=100)@1;
+upgradeWarehouse()@2;
+collectYield()@3;
+buyGems()@4;
+upgradeFarm(param1=71)@5;
+register()@6;
+upgradeTruck()@7;
+initialize()@8;
+upgradeTruck()@9;
+withdraw(bidder=72, amount=100)@10;
+mint(account=0xC3, amount=500)@11;
+transfer(from=0xA1, to=0xD4, value=200)@12;
+burn(account=0xA1, amount=100)@13;
+upgradeTruck()@14;
+register()@15;
+
+// Trace 6: 12 different operations
+buyGems()@0;
+initialize()@1;
+approve(owner=0xA1, spender=0xA1, amount=100)@2;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@3;
+register()@4;
+upgradeWarehouse()@5;
+collectYield()@6;
+mint(account=0xD4, amount=500)@7;
+transfer(from=0xD4, to=0xC3, value=200)@8;
+burn(account=0xA1, amount=100)@9;
+withdraw(bidder=72, amount=100)@10;
+approve(owner=0xD4, spender=0xD4, amount=100)@11;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@12;
+setMarketWallet(param1=0xD4)@13;
+mint(account=0xC3, amount=500)@14;
+transfer(from=0xA1, to=0xD4, value=200)@15;
+burn(account=0xC3, amount=100)@16;
+
+// Trace 7: 12 different operations
+upgradeTruck()@0;
+setMarketWallet(param1=0xA1)@1;
+upgradeWarehouse()@2;
+initialize()@3;
+withdraw(bidder=36, amount=100)@4;
+upgradeFarm(param1=50)@5;
+buyGems()@6;
+transfer(from=0xB2, to=0xA1, value=30)@7;
+transfer(from=0xD4, to=0xA1, value=20)@8;
+transfer(from=0xD4, to=0xB2, value=10)@9;
+collectYield()@10;
+register()@11;
+setMarketWallet(param1=0xC3)@12;
+mint(account=0xA1, amount=500)@13;
+transfer(from=0xD4, to=0xB2, value=200)@14;
+burn(account=0xD4, amount=100)@15;
+upgradeTruck()@16;
+
+// Trace 8: 11 different operations
+buyGems()@0;
+initialize()@1;
+transfer(from=0xA1, to=0xD4, value=20)@2;
+transfer(from=0xC3, to=0xA1, value=10)@3;
+upgradeTruck()@4;
+approve(owner=0xD4, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@6;
+withdraw(bidder=84, amount=100)@7;
+transfer(from=0xA1, to=0xD4, value=20)@8;
+transfer(from=0xD4, to=0xB2, value=10)@9;
+collectYield()@10;
+setMarketWallet(param1=0xA1)@11;
+upgradeWarehouse()@12;
+upgradeFarm(param1=80)@13;
+
+// Trace 9: 13 different operations
+withdraw(bidder=69, amount=100)@0;
+collectYield()@1;
+setMarketWallet(param1=0xB2)@2;
+mint(account=0xB2, amount=500)@3;
+transfer(from=0xD4, to=0xA1, value=200)@4;
+burn(account=0xD4, amount=100)@5;
+upgradeTruck()@6;
+upgradeFarm(param1=26)@7;
+upgradeWarehouse()@8;
+register()@9;
+buyGems()@10;
+approve(owner=0xC3, spender=0xC3, amount=100)@11;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@12;
+
+// Trace 10: 12 different operations
+upgradeTruck()@0;
+collectYield()@1;
+setMarketWallet(param1=0xC3)@2;
+initialize()@3;
+upgradeWarehouse()@4;
+approve(owner=0xB2, spender=0xB2, amount=100)@5;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@6;
+buyGems()@7;
+approve(owner=0xB2, spender=0xA1, amount=100)@8;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@9;
+upgradeFarm(param1=69)@10;
+mint(account=0xB2, amount=500)@11;
+burn(account=0xB2, amount=100)@12;
+register()@13;
+
+// Trace 11: 10 different operations
+withdraw(bidder=20, amount=100)@0;
+approve(owner=0xB2, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@2;
+initialize()@3;
+setMarketWallet(param1=0xD4)@4;
+upgradeWarehouse()@5;
+upgradeFarm(param1=16)@6;
+upgradeTruck()@7;
+transfer(from=0xA1, to=0xC3, value=30)@8;
+transfer(from=0xB2, to=0xA1, value=20)@9;
+transfer(from=0xB2, to=0xD4, value=10)@10;
+register()@11;
+
+// Trace 12: 8 different operations
+upgradeFarm(param1=47)@0;
+setMarketWallet(param1=0xD4)@1;
+mint(account=0xC3, amount=500)@2;
+transfer(from=0xA1, to=0xB2, value=200)@3;
+burn(account=0xC3, amount=100)@4;
+withdraw(bidder=32, amount=100)@5;
+register()@6;
+mint(account=0xB2, amount=500)@7;
+transfer(from=0xC3, to=0xD4, value=200)@8;
+burn(account=0xD4, amount=100)@9;
+collectYield()@10;
+
+// Trace 13: 10 different operations
+withdraw(bidder=9, amount=100)@0;
+approve(owner=0xB2, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@2;
+upgradeFarm(param1=47)@3;
+upgradeWarehouse()@4;
+approve(owner=0xD4, spender=0xA1, amount=100)@5;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@6;
+register()@7;
+transfer(from=0xC3, to=0xB2, value=30)@8;
+upgradeTruck()@9;
+collectYield()@10;
+approve(owner=0xB2, spender=0xD4, amount=100)@11;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@12;
+initialize()@13;
+approve(owner=0xC3, spender=0xB2, amount=100)@14;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@15;
+
+// Trace 14: 12 different operations
+buyGems()@0;
+collectYield()@1;
+upgradeFarm(param1=29)@2;
+upgradeTruck()@3;
+mint(account=0xD4, amount=500)@4;
+transfer(from=0xC3, to=0xD4, value=200)@5;
+burn(account=0xC3, amount=100)@6;
+initialize()@7;
+register()@8;
+approve(owner=0xC3, spender=0xD4, amount=100)@9;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@10;
+withdraw(bidder=51, amount=100)@11;
+transfer(from=0xC3, to=0xD4, value=30)@12;
+transfer(from=0xA1, to=0xD4, value=10)@13;
+
+// Trace 15: 12 different operations
+upgradeTruck()@0;
+upgradeFarm(param1=81)@1;
+withdraw(bidder=82, amount=100)@2;
+register()@3;
+initialize()@4;
+upgradeWarehouse()@5;
+collectYield()@6;
+mint(account=0xA1, amount=500)@7;
+transfer(from=0xD4, to=0xC3, value=200)@8;
+burn(account=0xC3, amount=100)@9;
+setMarketWallet(param1=0xA1)@10;
+buyGems()@11;
+upgradeFarm(param1=69)@12;
+transfer(from=0xD4, to=0xA1, value=30)@13;
+transfer(from=0xD4, to=0xA1, value=10)@14;
+upgradeFarm(param1=3)@15;
+withdraw(bidder=14, amount=100)@16;
+
+// Trace 16: 11 different operations
+initialize()@0;
+upgradeTruck()@1;
+setMarketWallet(param1=0xD4)@2;
+upgradeWarehouse()@3;
+upgradeFarm(param1=52)@4;
+register()@5;
+buyGems()@6;
+collectYield()@7;
+withdraw(bidder=47, amount=100)@8;
+register()@9;
+initialize()@10;
+upgradeTruck()@11;
+register()@12;
+upgradeWarehouse()@13;
+initialize()@14;
+approve(owner=0xD4, spender=0xD4, amount=100)@15;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@16;
+
+// Trace 17: 13 different operations
+collectYield()@0;
+buyGems()@1;
+approve(owner=0xD4, spender=0xB2, amount=100)@2;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@3;
+setMarketWallet(param1=0xD4)@4;
+mint(account=0xA1, amount=500)@5;
+transfer(from=0xA1, to=0xD4, value=200)@6;
+burn(account=0xD4, amount=100)@7;
+upgradeFarm(param1=17)@8;
+initialize()@9;
+withdraw(bidder=94, amount=100)@10;
+mint(account=0xA1, amount=500)@11;
+burn(account=0xA1, amount=100)@12;
+upgradeTruck()@13;
+mint(account=0xC3, amount=500)@14;
+burn(account=0xD4, amount=100)@15;
+upgradeWarehouse()@16;
+transfer(from=0xD4, to=0xB2, value=20)@17;
+transfer(from=0xA1, to=0xC3, value=10)@18;
+
+// Trace 18: 11 different operations
+setMarketWallet(param1=0xB2)@0;
+register()@1;
+initialize()@2;
+buyGems()@3;
+upgradeFarm(param1=99)@4;
+upgradeTruck()@5;
+upgradeWarehouse()@6;
+withdraw(bidder=7, amount=100)@7;
+mint(account=0xA1, amount=500)@8;
+transfer(from=0xC3, to=0xD4, value=200)@9;
+burn(account=0xC3, amount=100)@10;
+
+// Trace 19: 10 different operations
+buyGems()@0;
+setMarketWallet(param1=0xD4)@1;
+collectYield()@2;
+transfer(from=0xA1, to=0xB2, value=30)@3;
+upgradeFarm(param1=26)@4;
+initialize()@5;
+transfer(from=0xB2, to=0xD4, value=20)@6;
+transfer(from=0xB2, to=0xA1, value=10)@7;
+upgradeTruck()@8;
+upgradeWarehouse()@9;
+withdraw(bidder=58, amount=100)@10;
+register()@11;
+buyGems()@12;
+upgradeTruck()@13;
+
+// Trace 20: 11 different operations
+setMarketWallet(param1=0xC3)@0;
+initialize()@1;
+upgradeTruck()@2;
+transfer(from=0xC3, to=0xA1, value=30)@3;
+transfer(from=0xA1, to=0xD4, value=20)@4;
+transfer(from=0xC3, to=0xD4, value=10)@5;
+withdraw(bidder=10, amount=100)@6;
+buyGems()@7;
+collectYield()@8;
+approve(owner=0xA1, spender=0xD4, amount=100)@9;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@10;
+register()@11;
+transfer(from=0xD4, to=0xB2, value=30)@12;
+transfer(from=0xB2, to=0xC3, value=20)@13;
+transfer(from=0xB2, to=0xD4, value=10)@14;
+upgradeWarehouse()@15;
+transfer(from=0xB2, to=0xD4, value=30)@16;
+transfer(from=0xA1, to=0xD4, value=10)@17;
+
+// Trace 21: 12 different operations
+register()@0;
+upgradeFarm(param1=43)@1;
+mint(account=0xA1, amount=500)@2;
+transfer(from=0xC3, to=0xD4, value=200)@3;
+burn(account=0xA1, amount=100)@4;
+buyGems()@5;
+upgradeWarehouse()@6;
+upgradeTruck()@7;
+initialize()@8;
+collectYield()@9;
+transfer(from=0xB2, to=0xA1, value=30)@10;
+transfer(from=0xA1, to=0xD4, value=20)@11;
+transfer(from=0xB2, to=0xC3, value=10)@12;
+setMarketWallet(param1=0xA1)@13;
+withdraw(bidder=82, amount=100)@14;
+mint(account=0xC3, amount=500)@15;
+transfer(from=0xA1, to=0xD4, value=200)@16;
+burn(account=0xA1, amount=100)@17;
+
+// Trace 22: 8 different operations
+upgradeTruck()@0;
+approve(owner=0xD4, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@2;
+collectYield()@3;
+approve(owner=0xC3, spender=0xC3, amount=100)@4;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@5;
+buyGems()@6;
+withdraw(bidder=31, amount=100)@7;
+upgradeFarm(param1=74)@8;
+transfer(from=0xA1, to=0xD4, value=20)@9;
+transfer(from=0xC3, to=0xA1, value=10)@10;
+
+// Trace 23: 14 different operations
+buyGems()@0;
+withdraw(bidder=33, amount=100)@1;
+upgradeTruck()@2;
+initialize()@3;
+mint(account=0xC3, amount=500)@4;
+transfer(from=0xB2, to=0xC3, value=200)@5;
+burn(account=0xC3, amount=100)@6;
+setMarketWallet(param1=0xD4)@7;
+upgradeWarehouse()@8;
+register()@9;
+upgradeFarm(param1=47)@10;
+collectYield()@11;
+approve(owner=0xD4, spender=0xD4, amount=100)@12;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@13;
+setMarketWallet(param1=0xD4)@14;
+approve(owner=0xB2, spender=0xB2, amount=100)@15;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@16;
+withdraw(bidder=61, amount=100)@17;
+setMarketWallet(param1=0xD4)@18;
+
+// Trace 24: 10 different operations
+upgradeWarehouse()@0;
+withdraw(bidder=76, amount=100)@1;
+collectYield()@2;
+setMarketWallet(param1=0xA1)@3;
+register()@4;
+upgradeFarm(param1=65)@5;
+initialize()@6;
+upgradeTruck()@7;
+transfer(from=0xC3, to=0xD4, value=30)@8;
+transfer(from=0xB2, to=0xA1, value=20)@9;
+transfer(from=0xA1, to=0xD4, value=10)@10;
+buyGems()@11;
+upgradeFarm(param1=38)@12;
+
+// Trace 25: 13 different operations
+upgradeWarehouse()@0;
+upgradeTruck()@1;
+mint(account=0xD4, amount=500)@2;
+transfer(from=0xB2, to=0xD4, value=200)@3;
+burn(account=0xD4, amount=100)@4;
+upgradeFarm(param1=45)@5;
+transfer(from=0xD4, to=0xA1, value=20)@6;
+transfer(from=0xA1, to=0xB2, value=10)@7;
+collectYield()@8;
+buyGems()@9;
+approve(owner=0xA1, spender=0xD4, amount=100)@10;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@11;
+register()@12;
+withdraw(bidder=100, amount=100)@13;
+setMarketWallet(param1=0xC3)@14;
+
+// Trace 26: 11 different operations
+collectYield()@0;
+withdraw(bidder=77, amount=100)@1;
+setMarketWallet(param1=0xD4)@2;
+transfer(from=0xD4, to=0xC3, value=20)@3;
+transfer(from=0xB2, to=0xC3, value=10)@4;
+buyGems()@5;
+register()@6;
+mint(account=0xD4, amount=500)@7;
+transfer(from=0xD4, to=0xA1, value=200)@8;
+burn(account=0xC3, amount=100)@9;
+upgradeTruck()@10;
+initialize()@11;
+upgradeFarm(param1=74)@12;
+
+// Trace 27: 10 different operations
+withdraw(bidder=79, amount=100)@0;
+transfer(from=0xC3, to=0xD4, value=20)@1;
+transfer(from=0xD4, to=0xA1, value=10)@2;
+collectYield()@3;
+approve(owner=0xD4, spender=0xA1, amount=100)@4;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@5;
+initialize()@6;
+buyGems()@7;
+upgradeTruck()@8;
+transfer(from=0xC3, to=0xD4, value=30)@9;
+transfer(from=0xD4, to=0xB2, value=20)@10;
+register()@11;
+setMarketWallet(param1=0xA1)@12;
+approve(owner=0xC3, spender=0xC3, amount=100)@13;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@14;
+
+// Trace 28: 9 different operations
+collectYield()@0;
+register()@1;
+transfer(from=0xC3, to=0xB2, value=30)@2;
+transfer(from=0xD4, to=0xB2, value=10)@3;
+upgradeTruck()@4;
+transfer(from=0xA1, to=0xB2, value=30)@5;
+transfer(from=0xA1, to=0xB2, value=20)@6;
+upgradeWarehouse()@7;
+approve(owner=0xA1, spender=0xB2, amount=100)@8;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@9;
+upgradeFarm(param1=82)@10;
+withdraw(bidder=50, amount=100)@11;
+
+// Trace 29: 9 different operations
+initialize()@0;
+transfer(from=0xA1, to=0xB2, value=30)@1;
+transfer(from=0xB2, to=0xD4, value=10)@2;
+withdraw(bidder=81, amount=100)@3;
+buyGems()@4;
+approve(owner=0xB2, spender=0xB2, amount=100)@5;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@6;
+upgradeTruck()@7;
+upgradeWarehouse()@8;
+collectYield()@9;
+approve(owner=0xC3, spender=0xB2, amount=100)@10;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@11;
+
+// Trace 30: 12 different operations
+collectYield()@0;
+initialize()@1;
+upgradeWarehouse()@2;
+setMarketWallet(param1=0xA1)@3;
+withdraw(bidder=58, amount=100)@4;
+buyGems()@5;
+upgradeFarm(param1=24)@6;
+transfer(from=0xD4, to=0xA1, value=30)@7;
+transfer(from=0xC3, to=0xD4, value=20)@8;
+transfer(from=0xB2, to=0xD4, value=10)@9;
+register()@10;
+approve(owner=0xB2, spender=0xD4, amount=100)@11;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@12;
+upgradeTruck()@13;
+approve(owner=0xC3, spender=0xD4, amount=100)@14;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@15;
+
+// Trace 31: 14 different operations
+upgradeTruck()@0;
+upgradeFarm(param1=36)@1;
+mint(account=0xA1, amount=500)@2;
+transfer(from=0xA1, to=0xB2, value=200)@3;
+burn(account=0xD4, amount=100)@4;
+upgradeWarehouse()@5;
+mint(account=0xB2, amount=500)@6;
+transfer(from=0xD4, to=0xC3, value=200)@7;
+burn(account=0xC3, amount=100)@8;
+withdraw(bidder=63, amount=100)@9;
+initialize()@10;
+register()@11;
+buyGems()@12;
+setMarketWallet(param1=0xC3)@13;
+collectYield()@14;
+register()@15;
+approve(owner=0xB2, spender=0xB2, amount=100)@16;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@17;
+
+// Trace 32: 10 different operations
+upgradeTruck()@0;
+collectYield()@1;
+setMarketWallet(param1=0xA1)@2;
+upgradeWarehouse()@3;
+buyGems()@4;
+mint(account=0xB2, amount=500)@5;
+transfer(from=0xA1, to=0xC3, value=200)@6;
+burn(account=0xB2, amount=100)@7;
+register()@8;
+transfer(from=0xC3, to=0xD4, value=30)@9;
+transfer(from=0xD4, to=0xC3, value=20)@10;
+transfer(from=0xB2, to=0xD4, value=10)@11;
+upgradeFarm(param1=65)@12;
+
+// Trace 33: 10 different operations
+withdraw(bidder=3, amount=100)@0;
+upgradeTruck()@1;
+buyGems()@2;
+register()@3;
+initialize()@4;
+collectYield()@5;
+upgradeWarehouse()@6;
+transfer(from=0xA1, to=0xC3, value=20)@7;
+setMarketWallet(param1=0xB2)@8;
+upgradeFarm(param1=67)@9;
+upgradeWarehouse()@10;
+upgradeWarehouse()@11;
+buyGems()@12;
+
+// Trace 34: 12 different operations
+register()@0;
+approve(owner=0xB2, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@2;
+buyGems()@3;
+transfer(from=0xD4, to=0xA1, value=30)@4;
+transfer(from=0xC3, to=0xB2, value=20)@5;
+transfer(from=0xC3, to=0xA1, value=10)@6;
+upgradeWarehouse()@7;
+transfer(from=0xB2, to=0xC3, value=30)@8;
+transfer(from=0xD4, to=0xB2, value=20)@9;
+transfer(from=0xC3, to=0xA1, value=10)@10;
+initialize()@11;
+collectYield()@12;
+mint(account=0xC3, amount=500)@13;
+transfer(from=0xA1, to=0xD4, value=200)@14;
+burn(account=0xB2, amount=100)@15;
+withdraw(bidder=97, amount=100)@16;
+upgradeTruck()@17;
+transfer(from=0xB2, to=0xC3, value=20)@18;
+transfer(from=0xB2, to=0xA1, value=10)@19;
+
+// Trace 35: 9 different operations
+upgradeTruck()@0;
+collectYield()@1;
+initialize()@2;
+transfer(from=0xB2, to=0xD4, value=30)@3;
+transfer(from=0xC3, to=0xA1, value=20)@4;
+transfer(from=0xC3, to=0xA1, value=10)@5;
+setMarketWallet(param1=0xB2)@6;
+transfer(from=0xC3, to=0xA1, value=30)@7;
+transfer(from=0xB2, to=0xC3, value=20)@8;
+transfer(from=0xB2, to=0xA1, value=10)@9;
+buyGems()@10;
+approve(owner=0xA1, spender=0xD4, amount=100)@11;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@12;
+register()@13;
+approve(owner=0xC3, spender=0xB2, amount=100)@14;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@15;
+
+// Trace 36: 12 different operations
+upgradeFarm(param1=1)@0;
+upgradeTruck()@1;
+upgradeWarehouse()@2;
+withdraw(bidder=93, amount=100)@3;
+setMarketWallet(param1=0xB2)@4;
+register()@5;
+collectYield()@6;
+initialize()@7;
+buyGems()@8;
+setMarketWallet(param1=0xB2)@9;
+withdraw(bidder=71, amount=100)@10;
+buyGems()@11;
+withdraw(bidder=46, amount=100)@12;
+approve(owner=0xA1, spender=0xC3, amount=100)@13;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@14;
+upgradeWarehouse()@15;
+setMarketWallet(param1=0xA1)@16;
+transfer(from=0xA1, to=0xB2, value=30)@17;
+transfer(from=0xD4, to=0xA1, value=20)@18;
+transfer(from=0xB2, to=0xC3, value=10)@19;
+
+// Trace 37: 10 different operations
+upgradeFarm(param1=32)@0;
+initialize()@1;
+mint(account=0xA1, amount=500)@2;
+burn(account=0xB2, amount=100)@3;
+upgradeWarehouse()@4;
+withdraw(bidder=26, amount=100)@5;
+transfer(from=0xD4, to=0xB2, value=30)@6;
+transfer(from=0xD4, to=0xC3, value=20)@7;
+transfer(from=0xB2, to=0xD4, value=10)@8;
+collectYield()@9;
+register()@10;
+transfer(from=0xC3, to=0xA1, value=30)@11;
+transfer(from=0xA1, to=0xB2, value=10)@12;
+buyGems()@13;
+
+// Trace 38: 10 different operations
+buyGems()@0;
+upgradeWarehouse()@1;
+mint(account=0xB2, amount=500)@2;
+transfer(from=0xD4, to=0xB2, value=200)@3;
+burn(account=0xB2, amount=100)@4;
+withdraw(bidder=25, amount=100)@5;
+register()@6;
+upgradeFarm(param1=76)@7;
+initialize()@8;
+collectYield()@9;
+transfer(from=0xD4, to=0xC3, value=20)@10;
+transfer(from=0xB2, to=0xC3, value=10)@11;
+
+// Trace 39: 10 different operations
+setMarketWallet(param1=0xD4)@0;
+withdraw(bidder=71, amount=100)@1;
+transfer(from=0xC3, to=0xB2, value=30)@2;
+transfer(from=0xC3, to=0xB2, value=20)@3;
+transfer(from=0xA1, to=0xC3, value=10)@4;
+upgradeWarehouse()@5;
+initialize()@6;
+register()@7;
+collectYield()@8;
+upgradeFarm(param1=88)@9;
+upgradeTruck()@10;
+buyGems()@11;
+upgradeTruck()@12;
+
+// Trace 40: 12 different operations
+setMarketWallet(param1=0xD4)@0;
+register()@1;
+upgradeFarm(param1=22)@2;
+buyGems()@3;
+withdraw(bidder=39, amount=100)@4;
+initialize()@5;
+upgradeTruck()@6;
+collectYield()@7;
+upgradeWarehouse()@8;
+withdraw(bidder=44, amount=100)@9;
+upgradeFarm(param1=80)@10;
+setMarketWallet(param1=0xC3)@11;
+upgradeFarm(param1=87)@12;
+mint(account=0xC3, amount=500)@13;
+transfer(from=0xC3, to=0xA1, value=200)@14;
+burn(account=0xC3, amount=100)@15;
+
+// Trace 41: 12 different operations
+upgradeWarehouse()@0;
+upgradeTruck()@1;
+buyGems()@2;
+transfer(from=0xA1, to=0xD4, value=30)@3;
+transfer(from=0xA1, to=0xC3, value=20)@4;
+transfer(from=0xB2, to=0xD4, value=10)@5;
+withdraw(bidder=28, amount=100)@6;
+approve(owner=0xC3, spender=0xD4, amount=100)@7;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@8;
+collectYield()@9;
+setMarketWallet(param1=0xB2)@10;
+upgradeFarm(param1=91)@11;
+register()@12;
+initialize()@13;
+approve(owner=0xD4, spender=0xA1, amount=100)@14;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@15;
+
+// Trace 42: 11 different operations
+setMarketWallet(param1=0xB2)@0;
+mint(account=0xC3, amount=500)@1;
+transfer(from=0xB2, to=0xA1, value=200)@2;
+burn(account=0xA1, amount=100)@3;
+register()@4;
+collectYield()@5;
+transfer(from=0xA1, to=0xB2, value=30)@6;
+transfer(from=0xD4, to=0xC3, value=10)@7;
+withdraw(bidder=16, amount=100)@8;
+approve(owner=0xA1, spender=0xA1, amount=100)@9;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@10;
+upgradeTruck()@11;
+upgradeFarm(param1=69)@12;
+mint(account=0xC3, amount=500)@13;
+transfer(from=0xB2, to=0xC3, value=200)@14;
+burn(account=0xC3, amount=100)@15;
+
+// Trace 43: 10 different operations
+register()@0;
+upgradeTruck()@1;
+setMarketWallet(param1=0xA1)@2;
+approve(owner=0xB2, spender=0xA1, amount=100)@3;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@4;
+initialize()@5;
+collectYield()@6;
+upgradeWarehouse()@7;
+transfer(from=0xA1, to=0xD4, value=30)@8;
+transfer(from=0xC3, to=0xD4, value=20)@9;
+transfer(from=0xC3, to=0xD4, value=10)@10;
+upgradeFarm(param1=57)@11;
+approve(owner=0xC3, spender=0xB2, amount=100)@12;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@13;
+
+// Trace 44: 9 different operations
+upgradeFarm(param1=40)@0;
+mint(account=0xA1, amount=500)@1;
+transfer(from=0xC3, to=0xA1, value=200)@2;
+burn(account=0xD4, amount=100)@3;
+collectYield()@4;
+upgradeWarehouse()@5;
+approve(owner=0xD4, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@7;
+upgradeTruck()@8;
+mint(account=0xC3, amount=500)@9;
+transfer(from=0xD4, to=0xC3, value=200)@10;
+burn(account=0xB2, amount=100)@11;
+
+// Trace 45: 11 different operations
+upgradeTruck()@0;
+initialize()@1;
+collectYield()@2;
+withdraw(bidder=56, amount=100)@3;
+register()@4;
+approve(owner=0xC3, spender=0xC3, amount=100)@5;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@6;
+upgradeWarehouse()@7;
+buyGems()@8;
+setMarketWallet(param1=0xD4)@9;
+upgradeFarm(param1=58)@10;
+register()@11;
+
+// Trace 46: 11 different operations
+upgradeFarm(param1=41)@0;
+register()@1;
+mint(account=0xA1, amount=500)@2;
+transfer(from=0xC3, to=0xA1, value=200)@3;
+burn(account=0xD4, amount=100)@4;
+initialize()@5;
+approve(owner=0xA1, spender=0xD4, amount=100)@6;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@7;
+collectYield()@8;
+upgradeTruck()@9;
+setMarketWallet(param1=0xB2)@10;
+
+// Trace 47: 14 different operations
+upgradeFarm(param1=84)@0;
+approve(owner=0xD4, spender=0xB2, amount=100)@1;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@2;
+upgradeTruck()@3;
+upgradeWarehouse()@4;
+initialize()@5;
+setMarketWallet(param1=0xA1)@6;
+withdraw(bidder=60, amount=100)@7;
+approve(owner=0xA1, spender=0xB2, amount=100)@8;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@9;
+collectYield()@10;
+mint(account=0xC3, amount=500)@11;
+transfer(from=0xB2, to=0xD4, value=200)@12;
+burn(account=0xC3, amount=100)@13;
+buyGems()@14;
+approve(owner=0xB2, spender=0xD4, amount=100)@15;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@16;
+register()@17;
+
+// Trace 48: 12 different operations
+upgradeFarm(param1=97)@0;
+initialize()@1;
+collectYield()@2;
+upgradeWarehouse()@3;
+approve(owner=0xA1, spender=0xD4, amount=100)@4;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@5;
+withdraw(bidder=10, amount=100)@6;
+upgradeTruck()@7;
+setMarketWallet(param1=0xA1)@8;
+transfer(from=0xD4, to=0xA1, value=20)@9;
+transfer(from=0xC3, to=0xA1, value=10)@10;
+buyGems()@11;
+register()@12;
+upgradeWarehouse()@13;
+
+// Trace 49: 12 different operations
+withdraw(bidder=85, amount=100)@0;
+setMarketWallet(param1=0xA1)@1;
+approve(owner=0xA1, spender=0xD4, amount=100)@2;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@3;
+upgradeTruck()@4;
+upgradeWarehouse()@5;
+register()@6;
+buyGems()@7;
+upgradeFarm(param1=33)@8;
+mint(account=0xD4, amount=500)@9;
+burn(account=0xB2, amount=100)@10;
+collectYield()@11;
+
+// Trace 50: 10 different operations
+upgradeFarm(param1=73)@0;
+buyGems()@1;
+upgradeWarehouse()@2;
+approve(owner=0xB2, spender=0xB2, amount=100)@3;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@4;
+initialize()@5;
+withdraw(bidder=27, amount=100)@6;
+register()@7;
+setMarketWallet(param1=0xA1)@8;
+collectYield()@9;
+approve(owner=0xB2, spender=0xA1, amount=100)@10;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@11;
+
+// Trace 51: 8 different operations
+register()@0;
+approve(owner=0xB2, spender=0xD4, amount=100)@1;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@2;
+initialize()@3;
+approve(owner=0xD4, spender=0xD4, amount=100)@4;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@5;
+setMarketWallet(param1=0xB2)@6;
+upgradeWarehouse()@7;
+transfer(from=0xD4, to=0xA1, value=20)@8;
+transfer(from=0xC3, to=0xB2, value=10)@9;
+upgradeTruck()@10;
+
+// Trace 52: 14 different operations
+upgradeFarm(param1=46)@0;
+setMarketWallet(param1=0xC3)@1;
+mint(account=0xB2, amount=500)@2;
+transfer(from=0xC3, to=0xB2, value=200)@3;
+burn(account=0xA1, amount=100)@4;
+initialize()@5;
+withdraw(bidder=6, amount=100)@6;
+buyGems()@7;
+approve(owner=0xC3, spender=0xB2, amount=100)@8;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@9;
+collectYield()@10;
+register()@11;
+upgradeTruck()@12;
+upgradeWarehouse()@13;
+
+// Trace 53: 12 different operations
+upgradeTruck()@0;
+collectYield()@1;
+register()@2;
+approve(owner=0xC3, spender=0xA1, amount=100)@3;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@4;
+withdraw(bidder=7, amount=100)@5;
+upgradeWarehouse()@6;
+mint(account=0xB2, amount=500)@7;
+burn(account=0xB2, amount=100)@8;
+initialize()@9;
+mint(account=0xA1, amount=500)@10;
+transfer(from=0xC3, to=0xA1, value=200)@11;
+burn(account=0xA1, amount=100)@12;
+upgradeFarm(param1=57)@13;
+
+// Trace 54: 14 different operations
+register()@0;
+initialize()@1;
+buyGems()@2;
+upgradeTruck()@3;
+mint(account=0xB2, amount=500)@4;
+burn(account=0xA1, amount=100)@5;
+upgradeFarm(param1=86)@6;
+collectYield()@7;
+setMarketWallet(param1=0xA1)@8;
+withdraw(bidder=4, amount=100)@9;
+upgradeWarehouse()@10;
+transfer(from=0xC3, to=0xA1, value=20)@11;
+transfer(from=0xB2, to=0xD4, value=10)@12;
+register()@13;
+approve(owner=0xC3, spender=0xA1, amount=100)@14;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@15;
+
+// Trace 55: 12 different operations
+upgradeFarm(param1=61)@0;
+upgradeTruck()@1;
+mint(account=0xA1, amount=500)@2;
+transfer(from=0xD4, to=0xB2, value=200)@3;
+burn(account=0xA1, amount=100)@4;
+withdraw(bidder=15, amount=100)@5;
+transfer(from=0xD4, to=0xA1, value=30)@6;
+transfer(from=0xA1, to=0xD4, value=20)@7;
+transfer(from=0xC3, to=0xA1, value=10)@8;
+collectYield()@9;
+setMarketWallet(param1=0xA1)@10;
+initialize()@11;
+upgradeWarehouse()@12;
+buyGems()@13;
+register()@14;
+
+// Trace 56: 9 different operations
+upgradeFarm(param1=67)@0;
+setMarketWallet(param1=0xD4)@1;
+collectYield()@2;
+mint(account=0xA1, amount=500)@3;
+transfer(from=0xB2, to=0xA1, value=200)@4;
+burn(account=0xA1, amount=100)@5;
+buyGems()@6;
+mint(account=0xB2, amount=500)@7;
+transfer(from=0xD4, to=0xB2, value=200)@8;
+burn(account=0xB2, amount=100)@9;
+withdraw(bidder=61, amount=100)@10;
+mint(account=0xD4, amount=500)@11;
+transfer(from=0xA1, to=0xB2, value=200)@12;
+burn(account=0xC3, amount=100)@13;
+initialize()@14;
+
+// Trace 57: 11 different operations
+upgradeFarm(param1=84)@0;
+mint(account=0xC3, amount=500)@1;
+transfer(from=0xD4, to=0xB2, value=200)@2;
+burn(account=0xC3, amount=100)@3;
+setMarketWallet(param1=0xC3)@4;
+register()@5;
+initialize()@6;
+transfer(from=0xB2, to=0xC3, value=20)@7;
+transfer(from=0xA1, to=0xD4, value=10)@8;
+upgradeWarehouse()@9;
+upgradeTruck()@10;
+withdraw(bidder=17, amount=100)@11;
+buyGems()@12;
+
+// Trace 58: 12 different operations
+upgradeTruck()@0;
+register()@1;
+upgradeFarm(param1=78)@2;
+withdraw(bidder=96, amount=100)@3;
+upgradeWarehouse()@4;
+transfer(from=0xC3, to=0xB2, value=30)@5;
+transfer(from=0xB2, to=0xC3, value=20)@6;
+initialize()@7;
+collectYield()@8;
+approve(owner=0xB2, spender=0xC3, amount=100)@9;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@10;
+buyGems()@11;
+setMarketWallet(param1=0xB2)@12;
+transfer(from=0xD4, to=0xB2, value=20)@13;
+transfer(from=0xC3, to=0xA1, value=10)@14;
+register()@15;
+setMarketWallet(param1=0xD4)@16;
+approve(owner=0xA1, spender=0xB2, amount=100)@17;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@18;
+
+// Trace 59: 12 different operations
+buyGems()@0;
+setMarketWallet(param1=0xC3)@1;
+register()@2;
+upgradeTruck()@3;
+collectYield()@4;
+withdraw(bidder=48, amount=100)@5;
+approve(owner=0xB2, spender=0xD4, amount=100)@6;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@7;
+initialize()@8;
+approve(owner=0xD4, spender=0xC3, amount=100)@9;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@10;
+upgradeWarehouse()@11;
+transfer(from=0xA1, to=0xC3, value=30)@12;
+transfer(from=0xD4, to=0xB2, value=20)@13;
+transfer(from=0xD4, to=0xC3, value=10)@14;
+upgradeFarm(param1=88)@15;
+approve(owner=0xB2, spender=0xA1, amount=100)@16;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@17;
+
+// Trace 60: 5 different operations
+initialize()@0;
+register()@1;
+transfer(from=0xD4, to=0xA1, value=30)@2;
+transfer(from=0xA1, to=0xC3, value=10)@3;
+withdraw(bidder=28, amount=100)@4;
+setMarketWallet(param1=0xC3)@5;
+

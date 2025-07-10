@@ -1,0 +1,16 @@
+
+// Trace 1: Issuing, transferring, and redeeming tokens
+mint(p=0x123456, amount=100)@0;
+transfer(from=0x123456, to=0x654321, amount=50)@1;
+burn(p=0x654321, amount=20)@2;
+
+// Trace 2: Transferring with allowance and burning from another account
+mint(p=0xabcdef, amount=200)@0;
+transferFrom(from=0xabcdef, to=0x998877, spender=0x112233, amount=80)@1;
+burnFrom(p=0x998877, from=0x112233, amount=40)@2;
+
+// Trace 3: Complex token flow with burning and transfers
+mint(p=0x112233, amount=500)@0;
+transfer(from=0x112233, to=0x445566, amount=300)@1;
+burn(p=0x445566, amount=200)@2;
+transfer(from=0x445566, to=0x778899, amount=150)@3;

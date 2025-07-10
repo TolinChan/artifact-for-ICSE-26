@@ -1,0 +1,125 @@
+// Parameters
+.decl *owner(p: address)
+.decl *state(n: uint)  // 0: DEPLOYED, 1: DIVESTED, 2: INVESTED, 3: EJECTED, 4: DRAINED
+.decl *baseToken(p: address)
+.decl *fyToken(p: address)
+.decl *pool(p: address)
+.decl *maturity(n: uint)
+.decl *baseCached(n: uint)
+.decl *poolCached(n: uint)
+.decl *fyTokenCached(n: uint)
+.decl constructor()
+
+// Views
+.decl balanceOf(p: address, n: uint)[0]
+.decl totalSupply(n: uint)[0]
+
+// Transactions
+.decl init(p: address)
+.decl invest(p: address, pool: address)
+.decl divest(p: address)
+.decl eject(p: address)
+.decl buyFYToken(p: address, fyTokenTo: address, baseTo: address)
+.decl restart(p: address)
+.decl mint(p: address, to: address)
+.decl burn(p: address, to: address)
+.decl mintDivested(p: address, to: address)
+.decl burnDivested(p: address, to: address)
+
+// Rules
+owner(s) :- constructor().
+state(0) :- constructor().  // Initial state is DEPLOYED
+
+// Initialization
+init(p) :-
+    msgSender(p),
+    balanceOf(contract, b),
+    baseCached(b),
+    totalSupply(s) :- s = b,
+    state(1).  // Transition to DIVESTED
+
+// Investing in a Pool
+invest(p, pool) :-
+    msgSender(p),
+    state(1),
+    balanceOf(contract, baseAmt),
+    poolCached(poolAmt),
+    baseCached(0),
+    totalSupply(supply),
+    newSupply := supply + poolAmt,
+    state(2).  // Transition to INVESTED
+
+// Divesting from a Pool
+divest(p) :-
+    msgSender(p),
+    state(2),
+    maturity(m),
+    now(t),
+    t >= m,
+    balanceOf(contract, baseAmt),
+    poolCached(0),
+    baseCached(baseAmt),
+    state(1).  // Transition to DIVESTED
+
+// Ejecting from a Pool
+eject(p) :-
+    msgSender(p),
+    state(2),
+    balanceOf(contract, baseAmt),
+    poolCached(0),
+    fyTokenCached(fyAmt),
+    baseCached(baseAmt),
+    fyTokenCached(fyAmt),
+    state(3).  // Transition to EJECTED
+
+// Buying ejected fyToken
+buyFYToken(p, fyTokenTo, baseTo) :-
+    msgSender(p),
+    state(3),
+    baseCached(baseAmt),
+    fyTokenCached(fyAmt),
+    minSell := min(baseAmt, fyAmt),
+    newBase := baseAmt + minSell,
+    newFYToken := fyAmt - minSell,
+    baseCached(newBase),
+    fyTokenCached(newFYToken),
+    state(1).  // Transition to DIVESTED if all fyToken is sold
+
+// Restart strategy
+restart(p) :-
+    msgSender(p),
+    state(4),
+    balanceOf(contract, baseAmt),
+    baseCached(baseAmt),
+    state(1).  // Transition to DIVESTED
+
+// Minting and Burning Strategy Tokens
+mint(p, to) :-
+    msgSender(p),
+    state(2),
+    balanceOf(contract, poolAmt),
+    newSupply := totalSupply() + poolAmt,
+    totalSupply(newSupply).
+
+burn(p, to) :-
+    msgSender(p),
+    state(2),
+    balanceOf(contract, poolAmt),
+    totalSupply(supply),
+    burnt := supply * poolAmt / totalSupply(),
+    totalSupply(newSupply) :- newSupply = supply - burnt.
+
+mintDivested(p, to) :-
+    msgSender(p),
+    state(1),
+    balanceOf(contract, baseAmt),
+    newSupply := totalSupply() + baseAmt,
+    totalSupply(newSupply).
+
+burnDivested(p, to) :-
+    msgSender(p),
+    state(1),
+    balanceOf(contract, baseAmt),
+    totalSupply(supply),
+    burnt := supply * baseAmt / totalSupply(),
+    totalSupply(newSupply) :- newSupply = supply - burnt.

@@ -1,0 +1,37 @@
+// =====================================
+// Parameters
+// =====================================
+.decl *donationCollector(p: address)
+.decl *usedIds(id: bytes16)
+.decl *campaigns(id: bytes16, manager: address, token: address, amount: uint, end: uint, tokenLockup: uint8, root: bytes32)
+.decl *claimLockups(id: bytes16, tokenLocker: address, start: uint, cliff: uint, period: uint, periods: uint)
+.decl *claimed(id: bytes16, claimer: address)
+
+// =====================================
+// Transactions
+.decl createUnlockedCampaign(id: bytes16, manager: address, token: address, amount: uint, end: uint, tokenLockup: uint8, root: bytes32)
+.decl createLockedCampaign(id: bytes16, manager: address, token: address, amount: uint, end: uint, tokenLockup: uint8, root: bytes32, tokenLocker: address, start: uint, cliff: uint, period: uint, periods: uint)
+.decl claimTokens(id: bytes16, claimer: address, claimAmount: uint)
+.decl cancelCampaign(id: bytes16)
+
+// Rules
+campaigns(id, manager, token, amount, end, tokenLockup, root) :-
+    createUnlockedCampaign(id, manager, token, amount, end, tokenLockup, root),
+    not usedIds(id).
+
+
+campaigns(id, manager, token, amount, end, tokenLockup, root) :-
+    createLockedCampaign(id, manager, token, amount, end, tokenLockup, root, tokenLocker, start, cliff, period, periods),
+    not usedIds(id).
+
+claimLockups(id, tokenLocker, start, cliff, period, periods) :-
+    createLockedCampaign(id, _, _, _, _, _, _, tokenLocker, start, cliff, period, periods).
+
+claimed(id, claimer) :-
+    claimTokens(id, claimer, _),
+    campaigns(id, _, _, amount, _, _, _),
+    amount > 0.
+
+
+not campaigns(id, _, _, _, _, _, _) :-
+    cancelCampaign(id).

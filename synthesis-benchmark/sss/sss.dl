@@ -1,0 +1,26 @@
+
+// Parameters
+.decl *totalSupply(n: uint)
+.decl *buyTaxPercent(n: uint)
+.decl *sellTaxPercent(n: uint)
+.decl *tradeVolume(n: uint)
+.decl balanceOf(p: address, n: uint)[0]
+.decl constructor(n: uint)
+
+// Transactions
+.decl buyTokens(p: address, amount: uint)
+.decl sellTokens(p: address, amount: uint)
+.decl claimDevTax(p: address, amount: uint)
+.decl claimCommunityTax(p: address, amount: uint)
+.decl claimDevToken(p: address, amount: uint)
+
+// Rules
+totalSupply(n) :- constructor(n).
+buyTokens(p, n) :- balanceOf(p, m), m >= n.
+sellTokens(p, n) :- balanceOf(p, m), m >= n.
+claimDevTax(p, n) :- balanceOf(p, m), m >= n.
+claimCommunityTax(p, n) :- balanceOf(p, m), m >= n.
+claimDevToken(p, n) :- balanceOf(p, m), m >= n.
+
+.decl *totalTraded(n: uint)
+totalTraded(n) :- n = sum t: tradeVolume(t).

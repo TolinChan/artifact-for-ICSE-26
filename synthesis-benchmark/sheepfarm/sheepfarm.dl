@@ -1,0 +1,44 @@
+
+// Parameters
+.decl *totalVillages(n: uint)
+.decl *totalSheeps(n: uint)
+.decl *totalInvested(n: uint)
+.decl villageExists(p: address, b: bool)[0]
+.decl neighborExists(p: address, b: bool)[0]
+.decl gemsBalance(p: address, n: uint)[0]
+.decl moneyBalance(p: address, n: uint)[0]
+.decl sheepsCount(p: address, n: uint)[0]
+.decl warehouseLevel(p: address, n: uint)[0]
+.decl truckLevel(p: address, n: uint)[0]
+.decl farmLevel(p: address, n: uint)[0]
+
+// Transactions
+.decl register(p: address, neighbor: address)
+.decl buyGems(p: address, amount: uint)
+.decl convertWoolToGems(p: address, amount: uint)
+.decl collectMoney(p: address)
+.decl upgradeVillage(p: address, farmId: uint)
+.decl upgradeWarehouse(p: address)
+.decl upgradeTruck(p: address)
+.decl sellVillage(p: address)
+.decl withdrawMoney(p: address, amount: uint)
+
+// Rules
+villageExists(p, true) :- register(p, _).
+neighborExists(n, true) :- register(_, n).
+totalVillages(n) :- n = count: villageExists(_, true).
+totalSheeps(n) :- n = sum s: sheepsCount(_, s).
+totalInvested(n) :- n = sum i: buyGems(_, i).
+
+// Gems and Money balance calculations
+gemsBalance(p, n) :- buyGems(p, g), n = sum g.
+moneyBalance(p, n) :- collectMoney(p), n = sum m.
+
+sheepsCount(p, s) :- upgradeVillage(p, _), s = sum n: upgradeVillage(p, n).
+warehouseLevel(p, l) :- upgradeWarehouse(p), l = count: upgradeWarehouse(p).
+truckLevel(p, l) :- upgradeTruck(p), l = count: upgradeTruck(p).
+farmLevel(p, l) :- upgradeVillage(p, _), l = count: upgradeVillage(p, _).
+
+// Total balances
+.decl *totalGems(n: uint)
+totalGems(s) :- s = sum n: gemsBalance(_, n).

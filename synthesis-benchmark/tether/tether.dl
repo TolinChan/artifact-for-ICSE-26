@@ -1,0 +1,56 @@
+
+// Parameters
+.decl *totalSupply(n: uint)
+.decl balanceOf(p: address, n: uint)[0]
+.decl isBlackListed(p: address, b: bool)[0]
+.decl rate(r: uint)
+.decl maxFee(m: uint)
+.decl constructor(n: uint)
+
+// Transactions
+.decl issue(p: address, amount: uint)
+.decl redeem(p: address, amount: uint)
+.decl transfer(from: address, to: address, amount: uint)
+.decl transferWithFee(from: address, to: address, fee: uint, amount: uint)
+.decl transferFromWithFee(from: address, to: address, spender: address, fee: uint, amount: uint)
+.decl transferFrom(from: address, to: address, spender: address, amount: uint)
+.decl destroyBlackFund(p: address, n: uint)
+.decl addBlackList(p: address)
+.decl increaseAllowance(p: address, s: address, n: uint)
+
+// Rules
+totalSupply(n) :- constructor(n).
+
+issue(p, n) :- issue(p, n).
+redeem(p, n) :- redeem(p, n).
+transfer(s, r, n) :- transfer(s, r, n).
+
+// Handling blacklisted accounts
+destroyBlackFund(p, n) :- destroyBlackFund(p, n).
+redeem(p, n) :- destroyBlackFund(p, n).
+
+addBlackList(p) :- addBlackList(p).
+isBlackListed(p, true) :- addBlackList(p).
+
+// Fee calculation in transfers
+transferWithFee(s, r, f, n) :- transfer(s, r, n), isBlackListed(s, false),
+                                rate(rt), maxFee(mf),
+                                f := min(rt * n / 10000, mf).
+
+// Token balance calculations
+.decl totalIssue(p: address, n: uint)[0]
+.decl totalRedeem(p: address, n: uint)[0]
+.decl totalOut(p: address, n: uint)[0]
+.decl totalIn(p: address, n: uint)[0]
+
+totalOut(p, s) :- transfer(p, _, _), s = sum n: transfer(p, _, n).
+totalIn(p, s) :- transfer(_, p, _), s = sum n: transfer(_, p, n).
+totalIssue(p, s) :- issue(p, _), s = sum n: issue(p, n).
+totalRedeem(p, s) :- redeem(p, _), s = sum n: redeem(p, n).
+balanceOf(p, s) :- totalIssue(p, n), totalRedeem(p, m), totalOut(p, o), totalIn(p, i), s := n + i - m - o.
+
+.decl *allIssue(n: uint)
+.decl *allRedeem(n: uint)
+allIssue(s) :- s = sum n: issue(_, n).
+allRedeem(s) :- s = sum n: redeem(_, n).
+totalSupply(n) :- allIssue(m), allRedeem(b), n := m - b.

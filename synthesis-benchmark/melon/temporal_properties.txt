@@ -1,0 +1,12 @@
+
+// Ensuring council address is always valid
+□(council(p) → p != 0)
+
+// Ensuring inflation minting only happens after the enabled date
+□(mintInflation() → now(t) ∧ t ≥ inflationEnableDate)
+
+// Ensuring total supply is non-decreasing
+□(totalSupply(n) ∧ totalMinted(m) → m ≥ n)
+
+// Ensuring minting occurs only at correct intervals
+□(mintInflation() → nextMintingTime(t) ∧ now(t1) → t1 ≥ t)

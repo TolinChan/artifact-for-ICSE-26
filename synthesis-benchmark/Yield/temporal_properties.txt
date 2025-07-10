@@ -1,0 +1,19 @@
+□(init(p) → state = 0)
+
+□(invest(p, pool) → state = 1)
+
+□(divest(p) → state = 2)
+
+□(eject(p) → state = 2)
+
+□(buyFYToken(p, fyTokenTo, baseTo) → state = 3)
+
+□(restart(p) → state = 4)
+
+□(invest(p, pool) → baseCached = 0)
+
+□(divest(p) → baseCached > 0)
+
+□(mintDivested(p, to) → state ≠ 2)
+
+□(burnDivested(p, to) → state ≠ 2)

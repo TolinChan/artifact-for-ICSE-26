@@ -1,0 +1,11 @@
+□(transferFrom(from, to, spender, value) → allowance(from, spender, a) ∧ a ≥ value)
+
+□(transfer(from, to, value) → balanceOf(from, b) ∧ b ≥ value)
+
+□(burn(p, amount) → balanceOf(p, b) ∧ b ≥ amount)
+
+□(swapAndLiquify(tokenAmount) → balanceOf(contract, c) ∧ c ≥ tokenAmount)
+
+□(transfer(from, to, value) → 
+    (_isPairs(from) → balanceOf(_destroyAddress, d) ∧ d' = d + value * 2 / 100) ∧
+    (_isPairs(to) → balanceOf(_destroyAddress, d) ∧ d' = d + value / 200))

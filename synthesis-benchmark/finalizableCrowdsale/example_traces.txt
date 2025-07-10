@@ -1,0 +1,23 @@
+
+// Trace 1: Mint, transfer, approve, and buy tokens
+mint(p=0x123456, amount=1000)@0;
+transfer(from=0x123456, to=0x654321, amount=500)@1;
+approve(owner=0x123456, spender=0xabcdef, amount=300)@2;
+transferFrom(from=0x123456, to=0x654321, spender=0xabcdef, amount=200)@3;
+buyToken(p=0x654321, amount=400)@4;
+
+// Trace 2: Burn, multiple transfers, and finalization
+mint(p=0x998877, amount=5000)@0;
+transfer(from=0x998877, to=0x112233, amount=1500)@1;
+burn(p=0x998877, amount=1000)@2;
+approve(owner=0x998877, spender=0x334455, amount=500)@3;
+transferFrom(from=0x998877, to=0x667788, spender=0x334455, amount=400)@4;
+finalize()@5;
+
+// Trace 3: High-value transactions, approvals, and finalization
+mint(p=0xabcdef, amount=3000)@0;
+approve(owner=0xabcdef, spender=0x554433, amount=2000)@1;
+transfer(from=0xabcdef, to=0x223344, amount=1000)@2;
+transferFrom(from=0xabcdef, to=0x778899, spender=0x554433, amount=1500)@3;
+buyToken(p=0x223344, amount=500)@4;
+finalize()@5;

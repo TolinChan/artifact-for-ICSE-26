@@ -1,0 +1,15 @@
+
+// Trace 1: Buying tokens
+buyTokens(p=0x123456, amount=500)@1;
+sellTokens(p=0x123456, amount=200)@2;
+claimCommunityTax(p=0x123456, amount=50)@3;
+
+// Trace 2: Selling and claiming dev tokens
+buyTokens(p=0xabcdef, amount=1000)@1;
+sellTokens(p=0xabcdef, amount=500)@2;
+claimDevToken(p=0xabcdef, amount=100)@3;
+
+// Trace 3: Buying, claiming taxes, and trading volume increase
+buyTokens(p=0x112233, amount=2000)@1;
+claimDevTax(p=0x112233, amount=150)@2;
+sellTokens(p=0x112233, amount=1800)@3;

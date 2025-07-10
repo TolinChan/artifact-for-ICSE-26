@@ -1,0 +1,20 @@
+
+// Trace 1: Setting rates and buying tokens
+setInitialRate(n=1000)@0;
+setEndRate(n=500)@1;
+setBuyerRate(p=0x123456, n=700)@2;
+buyTokens(beneficiary=0x654321, weiAmount=10)@3;
+
+// Trace 2: Buying tokens with different rates
+setInitialRate(n=1200)@0;
+setEndRate(n=600)@1;
+setBuyerRate(p=0xabcdef, n=800)@2;
+buyTokens(beneficiary=0xabcdef, weiAmount=20)@3;
+buyTokens(beneficiary=0x998877, weiAmount=15)@4;
+
+// Trace 3: Finalization process
+setInitialRate(n=1500)@0;
+setEndRate(n=700)@1;
+buyTokens(beneficiary=0x112233, weiAmount=25)@2;
+buyTokens(beneficiary=0x334455, weiAmount=30)@3;
+finalization()@4;

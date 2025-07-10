@@ -1,0 +1,12 @@
+
+// Ensuring total balances do not exceed total supply
+□(totalSupply(n) ∧ balanceSum(s) → s ≤ n)
+
+// Ensuring allowance cannot be exceeded
+□(allowance(o, s, n) ∧ transferFrom(o, r, s, m) → m ≤ n)
+
+// Ensuring no negative balances
+□(balanceOf(p, n) → n ≥ 0)
+
+// Ensuring admin change only occurs once
+□(onceAdminChange(true) → ¬♦(changeAdmin(_)))

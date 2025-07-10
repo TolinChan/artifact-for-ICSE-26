@@ -1,0 +1,16 @@
+□(transferToken(t, from, to, n) → tokenBalance(to, b) → b > •b)
+□(transferLP(from, to, n) → lpBalance(to, b) → b > •b)
+
+□(transferToken(t, from, to, n) → tokenBalance(from, b) → b < •b)
+□(transferLP(from, to, n) → lpBalance(from, b) → b < •b)
+
+□(stakeNFT(p, id) → nftBalance(p, b) → b < •b)
+□(unstakeNFT(p, id) → nftBalance(p, b) → b > •b)
+
+□(nftRewardDistribution(p, n) → tokenBalance(p, b) → b > •b)
+
+□(transferToken(t, from, to, n) → taxLp(tax) ∧ taxNFT(taxN) ∧ tokenBalance(from, b) → b == •b - (n + tax + taxN))
+
+□(isDividendExempt(p) → transferToken(_, p, _, _) → false)
+
+□(isIdoUser(p) → removeLiquidity(p, _) → false)

@@ -1,0 +1,86 @@
+// Parameters
+.decl *owner(p: address)
+.decl *exchange(p: address)
+.decl *feeCollector(p: address)
+.decl constructor()
+
+// Balances
+.decl nativeBalance(p: address, n: uint)[0]
+.decl pendingNativeBalance(p: address, n: uint)[0]
+.decl tokenBalance(t: address, p: address, n: uint)[0]
+.decl pendingTokenBalance(t: address, p: address, n: uint)[0]
+
+// Locking Mechanism
+.decl lockAccount(p: address, alt: address, duration: uint)
+.decl unlockAccount(p: address)
+.decl extendLock(p: address, duration: uint)
+
+// Deposit & Withdraw
+.decl depositNative(p: address, amount: uint)
+.decl depositToken(p: address, t: address, amount: uint)
+.decl withdrawNative(p: address, amount: uint)
+.decl withdrawToken(p: address, t: address, amount: uint)
+
+// Transfer
+.decl transferNative(from: address, to: address, amount: uint)
+.decl transferToken(t: address, from: address, to: address, amount: uint)
+.decl transferPendingNative(from: address, to: address, amount: uint)
+.decl transferPendingToken(t: address, from: address, to: address, amount: uint)
+
+// Hold & Release
+.decl holdNative(p: address, amount: uint)
+.decl releaseNative(p: address, amount: uint)
+.decl holdToken(t: address, p: address, amount: uint)
+.decl releaseToken(t: address, p: address, amount: uint)
+
+// Rules
+owner(s) :- constructor(), msgSender(s).
+exchange(s) :- constructor(), msgSender(s).
+feeCollector(s) :- constructor(), msgSender(s).
+
+depositNative(p, n) :- msgSender(p), nativeBalance(p, b), b := b + n.
+depositToken(p, t, n) :- msgSender(p), tokenBalance(t, p, b), b := b + n.
+
+withdrawNative(p, n) :-
+    msgSender(p),
+    nativeBalance(p, b),
+    b >= n,
+    nativeBalance(p, b - n).
+
+withdrawToken(p, t, n) :-
+    msgSender(p),
+    tokenBalance(t, p, b),
+    b >= n,
+    tokenBalance(t, p, b - n).
+
+transferNative(from, to, n) :-
+    msgSender(from),
+    nativeBalance(from, b),
+    b >= n,
+    nativeBalance(from, b - n),
+    nativeBalance(to, b2),
+    nativeBalance(to, b2 + n).
+
+transferToken(t, from, to, n) :-
+    msgSender(from),
+    tokenBalance(t, from, b),
+    b >= n,
+    tokenBalance(t, from, b - n),
+    tokenBalance(t, to, b2),
+    tokenBalance(t, to, b2 + n).
+
+holdNative(p, n) :-
+    msgSender(exchange),
+    nativeBalance(p, b),
+    b >= n,
+    nativeBalance(p, b - n),
+    pendingNativeBalance(p, pn),
+    pendingNativeBalance(p, pn + n).
+
+releaseNative(p, n) :-
+    msgSender(exchange),
+    pendingNativeBalance(p, pn),
+    pn >= n,
+    pendingNativeBalance(p, pn - n),
+    nativeBalance(p, b),
+    nativeBalance(p, b + n).

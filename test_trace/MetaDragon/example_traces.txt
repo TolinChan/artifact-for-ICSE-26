@@ -1,0 +1,1003 @@
+// Trace 1: 10 different operations
+mint(account=0xC3, amount=906)@0;
+isAuthorized(param1=0xB2, param2=0xA1, param3=8)@1;
+safeTransferFrom(param1=0xB2, param2=0xD4, param3=11)@2;
+approve(owner=0xD4, spender=0xB2, amount=195)@3;
+transferFrom(sender=0xD4, from=0xB2, to=31, value=50)@4;
+isValidTokenId(param1=87)@5;
+approve(owner=0xD4, spender=0xB2, amount=100)@6;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@7;
+balanceOf(account=0xA1)@8;
+ownerOf(param1=31)@9;
+approve(owner=0xC3, spender=0xD4, amount=100)@10;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@11;
+transfer(from=0xA1, to=0xC3, value=1475)@12;
+burn(account=0xD4, amount=1742)@13;
+
+// Trace 2: 11 different operations
+transferFrom(sender=0xD4, from=0xB2, to=15, value=50)@0;
+transfer(from=0xC3, to=0xA1, value=30)@1;
+transfer(from=0xA1, to=0xB2, value=20)@2;
+transfer(from=0xB2, to=0xC3, value=10)@3;
+approve(owner=0xB2, spender=0xD4, amount=141)@4;
+ownerOf(param1=87)@5;
+balanceOf(account=0xD4)@6;
+setFeeTo(param1=0xC3)@7;
+safeTransferFrom(param1=0xA1, param2=0xB2, param3=58)@8;
+mint(account=0xC3, amount=858)@9;
+isValidTokenId(param1=4)@10;
+isAuthorized(param1=0xC3, param2=0xA1, param3=62)@11;
+mint(account=0xC3, amount=500)@12;
+transfer(from=0xA1, to=0xC3, value=200)@13;
+burn(account=0xA1, amount=100)@14;
+
+// Trace 3: 8 different operations
+transferFrom(sender=0xC3, from=0xD4, to=25, value=50)@0;
+isAuthorized(param1=0xD4, param2=0xD4, param3=85)@1;
+transfer(from=0xC3, to=0xA1, value=30)@2;
+transfer(from=0xD4, to=0xC3, value=20)@3;
+ownerOf(param1=71)@4;
+balanceOf(account=0xC3)@5;
+approve(owner=0xD4, spender=0xA1, amount=85)@6;
+setFeeTo(param1=0xA1)@7;
+approve(owner=0xB2, spender=0xD4, amount=100)@8;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@9;
+mint(account=0xB2, amount=674)@10;
+
+// Trace 4: 11 different operations
+ownerOf(param1=67)@0;
+mint(account=0xD4, amount=810)@1;
+setFeeTo(param1=0xC3)@2;
+mint(account=0xD4, amount=500)@3;
+transfer(from=0xC3, to=0xD4, value=200)@4;
+burn(account=0xB2, amount=100)@5;
+transferFrom(sender=0xB2, from=0xD4, to=37, value=50)@6;
+approve(owner=0xB2, spender=0xD4, amount=64)@7;
+transfer(from=0xB2, to=0xD4, value=30)@8;
+isAuthorized(param1=0xD4, param2=0xD4, param3=92)@9;
+safeTransferFrom(param1=0xA1, param2=0xA1, param3=37)@10;
+approve(owner=0xA1, spender=0xD4, amount=100)@11;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@12;
+isValidTokenId(param1=63)@13;
+mint(account=0xA1, amount=500)@14;
+burn(account=0xD4, amount=100)@15;
+balanceOf(account=0xD4)@16;
+
+// Trace 5: 11 different operations
+burn(account=0xA1, amount=515)@0;
+setFeeTo(param1=0xA1)@1;
+mint(account=0xB2, amount=500)@2;
+transfer(from=0xB2, to=0xD4, value=200)@3;
+burn(account=0xD4, amount=100)@4;
+isAuthorized(param1=0xB2, param2=0xD4, param3=88)@5;
+transfer(from=0xC3, to=0xD4, value=30)@6;
+transfer(from=0xC3, to=0xA1, value=10)@7;
+ownerOf(param1=61)@8;
+transferFrom(sender=0xD4, from=0xB2, to=39, value=50)@9;
+balanceOf(account=0xD4)@10;
+approve(owner=0xD4, spender=0xC3, amount=55)@11;
+safeTransferFrom(param1=0xB2, param2=0xA1, param3=15)@12;
+isValidTokenId(param1=29)@13;
+transferFrom(sender=0xA1, from=0xD4, to=17, value=50)@14;
+
+// Trace 6: 6 different operations
+mint(account=0xB2, amount=207)@0;
+transfer(from=0xC3, to=0xD4, value=6183)@1;
+mint(account=0xA1, amount=500)@2;
+transfer(from=0xD4, to=0xA1, value=200)@3;
+burn(account=0xB2, amount=100)@4;
+balanceOf(account=0xC3)@5;
+ownerOf(param1=49)@6;
+mint(account=0xA1, amount=500)@7;
+burn(account=0xB2, amount=100)@8;
+approve(owner=0xC3, spender=0xA1, amount=187)@9;
+
+// Trace 7: 11 different operations
+ownerOf(param1=73)@0;
+setFeeTo(param1=0xA1)@1;
+approve(owner=0xB2, spender=0xC3, amount=100)@2;
+mint(account=0xC3, amount=500)@3;
+transfer(from=0xC3, to=0xD4, value=200)@4;
+burn(account=0xA1, amount=100)@5;
+isAuthorized(param1=0xA1, param2=0xA1, param3=84)@6;
+transferFrom(sender=0xA1, from=0xD4, to=12, value=50)@7;
+approve(owner=0xC3, spender=0xA1, amount=100)@8;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@9;
+balanceOf(account=0xB2)@10;
+safeTransferFrom(param1=0xC3, param2=0xC3, param3=39)@11;
+approve(owner=0xC3, spender=0xA1, amount=100)@12;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@13;
+isValidTokenId(param1=15)@14;
+
+// Trace 8: 11 different operations
+mint(account=0xD4, amount=389)@0;
+transfer(from=0xD4, to=0xA1, value=4899)@1;
+transfer(from=0xC3, to=0xA1, value=20)@2;
+ownerOf(param1=19)@3;
+safeTransferFrom(param1=0xC3, param2=0xD4, param3=33)@4;
+transferFrom(sender=0xA1, from=0xD4, to=7, value=50)@5;
+approve(owner=0xC3, spender=0xB2, amount=26)@6;
+burn(account=0xA1, amount=1920)@7;
+isValidTokenId(param1=93)@8;
+isAuthorized(param1=0xB2, param2=0xA1, param3=24)@9;
+transfer(from=0xD4, to=0xA1, value=30)@10;
+transfer(from=0xD4, to=0xB2, value=20)@11;
+balanceOf(account=0xC3)@12;
+mint(account=0xA1, amount=500)@13;
+transfer(from=0xC3, to=0xD4, value=200)@14;
+burn(account=0xA1, amount=100)@15;
+setFeeTo(param1=0xA1)@16;
+
+// Trace 9: 8 different operations
+burn(account=0xB2, amount=644)@0;
+mint(account=0xB2, amount=500)@1;
+transfer(from=0xC3, to=0xA1, value=200)@2;
+burn(account=0xA1, amount=100)@3;
+approve(owner=0xB2, spender=0xD4, amount=198)@4;
+ownerOf(param1=39)@5;
+balanceOf(account=0xB2)@6;
+approve(owner=0xA1, spender=0xA1, amount=100)@7;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@8;
+setFeeTo(param1=0xC3)@9;
+
+// Trace 10: 9 different operations
+transfer(from=0xB2, to=0xA1, value=254)@0;
+mint(account=0xD4, amount=500)@1;
+burn(account=0xD4, amount=100)@2;
+approve(owner=0xC3, spender=0xD4, amount=137)@3;
+transferFrom(sender=0xC3, from=0xB2, to=4, value=50)@4;
+safeTransferFrom(param1=0xD4, param2=0xB2, param3=60)@5;
+isValidTokenId(param1=3)@6;
+transfer(from=0xB2, to=0xA1, value=30)@7;
+transfer(from=0xB2, to=0xC3, value=20)@8;
+transfer(from=0xA1, to=0xD4, value=10)@9;
+ownerOf(param1=35)@10;
+isAuthorized(param1=0xA1, param2=0xC3, param3=1)@11;
+approve(owner=0xD4, spender=0xD4, amount=100)@12;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@13;
+
+// Trace 11: 11 different operations
+balanceOf(account=0xC3)@0;
+approve(owner=0xB2, spender=0xD4, amount=100)@1;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@2;
+transfer(from=0xC3, to=0xD4, value=227)@3;
+ownerOf(param1=88)@4;
+mint(account=0xD4, amount=625)@5;
+isAuthorized(param1=0xC3, param2=0xB2, param3=6)@6;
+mint(account=0xB2, amount=500)@7;
+transfer(from=0xC3, to=0xA1, value=200)@8;
+burn(account=0xC3, amount=100)@9;
+setFeeTo(param1=0xB2)@10;
+safeTransferFrom(param1=0xA1, param2=0xB2, param3=62)@11;
+transfer(from=0xA1, to=0xD4, value=30)@12;
+transfer(from=0xC3, to=0xA1, value=20)@13;
+transfer(from=0xC3, to=0xD4, value=10)@14;
+isValidTokenId(param1=19)@15;
+
+// Trace 12: 7 different operations
+transferFrom(sender=0xB2, from=0xC3, to=22, value=50)@0;
+ownerOf(param1=35)@1;
+balanceOf(account=0xD4)@2;
+approve(owner=0xC3, spender=0xD4, amount=100)@3;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@4;
+safeTransferFrom(param1=0xA1, param2=0xA1, param3=91)@5;
+mint(account=0xC3, amount=822)@6;
+transfer(from=0xA1, to=0xB2, value=30)@7;
+transfer(from=0xD4, to=0xA1, value=20)@8;
+transfer(from=0xC3, to=0xB2, value=10)@9;
+
+// Trace 13: 11 different operations
+ownerOf(param1=49)@0;
+isValidTokenId(param1=78)@1;
+transfer(from=0xC3, to=0xA1, value=30)@2;
+transfer(from=0xB2, to=0xA1, value=20)@3;
+transfer(from=0xB2, to=0xA1, value=10)@4;
+transferFrom(sender=0xC3, from=0xD4, to=30, value=50)@5;
+mint(account=0xB2, amount=311)@6;
+approve(owner=0xD4, spender=0xC3, amount=169)@7;
+safeTransferFrom(param1=0xC3, param2=0xC3, param3=76)@8;
+balanceOf(account=0xD4)@9;
+setFeeTo(param1=0xC3)@10;
+burn(account=0xA1, amount=521)@11;
+isAuthorized(param1=0xD4, param2=0xA1, param3=37)@12;
+approve(owner=0xD4, spender=0xA1, amount=96)@13;
+balanceOf(account=0xB2)@14;
+
+// Trace 14: 11 different operations
+safeTransferFrom(param1=0xC3, param2=0xC3, param3=34)@0;
+ownerOf(param1=23)@1;
+isAuthorized(param1=0xC3, param2=0xA1, param3=67)@2;
+approve(owner=0xB2, spender=0xA1, amount=188)@3;
+transfer(from=0xA1, to=0xC3, value=30)@4;
+transfer(from=0xC3, to=0xA1, value=20)@5;
+transfer(from=0xD4, to=0xC3, value=10)@6;
+transferFrom(sender=0xB2, from=0xC3, to=10, value=50)@7;
+burn(account=0xB2, amount=451)@8;
+isValidTokenId(param1=44)@9;
+balanceOf(account=0xD4)@10;
+mint(account=0xC3, amount=251)@11;
+approve(owner=0xB2, spender=0xA1, amount=100)@12;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@13;
+setFeeTo(param1=0xA1)@14;
+safeTransferFrom(param1=0xA1, param2=0xD4, param3=99)@15;
+
+// Trace 15: 7 different operations
+setFeeTo(param1=0xD4)@0;
+transferFrom(sender=0xD4, from=0xA1, to=48, value=50)@1;
+mint(account=0xA1, amount=272)@2;
+safeTransferFrom(param1=0xD4, param2=0xC3, param3=9)@3;
+approve(owner=0xD4, spender=0xA1, amount=72)@4;
+approve(owner=0xC3, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@6;
+transfer(from=0xB2, to=0xD4, value=922)@7;
+balanceOf(account=0xC3)@8;
+approve(owner=0xB2, spender=0xC3, amount=100)@9;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@10;
+
+// Trace 16: 9 different operations
+balanceOf(account=0xB2)@0;
+approve(owner=0xC3, spender=0xB2, amount=100)@1;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@2;
+mint(account=0xD4, amount=801)@3;
+transfer(from=0xA1, to=0xB2, value=30)@4;
+transfer(from=0xB2, to=0xD4, value=10)@5;
+isValidTokenId(param1=57)@6;
+approve(owner=0xD4, spender=0xA1, amount=100)@7;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@8;
+safeTransferFrom(param1=0xC3, param2=0xB2, param3=80)@9;
+ownerOf(param1=11)@10;
+isAuthorized(param1=0xB2, param2=0xA1, param3=71)@11;
+
+// Trace 17: 11 different operations
+transferFrom(sender=0xD4, from=0xC3, to=80, value=50)@0;
+mint(account=0xD4, amount=500)@1;
+transfer(from=0xA1, to=0xC3, value=200)@2;
+burn(account=0xB2, amount=100)@3;
+approve(owner=0xC3, spender=0xB2, amount=29)@4;
+mint(account=0xD4, amount=500)@5;
+transfer(from=0xB2, to=0xA1, value=200)@6;
+burn(account=0xC3, amount=100)@7;
+ownerOf(param1=90)@8;
+isValidTokenId(param1=16)@9;
+balanceOf(account=0xB2)@10;
+isAuthorized(param1=0xD4, param2=0xD4, param3=24)@11;
+setFeeTo(param1=0xC3)@12;
+safeTransferFrom(param1=0xA1, param2=0xB2, param3=53)@13;
+mint(account=0xC3, amount=768)@14;
+
+// Trace 18: 11 different operations
+burn(account=0xC3, amount=1024)@0;
+approve(owner=0xB2, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@2;
+mint(account=0xC3, amount=986)@3;
+mint(account=0xB2, amount=500)@4;
+transfer(from=0xC3, to=0xA1, value=200)@5;
+burn(account=0xA1, amount=100)@6;
+setFeeTo(param1=0xB2)@7;
+balanceOf(account=0xB2)@8;
+ownerOf(param1=36)@9;
+safeTransferFrom(param1=0xB2, param2=0xA1, param3=58)@10;
+isAuthorized(param1=0xD4, param2=0xA1, param3=58)@11;
+isValidTokenId(param1=68)@12;
+
+// Trace 19: 9 different operations
+mint(account=0xA1, amount=933)@0;
+isValidTokenId(param1=15)@1;
+transfer(from=0xB2, to=0xC3, value=182)@2;
+setFeeTo(param1=0xB2)@3;
+transfer(from=0xD4, to=0xB2, value=20)@4;
+approve(owner=0xA1, spender=0xB2, amount=166)@5;
+safeTransferFrom(param1=0xB2, param2=0xD4, param3=20)@6;
+transfer(from=0xC3, to=0xB2, value=30)@7;
+burn(account=0xC3, amount=1107)@8;
+ownerOf(param1=10)@9;
+mint(account=0xA1, amount=500)@10;
+burn(account=0xB2, amount=100)@11;
+balanceOf(account=0xC3)@12;
+
+// Trace 20: 11 different operations
+balanceOf(account=0xD4)@0;
+mint(account=0xD4, amount=500)@1;
+transfer(from=0xD4, to=0xA1, value=200)@2;
+burn(account=0xD4, amount=100)@3;
+ownerOf(param1=48)@4;
+setFeeTo(param1=0xD4)@5;
+isValidTokenId(param1=36)@6;
+transferFrom(sender=0xA1, from=0xD4, to=31, value=50)@7;
+approve(owner=0xB2, spender=0xC3, amount=77)@8;
+mint(account=0xD4, amount=500)@9;
+transfer(from=0xC3, to=0xD4, value=200)@10;
+burn(account=0xC3, amount=100)@11;
+safeTransferFrom(param1=0xA1, param2=0xC3, param3=56)@12;
+isAuthorized(param1=0xA1, param2=0xC3, param3=60)@13;
+
+// Trace 21: 9 different operations
+transferFrom(sender=0xA1, from=0xD4, to=1, value=50)@0;
+transfer(from=0xC3, to=0xA1, value=1452)@1;
+transfer(from=0xB2, to=0xD4, value=10)@2;
+approve(owner=0xC3, spender=0xA1, amount=92)@3;
+mint(account=0xA1, amount=900)@4;
+approve(owner=0xB2, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@6;
+safeTransferFrom(param1=0xC3, param2=0xA1, param3=96)@7;
+burn(account=0xB2, amount=182)@8;
+isValidTokenId(param1=90)@9;
+ownerOf(param1=16)@10;
+approve(owner=0xD4, spender=0xA1, amount=100)@11;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@12;
+setFeeTo(param1=0xA1)@13;
+transfer(from=0xB2, to=0xC3, value=30)@14;
+transfer(from=0xC3, to=0xA1, value=20)@15;
+transfer(from=0xD4, to=0xB2, value=10)@16;
+
+// Trace 22: 10 different operations
+mint(account=0xC3, amount=682)@0;
+approve(owner=0xB2, spender=0xD4, amount=100)@1;
+balanceOf(account=0xD4)@2;
+isAuthorized(param1=0xD4, param2=0xC3, param3=9)@3;
+transfer(from=0xA1, to=0xC3, value=3496)@4;
+transferFrom(sender=0xB2, from=0xD4, to=29, value=50)@5;
+mint(account=0xC3, amount=500)@6;
+transfer(from=0xC3, to=0xA1, value=200)@7;
+burn(account=0xA1, amount=100)@8;
+isValidTokenId(param1=94)@9;
+safeTransferFrom(param1=0xD4, param2=0xA1, param3=41)@10;
+mint(account=0xD4, amount=500)@11;
+transfer(from=0xA1, to=0xD4, value=200)@12;
+burn(account=0xD4, amount=100)@13;
+setFeeTo(param1=0xD4)@14;
+
+// Trace 23: 11 different operations
+transfer(from=0xD4, to=0xC3, value=5402)@0;
+mint(account=0xB2, amount=147)@1;
+setFeeTo(param1=0xC3)@2;
+isAuthorized(param1=0xB2, param2=0xD4, param3=96)@3;
+transferFrom(sender=0xD4, from=0xC3, to=27, value=50)@4;
+isValidTokenId(param1=24)@5;
+ownerOf(param1=58)@6;
+balanceOf(account=0xA1)@7;
+mint(account=0xD4, amount=500)@8;
+transfer(from=0xC3, to=0xB2, value=200)@9;
+burn(account=0xD4, amount=100)@10;
+safeTransferFrom(param1=0xC3, param2=0xA1, param3=7)@11;
+approve(owner=0xD4, spender=0xB2, amount=200)@12;
+
+// Trace 24: 10 different operations
+transfer(from=0xC3, to=0xD4, value=6101)@0;
+ownerOf(param1=56)@1;
+isValidTokenId(param1=13)@2;
+transfer(from=0xB2, to=0xD4, value=30)@3;
+transfer(from=0xC3, to=0xB2, value=20)@4;
+transfer(from=0xD4, to=0xB2, value=10)@5;
+mint(account=0xA1, amount=161)@6;
+isAuthorized(param1=0xB2, param2=0xA1, param3=83)@7;
+approve(owner=0xC3, spender=0xB2, amount=180)@8;
+balanceOf(account=0xB2)@9;
+transferFrom(sender=0xD4, from=0xB2, to=57, value=50)@10;
+mint(account=0xD4, amount=500)@11;
+transfer(from=0xD4, to=0xC3, value=200)@12;
+burn(account=0xC3, amount=100)@13;
+setFeeTo(param1=0xA1)@14;
+
+// Trace 25: 11 different operations
+safeTransferFrom(param1=0xB2, param2=0xA1, param3=5)@0;
+mint(account=0xC3, amount=500)@1;
+transfer(from=0xC3, to=0xA1, value=200)@2;
+burn(account=0xC3, amount=100)@3;
+setFeeTo(param1=0xB2)@4;
+transferFrom(sender=0xB2, from=0xA1, to=46, value=50)@5;
+mint(account=0xC3, amount=500)@6;
+transfer(from=0xD4, to=0xB2, value=200)@7;
+burn(account=0xD4, amount=100)@8;
+isAuthorized(param1=0xC3, param2=0xC3, param3=73)@9;
+transfer(from=0xC3, to=0xA1, value=10)@10;
+balanceOf(account=0xB2)@11;
+ownerOf(param1=100)@12;
+mint(account=0xC3, amount=500)@13;
+transfer(from=0xB2, to=0xD4, value=200)@14;
+burn(account=0xD4, amount=100)@15;
+isValidTokenId(param1=45)@16;
+approve(owner=0xD4, spender=0xA1, amount=100)@17;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@18;
+
+// Trace 26: 11 different operations
+balanceOf(account=0xA1)@0;
+transferFrom(sender=0xB2, from=0xD4, to=31, value=50)@1;
+transfer(from=0xB2, to=0xC3, value=20)@2;
+transfer(from=0xC3, to=0xD4, value=10)@3;
+ownerOf(param1=14)@4;
+safeTransferFrom(param1=0xC3, param2=0xC3, param3=72)@5;
+mint(account=0xA1, amount=272)@6;
+approve(owner=0xD4, spender=0xC3, amount=27)@7;
+setFeeTo(param1=0xB2)@8;
+isAuthorized(param1=0xD4, param2=0xA1, param3=48)@9;
+mint(account=0xA1, amount=500)@10;
+transfer(from=0xA1, to=0xD4, value=200)@11;
+burn(account=0xD4, amount=100)@12;
+isValidTokenId(param1=56)@13;
+approve(owner=0xB2, spender=0xA1, amount=100)@14;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@15;
+transfer(from=0xA1, to=0xB2, value=2316)@16;
+transfer(from=0xB2, to=0xD4, value=1669)@17;
+transferFrom(sender=0xD4, from=0xB2, to=56, value=50)@18;
+
+// Trace 27: 9 different operations
+mint(account=0xA1, amount=189)@0;
+ownerOf(param1=97)@1;
+safeTransferFrom(param1=0xA1, param2=0xA1, param3=29)@2;
+isValidTokenId(param1=76)@3;
+isAuthorized(param1=0xA1, param2=0xD4, param3=17)@4;
+transfer(from=0xC3, to=0xD4, value=30)@5;
+transfer(from=0xA1, to=0xB2, value=20)@6;
+balanceOf(account=0xB2)@7;
+approve(owner=0xC3, spender=0xD4, amount=188)@8;
+transferFrom(sender=0xB2, from=0xA1, to=2, value=50)@9;
+
+// Trace 28: 11 different operations
+transfer(from=0xA1, to=0xD4, value=274)@0;
+isAuthorized(param1=0xC3, param2=0xB2, param3=35)@1;
+burn(account=0xB2, amount=587)@2;
+isValidTokenId(param1=10)@3;
+setFeeTo(param1=0xD4)@4;
+approve(owner=0xA1, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@6;
+mint(account=0xC3, amount=696)@7;
+transfer(from=0xA1, to=0xD4, value=30)@8;
+transfer(from=0xC3, to=0xD4, value=20)@9;
+safeTransferFrom(param1=0xA1, param2=0xD4, param3=76)@10;
+transfer(from=0xA1, to=0xC3, value=30)@11;
+transfer(from=0xB2, to=0xA1, value=20)@12;
+transfer(from=0xC3, to=0xB2, value=10)@13;
+ownerOf(param1=97)@14;
+balanceOf(account=0xB2)@15;
+mint(account=0xD4, amount=500)@16;
+transfer(from=0xD4, to=0xA1, value=200)@17;
+burn(account=0xB2, amount=100)@18;
+transfer(from=0xB2, to=0xC3, value=870)@19;
+
+// Trace 29: 11 different operations
+burn(account=0xA1, amount=864)@0;
+ownerOf(param1=26)@1;
+transferFrom(sender=0xB2, from=0xD4, to=16, value=50)@2;
+mint(account=0xC3, amount=500)@3;
+transfer(from=0xB2, to=0xC3, value=200)@4;
+burn(account=0xC3, amount=100)@5;
+approve(owner=0xD4, spender=0xB2, amount=17)@6;
+isAuthorized(param1=0xD4, param2=0xA1, param3=71)@7;
+safeTransferFrom(param1=0xA1, param2=0xA1, param3=12)@8;
+transfer(from=0xC3, to=0xD4, value=30)@9;
+transfer(from=0xB2, to=0xA1, value=10)@10;
+setFeeTo(param1=0xD4)@11;
+balanceOf(account=0xA1)@12;
+isValidTokenId(param1=54)@13;
+
+// Trace 30: 11 different operations
+safeTransferFrom(param1=0xA1, param2=0xC3, param3=9)@0;
+isValidTokenId(param1=87)@1;
+transferFrom(sender=0xA1, from=0xB2, to=17, value=50)@2;
+transfer(from=0xD4, to=0xC3, value=662)@3;
+mint(account=0xA1, amount=873)@4;
+ownerOf(param1=59)@5;
+approve(owner=0xD4, spender=0xA1, amount=170)@6;
+balanceOf(account=0xA1)@7;
+setFeeTo(param1=0xB2)@8;
+isAuthorized(param1=0xB2, param2=0xC3, param3=12)@9;
+burn(account=0xA1, amount=1716)@10;
+transferFrom(sender=0xD4, from=0xA1, to=17, value=50)@11;
+transfer(from=0xB2, to=0xD4, value=307)@12;
+transferFrom(sender=0xA1, from=0xD4, to=10, value=50)@13;
+
+// Trace 31: 8 different operations
+mint(account=0xB2, amount=243)@0;
+approve(owner=0xB2, spender=0xC3, amount=176)@1;
+transfer(from=0xA1, to=0xB2, value=30)@2;
+transfer(from=0xD4, to=0xC3, value=20)@3;
+transfer(from=0xC3, to=0xD4, value=10)@4;
+safeTransferFrom(param1=0xA1, param2=0xA1, param3=80)@5;
+balanceOf(account=0xA1)@6;
+transferFrom(sender=0xD4, from=0xA1, to=8, value=50)@7;
+burn(account=0xD4, amount=1801)@8;
+transfer(from=0xD4, to=0xA1, value=30)@9;
+transfer(from=0xD4, to=0xB2, value=20)@10;
+ownerOf(param1=61)@11;
+
+// Trace 32: 11 different operations
+mint(account=0xC3, amount=485)@0;
+ownerOf(param1=45)@1;
+approve(owner=0xD4, spender=0xC3, amount=130)@2;
+safeTransferFrom(param1=0xB2, param2=0xB2, param3=70)@3;
+transfer(from=0xC3, to=0xA1, value=4907)@4;
+isAuthorized(param1=0xA1, param2=0xD4, param3=44)@5;
+transfer(from=0xD4, to=0xB2, value=30)@6;
+transfer(from=0xB2, to=0xC3, value=20)@7;
+burn(account=0xB2, amount=130)@8;
+setFeeTo(param1=0xC3)@9;
+transferFrom(sender=0xC3, from=0xD4, to=94, value=50)@10;
+balanceOf(account=0xC3)@11;
+transfer(from=0xB2, to=0xD4, value=20)@12;
+transfer(from=0xB2, to=0xA1, value=10)@13;
+isValidTokenId(param1=31)@14;
+
+// Trace 33: 8 different operations
+approve(owner=0xC3, spender=0xB2, amount=134)@0;
+approve(owner=0xB2, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@2;
+balanceOf(account=0xC3)@3;
+transfer(from=0xD4, to=0xC3, value=30)@4;
+transfer(from=0xB2, to=0xD4, value=20)@5;
+transfer(from=0xC3, to=0xA1, value=10)@6;
+isAuthorized(param1=0xC3, param2=0xB2, param3=74)@7;
+approve(owner=0xD4, spender=0xD4, amount=100)@8;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@9;
+isValidTokenId(param1=49)@10;
+setFeeTo(param1=0xB2)@11;
+approve(owner=0xD4, spender=0xC3, amount=100)@12;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@13;
+mint(account=0xB2, amount=581)@14;
+approve(owner=0xB2, spender=0xD4, amount=100)@15;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@16;
+
+// Trace 34: 11 different operations
+burn(account=0xC3, amount=404)@0;
+balanceOf(account=0xC3)@1;
+mint(account=0xB2, amount=859)@2;
+safeTransferFrom(param1=0xC3, param2=0xC3, param3=54)@3;
+transferFrom(sender=0xA1, from=0xD4, to=3, value=50)@4;
+approve(owner=0xC3, spender=0xA1, amount=15)@5;
+transfer(from=0xD4, to=0xC3, value=30)@6;
+transfer(from=0xB2, to=0xD4, value=20)@7;
+isAuthorized(param1=0xB2, param2=0xA1, param3=50)@8;
+ownerOf(param1=28)@9;
+isValidTokenId(param1=51)@10;
+setFeeTo(param1=0xD4)@11;
+
+// Trace 35: 11 different operations
+mint(account=0xA1, amount=619)@0;
+setFeeTo(param1=0xB2)@1;
+approve(owner=0xC3, spender=0xA1, amount=75)@2;
+transfer(from=0xB2, to=0xC3, value=847)@3;
+transferFrom(sender=0xD4, from=0xA1, to=22, value=50)@4;
+burn(account=0xD4, amount=4613)@5;
+balanceOf(account=0xD4)@6;
+isValidTokenId(param1=69)@7;
+ownerOf(param1=81)@8;
+isAuthorized(param1=0xC3, param2=0xC3, param3=46)@9;
+safeTransferFrom(param1=0xC3, param2=0xC3, param3=92)@10;
+approve(owner=0xA1, spender=0xC3, amount=139)@11;
+transfer(from=0xA1, to=0xC3, value=20)@12;
+transfer(from=0xD4, to=0xA1, value=10)@13;
+mint(account=0xB2, amount=894)@14;
+transfer(from=0xB2, to=0xC3, value=530)@15;
+
+// Trace 36: 9 different operations
+setFeeTo(param1=0xC3)@0;
+burn(account=0xA1, amount=2575)@1;
+mint(account=0xD4, amount=500)@2;
+transfer(from=0xC3, to=0xA1, value=200)@3;
+burn(account=0xB2, amount=100)@4;
+isAuthorized(param1=0xD4, param2=0xC3, param3=71)@5;
+approve(owner=0xA1, spender=0xB2, amount=100)@6;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@7;
+safeTransferFrom(param1=0xD4, param2=0xD4, param3=26)@8;
+mint(account=0xB2, amount=500)@9;
+burn(account=0xB2, amount=100)@10;
+ownerOf(param1=57)@11;
+mint(account=0xA1, amount=500)@12;
+burn(account=0xA1, amount=100)@13;
+
+// Trace 37: 11 different operations
+isAuthorized(param1=0xD4, param2=0xB2, param3=7)@0;
+mint(account=0xD4, amount=273)@1;
+burn(account=0xC3, amount=1537)@2;
+approve(owner=0xA1, spender=0xC3, amount=100)@3;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@4;
+safeTransferFrom(param1=0xB2, param2=0xC3, param3=96)@5;
+approve(owner=0xC3, spender=0xB2, amount=100)@6;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@7;
+ownerOf(param1=60)@8;
+mint(account=0xC3, amount=500)@9;
+transfer(from=0xA1, to=0xC3, value=200)@10;
+burn(account=0xC3, amount=100)@11;
+setFeeTo(param1=0xA1)@12;
+approve(owner=0xC3, spender=0xA1, amount=100)@13;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@14;
+isValidTokenId(param1=51)@15;
+approve(owner=0xB2, spender=0xD4, amount=100)@16;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@17;
+balanceOf(account=0xC3)@18;
+
+// Trace 38: 8 different operations
+isAuthorized(param1=0xD4, param2=0xB2, param3=96)@0;
+transfer(from=0xA1, to=0xD4, value=20)@1;
+mint(account=0xD4, amount=659)@2;
+transfer(from=0xC3, to=0xD4, value=30)@3;
+transfer(from=0xD4, to=0xB2, value=20)@4;
+transfer(from=0xA1, to=0xD4, value=10)@5;
+approve(owner=0xD4, spender=0xB2, amount=139)@6;
+mint(account=0xA1, amount=500)@7;
+burn(account=0xD4, amount=100)@8;
+balanceOf(account=0xA1)@9;
+transfer(from=0xA1, to=0xB2, value=20)@10;
+transfer(from=0xB2, to=0xA1, value=10)@11;
+safeTransferFrom(param1=0xC3, param2=0xB2, param3=9)@12;
+isValidTokenId(param1=4)@13;
+
+// Trace 39: 11 different operations
+balanceOf(account=0xA1)@0;
+approve(owner=0xC3, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@2;
+ownerOf(param1=90)@3;
+isValidTokenId(param1=21)@4;
+mint(account=0xC3, amount=500)@5;
+transfer(from=0xD4, to=0xC3, value=200)@6;
+burn(account=0xD4, amount=100)@7;
+safeTransferFrom(param1=0xD4, param2=0xC3, param3=15)@8;
+setFeeTo(param1=0xD4)@9;
+mint(account=0xA1, amount=500)@10;
+transfer(from=0xB2, to=0xA1, value=200)@11;
+burn(account=0xB2, amount=100)@12;
+isAuthorized(param1=0xA1, param2=0xC3, param3=7)@13;
+isAuthorized(param1=0xD4, param2=0xA1, param3=85)@14;
+approve(owner=0xB2, spender=0xC3, amount=172)@15;
+ownerOf(param1=93)@16;
+mint(account=0xA1, amount=500)@17;
+transfer(from=0xD4, to=0xC3, value=200)@18;
+burn(account=0xD4, amount=100)@19;
+
+// Trace 40: 8 different operations
+transfer(from=0xD4, to=0xA1, value=2408)@0;
+setFeeTo(param1=0xC3)@1;
+approve(owner=0xD4, spender=0xB2, amount=109)@2;
+approve(owner=0xB2, spender=0xC3, amount=100)@3;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@4;
+safeTransferFrom(param1=0xA1, param2=0xA1, param3=25)@5;
+transfer(from=0xD4, to=0xC3, value=30)@6;
+transfer(from=0xB2, to=0xD4, value=20)@7;
+transfer(from=0xC3, to=0xB2, value=10)@8;
+isAuthorized(param1=0xC3, param2=0xB2, param3=77)@9;
+mint(account=0xC3, amount=215)@10;
+mint(account=0xB2, amount=500)@11;
+transfer(from=0xC3, to=0xB2, value=200)@12;
+burn(account=0xA1, amount=100)@13;
+
+// Trace 41: 9 different operations
+mint(account=0xA1, amount=272)@0;
+ownerOf(param1=77)@1;
+setFeeTo(param1=0xB2)@2;
+isAuthorized(param1=0xC3, param2=0xD4, param3=72)@3;
+transfer(from=0xC3, to=0xD4, value=30)@4;
+transfer(from=0xA1, to=0xC3, value=20)@5;
+transfer(from=0xA1, to=0xD4, value=10)@6;
+burn(account=0xA1, amount=2811)@7;
+transferFrom(sender=0xB2, from=0xC3, to=35, value=50)@8;
+safeTransferFrom(param1=0xC3, param2=0xA1, param3=24)@9;
+isValidTokenId(param1=90)@10;
+
+// Trace 42: 8 different operations
+transfer(from=0xB2, to=0xA1, value=10)@0;
+mint(account=0xC3, amount=287)@1;
+mint(account=0xA1, amount=500)@2;
+burn(account=0xA1, amount=100)@3;
+setFeeTo(param1=0xB2)@4;
+approve(owner=0xA1, spender=0xC3, amount=109)@5;
+mint(account=0xA1, amount=500)@6;
+burn(account=0xB2, amount=100)@7;
+balanceOf(account=0xC3)@8;
+safeTransferFrom(param1=0xD4, param2=0xA1, param3=99)@9;
+isAuthorized(param1=0xD4, param2=0xA1, param3=14)@10;
+
+// Trace 43: 9 different operations
+approve(owner=0xA1, spender=0xC3, amount=26)@0;
+ownerOf(param1=30)@1;
+approve(owner=0xA1, spender=0xA1, amount=100)@2;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@3;
+mint(account=0xA1, amount=869)@4;
+transfer(from=0xC3, to=0xB2, value=3384)@5;
+transfer(from=0xC3, to=0xD4, value=30)@6;
+transfer(from=0xC3, to=0xA1, value=20)@7;
+transfer(from=0xD4, to=0xA1, value=10)@8;
+balanceOf(account=0xC3)@9;
+approve(owner=0xC3, spender=0xC3, amount=100)@10;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@11;
+isAuthorized(param1=0xC3, param2=0xC3, param3=68)@12;
+safeTransferFrom(param1=0xC3, param2=0xD4, param3=39)@13;
+mint(account=0xC3, amount=500)@14;
+transfer(from=0xD4, to=0xA1, value=200)@15;
+burn(account=0xC3, amount=100)@16;
+
+// Trace 44: 8 different operations
+mint(account=0xA1, amount=406)@0;
+safeTransferFrom(param1=0xA1, param2=0xC3, param3=13)@1;
+isValidTokenId(param1=48)@2;
+balanceOf(account=0xB2)@3;
+mint(account=0xC3, amount=500)@4;
+transfer(from=0xA1, to=0xB2, value=200)@5;
+burn(account=0xC3, amount=100)@6;
+approve(owner=0xD4, spender=0xC3, amount=79)@7;
+transfer(from=0xB2, to=0xD4, value=10)@8;
+ownerOf(param1=74)@9;
+
+// Trace 45: 9 different operations
+isValidTokenId(param1=2)@0;
+burn(account=0xD4, amount=1029)@1;
+approve(owner=0xC3, spender=0xA1, amount=100)@2;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@3;
+isAuthorized(param1=0xA1, param2=0xC3, param3=35)@4;
+transfer(from=0xD4, to=0xB2, value=30)@5;
+transfer(from=0xD4, to=0xA1, value=20)@6;
+transfer(from=0xC3, to=0xD4, value=10)@7;
+setFeeTo(param1=0xD4)@8;
+safeTransferFrom(param1=0xD4, param2=0xD4, param3=19)@9;
+ownerOf(param1=5)@10;
+
+// Trace 46: 8 different operations
+transferFrom(sender=0xB2, from=0xA1, to=5, value=50)@0;
+isValidTokenId(param1=81)@1;
+approve(owner=0xA1, spender=0xD4, amount=68)@2;
+mint(account=0xC3, amount=741)@3;
+safeTransferFrom(param1=0xB2, param2=0xC3, param3=96)@4;
+mint(account=0xC3, amount=500)@5;
+transfer(from=0xB2, to=0xD4, value=200)@6;
+burn(account=0xD4, amount=100)@7;
+ownerOf(param1=60)@8;
+approve(owner=0xA1, spender=0xB2, amount=100)@9;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@10;
+
+// Trace 47: 8 different operations
+ownerOf(param1=73)@0;
+approve(owner=0xA1, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@2;
+transfer(from=0xC3, to=0xB2, value=958)@3;
+mint(account=0xB2, amount=319)@4;
+approve(owner=0xA1, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@6;
+burn(account=0xA1, amount=1023)@7;
+isAuthorized(param1=0xC3, param2=0xC3, param3=61)@8;
+balanceOf(account=0xB2)@9;
+approve(owner=0xC3, spender=0xB2, amount=100)@10;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@11;
+
+// Trace 48: 10 different operations
+setFeeTo(param1=0xA1)@0;
+safeTransferFrom(param1=0xD4, param2=0xB2, param3=70)@1;
+ownerOf(param1=25)@2;
+transfer(from=0xA1, to=0xD4, value=3599)@3;
+mint(account=0xA1, amount=500)@4;
+transfer(from=0xB2, to=0xA1, value=200)@5;
+burn(account=0xA1, amount=100)@6;
+approve(owner=0xC3, spender=0xD4, amount=182)@7;
+transferFrom(sender=0xD4, from=0xA1, to=10, value=50)@8;
+balanceOf(account=0xD4)@9;
+mint(account=0xB2, amount=500)@10;
+transfer(from=0xA1, to=0xB2, value=200)@11;
+burn(account=0xD4, amount=100)@12;
+isValidTokenId(param1=15)@13;
+mint(account=0xA1, amount=500)@14;
+transfer(from=0xD4, to=0xB2, value=200)@15;
+burn(account=0xD4, amount=100)@16;
+
+// Trace 49: 9 different operations
+burn(account=0xC3, amount=1320)@0;
+mint(account=0xA1, amount=210)@1;
+isValidTokenId(param1=55)@2;
+transfer(from=0xB2, to=0xC3, value=1736)@3;
+safeTransferFrom(param1=0xB2, param2=0xB2, param3=75)@4;
+transferFrom(sender=0xB2, from=0xA1, to=46, value=50)@5;
+mint(account=0xD4, amount=500)@6;
+burn(account=0xA1, amount=100)@7;
+ownerOf(param1=58)@8;
+approve(owner=0xD4, spender=0xA1, amount=198)@9;
+isAuthorized(param1=0xC3, param2=0xB2, param3=95)@10;
+
+// Trace 50: 11 different operations
+balanceOf(account=0xA1)@0;
+mint(account=0xD4, amount=428)@1;
+approve(owner=0xA1, spender=0xB2, amount=183)@2;
+transferFrom(sender=0xA1, from=0xB2, to=39, value=50)@3;
+ownerOf(param1=28)@4;
+safeTransferFrom(param1=0xD4, param2=0xA1, param3=20)@5;
+setFeeTo(param1=0xD4)@6;
+burn(account=0xC3, amount=1403)@7;
+isAuthorized(param1=0xA1, param2=0xA1, param3=42)@8;
+transfer(from=0xB2, to=0xC3, value=2322)@9;
+approve(owner=0xA1, spender=0xD4, amount=100)@10;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@11;
+isValidTokenId(param1=79)@12;
+approve(owner=0xC3, spender=0xD4, amount=100)@13;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@14;
+balanceOf(account=0xB2)@15;
+mint(account=0xC3, amount=500)@16;
+transfer(from=0xC3, to=0xD4, value=200)@17;
+burn(account=0xD4, amount=100)@18;
+
+// Trace 51: 10 different operations
+isAuthorized(param1=0xA1, param2=0xA1, param3=53)@0;
+mint(account=0xA1, amount=500)@1;
+transfer(from=0xA1, to=0xD4, value=200)@2;
+burn(account=0xA1, amount=100)@3;
+balanceOf(account=0xC3)@4;
+safeTransferFrom(param1=0xD4, param2=0xC3, param3=65)@5;
+mint(account=0xC3, amount=500)@6;
+transfer(from=0xA1, to=0xD4, value=200)@7;
+burn(account=0xC3, amount=100)@8;
+transferFrom(sender=0xB2, from=0xC3, to=28, value=50)@9;
+ownerOf(param1=28)@10;
+isValidTokenId(param1=45)@11;
+mint(account=0xA1, amount=500)@12;
+burn(account=0xD4, amount=100)@13;
+approve(owner=0xD4, spender=0xA1, amount=43)@14;
+mint(account=0xA1, amount=500)@15;
+burn(account=0xC3, amount=100)@16;
+
+// Trace 52: 8 different operations
+safeTransferFrom(param1=0xA1, param2=0xB2, param3=63)@0;
+mint(account=0xD4, amount=610)@1;
+transfer(from=0xA1, to=0xB2, value=20)@2;
+transfer(from=0xA1, to=0xB2, value=10)@3;
+transferFrom(sender=0xB2, from=0xD4, to=17, value=50)@4;
+transfer(from=0xB2, to=0xA1, value=30)@5;
+ownerOf(param1=48)@6;
+isAuthorized(param1=0xB2, param2=0xD4, param3=52)@7;
+balanceOf(account=0xA1)@8;
+burn(account=0xC3, amount=1817)@9;
+mint(account=0xA1, amount=500)@10;
+transfer(from=0xC3, to=0xA1, value=200)@11;
+burn(account=0xA1, amount=100)@12;
+
+// Trace 53: 10 different operations
+transferFrom(sender=0xC3, from=0xB2, to=3, value=50)@0;
+mint(account=0xA1, amount=986)@1;
+setFeeTo(param1=0xD4)@2;
+ownerOf(param1=2)@3;
+approve(owner=0xD4, spender=0xA1, amount=41)@4;
+safeTransferFrom(param1=0xA1, param2=0xD4, param3=49)@5;
+mint(account=0xC3, amount=500)@6;
+transfer(from=0xA1, to=0xD4, value=200)@7;
+burn(account=0xB2, amount=100)@8;
+isAuthorized(param1=0xA1, param2=0xA1, param3=31)@9;
+approve(owner=0xD4, spender=0xD4, amount=100)@10;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@11;
+isValidTokenId(param1=88)@12;
+
+// Trace 54: 11 different operations
+transferFrom(sender=0xC3, from=0xD4, to=36, value=50)@0;
+balanceOf(account=0xA1)@1;
+ownerOf(param1=92)@2;
+approve(owner=0xD4, spender=0xB2, amount=103)@3;
+isValidTokenId(param1=57)@4;
+transfer(from=0xB2, to=0xA1, value=890)@5;
+safeTransferFrom(param1=0xD4, param2=0xB2, param3=51)@6;
+setFeeTo(param1=0xB2)@7;
+burn(account=0xD4, amount=3458)@8;
+mint(account=0xA1, amount=450)@9;
+isAuthorized(param1=0xB2, param2=0xD4, param3=10)@10;
+transferFrom(sender=0xA1, from=0xD4, to=6, value=50)@11;
+isValidTokenId(param1=68)@12;
+
+// Trace 55: 11 different operations
+approve(owner=0xB2, spender=0xA1, amount=191)@0;
+transfer(from=0xB2, to=0xD4, value=20)@1;
+transferFrom(sender=0xC3, from=0xB2, to=10, value=50)@2;
+isValidTokenId(param1=86)@3;
+ownerOf(param1=69)@4;
+burn(account=0xA1, amount=2991)@5;
+balanceOf(account=0xA1)@6;
+mint(account=0xD4, amount=232)@7;
+safeTransferFrom(param1=0xA1, param2=0xA1, param3=23)@8;
+mint(account=0xB2, amount=500)@9;
+burn(account=0xA1, amount=100)@10;
+setFeeTo(param1=0xB2)@11;
+isAuthorized(param1=0xB2, param2=0xC3, param3=75)@12;
+balanceOf(account=0xD4)@13;
+
+// Trace 56: 9 different operations
+mint(account=0xA1, amount=837)@0;
+transfer(from=0xA1, to=0xC3, value=30)@1;
+transfer(from=0xC3, to=0xB2, value=20)@2;
+transfer(from=0xA1, to=0xB2, value=10)@3;
+safeTransferFrom(param1=0xA1, param2=0xC3, param3=13)@4;
+transfer(from=0xC3, to=0xB2, value=30)@5;
+transfer(from=0xA1, to=0xD4, value=20)@6;
+ownerOf(param1=79)@7;
+transferFrom(sender=0xA1, from=0xD4, to=45, value=50)@8;
+approve(owner=0xC3, spender=0xC3, amount=100)@9;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@10;
+setFeeTo(param1=0xB2)@11;
+isAuthorized(param1=0xB2, param2=0xD4, param3=28)@12;
+mint(account=0xA1, amount=500)@13;
+burn(account=0xB2, amount=100)@14;
+
+// Trace 57: 11 different operations
+safeTransferFrom(param1=0xC3, param2=0xD4, param3=99)@0;
+transferFrom(sender=0xC3, from=0xD4, to=24, value=50)@1;
+transfer(from=0xB2, to=0xD4, value=1427)@2;
+isValidTokenId(param1=2)@3;
+isAuthorized(param1=0xB2, param2=0xD4, param3=45)@4;
+ownerOf(param1=85)@5;
+burn(account=0xC3, amount=580)@6;
+approve(owner=0xD4, spender=0xA1, amount=100)@7;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@8;
+mint(account=0xD4, amount=233)@9;
+balanceOf(account=0xB2)@10;
+setFeeTo(param1=0xA1)@11;
+
+// Trace 58: 11 different operations
+mint(account=0xB2, amount=214)@0;
+isValidTokenId(param1=58)@1;
+transferFrom(sender=0xB2, from=0xA1, to=20, value=50)@2;
+approve(owner=0xC3, spender=0xD4, amount=14)@3;
+ownerOf(param1=97)@4;
+safeTransferFrom(param1=0xB2, param2=0xC3, param3=34)@5;
+transfer(from=0xD4, to=0xB2, value=1261)@6;
+isAuthorized(param1=0xA1, param2=0xA1, param3=17)@7;
+setFeeTo(param1=0xA1)@8;
+balanceOf(account=0xB2)@9;
+burn(account=0xB2, amount=16)@10;
+transferFrom(sender=0xD4, from=0xB2, to=24, value=50)@11;
+transferFrom(sender=0xB2, from=0xC3, to=11, value=50)@12;
+
+// Trace 59: 9 different operations
+isValidTokenId(param1=79)@0;
+approve(owner=0xB2, spender=0xA1, amount=69)@1;
+balanceOf(account=0xD4)@2;
+approve(owner=0xD4, spender=0xB2, amount=100)@3;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@4;
+ownerOf(param1=17)@5;
+transfer(from=0xA1, to=0xB2, value=30)@6;
+transfer(from=0xA1, to=0xC3, value=20)@7;
+transfer(from=0xC3, to=0xA1, value=10)@8;
+safeTransferFrom(param1=0xB2, param2=0xC3, param3=31)@9;
+burn(account=0xC3, amount=314)@10;
+setFeeTo(param1=0xA1)@11;
+
+// Trace 60: 8 different operations
+transferFrom(sender=0xA1, from=0xB2, to=68, value=50)@0;
+burn(account=0xB2, amount=221)@1;
+approve(owner=0xB2, spender=0xB2, amount=100)@2;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@3;
+mint(account=0xB2, amount=896)@4;
+transfer(from=0xA1, to=0xD4, value=204)@5;
+approve(owner=0xA1, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@7;
+ownerOf(param1=62)@8;
+balanceOf(account=0xD4)@9;
+isValidTokenId(param1=50)@10;
+mint(account=0xA1, amount=500)@11;
+transfer(from=0xD4, to=0xC3, value=200)@12;
+burn(account=0xA1, amount=100)@13;
+
+// Trace 61: 8 different operations
+transferFrom(sender=0xB2, from=0xD4, to=11, value=50)@0;
+approve(owner=0xD4, spender=0xA1, amount=75)@1;
+transfer(from=0xD4, to=0xA1, value=30)@2;
+transfer(from=0xB2, to=0xD4, value=10)@3;
+setFeeTo(param1=0xB2)@4;
+ownerOf(param1=12)@5;
+burn(account=0xB2, amount=249)@6;
+mint(account=0xB2, amount=500)@7;
+burn(account=0xC3, amount=100)@8;
+isValidTokenId(param1=53)@9;
+approve(owner=0xA1, spender=0xA1, amount=100)@10;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@11;
+
+// Trace 62: 9 different operations
+approve(owner=0xB2, spender=0xA1, amount=22)@0;
+mint(account=0xD4, amount=283)@1;
+transferFrom(sender=0xD4, from=0xA1, to=34, value=50)@2;
+setFeeTo(param1=0xD4)@3;
+isValidTokenId(param1=89)@4;
+ownerOf(param1=14)@5;
+mint(account=0xD4, amount=500)@6;
+transfer(from=0xC3, to=0xB2, value=200)@7;
+burn(account=0xB2, amount=100)@8;
+safeTransferFrom(param1=0xA1, param2=0xA1, param3=51)@9;
+
+// Trace 63: 5 different operations
+burn(account=0xB2, amount=306)@0;
+approve(owner=0xA1, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@2;
+isAuthorized(param1=0xB2, param2=0xB2, param3=79)@3;
+ownerOf(param1=58)@4;
+approve(owner=0xA1, spender=0xC3, amount=100)@5;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@6;
+

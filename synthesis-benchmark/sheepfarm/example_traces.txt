@@ -1,0 +1,18 @@
+
+// Trace 1: Registering a village, buying gems, and upgrading
+register(p=0x123456, neighbor=0x654321)@0;
+buyGems(p=0x123456, amount=100)@1;
+upgradeVillage(p=0x123456, farmId=2)@2;
+upgradeWarehouse(p=0x123456)@3;
+
+// Trace 2: Selling village after upgrades
+register(p=0xabcdef, neighbor=0x998877)@0;
+buyGems(p=0xabcdef, amount=200)@1;
+upgradeTruck(p=0xabcdef)@2;
+sellVillage(p=0xabcdef)@3;
+
+// Trace 3: Wool conversion and withdrawal
+register(p=0x112233, neighbor=0x445566)@0;
+buyGems(p=0x112233, amount=500)@1;
+convertWoolToGems(p=0x112233, amount=300)@2;
+withdrawMoney(p=0x112233, amount=200)@3;

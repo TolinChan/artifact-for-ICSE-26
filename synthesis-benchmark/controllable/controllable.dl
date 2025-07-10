@@ -1,0 +1,32 @@
+
+// Parameters
+.decl *owner(p: address)
+.decl *controller(p: address)
+.decl *totalSupply(n: uint)
+.decl balanceOf(p: address, n: uint)[0]
+.decl constructor(p: address)
+.decl allowance(p: address, s: address, n:uint)[0,1]
+
+// Transactions
+.decl mint(p: address, amount: uint)
+.decl burn(p: address, amount: uint)
+.decl transfer(from: address, to: address, amount: uint)
+.decl approve(owner: address, spender: address, amount: uint)
+.decl transferFrom(sender: address, from: address, to: address, amount: uint)
+.decl controllerTransfer(from: address, to: address, amount: uint)
+.decl controllerRedeem(p: address, amount: uint)
+
+// Rules
+owner(s) :- constructor(_).
+controller(p) :- constructor(p).
+totalSupply(n) :- totalSupply(n).
+balanceOf(p, n) :- balanceOf(p, n).
+allowance(o, s, n) :- allowance(o, s, n).
+
+mint(p, n) :- mint(p, n).
+burn(p, n) :- burn(p, n).
+transfer(s, r, n) :- transfer(s, r, n).
+approve(o, s, n) :- approve(o, s, n).
+transferFrom(o, r, s, n) :- transferFrom(o, r, s, n).
+controllerTransfer(s, r, n) :- controllerTransfer(s, r, n).
+controllerRedeem(p, n) :- controllerRedeem(p, n).

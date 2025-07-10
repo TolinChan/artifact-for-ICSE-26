@@ -1,0 +1,1002 @@
+// Trace 1: 10 different operations
+setEthTax(param1=84)@0;
+transfer(from=0xB2, to=0xD4, value=20)@1;
+transfer(from=0xB2, to=0xA1, value=10)@2;
+stake(param1=30, param2=37)@3;
+mint(account=0xD4, amount=500)@4;
+transfer(from=0xB2, to=0xC3, value=200)@5;
+burn(account=0xA1, amount=100)@6;
+setValidLockPeriod(param1=90, param2=true)@7;
+withdraw(bidder=8, amount=true)@8;
+balanceOf(account=0xC3)@9;
+setStakingSigner(param1=0xA1)@10;
+transfer(from=0xB2, to=0xC3, value=30)@11;
+transfer(from=0xB2, to=0xA1, value=20)@12;
+transfer(from=0xB2, to=0xD4, value=10)@13;
+setJokToken(param1=0xA1)@14;
+
+// Trace 2: 12 different operations
+setMaxPercentage(param1=29)@0;
+approve(owner=0xA1, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@2;
+setJokToken(param1=0xB2)@3;
+setEthTax(param1=93)@4;
+setStakingSigner(param1=0xC3)@5;
+withdraw(bidder=53, amount=false)@6;
+transfer(from=0xA1, to=0xD4, value=2447)@7;
+balanceOf(account=0xD4)@8;
+unstake(param1=55)@9;
+stake(param1=29, param2=58)@10;
+setValidLockPeriod(param1=9, param2=true)@11;
+transferFrom(sender=0xA1, from=0xC3, to=26, value=50)@12;
+transfer(from=0xB2, to=0xC3, value=30)@13;
+transfer(from=0xD4, to=0xC3, value=10)@14;
+
+// Trace 3: 11 different operations
+setMaxPercentage(param1=27)@0;
+setStakingSigner(param1=0xB2)@1;
+setJokToken(param1=0xC3)@2;
+approve(owner=0xA1, spender=0xB2, amount=100)@3;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@4;
+stake(param1=40, param2=68)@5;
+approve(owner=0xD4, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@7;
+balanceOf(account=0xA1)@8;
+setValidLockPeriod(param1=74, param2=false)@9;
+setEthTax(param1=28)@10;
+withdraw(bidder=94, amount=true)@11;
+unstake(param1=12)@12;
+
+// Trace 4: 12 different operations
+withdraw(bidder=70, amount=false)@0;
+transfer(from=0xD4, to=0xC3, value=540)@1;
+transfer(from=0xC3, to=0xB2, value=30)@2;
+transfer(from=0xB2, to=0xC3, value=20)@3;
+transfer(from=0xA1, to=0xB2, value=10)@4;
+unstake(param1=51)@5;
+balanceOf(account=0xD4)@6;
+stake(param1=61, param2=5)@7;
+setJokToken(param1=0xC3)@8;
+setValidLockPeriod(param1=91, param2=true)@9;
+mint(account=0xD4, amount=500)@10;
+burn(account=0xB2, amount=100)@11;
+transferFrom(sender=0xD4, from=0xC3, to=34, value=50)@12;
+setMaxPercentage(param1=15)@13;
+setEthTax(param1=77)@14;
+
+// Trace 5: 7 different operations
+transfer(from=0xC3, to=0xB2, value=1048)@0;
+approve(owner=0xC3, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@2;
+unstake(param1=17)@3;
+transfer(from=0xB2, to=0xA1, value=20)@4;
+setEthTax(param1=79)@5;
+approve(owner=0xD4, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@7;
+setStakingSigner(param1=0xC3)@8;
+balanceOf(account=0xC3)@9;
+approve(owner=0xB2, spender=0xD4, amount=100)@10;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@11;
+
+// Trace 6: 11 different operations
+setMaxPercentage(param1=64)@0;
+setJokToken(param1=0xB2)@1;
+unstake(param1=82)@2;
+approve(owner=0xA1, spender=0xD4, amount=100)@3;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@4;
+setStakingSigner(param1=0xA1)@5;
+setEthTax(param1=99)@6;
+transfer(from=0xC3, to=0xD4, value=44)@7;
+stake(param1=28, param2=67)@8;
+balanceOf(account=0xB2)@9;
+setValidLockPeriod(param1=25, param2=false)@10;
+
+// Trace 7: 13 different operations
+setMaxPercentage(param1=26)@0;
+setEthTax(param1=70)@1;
+transferFrom(sender=0xC3, from=0xA1, to=28, value=50)@2;
+stake(param1=86, param2=75)@3;
+transfer(from=0xB2, to=0xD4, value=1407)@4;
+withdraw(bidder=38, amount=false)@5;
+approve(owner=0xA1, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@7;
+setJokToken(param1=0xD4)@8;
+mint(account=0xA1, amount=500)@9;
+transfer(from=0xD4, to=0xA1, value=200)@10;
+burn(account=0xA1, amount=100)@11;
+setValidLockPeriod(param1=32, param2=true)@12;
+setStakingSigner(param1=0xD4)@13;
+balanceOf(account=0xB2)@14;
+mint(account=0xD4, amount=500)@15;
+burn(account=0xB2, amount=100)@16;
+
+// Trace 8: 10 different operations
+balanceOf(account=0xD4)@0;
+transfer(from=0xC3, to=0xA1, value=30)@1;
+transfer(from=0xD4, to=0xA1, value=20)@2;
+transfer(from=0xD4, to=0xC3, value=10)@3;
+setEthTax(param1=24)@4;
+setValidLockPeriod(param1=68, param2=false)@5;
+stake(param1=52, param2=35)@6;
+setStakingSigner(param1=0xA1)@7;
+setJokToken(param1=0xB2)@8;
+approve(owner=0xA1, spender=0xC3, amount=100)@9;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@10;
+withdraw(bidder=47, amount=false)@11;
+approve(owner=0xB2, spender=0xA1, amount=100)@12;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@13;
+
+// Trace 9: 10 different operations
+setValidLockPeriod(param1=21, param2=true)@0;
+mint(account=0xC3, amount=500)@1;
+burn(account=0xB2, amount=100)@2;
+setStakingSigner(param1=0xB2)@3;
+transfer(from=0xA1, to=0xC3, value=1483)@4;
+transfer(from=0xB2, to=0xC3, value=20)@5;
+setMaxPercentage(param1=90)@6;
+approve(owner=0xB2, spender=0xD4, amount=100)@7;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@8;
+unstake(param1=55)@9;
+stake(param1=83, param2=71)@10;
+approve(owner=0xA1, spender=0xA1, amount=100)@11;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@12;
+
+// Trace 10: 10 different operations
+setJokToken(param1=0xD4)@0;
+balanceOf(account=0xB2)@1;
+setValidLockPeriod(param1=86, param2=false)@2;
+mint(account=0xB2, amount=500)@3;
+transfer(from=0xD4, to=0xC3, value=200)@4;
+burn(account=0xD4, amount=100)@5;
+unstake(param1=45)@6;
+withdraw(bidder=13, amount=true)@7;
+transferFrom(sender=0xA1, from=0xC3, to=29, value=50)@8;
+approve(owner=0xB2, spender=0xC3, amount=100)@9;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@10;
+
+// Trace 11: 10 different operations
+setValidLockPeriod(param1=90, param2=false)@0;
+setMaxPercentage(param1=27)@1;
+transfer(from=0xC3, to=0xD4, value=141)@2;
+unstake(param1=64)@3;
+setStakingSigner(param1=0xB2)@4;
+setJokToken(param1=0xA1)@5;
+transfer(from=0xD4, to=0xA1, value=30)@6;
+transfer(from=0xD4, to=0xB2, value=20)@7;
+transfer(from=0xD4, to=0xA1, value=10)@8;
+stake(param1=6, param2=53)@9;
+balanceOf(account=0xB2)@10;
+mint(account=0xC3, amount=500)@11;
+burn(account=0xC3, amount=100)@12;
+
+// Trace 12: 9 different operations
+transfer(from=0xA1, to=0xD4, value=739)@0;
+transfer(from=0xA1, to=0xC3, value=30)@1;
+transfer(from=0xB2, to=0xA1, value=20)@2;
+transfer(from=0xB2, to=0xD4, value=10)@3;
+balanceOf(account=0xC3)@4;
+setValidLockPeriod(param1=69, param2=false)@5;
+approve(owner=0xD4, spender=0xB2, amount=100)@6;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@7;
+setJokToken(param1=0xC3)@8;
+stake(param1=44, param2=59)@9;
+withdraw(bidder=69, amount=false)@10;
+setStakingSigner(param1=0xC3)@11;
+
+// Trace 13: 13 different operations
+setValidLockPeriod(param1=40, param2=true)@0;
+setEthTax(param1=7)@1;
+unstake(param1=76)@2;
+transferFrom(sender=0xD4, from=0xB2, to=24, value=50)@3;
+setJokToken(param1=0xD4)@4;
+mint(account=0xA1, amount=500)@5;
+transfer(from=0xA1, to=0xB2, value=200)@6;
+burn(account=0xA1, amount=100)@7;
+withdraw(bidder=32, amount=true)@8;
+balanceOf(account=0xC3)@9;
+setStakingSigner(param1=0xD4)@10;
+setMaxPercentage(param1=2)@11;
+mint(account=0xC3, amount=500)@12;
+burn(account=0xB2, amount=100)@13;
+stake(param1=53, param2=55)@14;
+mint(account=0xA1, amount=500)@15;
+burn(account=0xA1, amount=100)@16;
+
+// Trace 14: 12 different operations
+stake(param1=76, param2=23)@0;
+balanceOf(account=0xC3)@1;
+transfer(from=0xB2, to=0xD4, value=1348)@2;
+approve(owner=0xD4, spender=0xD4, amount=100)@3;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@4;
+setMaxPercentage(param1=48)@5;
+withdraw(bidder=49, amount=false)@6;
+setEthTax(param1=54)@7;
+mint(account=0xA1, amount=500)@8;
+transfer(from=0xD4, to=0xA1, value=200)@9;
+burn(account=0xB2, amount=100)@10;
+setStakingSigner(param1=0xA1)@11;
+mint(account=0xB2, amount=500)@12;
+transfer(from=0xC3, to=0xB2, value=200)@13;
+burn(account=0xA1, amount=100)@14;
+unstake(param1=83)@15;
+approve(owner=0xA1, spender=0xC3, amount=100)@16;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@17;
+
+// Trace 15: 8 different operations
+setStakingSigner(param1=0xC3)@0;
+transfer(from=0xA1, to=0xC3, value=30)@1;
+transfer(from=0xA1, to=0xC3, value=20)@2;
+transfer(from=0xB2, to=0xD4, value=10)@3;
+stake(param1=7, param2=45)@4;
+setEthTax(param1=36)@5;
+mint(account=0xD4, amount=500)@6;
+burn(account=0xC3, amount=100)@7;
+unstake(param1=82)@8;
+setMaxPercentage(param1=45)@9;
+mint(account=0xC3, amount=500)@10;
+transfer(from=0xD4, to=0xB2, value=200)@11;
+burn(account=0xC3, amount=100)@12;
+
+// Trace 16: 8 different operations
+transfer(from=0xA1, to=0xD4, value=723)@0;
+setEthTax(param1=30)@1;
+withdraw(bidder=75, amount=false)@2;
+mint(account=0xD4, amount=500)@3;
+transfer(from=0xA1, to=0xD4, value=200)@4;
+burn(account=0xD4, amount=100)@5;
+balanceOf(account=0xA1)@6;
+mint(account=0xD4, amount=500)@7;
+transfer(from=0xC3, to=0xB2, value=200)@8;
+burn(account=0xD4, amount=100)@9;
+setStakingSigner(param1=0xA1)@10;
+setValidLockPeriod(param1=58, param2=true)@11;
+mint(account=0xB2, amount=500)@12;
+transfer(from=0xC3, to=0xA1, value=200)@13;
+burn(account=0xC3, amount=100)@14;
+
+// Trace 17: 13 different operations
+withdraw(bidder=34, amount=false)@0;
+balanceOf(account=0xA1)@1;
+approve(owner=0xB2, spender=0xA1, amount=100)@2;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@3;
+setJokToken(param1=0xC3)@4;
+mint(account=0xC3, amount=500)@5;
+transfer(from=0xD4, to=0xA1, value=200)@6;
+burn(account=0xC3, amount=100)@7;
+setEthTax(param1=79)@8;
+unstake(param1=28)@9;
+stake(param1=22, param2=48)@10;
+setMaxPercentage(param1=76)@11;
+setStakingSigner(param1=0xC3)@12;
+
+// Trace 18: 10 different operations
+setStakingSigner(param1=0xC3)@0;
+mint(account=0xB2, amount=500)@1;
+transfer(from=0xB2, to=0xC3, value=200)@2;
+burn(account=0xA1, amount=100)@3;
+setJokToken(param1=0xD4)@4;
+mint(account=0xA1, amount=500)@5;
+transfer(from=0xB2, to=0xC3, value=200)@6;
+burn(account=0xD4, amount=100)@7;
+transferFrom(sender=0xA1, from=0xD4, to=43, value=50)@8;
+stake(param1=23, param2=48)@9;
+unstake(param1=3)@10;
+setMaxPercentage(param1=86)@11;
+balanceOf(account=0xA1)@12;
+
+// Trace 19: 10 different operations
+withdraw(bidder=93, amount=true)@0;
+stake(param1=93, param2=28)@1;
+setJokToken(param1=0xB2)@2;
+mint(account=0xC3, amount=500)@3;
+transfer(from=0xA1, to=0xD4, value=200)@4;
+burn(account=0xA1, amount=100)@5;
+setValidLockPeriod(param1=7, param2=true)@6;
+setMaxPercentage(param1=2)@7;
+setStakingSigner(param1=0xB2)@8;
+transferFrom(sender=0xA1, from=0xC3, to=3, value=50)@9;
+transfer(from=0xA1, to=0xD4, value=30)@10;
+transfer(from=0xD4, to=0xA1, value=20)@11;
+transfer(from=0xA1, to=0xB2, value=10)@12;
+
+// Trace 20: 11 different operations
+setMaxPercentage(param1=24)@0;
+transfer(from=0xC3, to=0xA1, value=283)@1;
+setStakingSigner(param1=0xD4)@2;
+setEthTax(param1=16)@3;
+unstake(param1=69)@4;
+stake(param1=25, param2=28)@5;
+balanceOf(account=0xC3)@6;
+transferFrom(sender=0xA1, from=0xC3, to=8, value=50)@7;
+transfer(from=0xC3, to=0xA1, value=30)@8;
+transfer(from=0xA1, to=0xD4, value=20)@9;
+transfer(from=0xC3, to=0xD4, value=10)@10;
+setValidLockPeriod(param1=56, param2=false)@11;
+setJokToken(param1=0xD4)@12;
+withdraw(bidder=75, amount=false)@13;
+transfer(from=0xA1, to=0xD4, value=609)@14;
+
+// Trace 21: 14 different operations
+setStakingSigner(param1=0xA1)@0;
+mint(account=0xC3, amount=500)@1;
+transfer(from=0xC3, to=0xB2, value=200)@2;
+burn(account=0xB2, amount=100)@3;
+setEthTax(param1=56)@4;
+withdraw(bidder=60, amount=false)@5;
+setJokToken(param1=0xD4)@6;
+approve(owner=0xC3, spender=0xA1, amount=100)@7;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@8;
+balanceOf(account=0xB2)@9;
+setValidLockPeriod(param1=46, param2=false)@10;
+stake(param1=76, param2=70)@11;
+unstake(param1=70)@12;
+setMaxPercentage(param1=56)@13;
+
+// Trace 22: 8 different operations
+transferFrom(sender=0xB2, from=0xC3, to=27, value=50)@0;
+approve(owner=0xB2, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@2;
+stake(param1=1, param2=28)@3;
+setStakingSigner(param1=0xB2)@4;
+setEthTax(param1=9)@5;
+balanceOf(account=0xD4)@6;
+transfer(from=0xB2, to=0xD4, value=1066)@7;
+approve(owner=0xB2, spender=0xA1, amount=100)@8;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@9;
+setJokToken(param1=0xB2)@10;
+
+// Trace 23: 13 different operations
+setEthTax(param1=1)@0;
+balanceOf(account=0xD4)@1;
+setMaxPercentage(param1=57)@2;
+setStakingSigner(param1=0xC3)@3;
+transferFrom(sender=0xD4, from=0xB2, to=3, value=50)@4;
+approve(owner=0xC3, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@6;
+stake(param1=42, param2=69)@7;
+mint(account=0xD4, amount=500)@8;
+burn(account=0xB2, amount=100)@9;
+setValidLockPeriod(param1=23, param2=true)@10;
+mint(account=0xD4, amount=500)@11;
+transfer(from=0xA1, to=0xD4, value=200)@12;
+burn(account=0xC3, amount=100)@13;
+withdraw(bidder=50, amount=true)@14;
+setJokToken(param1=0xB2)@15;
+approve(owner=0xC3, spender=0xC3, amount=100)@16;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@17;
+
+// Trace 24: 8 different operations
+setMaxPercentage(param1=8)@0;
+approve(owner=0xA1, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@2;
+unstake(param1=28)@3;
+transfer(from=0xA1, to=0xC3, value=30)@4;
+transfer(from=0xA1, to=0xB2, value=10)@5;
+setEthTax(param1=46)@6;
+approve(owner=0xC3, spender=0xC3, amount=100)@7;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@8;
+stake(param1=87, param2=98)@9;
+setStakingSigner(param1=0xB2)@10;
+approve(owner=0xB2, spender=0xC3, amount=100)@11;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@12;
+
+// Trace 25: 9 different operations
+setValidLockPeriod(param1=40, param2=false)@0;
+balanceOf(account=0xC3)@1;
+transfer(from=0xC3, to=0xA1, value=1689)@2;
+transferFrom(sender=0xC3, from=0xD4, to=23, value=50)@3;
+setJokToken(param1=0xC3)@4;
+approve(owner=0xC3, spender=0xC3, amount=100)@5;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@6;
+setEthTax(param1=86)@7;
+setStakingSigner(param1=0xD4)@8;
+approve(owner=0xC3, spender=0xA1, amount=100)@9;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@10;
+stake(param1=52, param2=63)@11;
+
+// Trace 26: 8 different operations
+unstake(param1=24)@0;
+stake(param1=79, param2=37)@1;
+setJokToken(param1=0xD4)@2;
+transfer(from=0xB2, to=0xA1, value=30)@3;
+transfer(from=0xA1, to=0xB2, value=10)@4;
+withdraw(bidder=93, amount=false)@5;
+mint(account=0xD4, amount=500)@6;
+transfer(from=0xA1, to=0xD4, value=200)@7;
+burn(account=0xD4, amount=100)@8;
+setValidLockPeriod(param1=64, param2=false)@9;
+mint(account=0xA1, amount=500)@10;
+transfer(from=0xA1, to=0xC3, value=200)@11;
+burn(account=0xD4, amount=100)@12;
+
+// Trace 27: 9 different operations
+unstake(param1=30)@0;
+stake(param1=72, param2=14)@1;
+mint(account=0xC3, amount=500)@2;
+transfer(from=0xA1, to=0xD4, value=200)@3;
+burn(account=0xA1, amount=100)@4;
+transferFrom(sender=0xD4, from=0xB2, to=10, value=50)@5;
+transfer(from=0xD4, to=0xA1, value=30)@6;
+transfer(from=0xA1, to=0xD4, value=20)@7;
+transfer(from=0xC3, to=0xD4, value=10)@8;
+balanceOf(account=0xB2)@9;
+setStakingSigner(param1=0xB2)@10;
+setEthTax(param1=95)@11;
+transfer(from=0xD4, to=0xC3, value=30)@12;
+transfer(from=0xA1, to=0xC3, value=20)@13;
+
+// Trace 28: 9 different operations
+withdraw(bidder=62, amount=false)@0;
+setMaxPercentage(param1=92)@1;
+setStakingSigner(param1=0xC3)@2;
+transfer(from=0xB2, to=0xC3, value=20)@3;
+transfer(from=0xC3, to=0xB2, value=10)@4;
+stake(param1=32, param2=41)@5;
+unstake(param1=12)@6;
+setValidLockPeriod(param1=6, param2=true)@7;
+mint(account=0xB2, amount=500)@8;
+transfer(from=0xB2, to=0xC3, value=200)@9;
+burn(account=0xC3, amount=100)@10;
+
+// Trace 29: 11 different operations
+transferFrom(sender=0xA1, from=0xD4, to=27, value=50)@0;
+mint(account=0xC3, amount=500)@1;
+burn(account=0xC3, amount=100)@2;
+balanceOf(account=0xD4)@3;
+transfer(from=0xC3, to=0xA1, value=2293)@4;
+unstake(param1=24)@5;
+mint(account=0xD4, amount=500)@6;
+burn(account=0xA1, amount=100)@7;
+setMaxPercentage(param1=20)@8;
+stake(param1=92, param2=50)@9;
+setStakingSigner(param1=0xC3)@10;
+setValidLockPeriod(param1=95, param2=true)@11;
+transfer(from=0xC3, to=0xA1, value=30)@12;
+transfer(from=0xB2, to=0xA1, value=20)@13;
+transfer(from=0xD4, to=0xB2, value=10)@14;
+withdraw(bidder=41, amount=true)@15;
+
+// Trace 30: 9 different operations
+withdraw(bidder=33, amount=true)@0;
+approve(owner=0xA1, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@2;
+transfer(from=0xD4, to=0xA1, value=651)@3;
+approve(owner=0xC3, spender=0xB2, amount=100)@4;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@5;
+stake(param1=65, param2=33)@6;
+approve(owner=0xA1, spender=0xA1, amount=100)@7;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@8;
+unstake(param1=43)@9;
+setStakingSigner(param1=0xA1)@10;
+setMaxPercentage(param1=43)@11;
+setEthTax(param1=45)@12;
+
+// Trace 31: 12 different operations
+setJokToken(param1=0xA1)@0;
+unstake(param1=29)@1;
+setMaxPercentage(param1=79)@2;
+transfer(from=0xC3, to=0xB2, value=10)@3;
+setValidLockPeriod(param1=50, param2=false)@4;
+balanceOf(account=0xC3)@5;
+mint(account=0xC3, amount=500)@6;
+transfer(from=0xB2, to=0xC3, value=200)@7;
+burn(account=0xD4, amount=100)@8;
+transferFrom(sender=0xB2, from=0xA1, to=42, value=50)@9;
+mint(account=0xC3, amount=500)@10;
+burn(account=0xC3, amount=100)@11;
+setEthTax(param1=71)@12;
+stake(param1=90, param2=47)@13;
+setStakingSigner(param1=0xD4)@14;
+
+// Trace 32: 10 different operations
+setMaxPercentage(param1=37)@0;
+unstake(param1=95)@1;
+transfer(from=0xB2, to=0xC3, value=30)@2;
+transfer(from=0xA1, to=0xC3, value=20)@3;
+transfer(from=0xB2, to=0xC3, value=10)@4;
+setValidLockPeriod(param1=88, param2=true)@5;
+setEthTax(param1=97)@6;
+setJokToken(param1=0xC3)@7;
+transferFrom(sender=0xB2, from=0xA1, to=15, value=50)@8;
+balanceOf(account=0xD4)@9;
+setStakingSigner(param1=0xA1)@10;
+approve(owner=0xD4, spender=0xC3, amount=100)@11;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@12;
+
+// Trace 33: 7 different operations
+stake(param1=67, param2=45)@0;
+mint(account=0xD4, amount=500)@1;
+transfer(from=0xB2, to=0xC3, value=200)@2;
+burn(account=0xD4, amount=100)@3;
+unstake(param1=78)@4;
+transfer(from=0xB2, to=0xA1, value=20)@5;
+transfer(from=0xA1, to=0xC3, value=10)@6;
+setValidLockPeriod(param1=76, param2=true)@7;
+balanceOf(account=0xC3)@8;
+mint(account=0xB2, amount=500)@9;
+burn(account=0xC3, amount=100)@10;
+
+// Trace 34: 8 different operations
+transfer(from=0xB2, to=0xC3, value=263)@0;
+setJokToken(param1=0xB2)@1;
+transfer(from=0xC3, to=0xA1, value=20)@2;
+transfer(from=0xC3, to=0xA1, value=10)@3;
+unstake(param1=85)@4;
+transferFrom(sender=0xC3, from=0xB2, to=34, value=50)@5;
+mint(account=0xC3, amount=500)@6;
+transfer(from=0xB2, to=0xA1, value=200)@7;
+burn(account=0xA1, amount=100)@8;
+setValidLockPeriod(param1=25, param2=false)@9;
+setStakingSigner(param1=0xA1)@10;
+
+// Trace 35: 11 different operations
+setJokToken(param1=0xC3)@0;
+transfer(from=0xC3, to=0xD4, value=693)@1;
+withdraw(bidder=37, amount=false)@2;
+unstake(param1=48)@3;
+balanceOf(account=0xA1)@4;
+setStakingSigner(param1=0xA1)@5;
+stake(param1=90, param2=21)@6;
+transferFrom(sender=0xC3, from=0xD4, to=6, value=50)@7;
+mint(account=0xC3, amount=500)@8;
+transfer(from=0xD4, to=0xA1, value=200)@9;
+burn(account=0xB2, amount=100)@10;
+setEthTax(param1=79)@11;
+
+// Trace 36: 12 different operations
+stake(param1=43, param2=78)@0;
+setMaxPercentage(param1=83)@1;
+unstake(param1=22)@2;
+approve(owner=0xC3, spender=0xD4, amount=100)@3;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@4;
+setValidLockPeriod(param1=21, param2=false)@5;
+transfer(from=0xA1, to=0xD4, value=1624)@6;
+setStakingSigner(param1=0xC3)@7;
+setEthTax(param1=73)@8;
+balanceOf(account=0xD4)@9;
+withdraw(bidder=29, amount=true)@10;
+setJokToken(param1=0xD4)@11;
+
+// Trace 37: 11 different operations
+unstake(param1=83)@0;
+setEthTax(param1=41)@1;
+transfer(from=0xB2, to=0xA1, value=30)@2;
+transfer(from=0xA1, to=0xC3, value=20)@3;
+transfer(from=0xC3, to=0xD4, value=10)@4;
+withdraw(bidder=12, amount=true)@5;
+stake(param1=68, param2=47)@6;
+approve(owner=0xB2, spender=0xD4, amount=100)@7;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@8;
+setStakingSigner(param1=0xC3)@9;
+setValidLockPeriod(param1=63, param2=false)@10;
+balanceOf(account=0xB2)@11;
+setMaxPercentage(param1=37)@12;
+approve(owner=0xA1, spender=0xA1, amount=100)@13;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@14;
+
+// Trace 38: 10 different operations
+stake(param1=64, param2=17)@0;
+transfer(from=0xB2, to=0xC3, value=30)@1;
+transfer(from=0xA1, to=0xC3, value=20)@2;
+setMaxPercentage(param1=89)@3;
+setJokToken(param1=0xC3)@4;
+withdraw(bidder=99, amount=false)@5;
+setValidLockPeriod(param1=91, param2=true)@6;
+balanceOf(account=0xC3)@7;
+unstake(param1=59)@8;
+transferFrom(sender=0xA1, from=0xD4, to=4, value=50)@9;
+setStakingSigner(param1=0xA1)@10;
+
+// Trace 39: 11 different operations
+transferFrom(sender=0xA1, from=0xC3, to=27, value=50)@0;
+setEthTax(param1=85)@1;
+balanceOf(account=0xB2)@2;
+setStakingSigner(param1=0xC3)@3;
+setJokToken(param1=0xA1)@4;
+unstake(param1=84)@5;
+mint(account=0xD4, amount=500)@6;
+transfer(from=0xB2, to=0xC3, value=200)@7;
+burn(account=0xB2, amount=100)@8;
+setMaxPercentage(param1=100)@9;
+setValidLockPeriod(param1=40, param2=true)@10;
+transfer(from=0xD4, to=0xB2, value=30)@11;
+transfer(from=0xA1, to=0xD4, value=10)@12;
+
+// Trace 40: 13 different operations
+unstake(param1=72)@0;
+mint(account=0xD4, amount=500)@1;
+transfer(from=0xD4, to=0xC3, value=200)@2;
+burn(account=0xC3, amount=100)@3;
+setJokToken(param1=0xD4)@4;
+approve(owner=0xC3, spender=0xB2, amount=100)@5;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@6;
+setMaxPercentage(param1=73)@7;
+withdraw(bidder=57, amount=true)@8;
+setValidLockPeriod(param1=67, param2=true)@9;
+stake(param1=83, param2=33)@10;
+setEthTax(param1=48)@11;
+mint(account=0xD4, amount=500)@12;
+transfer(from=0xC3, to=0xA1, value=200)@13;
+burn(account=0xA1, amount=100)@14;
+balanceOf(account=0xD4)@15;
+
+// Trace 41: 12 different operations
+setJokToken(param1=0xC3)@0;
+setValidLockPeriod(param1=69, param2=true)@1;
+approve(owner=0xB2, spender=0xD4, amount=100)@2;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@3;
+balanceOf(account=0xD4)@4;
+setEthTax(param1=19)@5;
+mint(account=0xA1, amount=500)@6;
+transfer(from=0xB2, to=0xC3, value=200)@7;
+burn(account=0xC3, amount=100)@8;
+setStakingSigner(param1=0xA1)@9;
+stake(param1=66, param2=15)@10;
+withdraw(bidder=5, amount=false)@11;
+
+// Trace 42: 13 different operations
+setJokToken(param1=0xC3)@0;
+balanceOf(account=0xD4)@1;
+approve(owner=0xC3, spender=0xD4, amount=100)@2;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@3;
+transfer(from=0xA1, to=0xB2, value=242)@4;
+stake(param1=100, param2=81)@5;
+setStakingSigner(param1=0xA1)@6;
+approve(owner=0xD4, spender=0xA1, amount=100)@7;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@8;
+setValidLockPeriod(param1=9, param2=false)@9;
+withdraw(bidder=78, amount=false)@10;
+setMaxPercentage(param1=29)@11;
+approve(owner=0xC3, spender=0xB2, amount=100)@12;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@13;
+unstake(param1=81)@14;
+mint(account=0xA1, amount=500)@15;
+transfer(from=0xD4, to=0xB2, value=200)@16;
+burn(account=0xD4, amount=100)@17;
+
+// Trace 43: 11 different operations
+setStakingSigner(param1=0xD4)@0;
+mint(account=0xD4, amount=500)@1;
+transfer(from=0xC3, to=0xD4, value=200)@2;
+burn(account=0xA1, amount=100)@3;
+withdraw(bidder=18, amount=true)@4;
+setValidLockPeriod(param1=46, param2=true)@5;
+setEthTax(param1=55)@6;
+setMaxPercentage(param1=52)@7;
+balanceOf(account=0xA1)@8;
+stake(param1=63, param2=26)@9;
+setJokToken(param1=0xC3)@10;
+
+// Trace 44: 11 different operations
+transfer(from=0xC3, to=0xA1, value=303)@0;
+stake(param1=97, param2=86)@1;
+setEthTax(param1=55)@2;
+balanceOf(account=0xD4)@3;
+setMaxPercentage(param1=70)@4;
+setJokToken(param1=0xD4)@5;
+unstake(param1=76)@6;
+setValidLockPeriod(param1=33, param2=false)@7;
+approve(owner=0xD4, spender=0xB2, amount=100)@8;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@9;
+setStakingSigner(param1=0xB2)@10;
+transfer(from=0xA1, to=0xB2, value=20)@11;
+transfer(from=0xC3, to=0xB2, value=10)@12;
+
+// Trace 45: 6 different operations
+setEthTax(param1=82)@0;
+setJokToken(param1=0xD4)@1;
+transfer(from=0xD4, to=0xB2, value=20)@2;
+transfer(from=0xD4, to=0xB2, value=10)@3;
+setMaxPercentage(param1=7)@4;
+transfer(from=0xD4, to=0xA1, value=30)@5;
+transfer(from=0xD4, to=0xA1, value=10)@6;
+setStakingSigner(param1=0xC3)@7;
+transfer(from=0xC3, to=0xD4, value=30)@8;
+transfer(from=0xB2, to=0xA1, value=20)@9;
+transfer(from=0xB2, to=0xC3, value=10)@10;
+transferFrom(sender=0xA1, from=0xD4, to=3, value=50)@11;
+transfer(from=0xC3, to=0xB2, value=20)@12;
+transfer(from=0xA1, to=0xC3, value=10)@13;
+
+// Trace 46: 7 different operations
+setEthTax(param1=100)@0;
+transfer(from=0xA1, to=0xD4, value=30)@1;
+transfer(from=0xC3, to=0xB2, value=20)@2;
+transfer(from=0xA1, to=0xD4, value=10)@3;
+stake(param1=96, param2=39)@4;
+setJokToken(param1=0xA1)@5;
+setStakingSigner(param1=0xC3)@6;
+transfer(from=0xB2, to=0xC3, value=30)@7;
+transfer(from=0xC3, to=0xB2, value=10)@8;
+setValidLockPeriod(param1=94, param2=false)@9;
+setMaxPercentage(param1=27)@10;
+
+// Trace 47: 10 different operations
+setJokToken(param1=0xA1)@0;
+mint(account=0xD4, amount=500)@1;
+transfer(from=0xC3, to=0xD4, value=200)@2;
+burn(account=0xA1, amount=100)@3;
+setEthTax(param1=65)@4;
+transferFrom(sender=0xD4, from=0xC3, to=46, value=50)@5;
+withdraw(bidder=20, amount=true)@6;
+setValidLockPeriod(param1=5, param2=true)@7;
+setStakingSigner(param1=0xA1)@8;
+mint(account=0xD4, amount=500)@9;
+burn(account=0xC3, amount=100)@10;
+unstake(param1=67)@11;
+
+// Trace 48: 11 different operations
+transferFrom(sender=0xB2, from=0xD4, to=41, value=50)@0;
+setJokToken(param1=0xD4)@1;
+unstake(param1=35)@2;
+setValidLockPeriod(param1=72, param2=false)@3;
+transfer(from=0xD4, to=0xA1, value=20)@4;
+transfer(from=0xC3, to=0xD4, value=10)@5;
+setEthTax(param1=93)@6;
+balanceOf(account=0xB2)@7;
+setStakingSigner(param1=0xB2)@8;
+withdraw(bidder=21, amount=true)@9;
+mint(account=0xD4, amount=500)@10;
+burn(account=0xB2, amount=100)@11;
+
+// Trace 49: 14 different operations
+transfer(from=0xC3, to=0xB2, value=239)@0;
+balanceOf(account=0xA1)@1;
+setStakingSigner(param1=0xB2)@2;
+setMaxPercentage(param1=90)@3;
+setValidLockPeriod(param1=86, param2=true)@4;
+mint(account=0xA1, amount=500)@5;
+burn(account=0xB2, amount=100)@6;
+setJokToken(param1=0xB2)@7;
+withdraw(bidder=92, amount=false)@8;
+transferFrom(sender=0xC3, from=0xB2, to=20, value=50)@9;
+setEthTax(param1=15)@10;
+unstake(param1=44)@11;
+stake(param1=30, param2=48)@12;
+transfer(from=0xB2, to=0xC3, value=828)@13;
+setJokToken(param1=0xB2)@14;
+approve(owner=0xB2, spender=0xB2, amount=100)@15;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@16;
+
+// Trace 50: 9 different operations
+transferFrom(sender=0xB2, from=0xA1, to=11, value=50)@0;
+approve(owner=0xD4, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@2;
+unstake(param1=21)@3;
+setEthTax(param1=49)@4;
+transfer(from=0xA1, to=0xB2, value=786)@5;
+approve(owner=0xA1, spender=0xD4, amount=100)@6;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@7;
+balanceOf(account=0xC3)@8;
+mint(account=0xB2, amount=500)@9;
+transfer(from=0xA1, to=0xC3, value=200)@10;
+burn(account=0xC3, amount=100)@11;
+stake(param1=20, param2=80)@12;
+
+// Trace 51: 7 different operations
+balanceOf(account=0xD4)@0;
+transferFrom(sender=0xC3, from=0xB2, to=28, value=50)@1;
+transfer(from=0xC3, to=0xB2, value=314)@2;
+transfer(from=0xA1, to=0xC3, value=30)@3;
+transfer(from=0xA1, to=0xC3, value=20)@4;
+withdraw(bidder=92, amount=false)@5;
+mint(account=0xB2, amount=500)@6;
+transfer(from=0xB2, to=0xD4, value=200)@7;
+burn(account=0xA1, amount=100)@8;
+stake(param1=18, param2=70)@9;
+
+// Trace 52: 11 different operations
+setValidLockPeriod(param1=85, param2=true)@0;
+setStakingSigner(param1=0xB2)@1;
+stake(param1=72, param2=60)@2;
+setMaxPercentage(param1=83)@3;
+transfer(from=0xD4, to=0xA1, value=2637)@4;
+transferFrom(sender=0xC3, from=0xA1, to=11, value=50)@5;
+balanceOf(account=0xC3)@6;
+setJokToken(param1=0xC3)@7;
+withdraw(bidder=36, amount=false)@8;
+unstake(param1=86)@9;
+setEthTax(param1=85)@10;
+
+// Trace 53: 11 different operations
+transfer(from=0xB2, to=0xC3, value=1676)@0;
+mint(account=0xA1, amount=500)@1;
+transfer(from=0xA1, to=0xD4, value=200)@2;
+burn(account=0xD4, amount=100)@3;
+balanceOf(account=0xD4)@4;
+unstake(param1=57)@5;
+transfer(from=0xA1, to=0xD4, value=30)@6;
+transfer(from=0xC3, to=0xD4, value=20)@7;
+transfer(from=0xA1, to=0xB2, value=10)@8;
+setValidLockPeriod(param1=56, param2=false)@9;
+setMaxPercentage(param1=44)@10;
+setEthTax(param1=38)@11;
+transfer(from=0xD4, to=0xA1, value=20)@12;
+transfer(from=0xC3, to=0xB2, value=10)@13;
+transferFrom(sender=0xD4, from=0xC3, to=2, value=50)@14;
+setStakingSigner(param1=0xC3)@15;
+setJokToken(param1=0xD4)@16;
+
+// Trace 54: 9 different operations
+transfer(from=0xC3, to=0xA1, value=1557)@0;
+stake(param1=77, param2=6)@1;
+approve(owner=0xC3, spender=0xB2, amount=100)@2;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@3;
+setMaxPercentage(param1=92)@4;
+mint(account=0xC3, amount=500)@5;
+transfer(from=0xB2, to=0xD4, value=200)@6;
+burn(account=0xA1, amount=100)@7;
+withdraw(bidder=22, amount=false)@8;
+unstake(param1=22)@9;
+transfer(from=0xB2, to=0xD4, value=30)@10;
+
+// Trace 55: 8 different operations
+unstake(param1=51)@0;
+approve(owner=0xB2, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@2;
+setMaxPercentage(param1=98)@3;
+setValidLockPeriod(param1=24, param2=false)@4;
+stake(param1=66, param2=27)@5;
+setJokToken(param1=0xD4)@6;
+withdraw(bidder=76, amount=true)@7;
+approve(owner=0xC3, spender=0xD4, amount=100)@8;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@9;
+
+// Trace 56: 10 different operations
+balanceOf(account=0xB2)@0;
+setJokToken(param1=0xA1)@1;
+setStakingSigner(param1=0xD4)@2;
+withdraw(bidder=74, amount=false)@3;
+transfer(from=0xA1, to=0xB2, value=3073)@4;
+setValidLockPeriod(param1=79, param2=false)@5;
+transferFrom(sender=0xA1, from=0xC3, to=1, value=50)@6;
+setMaxPercentage(param1=88)@7;
+transfer(from=0xA1, to=0xD4, value=30)@8;
+transfer(from=0xD4, to=0xA1, value=20)@9;
+transfer(from=0xB2, to=0xA1, value=10)@10;
+unstake(param1=94)@11;
+approve(owner=0xC3, spender=0xB2, amount=100)@12;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@13;
+
+// Trace 57: 10 different operations
+stake(param1=60, param2=61)@0;
+transfer(from=0xC3, to=0xA1, value=1879)@1;
+mint(account=0xA1, amount=500)@2;
+transfer(from=0xB2, to=0xC3, value=200)@3;
+burn(account=0xC3, amount=100)@4;
+setStakingSigner(param1=0xA1)@5;
+approve(owner=0xC3, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@7;
+setValidLockPeriod(param1=92, param2=false)@8;
+setMaxPercentage(param1=79)@9;
+withdraw(bidder=34, amount=true)@10;
+
+// Trace 58: 11 different operations
+transferFrom(sender=0xC3, from=0xB2, to=4, value=50)@0;
+setMaxPercentage(param1=78)@1;
+withdraw(bidder=97, amount=true)@2;
+transfer(from=0xA1, to=0xC3, value=30)@3;
+transfer(from=0xB2, to=0xD4, value=20)@4;
+transfer(from=0xA1, to=0xB2, value=10)@5;
+setStakingSigner(param1=0xA1)@6;
+stake(param1=37, param2=6)@7;
+setJokToken(param1=0xD4)@8;
+balanceOf(account=0xD4)@9;
+setEthTax(param1=5)@10;
+unstake(param1=74)@11;
+setValidLockPeriod(param1=21, param2=true)@12;
+
+// Trace 59: 9 different operations
+unstake(param1=1)@0;
+setJokToken(param1=0xA1)@1;
+stake(param1=30, param2=92)@2;
+withdraw(bidder=18, amount=true)@3;
+transfer(from=0xD4, to=0xB2, value=512)@4;
+balanceOf(account=0xB2)@5;
+mint(account=0xD4, amount=500)@6;
+burn(account=0xB2, amount=100)@7;
+setValidLockPeriod(param1=58, param2=true)@8;
+mint(account=0xC3, amount=500)@9;
+transfer(from=0xC3, to=0xD4, value=200)@10;
+burn(account=0xB2, amount=100)@11;
+
+// Trace 60: 12 different operations
+stake(param1=37, param2=86)@0;
+withdraw(bidder=23, amount=true)@1;
+setStakingSigner(param1=0xA1)@2;
+transferFrom(sender=0xA1, from=0xC3, to=11, value=50)@3;
+setJokToken(param1=0xA1)@4;
+approve(owner=0xA1, spender=0xA1, amount=100)@5;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@6;
+transfer(from=0xA1, to=0xB2, value=2053)@7;
+setValidLockPeriod(param1=73, param2=false)@8;
+setMaxPercentage(param1=44)@9;
+mint(account=0xA1, amount=500)@10;
+transfer(from=0xD4, to=0xC3, value=200)@11;
+burn(account=0xC3, amount=100)@12;
+balanceOf(account=0xC3)@13;
+
+// Trace 61: 9 different operations
+stake(param1=21, param2=37)@0;
+transfer(from=0xA1, to=0xD4, value=1239)@1;
+setEthTax(param1=74)@2;
+transfer(from=0xB2, to=0xA1, value=30)@3;
+transfer(from=0xB2, to=0xD4, value=20)@4;
+transfer(from=0xC3, to=0xA1, value=10)@5;
+transferFrom(sender=0xD4, from=0xB2, to=44, value=50)@6;
+unstake(param1=82)@7;
+mint(account=0xA1, amount=500)@8;
+transfer(from=0xB2, to=0xA1, value=200)@9;
+burn(account=0xA1, amount=100)@10;
+balanceOf(account=0xA1)@11;
+approve(owner=0xA1, spender=0xD4, amount=100)@12;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@13;
+
+// Trace 62: 14 different operations
+transferFrom(sender=0xB2, from=0xD4, to=8, value=50)@0;
+setEthTax(param1=73)@1;
+stake(param1=46, param2=1)@2;
+setValidLockPeriod(param1=70, param2=false)@3;
+transfer(from=0xB2, to=0xA1, value=2286)@4;
+setJokToken(param1=0xD4)@5;
+setStakingSigner(param1=0xC3)@6;
+balanceOf(account=0xB2)@7;
+setMaxPercentage(param1=64)@8;
+withdraw(bidder=87, amount=true)@9;
+unstake(param1=80)@10;
+transferFrom(sender=0xA1, from=0xC3, to=1, value=50)@11;
+transfer(from=0xC3, to=0xA1, value=1272)@12;
+approve(owner=0xC3, spender=0xB2, amount=100)@13;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@14;
+setJokToken(param1=0xC3)@15;
+mint(account=0xC3, amount=500)@16;
+burn(account=0xC3, amount=100)@17;
+setStakingSigner(param1=0xC3)@18;
+
+// Trace 63: 11 different operations
+stake(param1=51, param2=79)@0;
+approve(owner=0xA1, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@2;
+setStakingSigner(param1=0xD4)@3;
+setJokToken(param1=0xA1)@4;
+setValidLockPeriod(param1=38, param2=false)@5;
+transfer(from=0xA1, to=0xB2, value=30)@6;
+transfer(from=0xC3, to=0xB2, value=20)@7;
+transfer(from=0xB2, to=0xC3, value=10)@8;
+setMaxPercentage(param1=63)@9;
+mint(account=0xB2, amount=500)@10;
+transfer(from=0xB2, to=0xC3, value=200)@11;
+burn(account=0xA1, amount=100)@12;
+withdraw(bidder=100, amount=true)@13;
+mint(account=0xC3, amount=500)@14;
+transfer(from=0xB2, to=0xA1, value=200)@15;
+burn(account=0xA1, amount=100)@16;
+
+// Trace 64: 14 different operations
+setEthTax(param1=6)@0;
+transfer(from=0xB2, to=0xD4, value=1016)@1;
+approve(owner=0xD4, spender=0xB2, amount=100)@2;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@3;
+stake(param1=33, param2=7)@4;
+setValidLockPeriod(param1=29, param2=true)@5;
+approve(owner=0xD4, spender=0xA1, amount=100)@6;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@7;
+setStakingSigner(param1=0xA1)@8;
+mint(account=0xA1, amount=500)@9;
+transfer(from=0xA1, to=0xD4, value=200)@10;
+burn(account=0xA1, amount=100)@11;
+balanceOf(account=0xA1)@12;
+withdraw(bidder=41, amount=true)@13;
+setJokToken(param1=0xD4)@14;
+setMaxPercentage(param1=21)@15;
+transfer(from=0xA1, to=0xC3, value=20)@16;
+transfer(from=0xB2, to=0xA1, value=10)@17;
+unstake(param1=86)@18;
+
+// Trace 65: 4 different operations
+setEthTax(param1=24)@0;
+transfer(from=0xD4, to=0xA1, value=30)@1;
+transfer(from=0xA1, to=0xC3, value=20)@2;
+stake(param1=74, param2=27)@3;
+setStakingSigner(param1=0xD4)@4;
+

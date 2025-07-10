@@ -1,0 +1,17 @@
+
+// Trace 1: Simple voting process
+vote(p=0x123456, proposal=1)@0;
+vote(p=0x654321, proposal=2)@1;
+vote(p=0xabcdef, proposal=1)@2;
+
+// Trace 2: Multiple votes with a winning proposal
+vote(p=0x998877, proposal=3)@0;
+vote(p=0x112233, proposal=3)@1;
+vote(p=0x334455, proposal=3)@2;
+vote(p=0x556677, proposal=4)@3;
+
+// Trace 3: Conflicting winners detected
+vote(p=0xabcdef, proposal=5)@0;
+vote(p=0x778899, proposal=5)@1;
+vote(p=0x112244, proposal=6)@2;
+vote(p=0x334466, proposal=6)@3;

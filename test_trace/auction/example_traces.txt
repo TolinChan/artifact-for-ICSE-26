@@ -1,0 +1,1002 @@
+// Trace 1: 8 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+bid(bidder=0xA1, amount=100)@2;
+withdraw(bidder=0xA1, amount=100)@3;
+mint(account=0xB2, amount=500)@4;
+transfer(from=0xB2, to=0xA1, value=200)@5;
+burn(account=0xC3, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+auctionEnd()@8;
+auctionEnd()@9;
+approve(owner=0xB2, spender=0xD4, amount=100)@10;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@11;
+
+// Trace 2: 8 different operations
+auctionEnd()@0;
+mint(account=0xB2, amount=500)@1;
+burn(account=0xC3, amount=100)@2;
+bid(bidder=0xA1, amount=100)@3;
+withdraw(bidder=0xA1, amount=100)@4;
+auctionEnd()@5;
+bid(bidder=0xA1, amount=100)@6;
+bid(bidder=0xA1, amount=100)@7;
+bid(bidder=0xA1, amount=100)@8;
+auctionEnd()@9;
+mint(account=0xC3, amount=500)@10;
+transfer(from=0xB2, to=0xA1, value=200)@11;
+burn(account=0xC3, amount=100)@12;
+withdraw(bidder=0xA1, amount=100)@13;
+withdraw(bidder=0xA1, amount=100)@14;
+approve(owner=0xC3, spender=0xA1, amount=100)@15;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@16;
+
+// Trace 3: 6 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+bid(bidder=0xA1, amount=100)@1;
+mint(account=0xA1, amount=500)@2;
+transfer(from=0xD4, to=0xA1, value=200)@3;
+burn(account=0xA1, amount=100)@4;
+auctionEnd()@5;
+bid(bidder=0xA1, amount=100)@6;
+transfer(from=0xB2, to=0xA1, value=20)@7;
+transfer(from=0xD4, to=0xC3, value=10)@8;
+bid(bidder=0xA1, amount=100)@9;
+auctionEnd()@10;
+bid(bidder=0xA1, amount=100)@11;
+auctionEnd()@12;
+bid(bidder=0xA1, amount=100)@13;
+withdraw(bidder=0xA1, amount=100)@14;
+bid(bidder=0xA1, amount=100)@15;
+
+// Trace 4: 8 different operations
+bid(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+mint(account=0xB2, amount=500)@2;
+transfer(from=0xD4, to=0xC3, value=200)@3;
+burn(account=0xB2, amount=100)@4;
+withdraw(bidder=0xA1, amount=100)@5;
+bid(bidder=0xA1, amount=100)@6;
+auctionEnd()@7;
+bid(bidder=0xA1, amount=100)@8;
+bid(bidder=0xA1, amount=100)@9;
+approve(owner=0xA1, spender=0xB2, amount=100)@10;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@11;
+bid(bidder=0xA1, amount=100)@12;
+
+// Trace 5: 6 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+bid(bidder=0xA1, amount=100)@1;
+auctionEnd()@2;
+approve(owner=0xC3, spender=0xD4, amount=100)@3;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@4;
+auctionEnd()@5;
+withdraw(bidder=0xA1, amount=100)@6;
+approve(owner=0xC3, spender=0xD4, amount=100)@7;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@8;
+auctionEnd()@9;
+auctionEnd()@10;
+bid(bidder=0xA1, amount=100)@11;
+auctionEnd()@12;
+transfer(from=0xA1, to=0xB2, value=30)@13;
+bid(bidder=0xA1, amount=100)@14;
+
+// Trace 6: 4 different operations
+bid(bidder=0xA1, amount=100)@0;
+withdraw(bidder=0xA1, amount=100)@1;
+auctionEnd()@2;
+bid(bidder=0xA1, amount=100)@3;
+bid(bidder=0xA1, amount=100)@4;
+bid(bidder=0xA1, amount=100)@5;
+transfer(from=0xC3, to=0xB2, value=30)@6;
+transfer(from=0xA1, to=0xD4, value=20)@7;
+bid(bidder=0xA1, amount=100)@8;
+auctionEnd()@9;
+withdraw(bidder=0xA1, amount=100)@10;
+withdraw(bidder=0xA1, amount=100)@11;
+bid(bidder=0xA1, amount=100)@12;
+withdraw(bidder=0xA1, amount=100)@13;
+
+// Trace 7: 6 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+bid(bidder=0xA1, amount=100)@2;
+mint(account=0xB2, amount=500)@3;
+transfer(from=0xA1, to=0xB2, value=200)@4;
+burn(account=0xD4, amount=100)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+auctionEnd()@8;
+withdraw(bidder=0xA1, amount=100)@9;
+auctionEnd()@10;
+auctionEnd()@11;
+
+// Trace 8: 6 different operations
+bid(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+withdraw(bidder=0xA1, amount=100)@2;
+mint(account=0xA1, amount=500)@3;
+transfer(from=0xB2, to=0xC3, value=200)@4;
+burn(account=0xB2, amount=100)@5;
+auctionEnd()@6;
+withdraw(bidder=0xA1, amount=100)@7;
+auctionEnd()@8;
+auctionEnd()@9;
+
+// Trace 9: 6 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+bid(bidder=0xA1, amount=100)@1;
+auctionEnd()@2;
+withdraw(bidder=0xA1, amount=100)@3;
+withdraw(bidder=0xA1, amount=100)@4;
+withdraw(bidder=0xA1, amount=100)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+bid(bidder=0xA1, amount=100)@8;
+auctionEnd()@9;
+withdraw(bidder=0xA1, amount=100)@10;
+mint(account=0xB2, amount=500)@11;
+transfer(from=0xC3, to=0xA1, value=200)@12;
+burn(account=0xD4, amount=100)@13;
+withdraw(bidder=0xA1, amount=100)@14;
+
+// Trace 10: withdraw, bid, auctionEnd
+bid(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+withdraw(bidder=0xA1, amount=100)@2;
+bid(bidder=0xA1, amount=100)@3;
+bid(bidder=0xA1, amount=100)@4;
+withdraw(bidder=0xA1, amount=100)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+bid(bidder=0xA1, amount=100)@7;
+withdraw(bidder=0xA1, amount=100)@8;
+withdraw(bidder=0xA1, amount=100)@9;
+
+// Trace 11: 8 different operations
+bid(bidder=0xA1, amount=100)@0;
+withdraw(bidder=0xA1, amount=100)@1;
+transfer(from=0xA1, to=0xD4, value=30)@2;
+transfer(from=0xC3, to=0xA1, value=20)@3;
+transfer(from=0xA1, to=0xD4, value=10)@4;
+auctionEnd()@5;
+bid(bidder=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+withdraw(bidder=0xA1, amount=100)@8;
+mint(account=0xC3, amount=500)@9;
+transfer(from=0xD4, to=0xC3, value=200)@10;
+burn(account=0xD4, amount=100)@11;
+auctionEnd()@12;
+approve(owner=0xB2, spender=0xA1, amount=100)@13;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@14;
+
+// Trace 12: 6 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+bid(bidder=0xA1, amount=100)@1;
+auctionEnd()@2;
+approve(owner=0xB2, spender=0xB2, amount=100)@3;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@4;
+withdraw(bidder=0xA1, amount=100)@5;
+transfer(from=0xA1, to=0xB2, value=30)@6;
+transfer(from=0xA1, to=0xB2, value=10)@7;
+auctionEnd()@8;
+transfer(from=0xD4, to=0xB2, value=30)@9;
+transfer(from=0xD4, to=0xB2, value=20)@10;
+transfer(from=0xB2, to=0xA1, value=10)@11;
+
+// Trace 13: 6 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+bid(bidder=0xA1, amount=100)@2;
+withdraw(bidder=0xA1, amount=100)@3;
+auctionEnd()@4;
+auctionEnd()@5;
+withdraw(bidder=0xA1, amount=100)@6;
+transfer(from=0xC3, to=0xD4, value=30)@7;
+transfer(from=0xA1, to=0xB2, value=20)@8;
+auctionEnd()@9;
+auctionEnd()@10;
+bid(bidder=0xA1, amount=100)@11;
+approve(owner=0xB2, spender=0xC3, amount=100)@12;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@13;
+withdraw(bidder=0xA1, amount=100)@14;
+approve(owner=0xC3, spender=0xA1, amount=100)@15;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@16;
+
+// Trace 14: 5 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+bid(bidder=0xA1, amount=100)@2;
+auctionEnd()@3;
+bid(bidder=0xA1, amount=100)@4;
+withdraw(bidder=0xA1, amount=100)@5;
+bid(bidder=0xA1, amount=100)@6;
+approve(owner=0xD4, spender=0xC3, amount=100)@7;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@8;
+withdraw(bidder=0xA1, amount=100)@9;
+auctionEnd()@10;
+withdraw(bidder=0xA1, amount=100)@11;
+withdraw(bidder=0xA1, amount=100)@12;
+
+// Trace 15: 8 different operations
+auctionEnd()@0;
+approve(owner=0xC3, spender=0xB2, amount=100)@1;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@2;
+bid(bidder=0xA1, amount=100)@3;
+mint(account=0xC3, amount=500)@4;
+transfer(from=0xB2, to=0xA1, value=200)@5;
+burn(account=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+approve(owner=0xA1, spender=0xA1, amount=100)@8;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@9;
+auctionEnd()@10;
+bid(bidder=0xA1, amount=100)@11;
+bid(bidder=0xA1, amount=100)@12;
+approve(owner=0xC3, spender=0xA1, amount=100)@13;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@14;
+
+// Trace 16: 4 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+bid(bidder=0xA1, amount=100)@1;
+auctionEnd()@2;
+transfer(from=0xA1, to=0xD4, value=30)@3;
+transfer(from=0xC3, to=0xD4, value=20)@4;
+transfer(from=0xD4, to=0xB2, value=10)@5;
+bid(bidder=0xA1, amount=100)@6;
+auctionEnd()@7;
+auctionEnd()@8;
+bid(bidder=0xA1, amount=100)@9;
+
+// Trace 17: 4 different operations
+auctionEnd()@0;
+bid(bidder=0xA1, amount=100)@1;
+withdraw(bidder=0xA1, amount=100)@2;
+withdraw(bidder=0xA1, amount=100)@3;
+withdraw(bidder=0xA1, amount=100)@4;
+bid(bidder=0xA1, amount=100)@5;
+transfer(from=0xC3, to=0xB2, value=30)@6;
+transfer(from=0xD4, to=0xB2, value=20)@7;
+transfer(from=0xB2, to=0xD4, value=10)@8;
+bid(bidder=0xA1, amount=100)@9;
+bid(bidder=0xA1, amount=100)@10;
+transfer(from=0xB2, to=0xA1, value=20)@11;
+transfer(from=0xC3, to=0xA1, value=10)@12;
+
+// Trace 18: 7 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+mint(account=0xA1, amount=500)@2;
+burn(account=0xC3, amount=100)@3;
+bid(bidder=0xA1, amount=100)@4;
+bid(bidder=0xA1, amount=100)@5;
+bid(bidder=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+approve(owner=0xC3, spender=0xD4, amount=100)@8;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@9;
+auctionEnd()@10;
+
+// Trace 19: 8 different operations
+bid(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+mint(account=0xB2, amount=500)@2;
+transfer(from=0xB2, to=0xD4, value=200)@3;
+burn(account=0xD4, amount=100)@4;
+withdraw(bidder=0xA1, amount=100)@5;
+transfer(from=0xB2, to=0xC3, value=30)@6;
+transfer(from=0xC3, to=0xA1, value=20)@7;
+withdraw(bidder=0xA1, amount=100)@8;
+bid(bidder=0xA1, amount=100)@9;
+approve(owner=0xB2, spender=0xA1, amount=100)@10;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@11;
+auctionEnd()@12;
+bid(bidder=0xA1, amount=100)@13;
+auctionEnd()@14;
+bid(bidder=0xA1, amount=100)@15;
+
+// Trace 20: 6 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+bid(bidder=0xA1, amount=100)@1;
+auctionEnd()@2;
+withdraw(bidder=0xA1, amount=100)@3;
+auctionEnd()@4;
+approve(owner=0xB2, spender=0xB2, amount=100)@5;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+auctionEnd()@8;
+transfer(from=0xC3, to=0xA1, value=30)@9;
+transfer(from=0xA1, to=0xC3, value=20)@10;
+transfer(from=0xB2, to=0xA1, value=10)@11;
+auctionEnd()@12;
+transfer(from=0xA1, to=0xD4, value=30)@13;
+transfer(from=0xA1, to=0xD4, value=10)@14;
+auctionEnd()@15;
+auctionEnd()@16;
+
+// Trace 21: 8 different operations
+auctionEnd()@0;
+withdraw(bidder=0xA1, amount=100)@1;
+transfer(from=0xB2, to=0xA1, value=30)@2;
+transfer(from=0xA1, to=0xC3, value=20)@3;
+transfer(from=0xC3, to=0xA1, value=10)@4;
+bid(bidder=0xA1, amount=100)@5;
+auctionEnd()@6;
+approve(owner=0xA1, spender=0xC3, amount=100)@7;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@8;
+bid(bidder=0xA1, amount=100)@9;
+bid(bidder=0xA1, amount=100)@10;
+mint(account=0xC3, amount=500)@11;
+burn(account=0xB2, amount=100)@12;
+auctionEnd()@13;
+transfer(from=0xB2, to=0xA1, value=10)@14;
+withdraw(bidder=0xA1, amount=100)@15;
+
+// Trace 22: 6 different operations
+auctionEnd()@0;
+bid(bidder=0xA1, amount=100)@1;
+withdraw(bidder=0xA1, amount=100)@2;
+mint(account=0xD4, amount=500)@3;
+burn(account=0xD4, amount=100)@4;
+bid(bidder=0xA1, amount=100)@5;
+bid(bidder=0xA1, amount=100)@6;
+auctionEnd()@7;
+auctionEnd()@8;
+transfer(from=0xA1, to=0xC3, value=30)@9;
+transfer(from=0xD4, to=0xB2, value=20)@10;
+transfer(from=0xD4, to=0xC3, value=10)@11;
+
+// Trace 23: 6 different operations
+bid(bidder=0xA1, amount=100)@0;
+mint(account=0xB2, amount=500)@1;
+transfer(from=0xA1, to=0xB2, value=200)@2;
+burn(account=0xB2, amount=100)@3;
+withdraw(bidder=0xA1, amount=100)@4;
+transfer(from=0xD4, to=0xA1, value=30)@5;
+transfer(from=0xA1, to=0xB2, value=20)@6;
+transfer(from=0xC3, to=0xB2, value=10)@7;
+auctionEnd()@8;
+auctionEnd()@9;
+auctionEnd()@10;
+withdraw(bidder=0xA1, amount=100)@11;
+transfer(from=0xB2, to=0xC3, value=30)@12;
+transfer(from=0xC3, to=0xA1, value=10)@13;
+withdraw(bidder=0xA1, amount=100)@14;
+
+// Trace 24: 8 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+bid(bidder=0xA1, amount=100)@2;
+auctionEnd()@3;
+bid(bidder=0xA1, amount=100)@4;
+withdraw(bidder=0xA1, amount=100)@5;
+approve(owner=0xC3, spender=0xA1, amount=100)@6;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@7;
+withdraw(bidder=0xA1, amount=100)@8;
+mint(account=0xD4, amount=500)@9;
+transfer(from=0xB2, to=0xA1, value=200)@10;
+burn(account=0xD4, amount=100)@11;
+auctionEnd()@12;
+mint(account=0xB2, amount=500)@13;
+transfer(from=0xD4, to=0xA1, value=200)@14;
+burn(account=0xB2, amount=100)@15;
+
+// Trace 25: 5 different operations
+bid(bidder=0xA1, amount=100)@0;
+withdraw(bidder=0xA1, amount=100)@1;
+auctionEnd()@2;
+bid(bidder=0xA1, amount=100)@3;
+approve(owner=0xB2, spender=0xA1, amount=100)@4;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@5;
+auctionEnd()@6;
+auctionEnd()@7;
+auctionEnd()@8;
+withdraw(bidder=0xA1, amount=100)@9;
+bid(bidder=0xA1, amount=100)@10;
+
+// Trace 26: 4 different operations
+auctionEnd()@0;
+bid(bidder=0xA1, amount=100)@1;
+withdraw(bidder=0xA1, amount=100)@2;
+transfer(from=0xC3, to=0xA1, value=10)@3;
+bid(bidder=0xA1, amount=100)@4;
+withdraw(bidder=0xA1, amount=100)@5;
+bid(bidder=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+auctionEnd()@8;
+auctionEnd()@9;
+transfer(from=0xD4, to=0xC3, value=30)@10;
+transfer(from=0xC3, to=0xB2, value=10)@11;
+
+// Trace 27: 8 different operations
+auctionEnd()@0;
+withdraw(bidder=0xA1, amount=100)@1;
+bid(bidder=0xA1, amount=100)@2;
+bid(bidder=0xA1, amount=100)@3;
+mint(account=0xD4, amount=500)@4;
+transfer(from=0xB2, to=0xA1, value=200)@5;
+burn(account=0xB2, amount=100)@6;
+bid(bidder=0xA1, amount=100)@7;
+bid(bidder=0xA1, amount=100)@8;
+bid(bidder=0xA1, amount=100)@9;
+approve(owner=0xD4, spender=0xB2, amount=100)@10;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@11;
+bid(bidder=0xA1, amount=100)@12;
+
+// Trace 28: 8 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+approve(owner=0xB2, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@2;
+bid(bidder=0xA1, amount=100)@3;
+mint(account=0xB2, amount=500)@4;
+transfer(from=0xD4, to=0xA1, value=200)@5;
+burn(account=0xD4, amount=100)@6;
+auctionEnd()@7;
+bid(bidder=0xA1, amount=100)@8;
+withdraw(bidder=0xA1, amount=100)@9;
+auctionEnd()@10;
+bid(bidder=0xA1, amount=100)@11;
+
+// Trace 29: 5 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+bid(bidder=0xA1, amount=100)@2;
+bid(bidder=0xA1, amount=100)@3;
+bid(bidder=0xA1, amount=100)@4;
+auctionEnd()@5;
+bid(bidder=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+approve(owner=0xD4, spender=0xA1, amount=100)@8;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@9;
+withdraw(bidder=0xA1, amount=100)@10;
+
+// Trace 30: 4 different operations
+auctionEnd()@0;
+bid(bidder=0xA1, amount=100)@1;
+withdraw(bidder=0xA1, amount=100)@2;
+bid(bidder=0xA1, amount=100)@3;
+auctionEnd()@4;
+bid(bidder=0xA1, amount=100)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+bid(bidder=0xA1, amount=100)@7;
+bid(bidder=0xA1, amount=100)@8;
+bid(bidder=0xA1, amount=100)@9;
+auctionEnd()@10;
+withdraw(bidder=0xA1, amount=100)@11;
+bid(bidder=0xA1, amount=100)@12;
+transfer(from=0xC3, to=0xD4, value=30)@13;
+transfer(from=0xD4, to=0xA1, value=20)@14;
+transfer(from=0xD4, to=0xC3, value=10)@15;
+
+// Trace 31: 6 different operations
+auctionEnd()@0;
+bid(bidder=0xA1, amount=100)@1;
+withdraw(bidder=0xA1, amount=100)@2;
+auctionEnd()@3;
+approve(owner=0xC3, spender=0xB2, amount=100)@4;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+bid(bidder=0xA1, amount=100)@8;
+bid(bidder=0xA1, amount=100)@9;
+transfer(from=0xA1, to=0xD4, value=30)@10;
+transfer(from=0xC3, to=0xA1, value=20)@11;
+transfer(from=0xD4, to=0xA1, value=10)@12;
+withdraw(bidder=0xA1, amount=100)@13;
+transfer(from=0xC3, to=0xA1, value=30)@14;
+transfer(from=0xB2, to=0xD4, value=20)@15;
+transfer(from=0xA1, to=0xB2, value=10)@16;
+withdraw(bidder=0xA1, amount=100)@17;
+approve(owner=0xC3, spender=0xA1, amount=100)@18;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@19;
+
+// Trace 32: 6 different operations
+auctionEnd()@0;
+mint(account=0xA1, amount=500)@1;
+transfer(from=0xB2, to=0xC3, value=200)@2;
+burn(account=0xD4, amount=100)@3;
+withdraw(bidder=0xA1, amount=100)@4;
+transfer(from=0xD4, to=0xA1, value=30)@5;
+transfer(from=0xC3, to=0xB2, value=20)@6;
+bid(bidder=0xA1, amount=100)@7;
+withdraw(bidder=0xA1, amount=100)@8;
+transfer(from=0xD4, to=0xC3, value=20)@9;
+transfer(from=0xA1, to=0xC3, value=10)@10;
+auctionEnd()@11;
+bid(bidder=0xA1, amount=100)@12;
+bid(bidder=0xA1, amount=100)@13;
+withdraw(bidder=0xA1, amount=100)@14;
+transfer(from=0xA1, to=0xD4, value=30)@15;
+transfer(from=0xA1, to=0xD4, value=20)@16;
+
+// Trace 33: 4 different operations
+auctionEnd()@0;
+bid(bidder=0xA1, amount=100)@1;
+withdraw(bidder=0xA1, amount=100)@2;
+auctionEnd()@3;
+auctionEnd()@4;
+withdraw(bidder=0xA1, amount=100)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+transfer(from=0xC3, to=0xD4, value=20)@8;
+transfer(from=0xB2, to=0xA1, value=10)@9;
+auctionEnd()@10;
+bid(bidder=0xA1, amount=100)@11;
+
+// Trace 34: 6 different operations
+bid(bidder=0xA1, amount=100)@0;
+withdraw(bidder=0xA1, amount=100)@1;
+transfer(from=0xA1, to=0xD4, value=30)@2;
+transfer(from=0xD4, to=0xA1, value=10)@3;
+auctionEnd()@4;
+withdraw(bidder=0xA1, amount=100)@5;
+auctionEnd()@6;
+transfer(from=0xA1, to=0xD4, value=10)@7;
+withdraw(bidder=0xA1, amount=100)@8;
+auctionEnd()@9;
+mint(account=0xD4, amount=500)@10;
+burn(account=0xC3, amount=100)@11;
+withdraw(bidder=0xA1, amount=100)@12;
+auctionEnd()@13;
+
+// Trace 35: 6 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+bid(bidder=0xA1, amount=100)@1;
+auctionEnd()@2;
+withdraw(bidder=0xA1, amount=100)@3;
+auctionEnd()@4;
+bid(bidder=0xA1, amount=100)@5;
+auctionEnd()@6;
+mint(account=0xA1, amount=500)@7;
+transfer(from=0xB2, to=0xC3, value=200)@8;
+burn(account=0xB2, amount=100)@9;
+auctionEnd()@10;
+auctionEnd()@11;
+withdraw(bidder=0xA1, amount=100)@12;
+auctionEnd()@13;
+mint(account=0xD4, amount=500)@14;
+burn(account=0xA1, amount=100)@15;
+
+// Trace 36: 5 different operations
+auctionEnd()@0;
+withdraw(bidder=0xA1, amount=100)@1;
+bid(bidder=0xA1, amount=100)@2;
+bid(bidder=0xA1, amount=100)@3;
+withdraw(bidder=0xA1, amount=100)@4;
+bid(bidder=0xA1, amount=100)@5;
+approve(owner=0xC3, spender=0xD4, amount=100)@6;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@7;
+bid(bidder=0xA1, amount=100)@8;
+bid(bidder=0xA1, amount=100)@9;
+approve(owner=0xB2, spender=0xC3, amount=100)@10;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@11;
+
+// Trace 37: 8 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+mint(account=0xD4, amount=500)@2;
+burn(account=0xA1, amount=100)@3;
+bid(bidder=0xA1, amount=100)@4;
+auctionEnd()@5;
+bid(bidder=0xA1, amount=100)@6;
+auctionEnd()@7;
+transfer(from=0xC3, to=0xA1, value=30)@8;
+transfer(from=0xA1, to=0xC3, value=20)@9;
+transfer(from=0xA1, to=0xC3, value=10)@10;
+auctionEnd()@11;
+bid(bidder=0xA1, amount=100)@12;
+withdraw(bidder=0xA1, amount=100)@13;
+transfer(from=0xB2, to=0xC3, value=30)@14;
+transfer(from=0xA1, to=0xD4, value=20)@15;
+bid(bidder=0xA1, amount=100)@16;
+approve(owner=0xD4, spender=0xA1, amount=100)@17;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@18;
+
+// Trace 38: 6 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+bid(bidder=0xA1, amount=100)@1;
+transfer(from=0xA1, to=0xC3, value=20)@2;
+transfer(from=0xC3, to=0xD4, value=10)@3;
+auctionEnd()@4;
+withdraw(bidder=0xA1, amount=100)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+bid(bidder=0xA1, amount=100)@8;
+withdraw(bidder=0xA1, amount=100)@9;
+mint(account=0xA1, amount=500)@10;
+burn(account=0xB2, amount=100)@11;
+
+// Trace 39: 6 different operations
+bid(bidder=0xA1, amount=100)@0;
+transfer(from=0xD4, to=0xB2, value=10)@1;
+auctionEnd()@2;
+withdraw(bidder=0xA1, amount=100)@3;
+bid(bidder=0xA1, amount=100)@4;
+withdraw(bidder=0xA1, amount=100)@5;
+auctionEnd()@6;
+withdraw(bidder=0xA1, amount=100)@7;
+auctionEnd()@8;
+approve(owner=0xA1, spender=0xA1, amount=100)@9;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@10;
+auctionEnd()@11;
+
+// Trace 40: 8 different operations
+auctionEnd()@0;
+bid(bidder=0xA1, amount=100)@1;
+mint(account=0xC3, amount=500)@2;
+transfer(from=0xC3, to=0xB2, value=200)@3;
+burn(account=0xC3, amount=100)@4;
+withdraw(bidder=0xA1, amount=100)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+approve(owner=0xB2, spender=0xB2, amount=100)@7;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@8;
+bid(bidder=0xA1, amount=100)@9;
+auctionEnd()@10;
+auctionEnd()@11;
+
+// Trace 41: 8 different operations
+auctionEnd()@0;
+bid(bidder=0xA1, amount=100)@1;
+withdraw(bidder=0xA1, amount=100)@2;
+auctionEnd()@3;
+mint(account=0xB2, amount=500)@4;
+transfer(from=0xA1, to=0xB2, value=200)@5;
+burn(account=0xA1, amount=100)@6;
+bid(bidder=0xA1, amount=100)@7;
+withdraw(bidder=0xA1, amount=100)@8;
+auctionEnd()@9;
+approve(owner=0xC3, spender=0xB2, amount=100)@10;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@11;
+
+// Trace 42: 8 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+bid(bidder=0xA1, amount=100)@1;
+auctionEnd()@2;
+bid(bidder=0xA1, amount=100)@3;
+withdraw(bidder=0xA1, amount=100)@4;
+withdraw(bidder=0xA1, amount=100)@5;
+bid(bidder=0xA1, amount=100)@6;
+approve(owner=0xD4, spender=0xC3, amount=100)@7;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@8;
+withdraw(bidder=0xA1, amount=100)@9;
+approve(owner=0xC3, spender=0xB2, amount=100)@10;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@11;
+bid(bidder=0xA1, amount=100)@12;
+bid(bidder=0xA1, amount=100)@13;
+mint(account=0xD4, amount=500)@14;
+transfer(from=0xD4, to=0xB2, value=200)@15;
+burn(account=0xC3, amount=100)@16;
+
+// Trace 43: 6 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+bid(bidder=0xA1, amount=100)@1;
+approve(owner=0xA1, spender=0xD4, amount=100)@2;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@3;
+auctionEnd()@4;
+transfer(from=0xB2, to=0xC3, value=30)@5;
+transfer(from=0xD4, to=0xB2, value=20)@6;
+transfer(from=0xC3, to=0xA1, value=10)@7;
+auctionEnd()@8;
+transfer(from=0xD4, to=0xC3, value=30)@9;
+transfer(from=0xA1, to=0xD4, value=20)@10;
+withdraw(bidder=0xA1, amount=100)@11;
+withdraw(bidder=0xA1, amount=100)@12;
+
+// Trace 44: 6 different operations
+bid(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+approve(owner=0xD4, spender=0xD4, amount=100)@2;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@3;
+withdraw(bidder=0xA1, amount=100)@4;
+transfer(from=0xB2, to=0xA1, value=30)@5;
+transfer(from=0xD4, to=0xA1, value=20)@6;
+transfer(from=0xC3, to=0xB2, value=10)@7;
+auctionEnd()@8;
+auctionEnd()@9;
+
+// Trace 45: 6 different operations
+bid(bidder=0xA1, amount=100)@0;
+withdraw(bidder=0xA1, amount=100)@1;
+auctionEnd()@2;
+mint(account=0xD4, amount=500)@3;
+transfer(from=0xB2, to=0xD4, value=200)@4;
+burn(account=0xC3, amount=100)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+mint(account=0xB2, amount=500)@7;
+burn(account=0xA1, amount=100)@8;
+withdraw(bidder=0xA1, amount=100)@9;
+auctionEnd()@10;
+bid(bidder=0xA1, amount=100)@11;
+auctionEnd()@12;
+
+// Trace 46: 6 different operations
+auctionEnd()@0;
+withdraw(bidder=0xA1, amount=100)@1;
+bid(bidder=0xA1, amount=100)@2;
+withdraw(bidder=0xA1, amount=100)@3;
+mint(account=0xB2, amount=500)@4;
+transfer(from=0xA1, to=0xD4, value=200)@5;
+burn(account=0xB2, amount=100)@6;
+auctionEnd()@7;
+withdraw(bidder=0xA1, amount=100)@8;
+withdraw(bidder=0xA1, amount=100)@9;
+withdraw(bidder=0xA1, amount=100)@10;
+transfer(from=0xB2, to=0xA1, value=10)@11;
+
+// Trace 47: 6 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+bid(bidder=0xA1, amount=100)@1;
+transfer(from=0xB2, to=0xD4, value=30)@2;
+transfer(from=0xD4, to=0xB2, value=20)@3;
+transfer(from=0xD4, to=0xA1, value=10)@4;
+auctionEnd()@5;
+approve(owner=0xD4, spender=0xB2, amount=100)@6;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@7;
+withdraw(bidder=0xA1, amount=100)@8;
+auctionEnd()@9;
+withdraw(bidder=0xA1, amount=100)@10;
+
+// Trace 48: 5 different operations
+auctionEnd()@0;
+withdraw(bidder=0xA1, amount=100)@1;
+bid(bidder=0xA1, amount=100)@2;
+withdraw(bidder=0xA1, amount=100)@3;
+auctionEnd()@4;
+withdraw(bidder=0xA1, amount=100)@5;
+approve(owner=0xD4, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@7;
+auctionEnd()@8;
+auctionEnd()@9;
+bid(bidder=0xA1, amount=100)@10;
+withdraw(bidder=0xA1, amount=100)@11;
+
+// Trace 49: 4 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+transfer(from=0xB2, to=0xA1, value=20)@1;
+transfer(from=0xB2, to=0xA1, value=10)@2;
+auctionEnd()@3;
+bid(bidder=0xA1, amount=100)@4;
+auctionEnd()@5;
+withdraw(bidder=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+transfer(from=0xB2, to=0xA1, value=30)@8;
+auctionEnd()@9;
+auctionEnd()@10;
+auctionEnd()@11;
+bid(bidder=0xA1, amount=100)@12;
+
+// Trace 50: 8 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+approve(owner=0xC3, spender=0xB2, amount=100)@1;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@2;
+auctionEnd()@3;
+mint(account=0xC3, amount=500)@4;
+transfer(from=0xB2, to=0xD4, value=200)@5;
+burn(account=0xA1, amount=100)@6;
+bid(bidder=0xA1, amount=100)@7;
+bid(bidder=0xA1, amount=100)@8;
+withdraw(bidder=0xA1, amount=100)@9;
+
+// Trace 51: 8 different operations
+auctionEnd()@0;
+withdraw(bidder=0xA1, amount=100)@1;
+bid(bidder=0xA1, amount=100)@2;
+approve(owner=0xD4, spender=0xC3, amount=100)@3;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@4;
+auctionEnd()@5;
+withdraw(bidder=0xA1, amount=100)@6;
+mint(account=0xD4, amount=500)@7;
+burn(account=0xD4, amount=100)@8;
+withdraw(bidder=0xA1, amount=100)@9;
+transfer(from=0xB2, to=0xC3, value=20)@10;
+transfer(from=0xC3, to=0xD4, value=10)@11;
+
+// Trace 52: 8 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+bid(bidder=0xA1, amount=100)@1;
+approve(owner=0xA1, spender=0xC3, amount=100)@2;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@3;
+auctionEnd()@4;
+withdraw(bidder=0xA1, amount=100)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+bid(bidder=0xA1, amount=100)@7;
+mint(account=0xC3, amount=500)@8;
+burn(account=0xA1, amount=100)@9;
+auctionEnd()@10;
+withdraw(bidder=0xA1, amount=100)@11;
+withdraw(bidder=0xA1, amount=100)@12;
+bid(bidder=0xA1, amount=100)@13;
+bid(bidder=0xA1, amount=100)@14;
+mint(account=0xB2, amount=500)@15;
+transfer(from=0xD4, to=0xA1, value=200)@16;
+burn(account=0xD4, amount=100)@17;
+
+// Trace 53: 8 different operations
+bid(bidder=0xA1, amount=100)@0;
+withdraw(bidder=0xA1, amount=100)@1;
+auctionEnd()@2;
+bid(bidder=0xA1, amount=100)@3;
+withdraw(bidder=0xA1, amount=100)@4;
+auctionEnd()@5;
+auctionEnd()@6;
+withdraw(bidder=0xA1, amount=100)@7;
+approve(owner=0xA1, spender=0xB2, amount=100)@8;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@9;
+bid(bidder=0xA1, amount=100)@10;
+auctionEnd()@11;
+mint(account=0xA1, amount=500)@12;
+transfer(from=0xD4, to=0xC3, value=200)@13;
+burn(account=0xA1, amount=100)@14;
+withdraw(bidder=0xA1, amount=100)@15;
+mint(account=0xB2, amount=500)@16;
+transfer(from=0xA1, to=0xD4, value=200)@17;
+burn(account=0xA1, amount=100)@18;
+
+// Trace 54: 8 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+bid(bidder=0xA1, amount=100)@2;
+withdraw(bidder=0xA1, amount=100)@3;
+mint(account=0xD4, amount=500)@4;
+transfer(from=0xD4, to=0xB2, value=200)@5;
+burn(account=0xC3, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+bid(bidder=0xA1, amount=100)@8;
+approve(owner=0xC3, spender=0xA1, amount=100)@9;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@10;
+
+// Trace 55: 8 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+bid(bidder=0xA1, amount=100)@1;
+auctionEnd()@2;
+mint(account=0xC3, amount=500)@3;
+transfer(from=0xC3, to=0xD4, value=200)@4;
+burn(account=0xA1, amount=100)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+bid(bidder=0xA1, amount=100)@7;
+withdraw(bidder=0xA1, amount=100)@8;
+auctionEnd()@9;
+approve(owner=0xD4, spender=0xC3, amount=100)@10;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@11;
+auctionEnd()@12;
+
+// Trace 56: withdraw, auctionEnd, bid
+withdraw(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+bid(bidder=0xA1, amount=100)@2;
+auctionEnd()@3;
+withdraw(bidder=0xA1, amount=100)@4;
+withdraw(bidder=0xA1, amount=100)@5;
+bid(bidder=0xA1, amount=100)@6;
+bid(bidder=0xA1, amount=100)@7;
+auctionEnd()@8;
+auctionEnd()@9;
+auctionEnd()@10;
+withdraw(bidder=0xA1, amount=100)@11;
+
+// Trace 57: 6 different operations
+bid(bidder=0xA1, amount=100)@0;
+withdraw(bidder=0xA1, amount=100)@1;
+mint(account=0xB2, amount=500)@2;
+transfer(from=0xB2, to=0xC3, value=200)@3;
+burn(account=0xD4, amount=100)@4;
+auctionEnd()@5;
+withdraw(bidder=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+auctionEnd()@8;
+bid(bidder=0xA1, amount=100)@9;
+mint(account=0xD4, amount=500)@10;
+burn(account=0xB2, amount=100)@11;
+
+// Trace 58: 8 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+transfer(from=0xB2, to=0xC3, value=30)@1;
+transfer(from=0xA1, to=0xD4, value=20)@2;
+transfer(from=0xD4, to=0xA1, value=10)@3;
+auctionEnd()@4;
+bid(bidder=0xA1, amount=100)@5;
+approve(owner=0xA1, spender=0xB2, amount=100)@6;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@7;
+bid(bidder=0xA1, amount=100)@8;
+bid(bidder=0xA1, amount=100)@9;
+withdraw(bidder=0xA1, amount=100)@10;
+bid(bidder=0xA1, amount=100)@11;
+withdraw(bidder=0xA1, amount=100)@12;
+bid(bidder=0xA1, amount=100)@13;
+mint(account=0xC3, amount=500)@14;
+transfer(from=0xC3, to=0xB2, value=200)@15;
+burn(account=0xA1, amount=100)@16;
+
+// Trace 59: 5 different operations
+bid(bidder=0xA1, amount=100)@0;
+withdraw(bidder=0xA1, amount=100)@1;
+auctionEnd()@2;
+approve(owner=0xA1, spender=0xB2, amount=100)@3;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@4;
+auctionEnd()@5;
+approve(owner=0xC3, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@7;
+auctionEnd()@8;
+approve(owner=0xC3, spender=0xB2, amount=100)@9;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@10;
+withdraw(bidder=0xA1, amount=100)@11;
+withdraw(bidder=0xA1, amount=100)@12;
+withdraw(bidder=0xA1, amount=100)@13;
+withdraw(bidder=0xA1, amount=100)@14;
+
+// Trace 60: 6 different operations
+auctionEnd()@0;
+withdraw(bidder=0xA1, amount=100)@1;
+bid(bidder=0xA1, amount=100)@2;
+mint(account=0xB2, amount=500)@3;
+transfer(from=0xB2, to=0xD4, value=200)@4;
+burn(account=0xB2, amount=100)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+withdraw(bidder=0xA1, amount=100)@8;
+auctionEnd()@9;
+withdraw(bidder=0xA1, amount=100)@10;
+
+// Trace 61: 5 different operations
+bid(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+withdraw(bidder=0xA1, amount=100)@2;
+approve(owner=0xB2, spender=0xA1, amount=100)@3;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@4;
+auctionEnd()@5;
+withdraw(bidder=0xA1, amount=100)@6;
+withdraw(bidder=0xA1, amount=100)@7;
+bid(bidder=0xA1, amount=100)@8;
+auctionEnd()@9;
+auctionEnd()@10;
+approve(owner=0xB2, spender=0xB2, amount=100)@11;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@12;
+
+// Trace 62: 5 different operations
+bid(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+withdraw(bidder=0xA1, amount=100)@2;
+auctionEnd()@3;
+auctionEnd()@4;
+withdraw(bidder=0xA1, amount=100)@5;
+mint(account=0xD4, amount=500)@6;
+burn(account=0xA1, amount=100)@7;
+withdraw(bidder=0xA1, amount=100)@8;
+bid(bidder=0xA1, amount=100)@9;
+withdraw(bidder=0xA1, amount=100)@10;
+auctionEnd()@11;
+mint(account=0xD4, amount=500)@12;
+burn(account=0xC3, amount=100)@13;
+
+// Trace 63: 8 different operations
+bid(bidder=0xA1, amount=100)@0;
+auctionEnd()@1;
+withdraw(bidder=0xA1, amount=100)@2;
+bid(bidder=0xA1, amount=100)@3;
+approve(owner=0xD4, spender=0xA1, amount=100)@4;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+transfer(from=0xD4, to=0xB2, value=30)@7;
+transfer(from=0xC3, to=0xD4, value=10)@8;
+withdraw(bidder=0xA1, amount=100)@9;
+auctionEnd()@10;
+mint(account=0xA1, amount=500)@11;
+burn(account=0xB2, amount=100)@12;
+withdraw(bidder=0xA1, amount=100)@13;
+bid(bidder=0xA1, amount=100)@14;
+mint(account=0xA1, amount=500)@15;
+transfer(from=0xB2, to=0xA1, value=200)@16;
+burn(account=0xC3, amount=100)@17;
+
+// Trace 64: 8 different operations
+withdraw(bidder=0xA1, amount=100)@0;
+mint(account=0xC3, amount=500)@1;
+transfer(from=0xA1, to=0xC3, value=200)@2;
+burn(account=0xC3, amount=100)@3;
+auctionEnd()@4;
+bid(bidder=0xA1, amount=100)@5;
+withdraw(bidder=0xA1, amount=100)@6;
+auctionEnd()@7;
+transfer(from=0xD4, to=0xA1, value=20)@8;
+transfer(from=0xA1, to=0xB2, value=10)@9;
+auctionEnd()@10;
+approve(owner=0xB2, spender=0xB2, amount=100)@11;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@12;
+

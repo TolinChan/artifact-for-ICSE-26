@@ -1,0 +1,14 @@
+
+// Ensuring total supply remains constant
+□(totalSupply(n) → n = constructor(n))
+
+// Ensuring total traded volume is calculated correctly
+□(totalTraded(n) → n = sum t: tradeVolume(t))
+
+// Ensuring no negative balance for any account
+□(balanceOf(p, n) → n ≥ 0)
+
+// Ensuring tax claims do not exceed balance
+□(claimDevTax(p, a) → balanceOf(p, m) ∧ m ≥ a)
+□(claimCommunityTax(p, a) → balanceOf(p, m) ∧ m ≥ a)
+□(claimDevToken(p, a) → balanceOf(p, m) ∧ m ≥ a)

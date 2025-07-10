@@ -1,0 +1,14 @@
+stake(p=0x123456, amount=500)@1;
+stakeNFT(p=0x123456, tokenId=3001)@2;
+withdraw(p=0x123456)@3;
+unstakeNFT(p=0x123456, tokenId=3001)@4;
+
+stake(p=0x789ABC, amount=1000)@1;
+rePledge(p=0x789ABC, amount=500)@2;
+withdraw(p=0x789ABC)@3;
+emergencyWithdraw(p=0x789ABC)@4;
+
+stakeNFT(p=0x567DEF, tokenId=4005)@1;
+stakeNFT(p=0x567DEF, tokenId=4006)@2;
+unstakeNFT(p=0x567DEF, tokenId=4005)@3;
+withdraw(p=0x567DEF)@4;

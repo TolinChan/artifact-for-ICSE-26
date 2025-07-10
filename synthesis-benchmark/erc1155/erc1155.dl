@@ -1,0 +1,44 @@
+// Parameters
+.decl *owner(p: address)
+.decl totalSupply(tokenId: uint, n: uint)[0]
+.decl balanceOf(tokenId: uint, p: address, n: uint)[0,1]
+.decl constructor()
+.decl allowance(tokenId: uint, p: address, s: address, n:uint)[0,1,2]
+
+// Transactions
+.decl mint(tokenId: uint, p: address, amount: uint)
+.decl burn(tokenId: uint, p: address, amount: uint)
+.decl transfer(tokenId: uint, from: address, to: address, amount: uint)
+.decl approve(tokenId: uint, owner: address, spender: address, amount: uint)
+.decl transferFrom(tokenId: uint, from: address, to: address, spender: address, amount: uint)
+
+// Rules
+owner(s) :- constructor().
+totalSupply(t, n) :- totalSupply(t, n).
+balanceOf(t, p, n) :- balanceOf(t, p, n).
+allowance(t, o, s, n) :- allowance(t, o, s, n).
+
+mint(t, p, n) :- mint(t, p, n).
+burn(t, p, n) :- burn(t, p, n).
+transfer(t, s, r, n) :- transfer(t, s, r, n).
+approve(t, o, s, n) :- approve(t, o, s, n).
+transferFrom(t, o, r, s, n) :- transferFrom(t, o, r, s, n).
+
+// Total balance calculations
+.decl totalMint(tokenId: uint, p: address, n: uint)[0,1]
+.decl totalBurn(tokenId: uint, p: address, n: uint)[0,1]
+.decl totalOut(tokenId: uint, p: address, n: uint)[0,1]
+.decl totalIn(tokenId: uint, p: address, n: uint)[0,1]
+
+totalOut(t, p, s) :- transfer(t, p, _, _), s = sum n: transfer(t, p, _, n).
+totalIn(t, p, s) :- transfer(t, _, p, _), s = sum n: transfer(t, _, p, n).
+totalMint(t, p, s) :- mint(t, p, _), s = sum n: mint(t, p, n).
+totalBurn(t, p, s) :- burn(t, p, _), s = sum n: burn(t, p, n).
+
+balanceOf(t, p, s) :- totalMint(t, p, n), totalBurn(t, p, m), totalOut(t, p, o), totalIn(t, p, i), s := n + i - m - o.
+
+.decl allMint(tokenId: uint, n: uint)[0]
+.decl allBurn(tokenId: uint, n: uint)[0]
+allMint(t, s) :- s = sum n: mint(t, _, n).
+allBurn(t, s) :- s = sum n: burn(t, _, n).
+totalSupply(t, n) :- allMint(t, m), allBurn(t, b), n := m - b.

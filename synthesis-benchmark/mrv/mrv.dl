@@ -1,0 +1,62 @@
+
+// Parameters
+.decl *totalSupply(n: uint)
+.decl *decimals(n: uint)
+.decl *maxCrowdsaleSupply(n: uint)
+.decl *wholeTokensReserved(n: uint)
+.decl *wholeTokensPerEth(n: uint)
+.decl *crowdsaleStarted(b: bool)
+.decl *crowdsaleEnded(b: bool)
+.decl *openTimer(n: uint)
+.decl *closeTimer(n: uint)
+.decl balanceOf(p: address, n: uint)[0]
+
+// Transactions
+.decl setMaxSupply(newMax: uint)
+.decl openCrowdsale()
+.decl setCrowdsaleOpenTimerFor(minutesFromNow: uint)
+.decl clearCrowdsaleOpenTimer()
+.decl setCrowdsaleCloseTimerFor(minutesFromNow: uint)
+.decl clearCrowdsaleCloseTimer()
+.decl createTokens(recipient: address, ethAmount: uint)
+.decl closeCrowdsale()
+.decl setDecimals(newDecimals: uint)
+
+// Rules
+totalSupply(0).
+wholeTokensReserved(5000).
+wholeTokensPerEth(5000).
+crowdsaleStarted(false).
+crowdsaleEnded(false).
+openTimer(0).
+closeTimer(0).
+
+setMaxSupply(n) :- setMaxSupply(n).
+openCrowdsale() :- openCrowdsale().
+setCrowdsaleOpenTimerFor(n) :- setCrowdsaleOpenTimerFor(n).
+clearCrowdsaleOpenTimer() :- clearCrowdsaleOpenTimer().
+setCrowdsaleCloseTimerFor(n) :- setCrowdsaleCloseTimerFor(n).
+clearCrowdsaleCloseTimer() :- clearCrowdsaleCloseTimer().
+createTokens(p, n) :- createTokens(p, n).
+closeCrowdsale() :- closeCrowdsale().
+setDecimals(n) :- setDecimals(n).
+
+// Open and close timer conditions
+.decl openTimerElapsed(b: bool)
+openTimerElapsed(true) :- openTimer(t), now(n), t != 0, n > t.
+openTimerElapsed(false) :- openTimer(t), now(n), t == 0 ∨ n ≤ t.
+
+.decl closeTimerElapsed(b: bool)
+closeTimerElapsed(true) :- closeTimer(t), now(n), t != 0, n > t.
+closeTimerElapsed(false) :- closeTimer(t), now(n), t == 0 ∨ n ≤ t.
+
+// Token minting logic
+.decl newTotalSupply(n: uint)
+newTotalSupply(s) :- createTokens(p, e), totalSupply(t), 
+                     tokens := e * wholeTokensPerEth, 
+                     s := t + tokens.
+
+.decl recipientBalance(p: address, n: uint)
+recipientBalance(p, b) :- createTokens(p, e), balanceOf(p, x),
+                          tokens := e * wholeTokensPerEth,
+                          b := x + tokens.

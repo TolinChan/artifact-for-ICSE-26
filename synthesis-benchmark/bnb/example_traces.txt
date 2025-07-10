@@ -1,0 +1,26 @@
+// Trace 1: Basic transactions
+mint(account=0x114514, amount=1000)@0;
+transfer(from=0x114514, to=0x114515, value=200)@1;
+burn(account=0x114514, amount=100)@2;
+freeze(account=0x114514, amount=50)@3;
+unfreeze(account=0x114514, amount=20)@4;
+approve(owner=0x114514, spender=0x114518, amount=150)@5;
+transferFrom(sender=0x114518, from=0x114514, to=0x114515, value=50)@6;
+
+// Trace 2: Higher-value transactions with multiple approvals
+mint(account=0x223344, amount=5000)@0;
+approve(owner=0x223344, spender=0x556677, amount=2000)@1;
+transfer(from=0x223344, to=0x445566, value=1500)@2;
+transferFrom(sender=0x556677, from=0x223344, to=0x778899, value=1000)@3;
+burn(account=0x223344, amount=500)@4;
+freeze(account=0x445566, amount=300)@5;
+unfreeze(account=0x445566, amount=100)@6;
+
+// Trace 3: Complex sequence with multiple approvals and transfers
+mint(account=0x998877, amount=3000)@0;
+approve(owner=0x998877, spender=0x554433, amount=1200)@1;
+transfer(from=0x998877, to=0x112233, value=600)@2;
+transferFrom(sender=0x554433, from=0x998877, to=0x334455, value=800)@3;
+burn(account=0x998877, amount=200)@4;
+freeze(account=0x334455, amount=250)@5;
+unfreeze(account=0x334455, amount=150)@6;

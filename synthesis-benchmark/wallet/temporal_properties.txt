@@ -1,0 +1,12 @@
+
+// Ensuring total balances do not exceed total supply
+□(totalSupply(n) ∧ totalBalances(s) → s ≤ n)
+
+// Ensuring no negative balances
+□(balanceOf(p, n) → n ≥ 0)
+
+// Ensuring total balances match total supply
+□(totalBalances(s) ∧ totalSupply(n) → s == n)
+
+// Detecting negative balances
+□(negativeBalance(p, n) → n < 0)

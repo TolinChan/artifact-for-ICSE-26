@@ -1,0 +1,1002 @@
+// Trace 1: 14 different operations
+transferNative(param1=0xC3, param2=0xB2, param3=84)@0;
+approve(owner=0xD4, spender=0xD4, amount=100)@1;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@2;
+getNativeBalance(param1=0xD4)@3;
+transfer(from=0xB2, to=0xD4, value=73)@4;
+withdrawNative(param1=56)@5;
+approve(owner=0xD4, spender=0xD4, amount=100)@6;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@7;
+removeSupportedToken(param1=0xB2)@8;
+addAdmin(param1=0xA1)@9;
+depositTokens(param1=0xD4, param2=42)@10;
+transferTokens(param1=0xD4, param2=0xC3, param3=0xC3, param4=67)@11;
+getTokenBalance(param1=0xB2, param2=0xC3)@12;
+approve(owner=0xC3, spender=0xD4, amount=100)@13;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@14;
+addSupportedToken(param1=0xC3)@15;
+mint(account=0xB2, amount=500)@16;
+transfer(from=0xD4, to=0xC3, value=200)@17;
+burn(account=0xA1, amount=100)@18;
+
+// Trace 2: 17 different operations
+addSupportedToken(param1=0xB2)@0;
+depositTokens(param1=0xB2, param2=50)@1;
+approve(owner=0xC3, spender=0xB2, amount=100)@2;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@3;
+addAdmin(param1=0xC3)@4;
+depositNative()@5;
+removeSupportedToken(param1=0xC3)@6;
+withdrawTokens(param1=0xD4, param2=79)@7;
+removeAdmin(param1=0xC3)@8;
+transfer(from=0xC3, to=0xB2, value=1504)@9;
+transferTokens(param1=0xB2, param2=0xC3, param3=0xC3, param4=28)@10;
+getNativeBalance(param1=0xD4)@11;
+transferNative(param1=0xA1, param2=0xB2, param3=81)@12;
+getTokenBalance(param1=0xD4, param2=0xD4)@13;
+withdrawNative(param1=8)@14;
+removeAdmin(param1=0xC3)@15;
+addAdmin(param1=0xD4)@16;
+mint(account=0xA1, amount=500)@17;
+burn(account=0xC3, amount=100)@18;
+
+// Trace 3: 9 different operations
+addSupportedToken(param1=0xD4)@0;
+transfer(from=0xA1, to=0xB2, value=30)@1;
+transfer(from=0xA1, to=0xB2, value=20)@2;
+transfer(from=0xC3, to=0xD4, value=10)@3;
+transferNative(param1=0xA1, param2=0xD4, param3=38)@4;
+getNativeBalance(param1=0xD4)@5;
+depositTokens(param1=0xB2, param2=52)@6;
+removeSupportedToken(param1=0xC3)@7;
+transferTokens(param1=0xA1, param2=0xB2, param3=0xA1, param4=62)@8;
+mint(account=0xD4, amount=500)@9;
+transfer(from=0xD4, to=0xB2, value=200)@10;
+burn(account=0xC3, amount=100)@11;
+
+// Trace 4: 10 different operations
+transfer(from=0xC3, to=0xD4, value=2032)@0;
+transfer(from=0xB2, to=0xD4, value=20)@1;
+transfer(from=0xD4, to=0xC3, value=10)@2;
+getTokenBalance(param1=0xA1, param2=0xB2)@3;
+addAdmin(param1=0xD4)@4;
+removeAdmin(param1=0xC3)@5;
+getNativeBalance(param1=0xB2)@6;
+withdrawNative(param1=70)@7;
+approve(owner=0xD4, spender=0xD4, amount=100)@8;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@9;
+addSupportedToken(param1=0xA1)@10;
+transfer(from=0xB2, to=0xA1, value=30)@11;
+transfer(from=0xC3, to=0xA1, value=20)@12;
+transfer(from=0xC3, to=0xB2, value=10)@13;
+transferTokens(param1=0xB2, param2=0xA1, param3=0xC3, param4=26)@14;
+approve(owner=0xA1, spender=0xD4, amount=100)@15;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@16;
+
+// Trace 5: 8 different operations
+withdrawTokens(param1=0xD4, param2=77)@0;
+removeSupportedToken(param1=0xA1)@1;
+transfer(from=0xA1, to=0xC3, value=30)@2;
+transfer(from=0xA1, to=0xC3, value=20)@3;
+transfer(from=0xD4, to=0xA1, value=10)@4;
+transferTokens(param1=0xC3, param2=0xD4, param3=0xB2, param4=59)@5;
+getTokenBalance(param1=0xD4, param2=0xA1)@6;
+addSupportedToken(param1=0xB2)@7;
+mint(account=0xD4, amount=500)@8;
+transfer(from=0xD4, to=0xB2, value=200)@9;
+burn(account=0xD4, amount=100)@10;
+
+// Trace 6: 14 different operations
+getNativeBalance(param1=0xD4)@0;
+transfer(from=0xC3, to=0xB2, value=30)@1;
+transfer(from=0xD4, to=0xA1, value=20)@2;
+transfer(from=0xD4, to=0xC3, value=10)@3;
+transferFrom(sender=0xC3, from=0xD4, to=20, value=50)@4;
+withdrawTokens(param1=0xC3, param2=79)@5;
+transferTokens(param1=0xC3, param2=0xC3, param3=0xD4, param4=5)@6;
+transferNative(param1=0xA1, param2=0xA1, param3=6)@7;
+depositNative()@8;
+removeAdmin(param1=0xB2)@9;
+mint(account=0xC3, amount=500)@10;
+transfer(from=0xB2, to=0xD4, value=200)@11;
+burn(account=0xC3, amount=100)@12;
+addAdmin(param1=0xD4)@13;
+withdrawNative(param1=34)@14;
+addSupportedToken(param1=0xA1)@15;
+getTokenBalance(param1=0xD4, param2=0xD4)@16;
+
+// Trace 7: 9 different operations
+removeSupportedToken(param1=0xA1)@0;
+mint(account=0xA1, amount=500)@1;
+transfer(from=0xC3, to=0xA1, value=200)@2;
+burn(account=0xD4, amount=100)@3;
+depositNative()@4;
+transfer(from=0xD4, to=0xA1, value=30)@5;
+transfer(from=0xD4, to=0xB2, value=20)@6;
+transfer(from=0xC3, to=0xD4, value=10)@7;
+withdrawNative(param1=28)@8;
+approve(owner=0xD4, spender=0xD4, amount=100)@9;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@10;
+withdrawTokens(param1=0xA1, param2=38)@11;
+transfer(from=0xB2, to=0xC3, value=30)@12;
+transfer(from=0xC3, to=0xA1, value=20)@13;
+transfer(from=0xC3, to=0xB2, value=10)@14;
+
+// Trace 8: 12 different operations
+removeSupportedToken(param1=0xC3)@0;
+transferTokens(param1=0xD4, param2=0xA1, param3=0xD4, param4=85)@1;
+removeAdmin(param1=0xC3)@2;
+getTokenBalance(param1=0xA1, param2=0xC3)@3;
+withdrawTokens(param1=0xD4, param2=95)@4;
+transfer(from=0xC3, to=0xB2, value=698)@5;
+withdrawNative(param1=1)@6;
+addAdmin(param1=0xC3)@7;
+getNativeBalance(param1=0xC3)@8;
+depositTokens(param1=0xA1, param2=49)@9;
+mint(account=0xD4, amount=500)@10;
+transfer(from=0xA1, to=0xD4, value=200)@11;
+burn(account=0xB2, amount=100)@12;
+
+// Trace 9: 10 different operations
+depositNative()@0;
+removeAdmin(param1=0xD4)@1;
+withdrawTokens(param1=0xB2, param2=56)@2;
+getTokenBalance(param1=0xC3, param2=0xA1)@3;
+approve(owner=0xD4, spender=0xD4, amount=100)@4;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@5;
+transferTokens(param1=0xA1, param2=0xC3, param3=0xB2, param4=44)@6;
+getNativeBalance(param1=0xA1)@7;
+transfer(from=0xB2, to=0xD4, value=30)@8;
+transfer(from=0xA1, to=0xC3, value=20)@9;
+transfer(from=0xD4, to=0xB2, value=10)@10;
+addSupportedToken(param1=0xD4)@11;
+
+// Trace 10: 10 different operations
+transferTokens(param1=0xD4, param2=0xA1, param3=0xC3, param4=73)@0;
+addSupportedToken(param1=0xC3)@1;
+withdrawTokens(param1=0xC3, param2=33)@2;
+transfer(from=0xA1, to=0xD4, value=3107)@3;
+addAdmin(param1=0xC3)@4;
+transfer(from=0xA1, to=0xC3, value=30)@5;
+transfer(from=0xD4, to=0xC3, value=20)@6;
+transfer(from=0xB2, to=0xA1, value=10)@7;
+getNativeBalance(param1=0xC3)@8;
+getTokenBalance(param1=0xD4, param2=0xD4)@9;
+removeAdmin(param1=0xA1)@10;
+transfer(from=0xA1, to=0xB2, value=30)@11;
+transfer(from=0xA1, to=0xC3, value=10)@12;
+transferFrom(sender=0xA1, from=0xD4, to=2, value=50)@13;
+withdrawNative(param1=59)@14;
+transfer(from=0xA1, to=0xD4, value=20)@15;
+transfer(from=0xB2, to=0xD4, value=10)@16;
+
+// Trace 11: 13 different operations
+withdrawNative(param1=38)@0;
+withdrawTokens(param1=0xB2, param2=29)@1;
+mint(account=0xB2, amount=500)@2;
+transfer(from=0xC3, to=0xA1, value=200)@3;
+burn(account=0xB2, amount=100)@4;
+depositTokens(param1=0xD4, param2=100)@5;
+approve(owner=0xD4, spender=0xB2, amount=100)@6;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@7;
+removeSupportedToken(param1=0xA1)@8;
+removeAdmin(param1=0xC3)@9;
+transferNative(param1=0xD4, param2=0xB2, param3=8)@10;
+getTokenBalance(param1=0xA1, param2=0xB2)@11;
+addSupportedToken(param1=0xB2)@12;
+mint(account=0xD4, amount=500)@13;
+transfer(from=0xC3, to=0xA1, value=200)@14;
+burn(account=0xB2, amount=100)@15;
+
+// Trace 12: 10 different operations
+depositNative()@0;
+withdrawNative(param1=8)@1;
+removeSupportedToken(param1=0xB2)@2;
+transferNative(param1=0xB2, param2=0xB2, param3=86)@3;
+mint(account=0xB2, amount=500)@4;
+transfer(from=0xB2, to=0xC3, value=200)@5;
+burn(account=0xA1, amount=100)@6;
+transferFrom(sender=0xA1, from=0xD4, to=42, value=50)@7;
+approve(owner=0xD4, spender=0xA1, amount=100)@8;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@9;
+removeAdmin(param1=0xD4)@10;
+mint(account=0xB2, amount=500)@11;
+transfer(from=0xB2, to=0xA1, value=200)@12;
+burn(account=0xB2, amount=100)@13;
+
+// Trace 13: 9 different operations
+withdrawNative(param1=23)@0;
+approve(owner=0xC3, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@2;
+transferTokens(param1=0xD4, param2=0xD4, param3=0xD4, param4=70)@3;
+transfer(from=0xB2, to=0xA1, value=30)@4;
+transfer(from=0xD4, to=0xB2, value=20)@5;
+transfer(from=0xC3, to=0xB2, value=10)@6;
+getTokenBalance(param1=0xA1, param2=0xB2)@7;
+removeSupportedToken(param1=0xC3)@8;
+transfer(from=0xD4, to=0xC3, value=30)@9;
+transfer(from=0xB2, to=0xA1, value=20)@10;
+transfer(from=0xB2, to=0xC3, value=10)@11;
+depositTokens(param1=0xC3, param2=4)@12;
+transfer(from=0xB2, to=0xD4, value=30)@13;
+transfer(from=0xD4, to=0xC3, value=20)@14;
+transfer(from=0xD4, to=0xA1, value=10)@15;
+addAdmin(param1=0xD4)@16;
+
+// Trace 14: 12 different operations
+addAdmin(param1=0xA1)@0;
+mint(account=0xC3, amount=500)@1;
+transfer(from=0xC3, to=0xD4, value=200)@2;
+burn(account=0xA1, amount=100)@3;
+transferNative(param1=0xD4, param2=0xD4, param3=28)@4;
+mint(account=0xC3, amount=500)@5;
+transfer(from=0xD4, to=0xC3, value=200)@6;
+burn(account=0xB2, amount=100)@7;
+withdrawNative(param1=52)@8;
+transferFrom(sender=0xC3, from=0xB2, to=49, value=50)@9;
+transferTokens(param1=0xB2, param2=0xB2, param3=0xA1, param4=97)@10;
+getNativeBalance(param1=0xB2)@11;
+getTokenBalance(param1=0xC3, param2=0xC3)@12;
+approve(owner=0xD4, spender=0xB2, amount=100)@13;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@14;
+withdrawTokens(param1=0xA1, param2=25)@15;
+approve(owner=0xB2, spender=0xD4, amount=100)@16;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@17;
+
+// Trace 15: 7 different operations
+getNativeBalance(param1=0xD4)@0;
+mint(account=0xA1, amount=500)@1;
+transfer(from=0xC3, to=0xD4, value=200)@2;
+burn(account=0xA1, amount=100)@3;
+removeAdmin(param1=0xC3)@4;
+withdrawTokens(param1=0xB2, param2=58)@5;
+mint(account=0xB2, amount=500)@6;
+transfer(from=0xA1, to=0xC3, value=200)@7;
+burn(account=0xB2, amount=100)@8;
+getTokenBalance(param1=0xB2, param2=0xA1)@9;
+mint(account=0xB2, amount=500)@10;
+transfer(from=0xC3, to=0xA1, value=200)@11;
+burn(account=0xA1, amount=100)@12;
+
+// Trace 16: 8 different operations
+addSupportedToken(param1=0xA1)@0;
+transfer(from=0xC3, to=0xB2, value=1706)@1;
+withdrawNative(param1=31)@2;
+transferTokens(param1=0xA1, param2=0xA1, param3=0xB2, param4=43)@3;
+depositNative()@4;
+getNativeBalance(param1=0xD4)@5;
+transferNative(param1=0xB2, param2=0xC3, param3=58)@6;
+transfer(from=0xC3, to=0xD4, value=30)@7;
+removeAdmin(param1=0xA1)@8;
+transfer(from=0xC3, to=0xA1, value=30)@9;
+
+// Trace 17: 8 different operations
+removeAdmin(param1=0xB2)@0;
+mint(account=0xA1, amount=500)@1;
+transfer(from=0xD4, to=0xB2, value=200)@2;
+burn(account=0xB2, amount=100)@3;
+getTokenBalance(param1=0xA1, param2=0xA1)@4;
+depositTokens(param1=0xB2, param2=66)@5;
+addSupportedToken(param1=0xD4)@6;
+mint(account=0xB2, amount=500)@7;
+transfer(from=0xC3, to=0xB2, value=200)@8;
+burn(account=0xA1, amount=100)@9;
+transferTokens(param1=0xB2, param2=0xB2, param3=0xA1, param4=4)@10;
+
+// Trace 18: 9 different operations
+addSupportedToken(param1=0xB2)@0;
+getNativeBalance(param1=0xC3)@1;
+transfer(from=0xC3, to=0xB2, value=30)@2;
+transfer(from=0xC3, to=0xD4, value=20)@3;
+transfer(from=0xD4, to=0xA1, value=10)@4;
+withdrawTokens(param1=0xC3, param2=57)@5;
+withdrawNative(param1=53)@6;
+approve(owner=0xD4, spender=0xD4, amount=100)@7;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@8;
+addAdmin(param1=0xA1)@9;
+approve(owner=0xD4, spender=0xB2, amount=100)@10;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@11;
+transferTokens(param1=0xA1, param2=0xA1, param3=0xC3, param4=60)@12;
+transfer(from=0xB2, to=0xD4, value=20)@13;
+transfer(from=0xB2, to=0xC3, value=10)@14;
+
+// Trace 19: 16 different operations
+removeSupportedToken(param1=0xC3)@0;
+transferNative(param1=0xB2, param2=0xA1, param3=99)@1;
+withdrawNative(param1=60)@2;
+transferFrom(sender=0xD4, from=0xB2, to=6, value=50)@3;
+depositTokens(param1=0xA1, param2=49)@4;
+transfer(from=0xC3, to=0xD4, value=1557)@5;
+approve(owner=0xD4, spender=0xA1, amount=100)@6;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@7;
+depositNative()@8;
+withdrawTokens(param1=0xD4, param2=74)@9;
+getTokenBalance(param1=0xD4, param2=0xC3)@10;
+removeAdmin(param1=0xD4)@11;
+addSupportedToken(param1=0xA1)@12;
+getNativeBalance(param1=0xD4)@13;
+mint(account=0xD4, amount=500)@14;
+transfer(from=0xC3, to=0xD4, value=200)@15;
+burn(account=0xA1, amount=100)@16;
+addAdmin(param1=0xB2)@17;
+
+// Trace 20: 12 different operations
+removeAdmin(param1=0xA1)@0;
+depositTokens(param1=0xC3, param2=37)@1;
+transfer(from=0xB2, to=0xD4, value=20)@2;
+addSupportedToken(param1=0xB2)@3;
+transfer(from=0xD4, to=0xB2, value=30)@4;
+transfer(from=0xD4, to=0xB2, value=20)@5;
+transfer(from=0xC3, to=0xA1, value=10)@6;
+addAdmin(param1=0xC3)@7;
+withdrawNative(param1=15)@8;
+removeSupportedToken(param1=0xD4)@9;
+transferTokens(param1=0xB2, param2=0xC3, param3=0xC3, param4=78)@10;
+transferFrom(sender=0xB2, from=0xD4, to=34, value=50)@11;
+approve(owner=0xB2, spender=0xD4, amount=100)@12;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@13;
+depositNative()@14;
+transferNative(param1=0xC3, param2=0xB2, param3=25)@15;
+
+// Trace 21: 8 different operations
+withdrawNative(param1=33)@0;
+addSupportedToken(param1=0xC3)@1;
+removeAdmin(param1=0xA1)@2;
+transferFrom(sender=0xD4, from=0xA1, to=24, value=50)@3;
+transfer(from=0xC3, to=0xD4, value=30)@4;
+transfer(from=0xB2, to=0xD4, value=20)@5;
+transferNative(param1=0xB2, param2=0xC3, param3=64)@6;
+withdrawTokens(param1=0xA1, param2=47)@7;
+getNativeBalance(param1=0xC3)@8;
+transfer(from=0xA1, to=0xB2, value=30)@9;
+transfer(from=0xD4, to=0xC3, value=20)@10;
+transfer(from=0xC3, to=0xA1, value=10)@11;
+
+// Trace 22: 10 different operations
+depositNative()@0;
+addSupportedToken(param1=0xC3)@1;
+transfer(from=0xD4, to=0xB2, value=30)@2;
+transfer(from=0xD4, to=0xC3, value=20)@3;
+withdrawTokens(param1=0xB2, param2=26)@4;
+depositTokens(param1=0xA1, param2=11)@5;
+removeAdmin(param1=0xD4)@6;
+transferTokens(param1=0xD4, param2=0xD4, param3=0xA1, param4=81)@7;
+mint(account=0xA1, amount=500)@8;
+transfer(from=0xA1, to=0xD4, value=200)@9;
+burn(account=0xB2, amount=100)@10;
+getTokenBalance(param1=0xB2, param2=0xA1)@11;
+mint(account=0xC3, amount=500)@12;
+transfer(from=0xC3, to=0xD4, value=200)@13;
+burn(account=0xD4, amount=100)@14;
+
+// Trace 23: 12 different operations
+transferNative(param1=0xA1, param2=0xB2, param3=23)@0;
+getTokenBalance(param1=0xA1, param2=0xA1)@1;
+addSupportedToken(param1=0xB2)@2;
+getNativeBalance(param1=0xD4)@3;
+withdrawNative(param1=9)@4;
+approve(owner=0xD4, spender=0xB2, amount=100)@5;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@6;
+removeAdmin(param1=0xD4)@7;
+depositNative()@8;
+depositTokens(param1=0xB2, param2=92)@9;
+transfer(from=0xB2, to=0xC3, value=30)@10;
+transfer(from=0xB2, to=0xA1, value=20)@11;
+removeSupportedToken(param1=0xD4)@12;
+transfer(from=0xB2, to=0xC3, value=30)@13;
+transfer(from=0xD4, to=0xA1, value=20)@14;
+transfer(from=0xD4, to=0xA1, value=10)@15;
+
+// Trace 24: 11 different operations
+addSupportedToken(param1=0xA1)@0;
+addAdmin(param1=0xC3)@1;
+transferTokens(param1=0xD4, param2=0xD4, param3=0xA1, param4=57)@2;
+withdrawTokens(param1=0xD4, param2=40)@3;
+transfer(from=0xD4, to=0xC3, value=30)@4;
+transfer(from=0xC3, to=0xB2, value=10)@5;
+getTokenBalance(param1=0xD4, param2=0xC3)@6;
+removeSupportedToken(param1=0xC3)@7;
+depositTokens(param1=0xD4, param2=86)@8;
+depositNative()@9;
+getNativeBalance(param1=0xC3)@10;
+transfer(from=0xD4, to=0xB2, value=30)@11;
+transfer(from=0xD4, to=0xB2, value=20)@12;
+transfer(from=0xB2, to=0xD4, value=10)@13;
+transferFrom(sender=0xC3, from=0xB2, to=23, value=50)@14;
+
+// Trace 25: 12 different operations
+withdrawNative(param1=53)@0;
+transfer(from=0xB2, to=0xD4, value=30)@1;
+transfer(from=0xB2, to=0xC3, value=20)@2;
+transfer(from=0xB2, to=0xC3, value=10)@3;
+transferFrom(sender=0xC3, from=0xB2, to=7, value=50)@4;
+transferTokens(param1=0xD4, param2=0xD4, param3=0xC3, param4=54)@5;
+depositNative()@6;
+withdrawTokens(param1=0xA1, param2=69)@7;
+approve(owner=0xD4, spender=0xB2, amount=100)@8;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@9;
+addAdmin(param1=0xB2)@10;
+depositTokens(param1=0xD4, param2=26)@11;
+transfer(from=0xA1, to=0xC3, value=30)@12;
+transfer(from=0xB2, to=0xD4, value=20)@13;
+transfer(from=0xB2, to=0xA1, value=10)@14;
+transferNative(param1=0xB2, param2=0xC3, param3=34)@15;
+mint(account=0xC3, amount=500)@16;
+transfer(from=0xA1, to=0xB2, value=200)@17;
+burn(account=0xA1, amount=100)@18;
+
+// Trace 26: 10 different operations
+getTokenBalance(param1=0xB2, param2=0xC3)@0;
+depositNative()@1;
+transferNative(param1=0xC3, param2=0xC3, param3=25)@2;
+transferFrom(sender=0xC3, from=0xD4, to=40, value=50)@3;
+mint(account=0xB2, amount=500)@4;
+transfer(from=0xB2, to=0xC3, value=200)@5;
+burn(account=0xD4, amount=100)@6;
+removeSupportedToken(param1=0xA1)@7;
+approve(owner=0xC3, spender=0xA1, amount=100)@8;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@9;
+getNativeBalance(param1=0xC3)@10;
+
+// Trace 27: 15 different operations
+transfer(from=0xA1, to=0xC3, value=1663)@0;
+withdrawTokens(param1=0xB2, param2=47)@1;
+addSupportedToken(param1=0xA1)@2;
+transferNative(param1=0xA1, param2=0xA1, param3=71)@3;
+addAdmin(param1=0xB2)@4;
+removeAdmin(param1=0xD4)@5;
+withdrawNative(param1=62)@6;
+transferFrom(sender=0xC3, from=0xD4, to=9, value=50)@7;
+transferTokens(param1=0xA1, param2=0xC3, param3=0xD4, param4=26)@8;
+approve(owner=0xA1, spender=0xD4, amount=100)@9;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@10;
+getNativeBalance(param1=0xA1)@11;
+removeSupportedToken(param1=0xC3)@12;
+depositTokens(param1=0xA1, param2=9)@13;
+mint(account=0xB2, amount=500)@14;
+burn(account=0xD4, amount=100)@15;
+
+// Trace 28: 9 different operations
+depositNative()@0;
+transfer(from=0xC3, to=0xA1, value=2288)@1;
+mint(account=0xB2, amount=500)@2;
+transfer(from=0xB2, to=0xD4, value=200)@3;
+burn(account=0xD4, amount=100)@4;
+transferTokens(param1=0xA1, param2=0xC3, param3=0xC3, param4=88)@5;
+mint(account=0xA1, amount=500)@6;
+transfer(from=0xC3, to=0xD4, value=200)@7;
+burn(account=0xA1, amount=100)@8;
+withdrawNative(param1=51)@9;
+approve(owner=0xB2, spender=0xA1, amount=100)@10;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@11;
+getTokenBalance(param1=0xC3, param2=0xB2)@12;
+transfer(from=0xA1, to=0xB2, value=30)@13;
+transfer(from=0xB2, to=0xD4, value=20)@14;
+
+// Trace 29: 12 different operations
+transferNative(param1=0xA1, param2=0xD4, param3=11)@0;
+getTokenBalance(param1=0xA1, param2=0xB2)@1;
+approve(owner=0xA1, spender=0xB2, amount=100)@2;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@3;
+getNativeBalance(param1=0xC3)@4;
+depositTokens(param1=0xD4, param2=95)@5;
+approve(owner=0xB2, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@7;
+depositNative()@8;
+removeSupportedToken(param1=0xD4)@9;
+mint(account=0xC3, amount=500)@10;
+transfer(from=0xC3, to=0xD4, value=200)@11;
+burn(account=0xA1, amount=100)@12;
+addAdmin(param1=0xC3)@13;
+
+// Trace 30: 14 different operations
+addSupportedToken(param1=0xC3)@0;
+transfer(from=0xA1, to=0xD4, value=10)@1;
+withdrawNative(param1=25)@2;
+getNativeBalance(param1=0xB2)@3;
+approve(owner=0xC3, spender=0xA1, amount=100)@4;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@5;
+removeSupportedToken(param1=0xD4)@6;
+depositTokens(param1=0xA1, param2=22)@7;
+mint(account=0xD4, amount=500)@8;
+transfer(from=0xC3, to=0xD4, value=200)@9;
+burn(account=0xC3, amount=100)@10;
+addAdmin(param1=0xA1)@11;
+getTokenBalance(param1=0xA1, param2=0xC3)@12;
+transferNative(param1=0xD4, param2=0xB2, param3=78)@13;
+transferTokens(param1=0xB2, param2=0xA1, param3=0xC3, param4=17)@14;
+
+// Trace 31: 8 different operations
+getTokenBalance(param1=0xA1, param2=0xC3)@0;
+addSupportedToken(param1=0xD4)@1;
+transferNative(param1=0xD4, param2=0xD4, param3=1)@2;
+getNativeBalance(param1=0xD4)@3;
+transfer(from=0xC3, to=0xD4, value=10)@4;
+depositNative()@5;
+depositTokens(param1=0xA1, param2=54)@6;
+transfer(from=0xB2, to=0xA1, value=30)@7;
+transfer(from=0xC3, to=0xA1, value=20)@8;
+removeAdmin(param1=0xC3)@9;
+
+// Trace 32: 11 different operations
+getTokenBalance(param1=0xB2, param2=0xD4)@0;
+transfer(from=0xA1, to=0xC3, value=30)@1;
+transfer(from=0xD4, to=0xA1, value=20)@2;
+addSupportedToken(param1=0xD4)@3;
+depositTokens(param1=0xB2, param2=60)@4;
+addAdmin(param1=0xD4)@5;
+depositNative()@6;
+transferNative(param1=0xA1, param2=0xC3, param3=84)@7;
+removeAdmin(param1=0xA1)@8;
+approve(owner=0xD4, spender=0xB2, amount=100)@9;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@10;
+withdrawTokens(param1=0xD4, param2=54)@11;
+
+// Trace 33: 10 different operations
+depositTokens(param1=0xD4, param2=61)@0;
+addAdmin(param1=0xA1)@1;
+mint(account=0xD4, amount=500)@2;
+transfer(from=0xB2, to=0xC3, value=200)@3;
+burn(account=0xA1, amount=100)@4;
+withdrawNative(param1=87)@5;
+mint(account=0xA1, amount=500)@6;
+burn(account=0xD4, amount=100)@7;
+depositNative()@8;
+approve(owner=0xB2, spender=0xD4, amount=100)@9;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@10;
+removeSupportedToken(param1=0xA1)@11;
+
+// Trace 34: 7 different operations
+withdrawTokens(param1=0xA1, param2=61)@0;
+getNativeBalance(param1=0xA1)@1;
+depositNative()@2;
+transfer(from=0xD4, to=0xA1, value=6585)@3;
+addAdmin(param1=0xB2)@4;
+transfer(from=0xC3, to=0xD4, value=30)@5;
+transfer(from=0xC3, to=0xB2, value=20)@6;
+transfer(from=0xA1, to=0xB2, value=10)@7;
+transferTokens(param1=0xA1, param2=0xC3, param3=0xC3, param4=24)@8;
+transfer(from=0xB2, to=0xD4, value=30)@9;
+transfer(from=0xC3, to=0xA1, value=20)@10;
+transferFrom(sender=0xC3, from=0xA1, to=20, value=50)@11;
+
+// Trace 35: 9 different operations
+depositTokens(param1=0xD4, param2=42)@0;
+withdrawNative(param1=37)@1;
+depositNative()@2;
+getNativeBalance(param1=0xA1)@3;
+transferNative(param1=0xD4, param2=0xD4, param3=58)@4;
+removeSupportedToken(param1=0xB2)@5;
+transfer(from=0xD4, to=0xC3, value=20)@6;
+transfer(from=0xC3, to=0xD4, value=10)@7;
+transferTokens(param1=0xD4, param2=0xB2, param3=0xA1, param4=54)@8;
+transfer(from=0xD4, to=0xA1, value=20)@9;
+transfer(from=0xC3, to=0xD4, value=10)@10;
+addSupportedToken(param1=0xC3)@11;
+
+// Trace 36: 11 different operations
+getNativeBalance(param1=0xB2)@0;
+getTokenBalance(param1=0xA1, param2=0xB2)@1;
+transferFrom(sender=0xC3, from=0xD4, to=2, value=50)@2;
+approve(owner=0xD4, spender=0xB2, amount=100)@3;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@4;
+withdrawTokens(param1=0xC3, param2=1)@5;
+transfer(from=0xD4, to=0xC3, value=20)@6;
+transfer(from=0xD4, to=0xC3, value=10)@7;
+transferTokens(param1=0xC3, param2=0xD4, param3=0xC3, param4=89)@8;
+transferNative(param1=0xC3, param2=0xB2, param3=23)@9;
+removeAdmin(param1=0xA1)@10;
+withdrawNative(param1=43)@11;
+addAdmin(param1=0xA1)@12;
+
+// Trace 37: 13 different operations
+addSupportedToken(param1=0xA1)@0;
+getTokenBalance(param1=0xC3, param2=0xA1)@1;
+depositNative()@2;
+transferTokens(param1=0xC3, param2=0xB2, param3=0xC3, param4=35)@3;
+transferFrom(sender=0xC3, from=0xD4, to=1, value=50)@4;
+transferNative(param1=0xD4, param2=0xD4, param3=38)@5;
+depositTokens(param1=0xA1, param2=17)@6;
+addAdmin(param1=0xD4)@7;
+withdrawNative(param1=66)@8;
+removeAdmin(param1=0xC3)@9;
+approve(owner=0xB2, spender=0xD4, amount=100)@10;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@11;
+getNativeBalance(param1=0xC3)@12;
+withdrawTokens(param1=0xB2, param2=37)@13;
+approve(owner=0xD4, spender=0xC3, amount=100)@14;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@15;
+
+// Trace 38: 16 different operations
+withdrawTokens(param1=0xB2, param2=80)@0;
+addSupportedToken(param1=0xB2)@1;
+removeAdmin(param1=0xA1)@2;
+getNativeBalance(param1=0xA1)@3;
+mint(account=0xC3, amount=500)@4;
+burn(account=0xB2, amount=100)@5;
+addAdmin(param1=0xC3)@6;
+transfer(from=0xB2, to=0xC3, value=4273)@7;
+getTokenBalance(param1=0xC3, param2=0xA1)@8;
+depositTokens(param1=0xC3, param2=63)@9;
+depositNative()@10;
+removeSupportedToken(param1=0xC3)@11;
+transferTokens(param1=0xB2, param2=0xB2, param3=0xC3, param4=44)@12;
+approve(owner=0xA1, spender=0xD4, amount=100)@13;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@14;
+withdrawNative(param1=66)@15;
+transfer(from=0xB2, to=0xA1, value=30)@16;
+transfer(from=0xA1, to=0xD4, value=20)@17;
+transfer(from=0xC3, to=0xD4, value=10)@18;
+
+// Trace 39: 10 different operations
+withdrawNative(param1=12)@0;
+depositNative()@1;
+addSupportedToken(param1=0xA1)@2;
+transferTokens(param1=0xB2, param2=0xA1, param3=0xA1, param4=7)@3;
+getNativeBalance(param1=0xA1)@4;
+removeSupportedToken(param1=0xA1)@5;
+depositTokens(param1=0xB2, param2=96)@6;
+transferFrom(sender=0xD4, from=0xC3, to=32, value=50)@7;
+transferNative(param1=0xB2, param2=0xC3, param3=14)@8;
+getTokenBalance(param1=0xB2, param2=0xB2)@9;
+
+// Trace 40: 10 different operations
+addAdmin(param1=0xC3)@0;
+transferTokens(param1=0xC3, param2=0xD4, param3=0xB2, param4=43)@1;
+transfer(from=0xD4, to=0xA1, value=1206)@2;
+approve(owner=0xD4, spender=0xA1, amount=100)@3;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@4;
+transferNative(param1=0xB2, param2=0xB2, param3=28)@5;
+transfer(from=0xC3, to=0xB2, value=30)@6;
+transfer(from=0xC3, to=0xB2, value=20)@7;
+transfer(from=0xA1, to=0xB2, value=10)@8;
+removeSupportedToken(param1=0xA1)@9;
+addSupportedToken(param1=0xB2)@10;
+depositNative()@11;
+depositTokens(param1=0xD4, param2=20)@12;
+
+// Trace 41: 12 different operations
+transferTokens(param1=0xB2, param2=0xA1, param3=0xA1, param4=28)@0;
+depositTokens(param1=0xA1, param2=15)@1;
+getTokenBalance(param1=0xD4, param2=0xC3)@2;
+transfer(from=0xA1, to=0xC3, value=6450)@3;
+getNativeBalance(param1=0xC3)@4;
+removeAdmin(param1=0xC3)@5;
+transfer(from=0xC3, to=0xB2, value=30)@6;
+transfer(from=0xC3, to=0xD4, value=20)@7;
+transfer(from=0xD4, to=0xC3, value=10)@8;
+removeSupportedToken(param1=0xB2)@9;
+approve(owner=0xA1, spender=0xD4, amount=100)@10;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@11;
+withdrawNative(param1=13)@12;
+transferNative(param1=0xA1, param2=0xD4, param3=19)@13;
+depositNative()@14;
+
+// Trace 42: 12 different operations
+withdrawNative(param1=70)@0;
+mint(account=0xD4, amount=500)@1;
+burn(account=0xD4, amount=100)@2;
+addAdmin(param1=0xB2)@3;
+transferTokens(param1=0xD4, param2=0xA1, param3=0xC3, param4=12)@4;
+getTokenBalance(param1=0xD4, param2=0xD4)@5;
+getNativeBalance(param1=0xC3)@6;
+withdrawTokens(param1=0xD4, param2=9)@7;
+transferFrom(sender=0xA1, from=0xD4, to=33, value=50)@8;
+addSupportedToken(param1=0xD4)@9;
+removeAdmin(param1=0xC3)@10;
+transfer(from=0xA1, to=0xB2, value=30)@11;
+transfer(from=0xC3, to=0xB2, value=20)@12;
+
+// Trace 43: 10 different operations
+addAdmin(param1=0xC3)@0;
+removeSupportedToken(param1=0xC3)@1;
+transfer(from=0xD4, to=0xA1, value=30)@2;
+transfer(from=0xD4, to=0xB2, value=20)@3;
+depositTokens(param1=0xA1, param2=71)@4;
+transferTokens(param1=0xC3, param2=0xB2, param3=0xB2, param4=71)@5;
+transferFrom(sender=0xD4, from=0xB2, to=32, value=50)@6;
+approve(owner=0xC3, spender=0xB2, amount=100)@7;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@8;
+withdrawTokens(param1=0xA1, param2=59)@9;
+addSupportedToken(param1=0xA1)@10;
+approve(owner=0xC3, spender=0xC3, amount=100)@11;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@12;
+removeAdmin(param1=0xC3)@13;
+
+// Trace 44: 11 different operations
+addSupportedToken(param1=0xC3)@0;
+removeSupportedToken(param1=0xD4)@1;
+approve(owner=0xC3, spender=0xA1, amount=100)@2;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@3;
+removeAdmin(param1=0xB2)@4;
+transferTokens(param1=0xD4, param2=0xD4, param3=0xD4, param4=44)@5;
+withdrawNative(param1=57)@6;
+addAdmin(param1=0xB2)@7;
+getTokenBalance(param1=0xB2, param2=0xD4)@8;
+withdrawTokens(param1=0xD4, param2=1)@9;
+depositTokens(param1=0xB2, param2=88)@10;
+
+// Trace 45: 13 different operations
+withdrawTokens(param1=0xB2, param2=54)@0;
+transfer(from=0xB2, to=0xC3, value=20)@1;
+transfer(from=0xD4, to=0xB2, value=10)@2;
+depositTokens(param1=0xC3, param2=88)@3;
+addSupportedToken(param1=0xD4)@4;
+withdrawNative(param1=26)@5;
+removeAdmin(param1=0xC3)@6;
+transferFrom(sender=0xD4, from=0xB2, to=34, value=50)@7;
+removeSupportedToken(param1=0xB2)@8;
+getTokenBalance(param1=0xB2, param2=0xA1)@9;
+addAdmin(param1=0xC3)@10;
+depositNative()@11;
+mint(account=0xC3, amount=500)@12;
+transfer(from=0xC3, to=0xB2, value=200)@13;
+burn(account=0xD4, amount=100)@14;
+
+// Trace 46: 14 different operations
+withdrawNative(param1=25)@0;
+transferFrom(sender=0xD4, from=0xC3, to=14, value=50)@1;
+removeSupportedToken(param1=0xA1)@2;
+addSupportedToken(param1=0xB2)@3;
+transferTokens(param1=0xB2, param2=0xA1, param3=0xC3, param4=88)@4;
+transferNative(param1=0xB2, param2=0xD4, param3=86)@5;
+addAdmin(param1=0xA1)@6;
+transfer(from=0xA1, to=0xB2, value=4210)@7;
+removeAdmin(param1=0xD4)@8;
+approve(owner=0xD4, spender=0xD4, amount=100)@9;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@10;
+depositTokens(param1=0xB2, param2=20)@11;
+depositNative()@12;
+withdrawTokens(param1=0xD4, param2=75)@13;
+getTokenBalance(param1=0xB2, param2=0xA1)@14;
+
+// Trace 47: 9 different operations
+transferTokens(param1=0xC3, param2=0xD4, param3=0xC3, param4=40)@0;
+transferFrom(sender=0xC3, from=0xD4, to=7, value=50)@1;
+transferNative(param1=0xA1, param2=0xA1, param3=48)@2;
+approve(owner=0xD4, spender=0xB2, amount=100)@3;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@4;
+withdrawNative(param1=48)@5;
+approve(owner=0xD4, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@7;
+addAdmin(param1=0xD4)@8;
+removeSupportedToken(param1=0xB2)@9;
+depositNative()@10;
+approve(owner=0xD4, spender=0xC3, amount=100)@11;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@12;
+withdrawTokens(param1=0xC3, param2=57)@13;
+
+// Trace 48: 10 different operations
+depositTokens(param1=0xA1, param2=62)@0;
+transferTokens(param1=0xB2, param2=0xC3, param3=0xA1, param4=56)@1;
+withdrawNative(param1=10)@2;
+approve(owner=0xA1, spender=0xD4, amount=100)@3;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@4;
+addAdmin(param1=0xC3)@5;
+getNativeBalance(param1=0xC3)@6;
+removeAdmin(param1=0xC3)@7;
+depositNative()@8;
+approve(owner=0xC3, spender=0xC3, amount=100)@9;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@10;
+transfer(from=0xC3, to=0xA1, value=3236)@11;
+
+// Trace 49: 14 different operations
+getTokenBalance(param1=0xA1, param2=0xB2)@0;
+removeSupportedToken(param1=0xB2)@1;
+withdrawNative(param1=45)@2;
+addSupportedToken(param1=0xA1)@3;
+transferFrom(sender=0xA1, from=0xD4, to=45, value=50)@4;
+depositTokens(param1=0xB2, param2=30)@5;
+transferNative(param1=0xC3, param2=0xB2, param3=31)@6;
+depositNative()@7;
+transferTokens(param1=0xB2, param2=0xA1, param3=0xD4, param4=4)@8;
+transfer(from=0xD4, to=0xA1, value=2309)@9;
+withdrawTokens(param1=0xB2, param2=41)@10;
+addAdmin(param1=0xB2)@11;
+getNativeBalance(param1=0xB2)@12;
+removeAdmin(param1=0xC3)@13;
+transfer(from=0xA1, to=0xD4, value=30)@14;
+transfer(from=0xC3, to=0xB2, value=10)@15;
+
+// Trace 50: 15 different operations
+removeSupportedToken(param1=0xB2)@0;
+withdrawNative(param1=51)@1;
+transfer(from=0xB2, to=0xC3, value=30)@2;
+transfer(from=0xD4, to=0xB2, value=20)@3;
+transfer(from=0xD4, to=0xC3, value=10)@4;
+getNativeBalance(param1=0xD4)@5;
+approve(owner=0xB2, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@7;
+depositTokens(param1=0xD4, param2=18)@8;
+depositNative()@9;
+transferTokens(param1=0xC3, param2=0xC3, param3=0xB2, param4=82)@10;
+transferNative(param1=0xD4, param2=0xD4, param3=85)@11;
+removeAdmin(param1=0xD4)@12;
+addSupportedToken(param1=0xD4)@13;
+withdrawTokens(param1=0xA1, param2=5)@14;
+mint(account=0xD4, amount=500)@15;
+burn(account=0xC3, amount=100)@16;
+
+// Trace 51: 10 different operations
+transferNative(param1=0xC3, param2=0xA1, param3=55)@0;
+withdrawTokens(param1=0xA1, param2=80)@1;
+transfer(from=0xB2, to=0xC3, value=30)@2;
+getTokenBalance(param1=0xB2, param2=0xA1)@3;
+removeSupportedToken(param1=0xC3)@4;
+approve(owner=0xC3, spender=0xC3, amount=100)@5;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@6;
+transferTokens(param1=0xB2, param2=0xA1, param3=0xC3, param4=21)@7;
+approve(owner=0xC3, spender=0xC3, amount=100)@8;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@9;
+getNativeBalance(param1=0xA1)@10;
+removeAdmin(param1=0xD4)@11;
+
+// Trace 52: 9 different operations
+addSupportedToken(param1=0xC3)@0;
+getTokenBalance(param1=0xC3, param2=0xB2)@1;
+transfer(from=0xD4, to=0xA1, value=891)@2;
+addAdmin(param1=0xB2)@3;
+withdrawNative(param1=67)@4;
+transfer(from=0xB2, to=0xD4, value=20)@5;
+transfer(from=0xA1, to=0xB2, value=10)@6;
+depositNative()@7;
+removeAdmin(param1=0xA1)@8;
+transfer(from=0xC3, to=0xD4, value=30)@9;
+transfer(from=0xB2, to=0xD4, value=20)@10;
+transfer(from=0xD4, to=0xB2, value=10)@11;
+depositTokens(param1=0xA1, param2=16)@12;
+transferNative(param1=0xA1, param2=0xB2, param3=2)@13;
+
+// Trace 53: 10 different operations
+removeSupportedToken(param1=0xA1)@0;
+mint(account=0xD4, amount=500)@1;
+transfer(from=0xB2, to=0xD4, value=200)@2;
+burn(account=0xC3, amount=100)@3;
+withdrawTokens(param1=0xA1, param2=20)@4;
+transferNative(param1=0xA1, param2=0xC3, param3=17)@5;
+mint(account=0xC3, amount=500)@6;
+transfer(from=0xB2, to=0xC3, value=200)@7;
+burn(account=0xA1, amount=100)@8;
+transferTokens(param1=0xB2, param2=0xB2, param3=0xD4, param4=51)@9;
+removeAdmin(param1=0xD4)@10;
+depositNative()@11;
+getNativeBalance(param1=0xD4)@12;
+
+// Trace 54: 11 different operations
+getTokenBalance(param1=0xA1, param2=0xD4)@0;
+transfer(from=0xB2, to=0xD4, value=4307)@1;
+transferFrom(sender=0xC3, from=0xB2, to=18, value=50)@2;
+removeAdmin(param1=0xA1)@3;
+depositNative()@4;
+approve(owner=0xA1, spender=0xA1, amount=100)@5;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@6;
+getNativeBalance(param1=0xC3)@7;
+mint(account=0xB2, amount=500)@8;
+burn(account=0xB2, amount=100)@9;
+transferTokens(param1=0xC3, param2=0xB2, param3=0xA1, param4=49)@10;
+transferNative(param1=0xC3, param2=0xC3, param3=56)@11;
+
+// Trace 55: 14 different operations
+withdrawTokens(param1=0xC3, param2=49)@0;
+addAdmin(param1=0xC3)@1;
+mint(account=0xC3, amount=500)@2;
+transfer(from=0xC3, to=0xD4, value=200)@3;
+burn(account=0xA1, amount=100)@4;
+getNativeBalance(param1=0xC3)@5;
+removeAdmin(param1=0xD4)@6;
+withdrawNative(param1=10)@7;
+addSupportedToken(param1=0xB2)@8;
+depositNative()@9;
+transferTokens(param1=0xA1, param2=0xA1, param3=0xC3, param4=75)@10;
+removeSupportedToken(param1=0xB2)@11;
+getTokenBalance(param1=0xD4, param2=0xA1)@12;
+transfer(from=0xB2, to=0xC3, value=30)@13;
+transfer(from=0xA1, to=0xC3, value=20)@14;
+transferFrom(sender=0xB2, from=0xD4, to=23, value=50)@15;
+mint(account=0xC3, amount=500)@16;
+transfer(from=0xB2, to=0xD4, value=200)@17;
+burn(account=0xD4, amount=100)@18;
+
+// Trace 56: 10 different operations
+removeAdmin(param1=0xB2)@0;
+transferNative(param1=0xC3, param2=0xA1, param3=18)@1;
+transferTokens(param1=0xB2, param2=0xB2, param3=0xD4, param4=39)@2;
+transfer(from=0xD4, to=0xB2, value=20)@3;
+addSupportedToken(param1=0xB2)@4;
+depositTokens(param1=0xD4, param2=70)@5;
+withdrawTokens(param1=0xA1, param2=58)@6;
+mint(account=0xA1, amount=500)@7;
+transfer(from=0xB2, to=0xD4, value=200)@8;
+burn(account=0xC3, amount=100)@9;
+depositNative()@10;
+mint(account=0xC3, amount=500)@11;
+transfer(from=0xD4, to=0xA1, value=200)@12;
+burn(account=0xA1, amount=100)@13;
+
+// Trace 57: 13 different operations
+transfer(from=0xA1, to=0xD4, value=4929)@0;
+removeAdmin(param1=0xC3)@1;
+removeSupportedToken(param1=0xA1)@2;
+addSupportedToken(param1=0xC3)@3;
+transferTokens(param1=0xA1, param2=0xB2, param3=0xD4, param4=84)@4;
+withdrawTokens(param1=0xA1, param2=96)@5;
+getNativeBalance(param1=0xA1)@6;
+depositNative()@7;
+getTokenBalance(param1=0xA1, param2=0xC3)@8;
+depositTokens(param1=0xD4, param2=37)@9;
+addAdmin(param1=0xA1)@10;
+transferFrom(sender=0xB2, from=0xD4, to=7, value=50)@11;
+withdrawNative(param1=34)@12;
+
+// Trace 58: 9 different operations
+withdrawTokens(param1=0xA1, param2=71)@0;
+depositNative()@1;
+removeAdmin(param1=0xD4)@2;
+mint(account=0xA1, amount=500)@3;
+burn(account=0xC3, amount=100)@4;
+transferNative(param1=0xA1, param2=0xA1, param3=20)@5;
+transferFrom(sender=0xB2, from=0xC3, to=1, value=50)@6;
+removeSupportedToken(param1=0xC3)@7;
+transfer(from=0xB2, to=0xC3, value=2899)@8;
+transfer(from=0xD4, to=0xC3, value=30)@9;
+transfer(from=0xD4, to=0xB2, value=10)@10;
+
+// Trace 59: 15 different operations
+depositNative()@0;
+mint(account=0xB2, amount=500)@1;
+transfer(from=0xA1, to=0xB2, value=200)@2;
+burn(account=0xB2, amount=100)@3;
+withdrawTokens(param1=0xB2, param2=86)@4;
+withdrawNative(param1=41)@5;
+depositTokens(param1=0xC3, param2=27)@6;
+removeSupportedToken(param1=0xC3)@7;
+removeAdmin(param1=0xD4)@8;
+getTokenBalance(param1=0xB2, param2=0xA1)@9;
+getNativeBalance(param1=0xB2)@10;
+transferNative(param1=0xC3, param2=0xA1, param3=11)@11;
+addAdmin(param1=0xC3)@12;
+transfer(from=0xC3, to=0xD4, value=30)@13;
+transfer(from=0xA1, to=0xB2, value=10)@14;
+transferFrom(sender=0xB2, from=0xC3, to=16, value=50)@15;
+addSupportedToken(param1=0xD4)@16;
+
+// Trace 60: 13 different operations
+depositNative()@0;
+withdrawTokens(param1=0xD4, param2=87)@1;
+getTokenBalance(param1=0xC3, param2=0xA1)@2;
+transferFrom(sender=0xB2, from=0xA1, to=26, value=50)@3;
+depositTokens(param1=0xD4, param2=83)@4;
+addAdmin(param1=0xD4)@5;
+getNativeBalance(param1=0xB2)@6;
+transfer(from=0xB2, to=0xC3, value=10)@7;
+addSupportedToken(param1=0xD4)@8;
+transferTokens(param1=0xA1, param2=0xB2, param3=0xA1, param4=8)@9;
+approve(owner=0xB2, spender=0xB2, amount=100)@10;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@11;
+removeAdmin(param1=0xD4)@12;
+transferNative(param1=0xD4, param2=0xC3, param3=94)@13;
+
+// Trace 61: 14 different operations
+transferTokens(param1=0xD4, param2=0xA1, param3=0xB2, param4=72)@0;
+removeSupportedToken(param1=0xC3)@1;
+withdrawNative(param1=75)@2;
+mint(account=0xC3, amount=500)@3;
+transfer(from=0xA1, to=0xC3, value=200)@4;
+burn(account=0xA1, amount=100)@5;
+transferFrom(sender=0xB2, from=0xA1, to=21, value=50)@6;
+approve(owner=0xB2, spender=0xC3, amount=100)@7;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@8;
+withdrawTokens(param1=0xC3, param2=39)@9;
+getTokenBalance(param1=0xD4, param2=0xA1)@10;
+addSupportedToken(param1=0xA1)@11;
+depositNative()@12;
+depositTokens(param1=0xA1, param2=60)@13;
+getNativeBalance(param1=0xD4)@14;
+mint(account=0xA1, amount=500)@15;
+burn(account=0xA1, amount=100)@16;
+
+// Trace 62: withdrawNative, addAdmin, transferFrom
+withdrawNative(param1=19)@0;
+transferFrom(sender=0xD4, from=0xC3, to=46, value=50)@1;
+addAdmin(param1=0xB2)@2;
+

@@ -1,0 +1,26 @@
+// Trace 1: Successful investment and withdrawal
+constructor(target=1000, beneficiary=0x123456)@0;
+recv_invest()@1;
+invest(p=0x114514, n=500)@2;
+invest(p=0x114515, n=600)@3;
+recv_withdraw()@4;
+withdraw(p=0x123456, r=1100)@5;
+
+// Trace 2: Failed investment and refund scenario
+constructor(target=2000, beneficiary=0x654321)@0;
+recv_invest()@1;
+invest(p=0x998877, n=1000)@2;
+recv_close()@3;
+recv_refund()@4;
+refund(p=0x998877, n=1000)@5;
+
+// Trace 3: Mixed case of investment, refund, and withdraw
+constructor(target=1500, beneficiary=0xabcdef)@0;
+recv_invest()@1;
+invest(p=0x112233, n=700)@2;
+invest(p=0x334455, n=800)@3;
+recv_close()@4;
+recv_refund()@5;
+refund(p=0x112233, n=700)@6;
+recv_withdraw()@7;
+withdraw(p=0xabcdef, r=1500)@8;

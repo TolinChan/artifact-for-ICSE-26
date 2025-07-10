@@ -1,0 +1,26 @@
+
+// Parameters
+.decl *totalSupply(n: uint)
+.decl balanceOf(p: address, n: uint)[0]
+.decl allowance(p: address, s: address, n: uint)[0,1]
+.decl *admin(p: address)
+
+// Transactions
+.decl mint(p: address, amount: uint)
+.decl burn(p: address, amount: uint)
+.decl transfer(from: address, to: address, amount: uint)
+.decl approve(owner: address, spender: address, amount: uint)
+.decl transferFrom(sender: address, from: address, to: address, amount: uint)
+.decl changeAdmin(newAdmin: address)
+
+// Rules
+totalSupply(n) :- totalSupply(n).
+balanceOf(p, n) :- balanceOf(p, n).
+allowance(o, s, n) :- allowance(o, s, n).
+
+mint(p, n) :- mint(p, n).
+burn(p, n) :- burn(p, n).
+transfer(s, r, n) :- transfer(s, r, n).
+approve(o, s, n) :- approve(o, s, n).
+transferFrom(o, r, s, n) :- transferFrom(o, r, s, n).
+changeAdmin(a) :- changeAdmin(a).

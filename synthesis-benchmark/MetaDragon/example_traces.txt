@@ -1,0 +1,11 @@
+transfer(from=0x100000, to=contract, amount=20000)@1;
+transform(tokenIdOrValue=20000)@2;
+
+transferFrom(from=0x200000, to=contract, tokenId=1234)@1;
+transform(tokenIdOrValue=1234)@2;
+
+transferFrom(from=0x300000, to=0x400000, tokenId=5678)@1;
+
+mintNFT(p=0x500000)@1;
+
+mintNFT(p=0x600000, msg.value=1 ether)@1;

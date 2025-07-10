@@ -1,0 +1,19 @@
+□(transfer(from, to, amount) ∧ to = contract → amount ≥ TRANSFORM_PRICE ∧ amount % TRANSFORM_PRICE = 0)
+
+□(transferFrom(from, to, tokenId) ∧ isValidTokenId(tokenId) → ownerOf(tokenId) = from)
+
+□(transferFrom(from, contract, tokenId) ∧ isValidTokenId(tokenId) → ¬ownerOf(tokenId))
+
+□(transferFrom(from, contract, tokenId) → balanceOf(from, b) ∧ b' = b + ((TRANSFORM_PRICE * (10000 - TRANSFORM_LOSE_RATE)) / 10000))
+
+□(mintNFT(p) → msg.value ≥ MINT_PRICE ∧ msg.value % MINT_PRICE = 0)
+
+□(mintNFT(p) → nftMinted + (msg.value / MINT_PRICE) ≤ MAX_NFT_MINT)
+
+□(mintNFT(p) → msg.value ≤ MAX_MINT_VALUE)
+
+□(mintNFT(p) → allowlist(p))
+
+□(mintNFT(p) → mintedAmount(p) + (msg.value / MINT_PRICE * MINT_PRICE) ≤ MAX_MINT_VALUE)
+
+□(transferFrom(from, to, tokenId) ∧ isValidTokenId(tokenId) → iERC721CheckAuth(erc721).isAuthorized(from, msg.sender, tokenId))

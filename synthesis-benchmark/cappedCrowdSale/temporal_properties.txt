@@ -1,0 +1,18 @@
+
+// Ensuring total balances do not exceed total supply
+□(totalSupply(n) ∧ balanceSum(s) → s ≤ n)
+
+// Ensuring allowance cannot be exceeded
+□(allowance(o, s, n) ∧ transferFrom(o, r, s, m) → m ≤ n)
+
+// Ensuring no negative balances
+□(balanceOf(p, n) → n ≥ 0)
+
+// Ensuring finalization only occurs once
+□(onceFinalize(true) → ¬♦(finalize()))
+
+// Ensuring no token purchase after finalization
+□(onceFinalize(true) → ¬♦(buyToken(_, _)))
+
+// Ensuring illegal finalization is prevented
+□(onceFinalize(true) → now(t) ∧ end(e) ∧ t ≥ e ∨ raised(r) ∧ cap(c) ∧ r ≥ c)

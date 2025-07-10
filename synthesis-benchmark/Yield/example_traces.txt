@@ -1,0 +1,16 @@
+init(p=0x100000)@1;
+invest(p=0x100000, pool=0xA00000)@2;
+divest(p=0x100000)@10;
+mint(p=0x100000, to=0x200000)@12;
+burn(p=0x100000, to=0x200000)@15;
+
+init(p=0x300000)@1;
+invest(p=0x300000, pool=0xB00000)@2;
+eject(p=0x300000)@5;
+buyFYToken(p=0x300000, fyTokenTo=0x400000, baseTo=0x500000)@6;
+restart(p=0x300000)@7;
+
+init(p=0x600000)@1;
+invest(p=0x600000, pool=0xC00000)@2;
+mint(p=0x600000, to=0x700000)@3;
+burn(p=0x700000, to=0x600000)@4;

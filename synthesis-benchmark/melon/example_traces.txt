@@ -1,0 +1,16 @@
+
+// Trace 1: Initial setup and council change
+changeCouncil(newCouncil=0x123456)@0;
+mintInitialSupply(initialReceiver=0x654321)@1;
+
+// Trace 2: Inflation minting process
+mintInflation()@0;
+mintInflation()@1;
+mintInflation()@2;
+
+// Trace 3: Multiple council changes and minting
+changeCouncil(newCouncil=0xabcdef)@0;
+mintInitialSupply(initialReceiver=0x998877)@1;
+mintInflation()@2;
+changeCouncil(newCouncil=0x334455)@3;
+mintInflation()@4;

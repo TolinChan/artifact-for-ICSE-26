@@ -1,0 +1,17 @@
+□(depositNative(p, n) → nativeBalance(p, b) → b > •b)
+□(depositToken(p, t, n) → tokenBalance(t, p, b) → b > •b)
+
+□(withdrawNative(p, n) → nativeBalance(p, b) → b < •b)
+□(withdrawToken(p, t, n) → tokenBalance(t, p, b) → b < •b)
+
+□(lockAccount(p, _, _) → withdrawNative(p, _) → false)
+□(lockAccount(p, _, _) → withdrawToken(p, _, _) → false)
+
+□(transferNative(from, to, n) → nativeBalance(from, b1) ∧ nativeBalance(to, b2) → b1 < •b1 ∧ b2 > •b2)
+□(transferToken(t, from, to, n) → tokenBalance(t, from, b1) ∧ tokenBalance(t, to, b2) → b1 < •b1 ∧ b2 > •b2)
+
+□(lockAccount(p, _, _) → transferNative(p, _, _) → false)
+□(lockAccount(p, _, _) → transferToken(_, p, _, _) → false)
+
+□(releaseNative(p, n) → pendingNativeBalance(p, b1) ∧ nativeBalance(p, b2) → b1 < •b1 ∧ b2 > •b2)
+□(releaseToken(t, p, n) → pendingTokenBalance(t, p, b1) ∧ tokenBalance(t, p, b2) → b1 < •b1 ∧ b2 > •b2)

@@ -1,0 +1,12 @@
+
+// Ensuring each voter votes only once
+□(vote(v, p1) ∧ vote(v, p2) → p1 = p2)
+
+// Ensuring only one proposal can win
+□(wins(p1, true) ∧ wins(p2, true) → p1 = p2)
+
+// Ensuring votes count correctly
+□(votes(p, c) → c ≥ 0)
+
+// Ensuring a proposal wins only if it meets quorum
+□(wins(p, true) → votes(p, c) ∧ quorumSize(q) → c ≥ q)

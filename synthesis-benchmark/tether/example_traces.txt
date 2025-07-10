@@ -1,0 +1,16 @@
+
+// Trace 1: Issuing, transferring, and redeeming tokens
+issue(p=0x123456, amount=100)@0;
+transfer(from=0x123456, to=0x654321, amount=50)@1;
+redeem(p=0x654321, amount=20)@2;
+
+// Trace 2: Blacklisting and destroying funds
+issue(p=0xabcdef, amount=200)@0;
+addBlackList(p=0xabcdef)@1;
+destroyBlackFund(p=0xabcdef, n=100)@2;
+redeem(p=0xabcdef, amount=100)@3;
+
+// Trace 3: Transfers with fee deduction
+issue(p=0x112233, amount=500)@0;
+transferWithFee(from=0x112233, to=0x445566, fee=5, amount=300)@1;
+redeem(p=0x445566, amount=200)@2;

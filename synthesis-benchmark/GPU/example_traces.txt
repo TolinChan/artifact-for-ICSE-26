@@ -1,0 +1,25 @@
+mint(p=0x100000, amount=100000)@1;
+approve(owner=0x100000, spender=0x200000, amount=5000)@2;
+transfer(from=0x100000, to=0x300000, value=1000)@3;
+transferFrom(from=0x100000, to=0x300000, spender=0x200000, amount=500)@4;
+burn(p=0x300000, amount=200)@5;
+swapAndLiquify(tokenAmount=1000)@6;
+
+mint(p=0x400000, amount=50000)@1;
+approve(owner=0x400000, spender=0x500000, amount=10000)@2;
+transfer(from=0x400000, to=0x600000, value=2000)@3;
+transferFrom(from=0x400000, to=0x600000, spender=0x500000, amount=3000)@4;
+burn(p=0x600000, amount=1000)@5;
+
+mint(p=0x700000, amount=200000)@1;
+approve(owner=0x700000, spender=0x800000, amount=5000)@2;
+transfer(from=0x700000, to=0x900000, value=5000)@3;
+transferFrom(from=0x700000, to=0x900000, spender=0x800000, amount=2000)@4;
+burn(p=0x900000, amount=500)@5;
+swapAndLiquify(tokenAmount=3000)@6;
+
+mint(p=0xA00000, amount=150000)@1;
+approve(owner=0xA00000, spender=0xB00000, amount=10000)@2;
+transfer(from=0xA00000, to=0xC00000, value=7000)@3;
+transferFrom(from=0xA00000, to=0xC00000, spender=0xB00000, amount=4000)@4;
+swapAndLiquify(tokenAmount=5000)@5;

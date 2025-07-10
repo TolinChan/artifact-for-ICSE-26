@@ -1,0 +1,90 @@
+// Parameters
+.decl *owner(p: address)
+.decl *operator(p: address)
+.decl *distributor(p: address)
+.decl *usdtToken(t: address)
+.decl *pancakeRouter(r: address)
+.decl *pancakePair(p: address)
+.decl *nftContract(n: address)
+.decl constructor()
+
+// Balances
+.decl tokenBalance(t: address, p: address, n: uint)[0]
+.decl lpBalance(p: address, n: uint)[0]
+.decl usdtBalance(p: address, n: uint)[0]
+
+// Fees and Taxes
+.decl taxLp(n: uint)
+.decl taxNFT(n: uint)
+.decl taxChildCoin(n: uint)
+.decl tax20minutes(n: uint)
+
+// Timings
+.decl openTime(n: uint)
+.decl limitTime(n: uint)
+
+// Transfers
+.decl transferToken(t: address, from: address, to: address, amount: uint)
+.decl transferLP(from: address, to: address, amount: uint)
+.decl distributeUSDT(to: address, amount: uint)
+
+// NFT Staking & Rewards
+.decl stakeNFT(p: address, tokenId: uint)
+.decl unstakeNFT(p: address, tokenId: uint)
+.decl nftRewardDistribution(p: address, amount: uint)
+
+// Liquidity Actions
+.decl addLiquidity(p: address, amount: uint)
+.decl removeLiquidity(p: address, amount: uint)
+
+// Properties
+.decl isDividendExempt(p: address)
+.decl isIdoUser(p: address)
+
+// Rules
+owner(s) :- constructor(), msgSender(s).
+operator(s) :- constructor(), msgSender(s).
+
+transferToken(t, from, to, n) :-
+    msgSender(from),
+    tokenBalance(t, from, b),
+    b >= n,
+    tokenBalance(t, from, b - n),
+    tokenBalance(t, to, b2),
+    tokenBalance(t, to, b2 + n).
+
+transferLP(from, to, n) :-
+    msgSender(from),
+    lpBalance(from, b),
+    b >= n,
+    lpBalance(from, b - n),
+    lpBalance(to, b2),
+    lpBalance(to, b2 + n).
+
+distributeUSDT(to, n) :-
+    msgSender(distributor),
+    usdtBalance(distributor, b),
+    b >= n,
+    usdtBalance(distributor, b - n),
+    usdtBalance(to, b2),
+    usdtBalance(to, b2 + n).
+
+stakeNFT(p, tokenId) :-
+    msgSender(p),
+    nftContract(n),
+    nftBalance(p, b),
+    b >= 1,
+    nftBalance(p, b - 1).
+
+unstakeNFT(p, tokenId) :-
+    msgSender(p),
+    nftBalance(p, b),
+    nftBalance(p, b + 1).
+
+nftRewardDistribution(p, n) :-
+    msgSender(distributor),
+    tokenBalance(distributor, b),
+    b >= n,
+    tokenBalance(distributor, b - n),
+    tokenBalance(p, b2),
+    tokenBalance(p, b2 + n).

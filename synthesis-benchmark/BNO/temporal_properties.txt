@@ -1,0 +1,11 @@
+□(stake(p, n) → balanceOf(p, b) → b < b@prev)
+
+□(rePledge(p, n) → totalSupply(s) → s > s@prev)
+
+□(withdraw(p) → pendingReward(p, r) → r = 0)
+
+□(unstakeNFT(p, tokenId) → totalSupply(n) → n < n@prev)
+
+□(stakeNFT(p, tokenId) → totalSupply(n) < maxNftAmount)
+
+□(stakeNFT(p, tokenId) → ownerOf(tokenId) = p) ∧ (unstakeNFT(p, tokenId) → ownerOf(tokenId) = contract)

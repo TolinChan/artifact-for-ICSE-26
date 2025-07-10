@@ -1,0 +1,17 @@
+
+// Trace 1: Mint, transfer, and burn
+mint(p=0x123456, amount=100)@0;
+transfer(from=0x123456, to=0x654321, amount=50)@1;
+burn(p=0x654321, amount=20)@2;
+
+// Trace 2: Multiple transfers and minting
+mint(p=0xabcdef, amount=200)@0;
+transfer(from=0xabcdef, to=0x998877, amount=80)@1;
+transfer(from=0x998877, to=0x334455, amount=40)@2;
+burn(p=0x334455, amount=10)@3;
+
+// Trace 3: Complex flow with burn and invalid transfer attempt
+mint(p=0x112233, amount=500)@0;
+transfer(from=0x112233, to=0x445566, amount=300)@1;
+burn(p=0x445566, amount=200)@2;
+transfer(from=0x445566, to=0x778899, amount=150)@3;

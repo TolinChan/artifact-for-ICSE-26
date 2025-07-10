@@ -1,0 +1,15 @@
+
+// Ensuring buyTokens only happens within allowed period
+□(buyTokens(p, n) → now(t) ∧ startTime(s) ∧ endTime(e) → s ≤ t ≤ e)
+
+// Ensuring only gold list or KYC verified can buy tokens
+□(buyTokens(p, n) → addToGoldList(p) ∨ addToKYCList(p))
+
+// Ensuring total supply is always increasing
+□(buyTokens(p, e) → newTotalSupply(s) ∧ totalSupply(t) → s ≥ t)
+
+// Ensuring no negative balances
+□(balanceOf(p, n) → n ≥ 0)
+
+// Ensuring forced refund only happens when valid
+□(forcedRefund(p) → refund(p))

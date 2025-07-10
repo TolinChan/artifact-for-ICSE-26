@@ -1,0 +1,14 @@
+
+// Trace 1: Releasing payments based on shares
+release(p=0x123456, n=100)@0;
+release(p=0x654321, n=50)@1;
+
+// Trace 2: Multiple payments over time
+release(p=0xabcdef, n=200)@0;
+release(p=0x998877, n=80)@1;
+release(p=0x334455, n=40)@2;
+
+// Trace 3: Complex scenario with different shares
+release(p=0x112233, n=500)@0;
+release(p=0x445566, n=300)@1;
+release(p=0x778899, n=200)@2;

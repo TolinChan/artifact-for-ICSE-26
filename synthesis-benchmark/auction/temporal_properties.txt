@@ -1,0 +1,12 @@
+
+// Ensuring highest bid is always respected
+□(highestBid(p, m) ∧ bid(q, n) → n ≤ m ∨ p = q)
+
+// Ensuring no repeated withdrawals
+□(withdrawCount(p, c) → c ≤ 1)
+
+// Ensuring auction cannot end prematurely
+□(now(t1) ∧ endTime(t2) → ¬(t1 < t2 ∧ endAuction()))
+
+// Ensuring only the highest bidder wins
+□(endAuction() → highestBid(p, m) → send(p, m))

@@ -1,0 +1,16 @@
+stake(p=0x100000, amount=5000, lockPeriod=30)@1;
+claimRewards(p=0x100000, earnings=500, inETH=true)@2;
+unstake(p=0x100000, stakeIndex=0, amount=5000)@31;
+
+stake(p=0x200000, amount=10000, lockPeriod=60)@1;
+claimRewards(p=0x200000, earnings=6000, inETH=false)@2;
+
+stake(p=0x300000, amount=8000, lockPeriod=40)@1;
+unstake(p=0x300000, stakeIndex=0, amount=8000)@20;
+
+stake(p=0x400000, amount=12000, lockPeriod=90)@1;
+claimAffiliateEarnings(p=0x400000, amount=1000)@2;
+
+stake(p=0x500000, amount=15000, lockPeriod=60)@1;
+unstake(p=0x500000, stakeIndex=0, amount=5000)@61;
+claimRewards(p=0x500000, earnings=2000, inETH=true)@62;

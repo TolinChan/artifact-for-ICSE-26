@@ -1,0 +1,12 @@
+
+// Ensuring total balances do not exceed total supply
+□(totalSupply(t, n) ∧ balanceSum(t, s) → s ≤ n)
+
+// Ensuring allowance cannot be exceeded
+□(allowance(t, o, s, n) ∧ transferFrom(t, o, r, s, m) → m ≤ n)
+
+// Ensuring no negative balances
+□(balanceOf(t, p, n) → n ≥ 0)
+
+// Ensuring total balances match total supply
+□(totalBalances(t, s) ∧ totalSupply(t, n) → s == n)

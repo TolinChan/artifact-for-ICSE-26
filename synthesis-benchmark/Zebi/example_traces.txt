@@ -1,0 +1,16 @@
+
+// Trace 1: Gold list and buying tokens
+addToGoldList(participant=0x123456)@0;
+buyTokens(beneficiary=0x654321, weiAmount=10)@1;
+removeFromGoldList(participant=0x123456)@2;
+
+// Trace 2: KYC verification and refund
+addToKYCList(participant=0xabcdef)@0;
+buyTokens(beneficiary=0xabcdef, weiAmount=20)@1;
+enableRefundPeriod()@2;
+refund(p=0xabcdef)@3;
+disableRefundPeriod()@4;
+
+// Trace 3: Vested minting and forced refund
+mintvestedTokens(partner=0x998877, zweitokens=50000)@0;
+forcedRefund(p=0x334455)@1;

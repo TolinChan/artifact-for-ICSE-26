@@ -1,0 +1,27 @@
+
+// Transactions
+.decl vote(p: address, proposal: uint)
+
+// Rules
+vote(v, p) :- vote(v, p).
+
+// Vote counting logic
+.decl votes(proposal: uint, c: uint)[0]
+votes(p, c) :- vote(_, p), c = count: vote(_, p).
+
+// Winning proposal logic
+.decl wins(proposal: uint, b: bool)[0]
+.decl hasWinner(b: bool)
+.decl winningProposal(proposal: uint)
+
+wins(p, true) :- votes(p, c), quorumSize(q), c >= q.
+hasWinner(true) :- wins(_, b), b == true.
+winningProposal(p) :- wins(p, b), b == true.
+
+.decl voted(p: address, b: bool)[0]
+voted(v, true) :- vote(v, _).
+
+// Detecting inconsistencies
+.decl inconsistency(p1: uint, p2: uint)[0,1]
+.violation inconsistency
+inconsistency(p1, p2) :- wins(p1, true), wins(p2, true), p1 != p2.

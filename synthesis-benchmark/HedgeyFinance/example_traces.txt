@@ -1,0 +1,12 @@
+createUnlockedCampaign(id=0x1, manager=0x111, token=0xAAA, amount=1000, end=1700000000, tokenLockup=Unlocked, root=0xabc)@1;
+claimTokens(id=0x1, claimer=0x222, claimAmount=200)@2;
+
+createLockedCampaign(id=0x2, manager=0x111, token=0xAAA, amount=5000, end=1700000000, tokenLockup=Locked, root=0xdef, tokenLocker=0xLOCKER, start=1700000100, cliff=1700000200, period=30, periods=5)@3;
+claimTokens(id=0x2, claimer=0x333, claimAmount=300)@4;
+
+createUnlockedCampaign(id=0x3, manager=0x111, token=0xAAA, amount=2000, end=1700000000, tokenLockup=Unlocked, root=0xghi)@5;
+cancelCampaign(id=0x3)@6;
+
+createUnlockedCampaign(id=0x4, manager=0x111, token=0xAAA, amount=1000, end=1700000000, tokenLockup=Unlocked, root=0xjkl)@7;
+claimTokens(id=0x4, claimer=0x444, claimAmount=500)@8;
+claimTokens(id=0x4, claimer=0x444, claimAmount=500)@9;

@@ -1,0 +1,5 @@
+transferToken(t=0xABC123, from=0x123456, to=0x789ABC, amount=500)@1;
+transferLP(from=0x123456, to=0x789ABC, amount=100)@2;
+stakeNFT(p=0x123456, tokenId=42)@3;
+unstakeNFT(p=0x123456, tokenId=42)@4;
+nftRewardDistribution(p=0x123456, amount=50)@5;

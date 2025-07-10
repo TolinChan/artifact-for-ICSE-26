@@ -1,0 +1,19 @@
+
+// Trace 1: Mint, transfer, and approve
+mint(account=0x123456, amount=1000)@0;
+transfer(from=0x123456, to=0x654321, value=500)@1;
+approve(owner=0x123456, spender=0xabcdef, amount=300)@2;
+transferFrom(sender=0xabcdef, from=0x123456, to=0x654321, value=200)@3;
+
+// Trace 2: Burn and multiple transfers
+mint(account=0x998877, amount=5000)@0;
+transfer(from=0x998877, to=0x112233, value=1500)@1;
+burn(account=0x998877, amount=1000)@2;
+approve(owner=0x998877, spender=0x334455, amount=500)@3;
+transferFrom(sender=0x334455, from=0x998877, to=0x667788, value=400)@4;
+
+// Trace 3: High-value transactions and approvals
+mint(account=0xabcdef, amount=3000)@0;
+approve(owner=0xabcdef, spender=0x554433, amount=2000)@1;
+transfer(from=0xabcdef, to=0x223344, value=1000)@2;
+transferFrom(sender=0x554433, from=0xabcdef, to=0x778899, value=1500)@3;

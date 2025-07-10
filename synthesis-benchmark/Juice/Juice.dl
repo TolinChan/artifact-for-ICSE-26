@@ -1,0 +1,90 @@
+// Parameters
+.decl *owner(p: address)
+.decl *Juice(p: address)
+.decl *precisionFactor(n: uint)
+.decl *rewardPerSecond(n: uint)
+.decl *lastRewardUpdateTime(n: uint)
+.decl *stakingStartTime(n: uint)
+.decl *stakingEndTime(n: uint)
+.decl *rewardPerShare(n: uint)
+.decl *JuiceStaked(n: uint)
+.decl constructor()
+
+// Views
+.decl balanceOf(p: address, n: uint)[0]
+.decl stakingCount(p: address, n: uint)[0]
+.decl stakedAmount(p: address, i: uint, n: uint)[0]
+.decl rewardDebt(p: address, i: uint, n: uint)[0]
+.decl unstakeStatus(p: address, i: uint, n: uint)[0]
+.decl stakingWeek(p: address, i: uint, n: uint)[0]
+.decl startTime(p: address, i: uint, n: uint)[0]
+.decl endTime(p: address, i: uint, n: uint)[0]
+
+// Transactions
+.decl stake(p: address, amount: uint, stakeWeek: uint)
+.decl unstake(p: address, stakeIndex: uint)
+.decl harvest(p: address, stakeIndex: uint)
+.decl startStaking(rewardTokens: uint)
+.decl rescueReward(receiver: address)
+
+// Rules
+owner(s) :- constructor().
+Juice(a) :- constructor().
+
+// Stake tokens
+stake(p, amount, stakeWeek) :-
+    balanceOf(p, b), 
+    stakingCount(p, count),
+    JuiceStaked(staked),
+    b1 := b - amount, 
+    JuiceStaked(staked1) := staked + amount,
+    stakedAmount(p, count, amount),
+    startTime(p, count, t) :- t = now(),
+    endTime(p, count, e) :- e = now() + (stakeWeek * 7 * 86400),
+    stakingWeek(p, count, stakeWeek),
+    rewardDebt(p, count, d) :- d = (amount * rewardPerShare) / precisionFactor.
+
+stakingCount(p, newCount) :- stakingCount(p, count), newCount := count + 1.
+
+// Unstake tokens
+unstake(p, stakeIndex) :-
+    stakedAmount(p, stakeIndex, amount),
+    unstakeStatus(p, stakeIndex, s),
+    JuiceStaked(staked),
+    s = 0,
+    t = now(),
+    e = endTime(p, stakeIndex, _),
+    t >= e,
+    JuiceStaked(newStaked) :- newStaked = staked - amount,
+    unstakeStatus(p, stakeIndex, 1),
+    balanceOf(p, b), 
+    balanceOf(p, newBalance) :- newBalance = b + amount.
+
+// Harvest rewards
+harvest(p, stakeIndex) :-
+    stakedAmount(p, stakeIndex, amount),
+    unstakeStatus(p, stakeIndex, s),
+    s = 0,
+    balanceOf(p, b),
+    pendingReward(p, stakeIndex, pending, bonus),
+    rewardDebt(p, stakeIndex, d),
+    rewardDebt(p, stakeIndex, newDebt) :- newDebt = d + pending,
+    balanceOf(p, newBalance) :- newBalance = b + pending + bonus.
+
+// Staking rewards
+startStaking(rewardTokens) :-
+    stakingStartTime(t),
+    stakingEndTime(e),
+    lastRewardUpdateTime(lastTime),
+    rewardPerSecond(rps),
+    stakingStartTime(now()),
+    stakingEndTime(now() + 90 * 86400),
+    lastRewardUpdateTime(now()),
+    rewardPerSecond(r) :- r = rewardTokens / (stakingEndTime - stakingStartTime).
+
+// Rescue rewards
+rescueReward(receiver) :-
+    JuiceStaked(staked),
+    balanceOf(contract, b),
+    transfer(contract, receiver, amount) :-
+        amount = b - staked.

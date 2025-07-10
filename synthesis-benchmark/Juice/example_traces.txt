@@ -1,0 +1,14 @@
+startStaking(rewardTokens=1000000)@1;
+stake(p=0x100000, amount=5000, stakeWeek=4)@2;
+harvest(p=0x100000, stakeIndex=0)@3;
+unstake(p=0x100000, stakeIndex=0)@30;
+
+startStaking(rewardTokens=500000)@1;
+stake(p=0x200000, amount=10000, stakeWeek=8)@2;
+harvest(p=0x200000, stakeIndex=0)@3;
+unstake(p=0x200000, stakeIndex=0)@60;
+
+startStaking(rewardTokens=2000000)@1;
+stake(p=0x300000, amount=20000, stakeWeek=12)@2;
+harvest(p=0x300000, stakeIndex=0)@3;
+unstake(p=0x300000, stakeIndex=0)@90;

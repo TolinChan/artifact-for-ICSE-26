@@ -1,0 +1,65 @@
+
+// parameters
+.decl *owner(p: address)
+.decl *stakingSigner(p: address)
+.decl *bot(p: address)
+.decl *ethTax(n: uint)
+.decl *maxPercentage(n: uint)
+.decl constructor()
+
+// views
+.decl balanceOf(p: address, n: uint)[0]
+.decl *totalStaked(n: uint)
+.decl *totalDeposits(n: uint)
+.decl *lastOwnerDepositDay(n: uint)
+.decl totalRewardsClaimed(p: address, n: uint)[0]
+.decl lastClaimDay(p: address, n: uint)[0]
+
+// staking
+.decl stake(p: address, amount: uint, lockPeriod: uint)
+.decl recv_stake(p: address, amount: uint, lockPeriod: uint)
+.decl unstake(p: address, stakeIndex: uint, amount: uint)
+.decl recv_unstake(p: address, stakeIndex: uint)
+
+// rewards and withdrawal
+.decl claimRewards(p: address, earnings: uint, inETH: bool)
+.decl recv_claimRewards(p: address, earnings: uint, inETH: bool)
+.decl claimAffiliateEarnings(p: address, amount: uint)
+.decl recv_claimAffiliateEarnings(p: address, amount: uint)
+
+// lock period
+.decl validLockPeriod(period: uint, isValid: bool, bonus: uint)[0]
+
+// interfaces
+.public recv_stake
+.public recv_unstake
+.public recv_claimRewards
+.public recv_claimAffiliateEarnings
+.public balanceOf(1)
+.public totalStaked(0)
+
+// rules
+owner(s) :- constructor(), msgSender(s).
+stakingSigner(s) :- constructor(), msgSender(s).
+totalStaked(0) :- constructor().
+
+stake(p,n,t) :- recv_stake(p,n,t), msgSender(p), validLockPeriod(t,true,_), n>0.
+totalStaked(m) :- stake(_,n,_), m = sum n: stake(_,n,_).
+
+unstake(p,i,n) :- recv_unstake(p,i), msgSender(p), stake(p,m,_), m >= n.
+totalStaked(m) :- unstake(_,_,n), m = sum s: unstake(_,_,s).
+
+claimRewards(p,n,true) :- recv_claimRewards(p,n,true), msgSender(p), balanceOf(p,m), n<=m, maxPercentage(mp), n < (balanceOf(p,_) * mp / 100).
+claimRewards(p,n,false) :- recv_claimRewards(p,n,false), msgSender(p), balanceOf(p,m), n<=m, maxPercentage(mp), n < (balanceOf(p,_) * mp / 100).
+
+.decl *totalRewardsClaimed(n: uint)
+totalRewardsClaimed(s) :- claimRewards(_,n,_), s = sum n: claimRewards(_,n,_).
+
+// properties
+.decl overWithdrawal(p: address, n: uint)[0]
+.violation overWithdrawal
+overWithdrawal(p,n) :- claimRewards(p,n,true), totalStaked(m), n > m * maxPercentage / 100.
+
+.decl incorrectUnstake(p: address, i: uint)[0]
+.violation incorrectUnstake
+incorrectUnstake(p,i) :- unstake(p,i,_), stake(p,_,t), now(d), d < t.

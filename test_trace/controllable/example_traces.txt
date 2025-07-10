@@ -1,0 +1,1002 @@
+// Trace 1: transfer, burn, mint
+mint(account=0xD4, amount=812)@0;
+mint(account=0xC3, amount=500)@1;
+transfer(from=0xA1, to=0xB2, value=200)@2;
+burn(account=0xB2, amount=100)@3;
+burn(account=0xB2, amount=1241)@4;
+burn(account=0xB2, amount=665)@5;
+transfer(from=0xA1, to=0xD4, value=30)@6;
+transfer(from=0xA1, to=0xB2, value=20)@7;
+transfer(from=0xC3, to=0xB2, value=10)@8;
+mint(account=0xA1, amount=344)@9;
+mint(account=0xD4, amount=500)@10;
+transfer(from=0xA1, to=0xB2, value=200)@11;
+burn(account=0xB2, amount=100)@12;
+burn(account=0xA1, amount=36)@13;
+burn(account=0xC3, amount=125)@14;
+burn(account=0xC3, amount=1369)@15;
+mint(account=0xA1, amount=486)@16;
+
+// Trace 2: transfer, burn, mint
+burn(account=0xA1, amount=13)@0;
+mint(account=0xC3, amount=243)@1;
+burn(account=0xC3, amount=189)@2;
+mint(account=0xA1, amount=478)@3;
+burn(account=0xA1, amount=118)@4;
+burn(account=0xC3, amount=1142)@5;
+burn(account=0xA1, amount=1641)@6;
+burn(account=0xD4, amount=736)@7;
+burn(account=0xD4, amount=186)@8;
+mint(account=0xA1, amount=153)@9;
+mint(account=0xB2, amount=610)@10;
+burn(account=0xC3, amount=257)@11;
+mint(account=0xD4, amount=326)@12;
+burn(account=0xB2, amount=1282)@13;
+burn(account=0xB2, amount=789)@14;
+transfer(from=0xB2, to=0xD4, value=20)@15;
+transfer(from=0xC3, to=0xD4, value=10)@16;
+
+// Trace 3: 5 different operations
+burn(account=0xB2, amount=210)@0;
+mint(account=0xC3, amount=905)@1;
+mint(account=0xA1, amount=107)@2;
+burn(account=0xA1, amount=1389)@3;
+burn(account=0xB2, amount=334)@4;
+burn(account=0xA1, amount=95)@5;
+mint(account=0xA1, amount=500)@6;
+transfer(from=0xB2, to=0xA1, value=200)@7;
+burn(account=0xB2, amount=100)@8;
+burn(account=0xA1, amount=678)@9;
+burn(account=0xB2, amount=123)@10;
+approve(owner=0xA1, spender=0xA1, amount=100)@11;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@12;
+
+// Trace 4: transfer, burn, mint
+mint(account=0xC3, amount=612)@0;
+burn(account=0xC3, amount=1009)@1;
+mint(account=0xB2, amount=529)@2;
+mint(account=0xB2, amount=331)@3;
+mint(account=0xB2, amount=500)@4;
+transfer(from=0xB2, to=0xA1, value=200)@5;
+burn(account=0xB2, amount=100)@6;
+burn(account=0xB2, amount=624)@7;
+mint(account=0xC3, amount=984)@8;
+mint(account=0xD4, amount=879)@9;
+mint(account=0xA1, amount=628)@10;
+burn(account=0xD4, amount=917)@11;
+
+// Trace 5: 5 different operations
+mint(account=0xA1, amount=376)@0;
+burn(account=0xB2, amount=490)@1;
+mint(account=0xC3, amount=188)@2;
+burn(account=0xA1, amount=1391)@3;
+transfer(from=0xB2, to=0xD4, value=30)@4;
+transfer(from=0xC3, to=0xA1, value=10)@5;
+burn(account=0xD4, amount=34)@6;
+burn(account=0xD4, amount=284)@7;
+burn(account=0xA1, amount=475)@8;
+burn(account=0xD4, amount=32)@9;
+burn(account=0xB2, amount=57)@10;
+burn(account=0xD4, amount=487)@11;
+approve(owner=0xD4, spender=0xC3, amount=100)@12;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@13;
+
+// Trace 6: transfer, burn, mint
+mint(account=0xD4, amount=312)@0;
+burn(account=0xC3, amount=1029)@1;
+mint(account=0xD4, amount=863)@2;
+mint(account=0xB2, amount=687)@3;
+burn(account=0xD4, amount=467)@4;
+transfer(from=0xD4, to=0xB2, value=30)@5;
+transfer(from=0xB2, to=0xA1, value=20)@6;
+transfer(from=0xB2, to=0xA1, value=10)@7;
+mint(account=0xA1, amount=615)@8;
+mint(account=0xD4, amount=921)@9;
+mint(account=0xD4, amount=971)@10;
+mint(account=0xD4, amount=697)@11;
+
+// Trace 7: 5 different operations
+burn(account=0xA1, amount=843)@0;
+approve(owner=0xC3, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@2;
+mint(account=0xA1, amount=996)@3;
+burn(account=0xD4, amount=134)@4;
+mint(account=0xA1, amount=696)@5;
+mint(account=0xB2, amount=207)@6;
+mint(account=0xA1, amount=278)@7;
+mint(account=0xC3, amount=197)@8;
+mint(account=0xB2, amount=757)@9;
+burn(account=0xC3, amount=517)@10;
+transfer(from=0xC3, to=0xB2, value=30)@11;
+transfer(from=0xB2, to=0xC3, value=20)@12;
+transfer(from=0xC3, to=0xD4, value=10)@13;
+mint(account=0xC3, amount=519)@14;
+
+// Trace 8: transfer, burn, mint
+burn(account=0xB2, amount=480)@0;
+mint(account=0xA1, amount=283)@1;
+mint(account=0xB2, amount=985)@2;
+transfer(from=0xD4, to=0xB2, value=30)@3;
+transfer(from=0xB2, to=0xA1, value=20)@4;
+transfer(from=0xC3, to=0xB2, value=10)@5;
+mint(account=0xC3, amount=648)@6;
+burn(account=0xC3, amount=1245)@7;
+transfer(from=0xB2, to=0xD4, value=30)@8;
+transfer(from=0xB2, to=0xC3, value=20)@9;
+burn(account=0xD4, amount=505)@10;
+mint(account=0xA1, amount=378)@11;
+mint(account=0xD4, amount=500)@12;
+transfer(from=0xA1, to=0xD4, value=200)@13;
+burn(account=0xA1, amount=100)@14;
+burn(account=0xB2, amount=778)@15;
+mint(account=0xB2, amount=500)@16;
+burn(account=0xC3, amount=100)@17;
+
+// Trace 9: transfer, burn, mint
+burn(account=0xD4, amount=847)@0;
+mint(account=0xD4, amount=649)@1;
+mint(account=0xB2, amount=792)@2;
+mint(account=0xD4, amount=132)@3;
+mint(account=0xB2, amount=691)@4;
+mint(account=0xC3, amount=500)@5;
+transfer(from=0xA1, to=0xC3, value=200)@6;
+burn(account=0xA1, amount=100)@7;
+mint(account=0xC3, amount=287)@8;
+mint(account=0xA1, amount=909)@9;
+transfer(from=0xB2, to=0xA1, value=30)@10;
+transfer(from=0xC3, to=0xB2, value=10)@11;
+mint(account=0xB2, amount=931)@12;
+
+// Trace 10: transfer, burn, mint
+mint(account=0xC3, amount=598)@0;
+burn(account=0xC3, amount=1381)@1;
+burn(account=0xA1, amount=252)@2;
+mint(account=0xA1, amount=402)@3;
+mint(account=0xC3, amount=500)@4;
+transfer(from=0xC3, to=0xD4, value=200)@5;
+burn(account=0xB2, amount=100)@6;
+burn(account=0xC3, amount=274)@7;
+burn(account=0xD4, amount=1006)@8;
+burn(account=0xD4, amount=267)@9;
+burn(account=0xC3, amount=6)@10;
+mint(account=0xD4, amount=265)@11;
+mint(account=0xA1, amount=910)@12;
+mint(account=0xA1, amount=256)@13;
+
+// Trace 11: 5 different operations
+mint(account=0xA1, amount=375)@0;
+mint(account=0xB2, amount=500)@1;
+transfer(from=0xB2, to=0xD4, value=200)@2;
+burn(account=0xB2, amount=100)@3;
+burn(account=0xA1, amount=2479)@4;
+burn(account=0xB2, amount=1146)@5;
+mint(account=0xD4, amount=101)@6;
+mint(account=0xD4, amount=247)@7;
+approve(owner=0xC3, spender=0xD4, amount=100)@8;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@9;
+mint(account=0xB2, amount=450)@10;
+burn(account=0xB2, amount=794)@11;
+approve(owner=0xA1, spender=0xA1, amount=100)@12;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@13;
+
+// Trace 12: transfer, burn, mint
+mint(account=0xC3, amount=910)@0;
+burn(account=0xB2, amount=660)@1;
+mint(account=0xC3, amount=500)@2;
+transfer(from=0xA1, to=0xD4, value=200)@3;
+burn(account=0xA1, amount=100)@4;
+mint(account=0xB2, amount=381)@5;
+mint(account=0xA1, amount=105)@6;
+burn(account=0xD4, amount=278)@7;
+transfer(from=0xC3, to=0xD4, value=30)@8;
+transfer(from=0xD4, to=0xA1, value=10)@9;
+burn(account=0xD4, amount=857)@10;
+burn(account=0xA1, amount=1034)@11;
+
+// Trace 13: transfer, burn, mint
+burn(account=0xA1, amount=108)@0;
+transfer(from=0xA1, to=0xD4, value=30)@1;
+transfer(from=0xD4, to=0xB2, value=20)@2;
+transfer(from=0xA1, to=0xB2, value=10)@3;
+mint(account=0xA1, amount=551)@4;
+burn(account=0xA1, amount=179)@5;
+burn(account=0xB2, amount=408)@6;
+transfer(from=0xD4, to=0xC3, value=30)@7;
+transfer(from=0xC3, to=0xD4, value=20)@8;
+transfer(from=0xA1, to=0xC3, value=10)@9;
+burn(account=0xC3, amount=27)@10;
+mint(account=0xC3, amount=270)@11;
+mint(account=0xB2, amount=500)@12;
+transfer(from=0xA1, to=0xD4, value=200)@13;
+burn(account=0xB2, amount=100)@14;
+
+// Trace 14: 5 different operations
+mint(account=0xD4, amount=690)@0;
+burn(account=0xC3, amount=1014)@1;
+mint(account=0xB2, amount=440)@2;
+transfer(from=0xC3, to=0xD4, value=30)@3;
+transfer(from=0xC3, to=0xA1, value=20)@4;
+transfer(from=0xD4, to=0xC3, value=10)@5;
+burn(account=0xD4, amount=1048)@6;
+burn(account=0xB2, amount=361)@7;
+mint(account=0xD4, amount=976)@8;
+transfer(from=0xD4, to=0xC3, value=30)@9;
+transfer(from=0xB2, to=0xA1, value=20)@10;
+transfer(from=0xB2, to=0xA1, value=10)@11;
+burn(account=0xD4, amount=416)@12;
+mint(account=0xD4, amount=500)@13;
+burn(account=0xC3, amount=100)@14;
+mint(account=0xD4, amount=535)@15;
+approve(owner=0xC3, spender=0xA1, amount=100)@16;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@17;
+
+// Trace 15: transfer, burn, mint
+mint(account=0xA1, amount=166)@0;
+burn(account=0xA1, amount=1251)@1;
+mint(account=0xC3, amount=527)@2;
+burn(account=0xA1, amount=318)@3;
+burn(account=0xA1, amount=35)@4;
+mint(account=0xB2, amount=311)@5;
+mint(account=0xC3, amount=500)@6;
+transfer(from=0xB2, to=0xD4, value=200)@7;
+burn(account=0xA1, amount=100)@8;
+mint(account=0xA1, amount=188)@9;
+mint(account=0xA1, amount=500)@10;
+burn(account=0xB2, amount=100)@11;
+mint(account=0xC3, amount=435)@12;
+mint(account=0xB2, amount=500)@13;
+transfer(from=0xD4, to=0xB2, value=200)@14;
+burn(account=0xB2, amount=100)@15;
+
+// Trace 16: 5 different operations
+mint(account=0xA1, amount=639)@0;
+transfer(from=0xC3, to=0xA1, value=30)@1;
+transfer(from=0xA1, to=0xD4, value=20)@2;
+transfer(from=0xA1, to=0xC3, value=10)@3;
+burn(account=0xA1, amount=765)@4;
+approve(owner=0xB2, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@6;
+burn(account=0xB2, amount=1053)@7;
+transfer(from=0xB2, to=0xC3, value=30)@8;
+transfer(from=0xB2, to=0xC3, value=20)@9;
+transfer(from=0xB2, to=0xA1, value=10)@10;
+mint(account=0xA1, amount=514)@11;
+
+// Trace 17: 5 different operations
+burn(account=0xA1, amount=837)@0;
+transfer(from=0xD4, to=0xC3, value=30)@1;
+transfer(from=0xD4, to=0xA1, value=20)@2;
+transfer(from=0xA1, to=0xD4, value=10)@3;
+mint(account=0xA1, amount=890)@4;
+approve(owner=0xA1, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@6;
+mint(account=0xB2, amount=912)@7;
+mint(account=0xA1, amount=984)@8;
+mint(account=0xC3, amount=358)@9;
+burn(account=0xC3, amount=496)@10;
+burn(account=0xD4, amount=952)@11;
+
+// Trace 18: transfer, burn, mint
+mint(account=0xD4, amount=644)@0;
+burn(account=0xD4, amount=1339)@1;
+mint(account=0xC3, amount=433)@2;
+mint(account=0xB2, amount=127)@3;
+burn(account=0xB2, amount=750)@4;
+mint(account=0xA1, amount=500)@5;
+transfer(from=0xA1, to=0xD4, value=200)@6;
+burn(account=0xA1, amount=100)@7;
+burn(account=0xB2, amount=1195)@8;
+transfer(from=0xA1, to=0xC3, value=30)@9;
+transfer(from=0xC3, to=0xA1, value=20)@10;
+transfer(from=0xB2, to=0xC3, value=10)@11;
+burn(account=0xB2, amount=783)@12;
+burn(account=0xD4, amount=467)@13;
+transfer(from=0xC3, to=0xB2, value=30)@14;
+transfer(from=0xB2, to=0xC3, value=10)@15;
+
+// Trace 19: transfer, burn, mint
+mint(account=0xB2, amount=676)@0;
+burn(account=0xA1, amount=251)@1;
+burn(account=0xB2, amount=595)@2;
+transfer(from=0xD4, to=0xB2, value=30)@3;
+mint(account=0xD4, amount=661)@4;
+burn(account=0xC3, amount=1797)@5;
+mint(account=0xA1, amount=738)@6;
+mint(account=0xD4, amount=596)@7;
+mint(account=0xC3, amount=284)@8;
+mint(account=0xC3, amount=543)@9;
+burn(account=0xA1, amount=1740)@10;
+burn(account=0xA1, amount=899)@11;
+mint(account=0xA1, amount=311)@12;
+
+// Trace 20: 5 different operations
+burn(account=0xA1, amount=129)@0;
+mint(account=0xD4, amount=500)@1;
+transfer(from=0xC3, to=0xA1, value=200)@2;
+burn(account=0xB2, amount=100)@3;
+mint(account=0xB2, amount=427)@4;
+mint(account=0xB2, amount=783)@5;
+burn(account=0xA1, amount=378)@6;
+transfer(from=0xD4, to=0xB2, value=30)@7;
+transfer(from=0xD4, to=0xB2, value=20)@8;
+mint(account=0xB2, amount=232)@9;
+approve(owner=0xA1, spender=0xA1, amount=100)@10;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@11;
+
+// Trace 21: transfer, burn, mint
+mint(account=0xC3, amount=543)@0;
+transfer(from=0xA1, to=0xC3, value=30)@1;
+transfer(from=0xD4, to=0xC3, value=20)@2;
+burn(account=0xA1, amount=516)@3;
+mint(account=0xB2, amount=678)@4;
+mint(account=0xD4, amount=500)@5;
+transfer(from=0xD4, to=0xA1, value=200)@6;
+burn(account=0xB2, amount=100)@7;
+mint(account=0xB2, amount=626)@8;
+burn(account=0xC3, amount=311)@9;
+burn(account=0xA1, amount=942)@10;
+burn(account=0xA1, amount=83)@11;
+mint(account=0xA1, amount=500)@12;
+burn(account=0xD4, amount=100)@13;
+mint(account=0xC3, amount=266)@14;
+mint(account=0xC3, amount=304)@15;
+mint(account=0xA1, amount=500)@16;
+transfer(from=0xC3, to=0xD4, value=200)@17;
+burn(account=0xA1, amount=100)@18;
+mint(account=0xA1, amount=980)@19;
+
+// Trace 22: 5 different operations
+mint(account=0xA1, amount=335)@0;
+burn(account=0xC3, amount=1658)@1;
+mint(account=0xB2, amount=352)@2;
+transfer(from=0xD4, to=0xC3, value=30)@3;
+transfer(from=0xB2, to=0xD4, value=20)@4;
+transfer(from=0xA1, to=0xC3, value=10)@5;
+mint(account=0xA1, amount=197)@6;
+approve(owner=0xA1, spender=0xC3, amount=100)@7;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@8;
+mint(account=0xA1, amount=167)@9;
+mint(account=0xB2, amount=792)@10;
+mint(account=0xA1, amount=836)@11;
+approve(owner=0xB2, spender=0xC3, amount=100)@12;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@13;
+
+// Trace 23: 5 different operations
+burn(account=0xB2, amount=1529)@0;
+mint(account=0xA1, amount=737)@1;
+mint(account=0xB2, amount=500)@2;
+transfer(from=0xC3, to=0xD4, value=200)@3;
+burn(account=0xC3, amount=100)@4;
+burn(account=0xA1, amount=1774)@5;
+mint(account=0xB2, amount=500)@6;
+transfer(from=0xA1, to=0xB2, value=200)@7;
+burn(account=0xB2, amount=100)@8;
+mint(account=0xA1, amount=448)@9;
+mint(account=0xC3, amount=290)@10;
+mint(account=0xC3, amount=214)@11;
+transfer(from=0xA1, to=0xB2, value=20)@12;
+burn(account=0xC3, amount=276)@13;
+approve(owner=0xD4, spender=0xD4, amount=100)@14;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@15;
+
+// Trace 24: transfer, burn, mint
+burn(account=0xC3, amount=270)@0;
+mint(account=0xB2, amount=500)@1;
+transfer(from=0xB2, to=0xD4, value=200)@2;
+burn(account=0xC3, amount=100)@3;
+burn(account=0xC3, amount=229)@4;
+burn(account=0xB2, amount=365)@5;
+burn(account=0xC3, amount=557)@6;
+burn(account=0xA1, amount=1295)@7;
+mint(account=0xD4, amount=500)@8;
+transfer(from=0xA1, to=0xB2, value=200)@9;
+burn(account=0xA1, amount=100)@10;
+burn(account=0xD4, amount=928)@11;
+mint(account=0xD4, amount=500)@12;
+burn(account=0xD4, amount=100)@13;
+burn(account=0xD4, amount=1371)@14;
+
+// Trace 25: 4 different operations
+mint(account=0xA1, amount=606)@0;
+approve(owner=0xA1, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@2;
+burn(account=0xA1, amount=196)@3;
+mint(account=0xA1, amount=783)@4;
+burn(account=0xA1, amount=913)@5;
+mint(account=0xB2, amount=867)@6;
+burn(account=0xC3, amount=413)@7;
+burn(account=0xC3, amount=419)@8;
+burn(account=0xC3, amount=90)@9;
+mint(account=0xA1, amount=633)@10;
+approve(owner=0xC3, spender=0xA1, amount=100)@11;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@12;
+burn(account=0xD4, amount=327)@13;
+mint(account=0xA1, amount=500)@14;
+burn(account=0xA1, amount=100)@15;
+
+// Trace 26: transfer, burn, mint
+mint(account=0xB2, amount=555)@0;
+burn(account=0xB2, amount=1833)@1;
+burn(account=0xA1, amount=986)@2;
+burn(account=0xD4, amount=633)@3;
+transfer(from=0xA1, to=0xB2, value=30)@4;
+transfer(from=0xD4, to=0xB2, value=20)@5;
+transfer(from=0xC3, to=0xD4, value=10)@6;
+mint(account=0xC3, amount=674)@7;
+mint(account=0xD4, amount=496)@8;
+burn(account=0xA1, amount=1022)@9;
+
+// Trace 27: 5 different operations
+mint(account=0xA1, amount=457)@0;
+transfer(from=0xB2, to=0xC3, value=10)@1;
+burn(account=0xA1, amount=650)@2;
+approve(owner=0xA1, spender=0xB2, amount=100)@3;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@4;
+burn(account=0xB2, amount=1096)@5;
+transfer(from=0xA1, to=0xD4, value=20)@6;
+burn(account=0xC3, amount=125)@7;
+burn(account=0xD4, amount=532)@8;
+mint(account=0xD4, amount=153)@9;
+approve(owner=0xD4, spender=0xC3, amount=100)@10;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@11;
+mint(account=0xC3, amount=872)@12;
+transfer(from=0xA1, to=0xC3, value=30)@13;
+transfer(from=0xB2, to=0xA1, value=20)@14;
+transfer(from=0xD4, to=0xB2, value=10)@15;
+
+// Trace 28: transfer, burn, mint
+burn(account=0xD4, amount=404)@0;
+mint(account=0xA1, amount=500)@1;
+transfer(from=0xB2, to=0xA1, value=200)@2;
+burn(account=0xB2, amount=100)@3;
+mint(account=0xB2, amount=269)@4;
+mint(account=0xD4, amount=961)@5;
+mint(account=0xD4, amount=269)@6;
+mint(account=0xD4, amount=964)@7;
+burn(account=0xA1, amount=540)@8;
+burn(account=0xC3, amount=211)@9;
+burn(account=0xB2, amount=1208)@10;
+mint(account=0xD4, amount=470)@11;
+mint(account=0xA1, amount=205)@12;
+mint(account=0xA1, amount=716)@13;
+mint(account=0xB2, amount=500)@14;
+transfer(from=0xD4, to=0xB2, value=200)@15;
+burn(account=0xB2, amount=100)@16;
+mint(account=0xA1, amount=837)@17;
+
+// Trace 29: transfer, burn, mint
+mint(account=0xA1, amount=755)@0;
+burn(account=0xB2, amount=617)@1;
+mint(account=0xD4, amount=603)@2;
+burn(account=0xD4, amount=1831)@3;
+mint(account=0xA1, amount=232)@4;
+transfer(from=0xC3, to=0xB2, value=20)@5;
+transfer(from=0xC3, to=0xD4, value=10)@6;
+burn(account=0xA1, amount=454)@7;
+transfer(from=0xC3, to=0xA1, value=20)@8;
+mint(account=0xC3, amount=782)@9;
+burn(account=0xB2, amount=617)@10;
+burn(account=0xA1, amount=433)@11;
+burn(account=0xA1, amount=580)@12;
+
+// Trace 30: 4 different operations
+burn(account=0xC3, amount=919)@0;
+mint(account=0xA1, amount=500)@1;
+burn(account=0xA1, amount=100)@2;
+burn(account=0xB2, amount=344)@3;
+approve(owner=0xC3, spender=0xD4, amount=100)@4;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@5;
+mint(account=0xD4, amount=339)@6;
+burn(account=0xC3, amount=188)@7;
+approve(owner=0xC3, spender=0xB2, amount=100)@8;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@9;
+burn(account=0xD4, amount=245)@10;
+mint(account=0xA1, amount=390)@11;
+
+// Trace 31: transfer, burn, mint
+mint(account=0xB2, amount=391)@0;
+burn(account=0xC3, amount=143)@1;
+burn(account=0xB2, amount=17)@2;
+transfer(from=0xA1, to=0xD4, value=30)@3;
+transfer(from=0xD4, to=0xB2, value=20)@4;
+transfer(from=0xC3, to=0xA1, value=10)@5;
+mint(account=0xC3, amount=997)@6;
+mint(account=0xD4, amount=500)@7;
+transfer(from=0xB2, to=0xA1, value=200)@8;
+burn(account=0xC3, amount=100)@9;
+burn(account=0xD4, amount=564)@10;
+mint(account=0xB2, amount=500)@11;
+burn(account=0xA1, amount=100)@12;
+mint(account=0xC3, amount=724)@13;
+burn(account=0xD4, amount=752)@14;
+burn(account=0xB2, amount=328)@15;
+
+// Trace 32: transfer, burn, mint
+mint(account=0xC3, amount=148)@0;
+mint(account=0xA1, amount=500)@1;
+transfer(from=0xC3, to=0xD4, value=200)@2;
+burn(account=0xD4, amount=100)@3;
+burn(account=0xC3, amount=61)@4;
+mint(account=0xC3, amount=500)@5;
+burn(account=0xB2, amount=100)@6;
+mint(account=0xC3, amount=968)@7;
+burn(account=0xD4, amount=807)@8;
+mint(account=0xD4, amount=498)@9;
+burn(account=0xB2, amount=291)@10;
+mint(account=0xB2, amount=980)@11;
+burn(account=0xA1, amount=633)@12;
+
+// Trace 33: 4 different operations
+burn(account=0xB2, amount=745)@0;
+mint(account=0xD4, amount=637)@1;
+approve(owner=0xA1, spender=0xC3, amount=100)@2;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@3;
+burn(account=0xC3, amount=303)@4;
+mint(account=0xD4, amount=344)@5;
+burn(account=0xA1, amount=19)@6;
+burn(account=0xB2, amount=262)@7;
+burn(account=0xB2, amount=64)@8;
+mint(account=0xB2, amount=651)@9;
+approve(owner=0xB2, spender=0xA1, amount=100)@10;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@11;
+burn(account=0xD4, amount=1074)@12;
+
+// Trace 34: transfer, burn, mint
+mint(account=0xC3, amount=212)@0;
+burn(account=0xC3, amount=1490)@1;
+transfer(from=0xC3, to=0xB2, value=30)@2;
+transfer(from=0xB2, to=0xC3, value=20)@3;
+transfer(from=0xA1, to=0xB2, value=10)@4;
+burn(account=0xA1, amount=81)@5;
+mint(account=0xB2, amount=709)@6;
+mint(account=0xD4, amount=227)@7;
+mint(account=0xA1, amount=161)@8;
+burn(account=0xB2, amount=264)@9;
+burn(account=0xD4, amount=210)@10;
+mint(account=0xC3, amount=521)@11;
+
+// Trace 35: 5 different operations
+burn(account=0xD4, amount=496)@0;
+mint(account=0xC3, amount=500)@1;
+transfer(from=0xA1, to=0xB2, value=200)@2;
+burn(account=0xD4, amount=100)@3;
+burn(account=0xA1, amount=4)@4;
+mint(account=0xC3, amount=500)@5;
+transfer(from=0xD4, to=0xA1, value=200)@6;
+burn(account=0xB2, amount=100)@7;
+burn(account=0xC3, amount=1584)@8;
+approve(owner=0xA1, spender=0xC3, amount=100)@9;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@10;
+burn(account=0xC3, amount=117)@11;
+burn(account=0xD4, amount=504)@12;
+burn(account=0xB2, amount=856)@13;
+burn(account=0xD4, amount=467)@14;
+mint(account=0xB2, amount=500)@15;
+burn(account=0xA1, amount=100)@16;
+
+// Trace 36: 5 different operations
+mint(account=0xA1, amount=384)@0;
+approve(owner=0xC3, spender=0xB2, amount=100)@1;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@2;
+burn(account=0xC3, amount=578)@3;
+burn(account=0xC3, amount=347)@4;
+mint(account=0xC3, amount=500)@5;
+transfer(from=0xD4, to=0xB2, value=200)@6;
+burn(account=0xD4, amount=100)@7;
+mint(account=0xA1, amount=355)@8;
+burn(account=0xD4, amount=218)@9;
+burn(account=0xA1, amount=1533)@10;
+approve(owner=0xC3, spender=0xC3, amount=100)@11;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@12;
+mint(account=0xC3, amount=195)@13;
+mint(account=0xD4, amount=335)@14;
+
+// Trace 37: transfer, burn, mint
+mint(account=0xC3, amount=690)@0;
+burn(account=0xB2, amount=245)@1;
+transfer(from=0xD4, to=0xB2, value=30)@2;
+transfer(from=0xA1, to=0xB2, value=20)@3;
+transfer(from=0xB2, to=0xD4, value=10)@4;
+burn(account=0xD4, amount=91)@5;
+burn(account=0xB2, amount=406)@6;
+burn(account=0xA1, amount=156)@7;
+mint(account=0xA1, amount=694)@8;
+mint(account=0xA1, amount=208)@9;
+
+// Trace 38: 5 different operations
+mint(account=0xB2, amount=148)@0;
+approve(owner=0xA1, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@2;
+burn(account=0xB2, amount=169)@3;
+burn(account=0xB2, amount=478)@4;
+burn(account=0xC3, amount=1036)@5;
+burn(account=0xC3, amount=791)@6;
+mint(account=0xA1, amount=254)@7;
+burn(account=0xC3, amount=251)@8;
+mint(account=0xD4, amount=500)@9;
+transfer(from=0xD4, to=0xB2, value=200)@10;
+burn(account=0xD4, amount=100)@11;
+mint(account=0xD4, amount=609)@12;
+transfer(from=0xA1, to=0xB2, value=30)@13;
+transfer(from=0xB2, to=0xA1, value=20)@14;
+transfer(from=0xB2, to=0xA1, value=10)@15;
+
+// Trace 39: transfer, burn, mint
+burn(account=0xB2, amount=291)@0;
+mint(account=0xD4, amount=657)@1;
+burn(account=0xB2, amount=63)@2;
+mint(account=0xD4, amount=674)@3;
+transfer(from=0xB2, to=0xC3, value=30)@4;
+transfer(from=0xD4, to=0xB2, value=20)@5;
+transfer(from=0xC3, to=0xA1, value=10)@6;
+mint(account=0xA1, amount=579)@7;
+transfer(from=0xA1, to=0xB2, value=20)@8;
+transfer(from=0xD4, to=0xA1, value=10)@9;
+burn(account=0xA1, amount=818)@10;
+
+// Trace 40: 5 different operations
+burn(account=0xD4, amount=215)@0;
+approve(owner=0xD4, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@2;
+mint(account=0xB2, amount=866)@3;
+transfer(from=0xD4, to=0xC3, value=30)@4;
+transfer(from=0xC3, to=0xB2, value=20)@5;
+burn(account=0xC3, amount=258)@6;
+burn(account=0xC3, amount=76)@7;
+burn(account=0xD4, amount=475)@8;
+mint(account=0xB2, amount=500)@9;
+transfer(from=0xC3, to=0xA1, value=200)@10;
+burn(account=0xA1, amount=100)@11;
+burn(account=0xA1, amount=765)@12;
+transfer(from=0xB2, to=0xA1, value=30)@13;
+transfer(from=0xB2, to=0xA1, value=20)@14;
+
+// Trace 41: 5 different operations
+burn(account=0xB2, amount=122)@0;
+mint(account=0xC3, amount=162)@1;
+mint(account=0xA1, amount=821)@2;
+approve(owner=0xB2, spender=0xD4, amount=100)@3;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@4;
+burn(account=0xC3, amount=288)@5;
+mint(account=0xB2, amount=500)@6;
+transfer(from=0xA1, to=0xC3, value=200)@7;
+burn(account=0xC3, amount=100)@8;
+burn(account=0xC3, amount=114)@9;
+burn(account=0xA1, amount=936)@10;
+burn(account=0xB2, amount=702)@11;
+mint(account=0xB2, amount=500)@12;
+transfer(from=0xA1, to=0xD4, value=200)@13;
+burn(account=0xA1, amount=100)@14;
+
+// Trace 42: transfer, burn, mint
+burn(account=0xB2, amount=232)@0;
+transfer(from=0xA1, to=0xD4, value=30)@1;
+transfer(from=0xC3, to=0xA1, value=20)@2;
+transfer(from=0xA1, to=0xD4, value=10)@3;
+mint(account=0xA1, amount=919)@4;
+burn(account=0xD4, amount=783)@5;
+mint(account=0xD4, amount=158)@6;
+burn(account=0xC3, amount=251)@7;
+transfer(from=0xD4, to=0xB2, value=30)@8;
+burn(account=0xB2, amount=346)@9;
+mint(account=0xD4, amount=500)@10;
+transfer(from=0xB2, to=0xA1, value=200)@11;
+burn(account=0xD4, amount=100)@12;
+mint(account=0xA1, amount=950)@13;
+
+// Trace 43: transfer, burn, mint
+burn(account=0xB2, amount=152)@0;
+mint(account=0xC3, amount=262)@1;
+mint(account=0xD4, amount=168)@2;
+burn(account=0xB2, amount=250)@3;
+mint(account=0xC3, amount=735)@4;
+transfer(from=0xD4, to=0xA1, value=30)@5;
+transfer(from=0xD4, to=0xC3, value=20)@6;
+transfer(from=0xA1, to=0xD4, value=10)@7;
+burn(account=0xD4, amount=694)@8;
+transfer(from=0xA1, to=0xD4, value=20)@9;
+transfer(from=0xD4, to=0xA1, value=10)@10;
+mint(account=0xC3, amount=489)@11;
+mint(account=0xD4, amount=169)@12;
+mint(account=0xB2, amount=853)@13;
+
+// Trace 44: 5 different operations
+mint(account=0xA1, amount=536)@0;
+transfer(from=0xD4, to=0xB2, value=30)@1;
+transfer(from=0xA1, to=0xB2, value=20)@2;
+burn(account=0xA1, amount=1541)@3;
+approve(owner=0xD4, spender=0xB2, amount=100)@4;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@5;
+burn(account=0xC3, amount=640)@6;
+mint(account=0xB2, amount=500)@7;
+burn(account=0xD4, amount=100)@8;
+mint(account=0xD4, amount=359)@9;
+burn(account=0xC3, amount=440)@10;
+mint(account=0xB2, amount=805)@11;
+burn(account=0xD4, amount=513)@12;
+mint(account=0xA1, amount=500)@13;
+transfer(from=0xD4, to=0xC3, value=200)@14;
+burn(account=0xC3, amount=100)@15;
+
+// Trace 45: 5 different operations
+burn(account=0xD4, amount=399)@0;
+transfer(from=0xD4, to=0xB2, value=20)@1;
+mint(account=0xC3, amount=920)@2;
+burn(account=0xA1, amount=1453)@3;
+approve(owner=0xB2, spender=0xA1, amount=100)@4;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@5;
+mint(account=0xD4, amount=100)@6;
+mint(account=0xA1, amount=894)@7;
+burn(account=0xA1, amount=385)@8;
+mint(account=0xC3, amount=119)@9;
+burn(account=0xC3, amount=23)@10;
+transfer(from=0xA1, to=0xD4, value=10)@11;
+burn(account=0xA1, amount=192)@12;
+mint(account=0xD4, amount=461)@13;
+mint(account=0xA1, amount=868)@14;
+mint(account=0xB2, amount=414)@15;
+
+// Trace 46: transfer, burn, mint
+burn(account=0xB2, amount=796)@0;
+mint(account=0xC3, amount=786)@1;
+mint(account=0xB2, amount=606)@2;
+transfer(from=0xC3, to=0xD4, value=20)@3;
+transfer(from=0xA1, to=0xD4, value=10)@4;
+burn(account=0xC3, amount=561)@5;
+mint(account=0xB2, amount=500)@6;
+burn(account=0xD4, amount=100)@7;
+mint(account=0xD4, amount=985)@8;
+burn(account=0xD4, amount=394)@9;
+burn(account=0xC3, amount=323)@10;
+mint(account=0xC3, amount=681)@11;
+burn(account=0xC3, amount=261)@12;
+mint(account=0xD4, amount=500)@13;
+burn(account=0xB2, amount=100)@14;
+
+// Trace 47: transfer, burn, mint
+burn(account=0xB2, amount=1396)@0;
+transfer(from=0xA1, to=0xC3, value=30)@1;
+transfer(from=0xD4, to=0xB2, value=20)@2;
+transfer(from=0xB2, to=0xA1, value=10)@3;
+mint(account=0xA1, amount=564)@4;
+burn(account=0xB2, amount=235)@5;
+transfer(from=0xC3, to=0xB2, value=30)@6;
+transfer(from=0xA1, to=0xB2, value=10)@7;
+mint(account=0xB2, amount=558)@8;
+transfer(from=0xD4, to=0xC3, value=30)@9;
+transfer(from=0xC3, to=0xB2, value=20)@10;
+mint(account=0xA1, amount=688)@11;
+mint(account=0xC3, amount=903)@12;
+
+// Trace 48: 4 different operations
+burn(account=0xB2, amount=673)@0;
+mint(account=0xA1, amount=711)@1;
+mint(account=0xA1, amount=108)@2;
+approve(owner=0xD4, spender=0xD4, amount=100)@3;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@4;
+mint(account=0xC3, amount=668)@5;
+mint(account=0xD4, amount=189)@6;
+mint(account=0xA1, amount=999)@7;
+approve(owner=0xC3, spender=0xD4, amount=100)@8;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@9;
+mint(account=0xA1, amount=167)@10;
+
+// Trace 49: 4 different operations
+burn(account=0xC3, amount=329)@0;
+mint(account=0xB2, amount=216)@1;
+mint(account=0xB2, amount=601)@2;
+burn(account=0xA1, amount=1617)@3;
+burn(account=0xD4, amount=119)@4;
+mint(account=0xA1, amount=357)@5;
+approve(owner=0xB2, spender=0xA1, amount=100)@6;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@7;
+burn(account=0xA1, amount=1656)@8;
+mint(account=0xD4, amount=844)@9;
+mint(account=0xA1, amount=697)@10;
+mint(account=0xD4, amount=530)@11;
+
+// Trace 50: 5 different operations
+burn(account=0xB2, amount=1181)@0;
+approve(owner=0xC3, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@2;
+mint(account=0xB2, amount=664)@3;
+mint(account=0xD4, amount=500)@4;
+burn(account=0xD4, amount=100)@5;
+mint(account=0xD4, amount=291)@6;
+burn(account=0xD4, amount=462)@7;
+burn(account=0xA1, amount=382)@8;
+transfer(from=0xD4, to=0xB2, value=30)@9;
+transfer(from=0xB2, to=0xC3, value=20)@10;
+transfer(from=0xB2, to=0xD4, value=10)@11;
+
+// Trace 51: transfer, burn, mint
+burn(account=0xB2, amount=116)@0;
+mint(account=0xD4, amount=494)@1;
+mint(account=0xC3, amount=500)@2;
+transfer(from=0xB2, to=0xA1, value=200)@3;
+burn(account=0xC3, amount=100)@4;
+burn(account=0xD4, amount=1191)@5;
+transfer(from=0xC3, to=0xA1, value=20)@6;
+transfer(from=0xC3, to=0xD4, value=10)@7;
+mint(account=0xB2, amount=407)@8;
+mint(account=0xB2, amount=609)@9;
+mint(account=0xB2, amount=154)@10;
+mint(account=0xB2, amount=125)@11;
+mint(account=0xD4, amount=847)@12;
+burn(account=0xA1, amount=1073)@13;
+
+// Trace 52: 5 different operations
+mint(account=0xC3, amount=408)@0;
+burn(account=0xD4, amount=478)@1;
+burn(account=0xC3, amount=1255)@2;
+burn(account=0xA1, amount=922)@3;
+mint(account=0xA1, amount=223)@4;
+burn(account=0xC3, amount=1032)@5;
+mint(account=0xB2, amount=722)@6;
+transfer(from=0xD4, to=0xA1, value=10)@7;
+burn(account=0xD4, amount=1081)@8;
+mint(account=0xD4, amount=959)@9;
+approve(owner=0xC3, spender=0xB2, amount=100)@10;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@11;
+burn(account=0xC3, amount=513)@12;
+transfer(from=0xA1, to=0xD4, value=30)@13;
+transfer(from=0xD4, to=0xA1, value=20)@14;
+transfer(from=0xD4, to=0xC3, value=10)@15;
+burn(account=0xA1, amount=987)@16;
+
+// Trace 53: 4 different operations
+mint(account=0xC3, amount=141)@0;
+burn(account=0xB2, amount=1092)@1;
+mint(account=0xD4, amount=396)@2;
+mint(account=0xC3, amount=216)@3;
+mint(account=0xB2, amount=423)@4;
+approve(owner=0xD4, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@6;
+mint(account=0xB2, amount=259)@7;
+burn(account=0xB2, amount=689)@8;
+mint(account=0xC3, amount=991)@9;
+
+// Trace 54: transfer, burn, mint
+mint(account=0xC3, amount=207)@0;
+burn(account=0xB2, amount=1219)@1;
+mint(account=0xA1, amount=915)@2;
+mint(account=0xB2, amount=500)@3;
+transfer(from=0xA1, to=0xB2, value=200)@4;
+burn(account=0xB2, amount=100)@5;
+mint(account=0xC3, amount=794)@6;
+burn(account=0xA1, amount=535)@7;
+mint(account=0xB2, amount=742)@8;
+transfer(from=0xD4, to=0xB2, value=30)@9;
+transfer(from=0xD4, to=0xB2, value=20)@10;
+
+// Trace 55: burn, mint
+burn(account=0xA1, amount=46)@0;
+mint(account=0xC3, amount=816)@1;
+burn(account=0xA1, amount=335)@2;
+mint(account=0xC3, amount=919)@3;
+mint(account=0xC3, amount=309)@4;
+burn(account=0xA1, amount=1)@5;
+burn(account=0xD4, amount=338)@6;
+burn(account=0xA1, amount=547)@7;
+burn(account=0xC3, amount=385)@8;
+mint(account=0xB2, amount=548)@9;
+mint(account=0xD4, amount=912)@10;
+
+// Trace 56: 5 different operations
+mint(account=0xC3, amount=427)@0;
+approve(owner=0xA1, spender=0xB2, amount=100)@1;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@2;
+burn(account=0xA1, amount=239)@3;
+approve(owner=0xD4, spender=0xB2, amount=100)@4;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@5;
+mint(account=0xD4, amount=854)@6;
+mint(account=0xD4, amount=694)@7;
+transfer(from=0xD4, to=0xC3, value=30)@8;
+transfer(from=0xB2, to=0xD4, value=10)@9;
+mint(account=0xC3, amount=517)@10;
+mint(account=0xA1, amount=500)@11;
+transfer(from=0xC3, to=0xB2, value=200)@12;
+burn(account=0xD4, amount=100)@13;
+mint(account=0xD4, amount=685)@14;
+approve(owner=0xB2, spender=0xC3, amount=100)@15;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@16;
+
+// Trace 57: 5 different operations
+mint(account=0xA1, amount=872)@0;
+transfer(from=0xB2, to=0xA1, value=20)@1;
+burn(account=0xD4, amount=397)@2;
+burn(account=0xA1, amount=724)@3;
+burn(account=0xC3, amount=1421)@4;
+burn(account=0xA1, amount=311)@5;
+mint(account=0xC3, amount=948)@6;
+burn(account=0xA1, amount=129)@7;
+mint(account=0xA1, amount=740)@8;
+burn(account=0xA1, amount=59)@9;
+burn(account=0xA1, amount=365)@10;
+approve(owner=0xD4, spender=0xC3, amount=100)@11;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@12;
+burn(account=0xB2, amount=954)@13;
+approve(owner=0xA1, spender=0xB2, amount=100)@14;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@15;
+
+// Trace 58: 5 different operations
+burn(account=0xA1, amount=173)@0;
+approve(owner=0xB2, spender=0xB2, amount=100)@1;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@2;
+mint(account=0xB2, amount=673)@3;
+burn(account=0xB2, amount=85)@4;
+burn(account=0xA1, amount=38)@5;
+mint(account=0xD4, amount=500)@6;
+transfer(from=0xB2, to=0xD4, value=200)@7;
+burn(account=0xA1, amount=100)@8;
+mint(account=0xD4, amount=355)@9;
+burn(account=0xB2, amount=149)@10;
+mint(account=0xD4, amount=998)@11;
+mint(account=0xB2, amount=865)@12;
+transfer(from=0xD4, to=0xB2, value=30)@13;
+transfer(from=0xC3, to=0xA1, value=10)@14;
+
+// Trace 59: 5 different operations
+mint(account=0xA1, amount=143)@0;
+approve(owner=0xC3, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@2;
+burn(account=0xB2, amount=1475)@3;
+mint(account=0xB2, amount=295)@4;
+mint(account=0xB2, amount=500)@5;
+transfer(from=0xB2, to=0xA1, value=200)@6;
+burn(account=0xD4, amount=100)@7;
+burn(account=0xA1, amount=19)@8;
+mint(account=0xD4, amount=493)@9;
+approve(owner=0xB2, spender=0xA1, amount=100)@10;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@11;
+
+// Trace 60: 5 different operations
+mint(account=0xD4, amount=155)@0;
+approve(owner=0xB2, spender=0xD4, amount=100)@1;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@2;
+burn(account=0xB2, amount=231)@3;
+burn(account=0xC3, amount=724)@4;
+mint(account=0xA1, amount=500)@5;
+burn(account=0xB2, amount=100)@6;
+mint(account=0xA1, amount=755)@7;
+approve(owner=0xD4, spender=0xB2, amount=100)@8;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@9;
+burn(account=0xB2, amount=1022)@10;
+transfer(from=0xC3, to=0xD4, value=30)@11;
+transfer(from=0xB2, to=0xA1, value=20)@12;
+transfer(from=0xC3, to=0xB2, value=10)@13;
+
+// Trace 61: 4 different operations
+mint(account=0xB2, amount=891)@0;
+burn(account=0xC3, amount=341)@1;
+approve(owner=0xD4, spender=0xD4, amount=100)@2;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@3;
+mint(account=0xA1, amount=101)@4;
+approve(owner=0xB2, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@6;
+burn(account=0xB2, amount=605)@7;
+burn(account=0xD4, amount=1747)@8;
+burn(account=0xB2, amount=256)@9;
+approve(owner=0xC3, spender=0xD4, amount=100)@10;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@11;
+
+// Trace 62: 5 different operations
+burn(account=0xA1, amount=381)@0;
+mint(account=0xD4, amount=500)@1;
+burn(account=0xB2, amount=100)@2;
+mint(account=0xC3, amount=552)@3;
+burn(account=0xC3, amount=1075)@4;
+mint(account=0xA1, amount=704)@5;
+mint(account=0xA1, amount=500)@6;
+transfer(from=0xD4, to=0xA1, value=200)@7;
+burn(account=0xC3, amount=100)@8;
+burn(account=0xC3, amount=517)@9;
+burn(account=0xD4, amount=1838)@10;
+approve(owner=0xD4, spender=0xC3, amount=100)@11;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@12;
+burn(account=0xC3, amount=640)@13;
+mint(account=0xD4, amount=825)@14;
+mint(account=0xA1, amount=833)@15;
+approve(owner=0xA1, spender=0xB2, amount=100)@16;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@17;
+

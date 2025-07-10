@@ -1,0 +1,12 @@
+
+// Ensuring rate calculation is always within range
+□(initialRate(i) ∧ endRate(e) ∧ rate(p, r) → e ≤ r ≤ i)
+
+// Ensuring no negative total supply after finalization
+□(finalization() → finalSupply(s) ∧ s ≥ 0)
+
+// Ensuring weiRaised increases properly
+□(buyTokens(p, w) → weiRaised(r) ∧ weiRaised(r + w))
+
+// Ensuring buyTokens only occurs with nonzero beneficiary
+□(buyTokens(p, w) → p != 0)

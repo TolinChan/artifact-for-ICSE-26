@@ -1,0 +1,21 @@
+
+// Trace 1: Basic bidding and withdrawal
+bid(bidder=0x123456, amount=100)@0;
+bid(bidder=0x654321, amount=200)@1;
+withdraw(bidder=0x123456, amount=100)@2;
+endAuction()@3;
+
+// Trace 2: Bidding war and end of auction
+bid(bidder=0x998877, amount=500)@0;
+bid(bidder=0x112233, amount=700)@1;
+bid(bidder=0x334455, amount=1000)@2;
+endAuction()@3;
+withdraw(bidder=0x998877, amount=500)@4;
+
+// Trace 3: Bids, end, and multiple withdrawals
+bid(bidder=0xabcdef, amount=400)@0;
+bid(bidder=0x998877, amount=800)@1;
+bid(bidder=0x554433, amount=1200)@2;
+endAuction()@3;
+withdraw(bidder=0xabcdef, amount=400)@4;
+withdraw(bidder=0x998877, amount=800)@5;

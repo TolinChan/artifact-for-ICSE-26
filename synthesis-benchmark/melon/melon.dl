@@ -1,0 +1,41 @@
+
+// Parameters
+.decl *baseUnits(n: uint)
+.decl *inflationEnableDate(n: uint)
+.decl *initialTotalSupply(n: uint)
+.decl *yearlyMintableAmount(n: uint)
+.decl *mintingInterval(n: uint)
+.decl *nextMinting(n: uint)
+.decl *council(p: address)
+.decl *deployer(p: address)
+.decl *totalSupply(n: uint)
+.decl balanceOf(p: address, n: uint)[0]
+.decl *initialSupplyMinted(b: bool)
+
+// Transactions
+.decl changeCouncil(newCouncil: address)
+.decl mintInitialSupply(initialReceiver: address)
+.decl mintInflation()
+
+// Rules
+baseUnits(10**18).
+inflationEnableDate(1551398400).
+initialTotalSupply(932613 * 10**18).
+yearlyMintableAmount(300600 * 10**18).
+mintingInterval(365 * 86400).  // Converting days to seconds
+nextMinting(1551398400).
+
+changeCouncil(nc) :- changeCouncil(nc).
+mintInitialSupply(ir) :- mintInitialSupply(ir).
+mintInflation() :- mintInflation().
+
+// Minting rules
+.decl nextMintingTime(n: uint)
+nextMintingTime(t) :- mintInflation(), nextMinting(n), t := n + mintingInterval.
+
+.decl totalMinted(n: uint)
+totalMinted(m) :- mintInitialSupply(_), m := initialTotalSupply.
+totalMinted(m) :- mintInflation(), totalMinted(p), m := p + yearlyMintableAmount.
+
+.decl councilBalance(n: uint)
+councilBalance(b) :- mintInflation(), council(p), balanceOf(p, c), b := c + yearlyMintableAmount.

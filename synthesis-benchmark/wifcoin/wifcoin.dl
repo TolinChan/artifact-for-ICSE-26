@@ -1,0 +1,77 @@
+// Parameters
+.decl *owner(p: address)
+.decl *stakingToken(t: address)
+.decl *burnAddress(a: address)
+.decl *planLimit(n: uint)
+.decl *penalty(n: uint)
+
+// Plans and Stakes
+.decl plan(p: uint, apr: uint, duration: uint, conclude: bool)
+.decl stake(s: uint, user: address, amount: uint, stakeAt: uint, endStakeAt: uint)
+
+// Rewards and Earnings
+.decl totalRewards(n: uint)
+.decl totalRewardsPerPlan(p: uint, n: uint)
+.decl totalEarnedRewardsPerWallet(p: address, n: uint)
+.decl totalRewardsPerWalletPerPlan(p: uint, user: address, n: uint)
+
+// Balances
+.decl tokenBalance(t: address, p: address, n: uint)[0]
+
+// Transactions
+.decl stakeToken(user: address, planId: uint, amount: uint, time: uint)
+.decl unstakeToken(user: address, planId: uint, amount: uint, burnRate: uint, time: uint)
+.decl claimRewards(user: address, planId: uint, burnRate: uint, time: uint)
+.decl emergencyWithdraw(user: address, planId: uint, amount: uint, time: uint)
+
+// Rules
+owner(s) :- msgSender(s).
+
+stakeToken(user, planId, amount, time) :-
+    msgSender(user),
+    tokenBalance(stakingToken, user, b),
+    b >= amount,
+    plan(planId, _, duration, false),
+    tokenBalance(stakingToken, user, b - amount),
+    tokenBalance(stakingToken, address(this), b2),
+    tokenBalance(stakingToken, address(this), b2 + amount),
+    stake(planId, user, amount, time, time + duration).
+
+unstakeToken(user, planId, amount, burnRate, time) :-
+    msgSender(user),
+    stake(planId, user, sAmount, stakeAt, endStakeAt),
+    time >= endStakeAt,
+    sAmount >= amount,
+    tokenBalance(stakingToken, user, b),
+    tokenBalance(stakingToken, burnAddress, b2),
+    burnAmount = amount * burnRate / 100,
+    tokenBalance(stakingToken, user, b + (amount - burnAmount)),
+    tokenBalance(stakingToken, burnAddress, b2 + burnAmount),
+    totalRewards += (amount - burnAmount).
+
+claimRewards(user, planId, burnRate, time) :-
+    msgSender(user),
+    stake(planId, user, amount, stakeAt, endStakeAt),
+    time >= endStakeAt,
+    plan(planId, apr, _, _),
+    earned = amount * apr / 10000,
+    tokenBalance(stakingToken, user, b),
+    tokenBalance(stakingToken, burnAddress, b2),
+    burnAmount = earned * burnRate / 100,
+    tokenBalance(stakingToken, user, b + (earned - burnAmount)),
+    tokenBalance(stakingToken, burnAddress, b2 + burnAmount),
+    totalRewards += (earned - burnAmount),
+    totalRewardsPerPlan(planId, totalRewardsPerPlan(planId) + (earned - burnAmount)),
+    totalRewardsPerWalletPerPlan(planId, user, totalRewardsPerWalletPerPlan(planId, user) + (earned - burnAmount)),
+    totalEarnedRewardsPerWallet(user, totalEarnedRewardsPerWallet(user) + (earned - burnAmount)).
+
+emergencyWithdraw(user, planId, amount, time) :-
+    msgSender(user),
+    stake(planId, user, sAmount, stakeAt, _),
+    sAmount >= amount,
+    tokenBalance(stakingToken, user, b),
+    tokenBalance(stakingToken, burnAddress, b2),
+    burnAmount = amount * penalty / 100,
+    tokenBalance(stakingToken, user, b + (amount - burnAmount)),
+    tokenBalance(stakingToken, burnAddress, b2 + burnAmount).
+

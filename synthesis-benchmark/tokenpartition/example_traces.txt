@@ -1,0 +1,17 @@
+
+// Trace 1: Issuing, transferring, and redeeming tokens by partition
+issueByPartition(p=0x123456, q=1, amount=100)@0;
+transferByPartition(from=0x123456, to=0x654321, q=1, amount=50)@1;
+redeemByPartition(p=0x654321, q=1, amount=20)@2;
+
+// Trace 2: Multiple transactions in different partitions
+issueByPartition(p=0xabcdef, q=2, amount=200)@0;
+transferByPartition(from=0xabcdef, to=0x998877, q=2, amount=80)@1;
+transferByPartition(from=0x998877, to=0x334455, q=2, amount=40)@2;
+redeemByPartition(p=0x334455, q=2, amount=10)@3;
+
+// Trace 3: Complex flow with cross-partition interactions
+issueByPartition(p=0x112233, q=1, amount=500)@0;
+transferByPartition(from=0x112233, to=0x445566, q=1, amount=300)@1;
+redeemByPartition(p=0x445566, q=1, amount=200)@2;
+transferByPartition(from=0x445566, to=0x778899, q=1, amount=150)@3;

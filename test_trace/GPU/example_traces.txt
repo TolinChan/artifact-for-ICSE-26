@@ -1,0 +1,1002 @@
+// Trace 1: 8 different operations
+factory()@0;
+transfer(from=0xA1, to=0xC3, value=1119)@1;
+approve(owner=0xD4, spender=0xC3, amount=159)@2;
+balanceOf(account=0xC3)@3;
+transfer(from=0xC3, to=0xD4, value=30)@4;
+transfer(from=0xC3, to=0xA1, value=10)@5;
+rescueToken(param1=0xA1, param2=89)@6;
+createPair(param1=0xB2, param2=0xA1)@7;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=99, param2=22, param3=0xA1, param4=0xA1, param5=40)@8;
+transfer(from=0xA1, to=0xC3, value=30)@9;
+transfer(from=0xC3, to=0xD4, value=20)@10;
+addLiquidity(param1=0xB2, param2=0xA1, param3=87, param4=96, param5=59)@11;
+balanceOf(account=0xA1)@12;
+approve(owner=0xA1, spender=0xD4, amount=119)@13;
+
+// Trace 2: 10 different operations
+balanceOf(account=0xD4)@0;
+mint(account=0xC3, amount=500)@1;
+transfer(from=0xA1, to=0xC3, value=200)@2;
+burn(account=0xA1, amount=100)@3;
+approve(owner=0xC3, spender=0xB2, amount=194)@4;
+createPair(param1=0xA1, param2=0xD4)@5;
+transfer(from=0xC3, to=0xD4, value=10)@6;
+rescueToken(param1=0xD4, param2=74)@7;
+factory()@8;
+approve(owner=0xD4, spender=0xC3, amount=100)@9;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@10;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=53, param2=16, param3=0xB2, param4=0xD4, param5=8)@11;
+
+// Trace 3: 10 different operations
+transfer(from=0xD4, to=0xA1, value=1549)@0;
+balanceOf(account=0xB2)@1;
+transfer(from=0xA1, to=0xC3, value=10)@2;
+rescueToken(param1=0xA1, param2=9)@3;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=31, param2=12, param3=0xC3, param4=0xC3, param5=14)@4;
+transfer(from=0xB2, to=0xD4, value=30)@5;
+approve(owner=0xA1, spender=0xB2, amount=177)@6;
+createPair(param1=0xA1, param2=0xB2)@7;
+mint(account=0xD4, amount=500)@8;
+transfer(from=0xD4, to=0xB2, value=200)@9;
+burn(account=0xC3, amount=100)@10;
+addLiquidity(param1=0xA1, param2=0xD4, param3=32, param4=14, param5=25)@11;
+factory()@12;
+
+// Trace 4: 11 different operations
+transfer(from=0xA1, to=0xD4, value=2492)@0;
+createPair(param1=0xD4, param2=0xD4)@1;
+approve(owner=0xB2, spender=0xD4, amount=100)@2;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@3;
+rescueToken(param1=0xD4, param2=82)@4;
+balanceOf(account=0xD4)@5;
+addLiquidity(param1=0xA1, param2=0xB2, param3=93, param4=82, param5=13)@6;
+factory()@7;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=83, param2=77, param3=0xA1, param4=0xD4, param5=84)@8;
+mint(account=0xC3, amount=500)@9;
+transfer(from=0xC3, to=0xA1, value=200)@10;
+burn(account=0xA1, amount=100)@11;
+createPair(param1=0xA1, param2=0xC3)@12;
+addLiquidity(param1=0xA1, param2=0xB2, param3=72, param4=99, param5=29)@13;
+transfer(from=0xB2, to=0xC3, value=393)@14;
+transfer(from=0xD4, to=0xB2, value=3348)@15;
+
+// Trace 5: 8 different operations
+factory()@0;
+transfer(from=0xB2, to=0xA1, value=30)@1;
+transfer(from=0xC3, to=0xA1, value=20)@2;
+transfer(from=0xC3, to=0xD4, value=10)@3;
+balanceOf(account=0xD4)@4;
+addLiquidity(param1=0xB2, param2=0xB2, param3=78, param4=65, param5=54)@5;
+mint(account=0xB2, amount=500)@6;
+transfer(from=0xB2, to=0xC3, value=200)@7;
+burn(account=0xB2, amount=100)@8;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=99, param2=9, param3=0xC3, param4=0xB2, param5=44)@9;
+mint(account=0xD4, amount=500)@10;
+transfer(from=0xA1, to=0xB2, value=200)@11;
+burn(account=0xB2, amount=100)@12;
+createPair(param1=0xC3, param2=0xA1)@13;
+mint(account=0xB2, amount=500)@14;
+transfer(from=0xC3, to=0xD4, value=200)@15;
+burn(account=0xD4, amount=100)@16;
+
+// Trace 6: 10 different operations
+factory()@0;
+transfer(from=0xD4, to=0xB2, value=1431)@1;
+transfer(from=0xB2, to=0xA1, value=20)@2;
+transfer(from=0xC3, to=0xB2, value=10)@3;
+addLiquidity(param1=0xC3, param2=0xC3, param3=54, param4=99, param5=26)@4;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=2, param2=81, param3=0xA1, param4=0xC3, param5=12)@5;
+mint(account=0xB2, amount=500)@6;
+transfer(from=0xD4, to=0xC3, value=200)@7;
+burn(account=0xB2, amount=100)@8;
+balanceOf(account=0xB2)@9;
+rescueToken(param1=0xC3, param2=11)@10;
+approve(owner=0xA1, spender=0xC3, amount=14)@11;
+mint(account=0xA1, amount=500)@12;
+transfer(from=0xD4, to=0xA1, value=200)@13;
+burn(account=0xA1, amount=100)@14;
+createPair(param1=0xC3, param2=0xB2)@15;
+
+// Trace 7: 8 different operations
+createPair(param1=0xA1, param2=0xB2)@0;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=46, param2=63, param3=0xC3, param4=0xB2, param5=86)@1;
+transfer(from=0xB2, to=0xA1, value=30)@2;
+transfer(from=0xD4, to=0xC3, value=20)@3;
+balanceOf(account=0xC3)@4;
+approve(owner=0xA1, spender=0xC3, amount=30)@5;
+transfer(from=0xD4, to=0xA1, value=10)@6;
+addLiquidity(param1=0xC3, param2=0xD4, param3=62, param4=85, param5=59)@7;
+factory()@8;
+rescueToken(param1=0xD4, param2=47)@9;
+transfer(from=0xC3, to=0xB2, value=30)@10;
+transfer(from=0xC3, to=0xA1, value=20)@11;
+transfer(from=0xD4, to=0xB2, value=691)@12;
+approve(owner=0xD4, spender=0xC3, amount=89)@13;
+
+// Trace 8: 9 different operations
+createPair(param1=0xA1, param2=0xB2)@0;
+approve(owner=0xC3, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@2;
+addLiquidity(param1=0xD4, param2=0xA1, param3=79, param4=2, param5=43)@3;
+balanceOf(account=0xA1)@4;
+transfer(from=0xB2, to=0xC3, value=20)@5;
+transfer(from=0xC3, to=0xA1, value=10)@6;
+factory()@7;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=67, param2=82, param3=0xB2, param4=0xC3, param5=31)@8;
+rescueToken(param1=0xD4, param2=22)@9;
+transfer(from=0xB2, to=0xC3, value=5304)@10;
+balanceOf(account=0xB2)@11;
+transfer(from=0xC3, to=0xB2, value=1251)@12;
+
+// Trace 9: 10 different operations
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=85, param2=17, param3=0xB2, param4=0xD4, param5=13)@0;
+transfer(from=0xB2, to=0xD4, value=10)@1;
+balanceOf(account=0xD4)@2;
+createPair(param1=0xD4, param2=0xA1)@3;
+approve(owner=0xC3, spender=0xB2, amount=194)@4;
+factory()@5;
+transfer(from=0xD4, to=0xB2, value=20)@6;
+transfer(from=0xD4, to=0xB2, value=10)@7;
+rescueToken(param1=0xA1, param2=34)@8;
+addLiquidity(param1=0xC3, param2=0xD4, param3=47, param4=97, param5=29)@9;
+addLiquidity(param1=0xD4, param2=0xA1, param3=31, param4=76, param5=27)@10;
+mint(account=0xD4, amount=500)@11;
+transfer(from=0xD4, to=0xC3, value=200)@12;
+burn(account=0xA1, amount=100)@13;
+
+// Trace 10: 8 different operations
+approve(owner=0xA1, spender=0xB2, amount=83)@0;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=92, param2=65, param3=0xB2, param4=0xA1, param5=78)@1;
+rescueToken(param1=0xC3, param2=7)@2;
+addLiquidity(param1=0xC3, param2=0xC3, param3=9, param4=89, param5=15)@3;
+transfer(from=0xC3, to=0xD4, value=3075)@4;
+approve(owner=0xC3, spender=0xB2, amount=100)@5;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@6;
+createPair(param1=0xB2, param2=0xA1)@7;
+approve(owner=0xB2, spender=0xC3, amount=100)@8;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@9;
+factory()@10;
+
+// Trace 11: 11 different operations
+approve(owner=0xC3, spender=0xA1, amount=172)@0;
+factory()@1;
+transfer(from=0xD4, to=0xA1, value=1213)@2;
+approve(owner=0xC3, spender=0xC3, amount=100)@3;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@4;
+rescueToken(param1=0xB2, param2=23)@5;
+balanceOf(account=0xB2)@6;
+mint(account=0xA1, amount=500)@7;
+transfer(from=0xA1, to=0xD4, value=200)@8;
+burn(account=0xC3, amount=100)@9;
+addLiquidity(param1=0xD4, param2=0xA1, param3=4, param4=4, param5=76)@10;
+createPair(param1=0xD4, param2=0xB2)@11;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=51, param2=8, param3=0xC3, param4=0xC3, param5=12)@12;
+mint(account=0xA1, amount=500)@13;
+transfer(from=0xC3, to=0xD4, value=200)@14;
+burn(account=0xC3, amount=100)@15;
+transfer(from=0xA1, to=0xC3, value=2891)@16;
+transfer(from=0xB2, to=0xD4, value=1557)@17;
+
+// Trace 12: 8 different operations
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=87, param2=67, param3=0xB2, param4=0xA1, param5=21)@0;
+transfer(from=0xA1, to=0xC3, value=736)@1;
+createPair(param1=0xB2, param2=0xA1)@2;
+mint(account=0xD4, amount=500)@3;
+burn(account=0xB2, amount=100)@4;
+approve(owner=0xA1, spender=0xB2, amount=124)@5;
+mint(account=0xC3, amount=500)@6;
+transfer(from=0xC3, to=0xB2, value=200)@7;
+burn(account=0xD4, amount=100)@8;
+rescueToken(param1=0xB2, param2=17)@9;
+addLiquidity(param1=0xB2, param2=0xC3, param3=24, param4=28, param5=69)@10;
+mint(account=0xB2, amount=500)@11;
+transfer(from=0xB2, to=0xA1, value=200)@12;
+burn(account=0xD4, amount=100)@13;
+
+// Trace 13: 9 different operations
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=68, param2=58, param3=0xC3, param4=0xB2, param5=11)@0;
+approve(owner=0xA1, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@2;
+balanceOf(account=0xD4)@3;
+transfer(from=0xA1, to=0xC3, value=1310)@4;
+factory()@5;
+rescueToken(param1=0xB2, param2=69)@6;
+addLiquidity(param1=0xD4, param2=0xD4, param3=94, param4=87, param5=67)@7;
+createPair(param1=0xC3, param2=0xA1)@8;
+balanceOf(account=0xD4)@9;
+
+// Trace 14: 10 different operations
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=12, param2=84, param3=0xD4, param4=0xC3, param5=35)@0;
+addLiquidity(param1=0xD4, param2=0xA1, param3=44, param4=59, param5=76)@1;
+balanceOf(account=0xA1)@2;
+approve(owner=0xA1, spender=0xD4, amount=10)@3;
+transfer(from=0xA1, to=0xC3, value=673)@4;
+factory()@5;
+createPair(param1=0xB2, param2=0xD4)@6;
+mint(account=0xA1, amount=500)@7;
+burn(account=0xC3, amount=100)@8;
+rescueToken(param1=0xD4, param2=20)@9;
+transfer(from=0xD4, to=0xA1, value=10)@10;
+rescueToken(param1=0xB2, param2=19)@11;
+transfer(from=0xB2, to=0xA1, value=90)@12;
+
+// Trace 15: 10 different operations
+addLiquidity(param1=0xB2, param2=0xC3, param3=77, param4=4, param5=94)@0;
+transfer(from=0xC3, to=0xA1, value=6721)@1;
+approve(owner=0xB2, spender=0xA1, amount=116)@2;
+createPair(param1=0xB2, param2=0xB2)@3;
+approve(owner=0xA1, spender=0xB2, amount=100)@4;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@5;
+balanceOf(account=0xB2)@6;
+mint(account=0xB2, amount=500)@7;
+burn(account=0xD4, amount=100)@8;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=28, param2=6, param3=0xB2, param4=0xA1, param5=16)@9;
+approve(owner=0xA1, spender=0xA1, amount=100)@10;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@11;
+factory()@12;
+transfer(from=0xD4, to=0xB2, value=30)@13;
+transfer(from=0xB2, to=0xA1, value=20)@14;
+transfer(from=0xB2, to=0xD4, value=10)@15;
+
+// Trace 16: 11 different operations
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=78, param2=80, param3=0xB2, param4=0xB2, param5=67)@0;
+transfer(from=0xA1, to=0xC3, value=1414)@1;
+approve(owner=0xA1, spender=0xD4, amount=67)@2;
+balanceOf(account=0xD4)@3;
+rescueToken(param1=0xD4, param2=46)@4;
+createPair(param1=0xC3, param2=0xC3)@5;
+factory()@6;
+approve(owner=0xA1, spender=0xA1, amount=100)@7;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@8;
+addLiquidity(param1=0xD4, param2=0xB2, param3=41, param4=9, param5=57)@9;
+mint(account=0xB2, amount=500)@10;
+transfer(from=0xC3, to=0xB2, value=200)@11;
+burn(account=0xB2, amount=100)@12;
+factory()@13;
+mint(account=0xC3, amount=500)@14;
+transfer(from=0xB2, to=0xA1, value=200)@15;
+burn(account=0xB2, amount=100)@16;
+factory()@17;
+
+// Trace 17: 8 different operations
+approve(owner=0xA1, spender=0xB2, amount=196)@0;
+createPair(param1=0xC3, param2=0xA1)@1;
+addLiquidity(param1=0xB2, param2=0xA1, param3=62, param4=67, param5=96)@2;
+rescueToken(param1=0xA1, param2=32)@3;
+balanceOf(account=0xB2)@4;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=7, param2=48, param3=0xD4, param4=0xA1, param5=21)@5;
+transfer(from=0xD4, to=0xB2, value=479)@6;
+transfer(from=0xD4, to=0xB2, value=30)@7;
+transfer(from=0xD4, to=0xA1, value=20)@8;
+transfer(from=0xA1, to=0xB2, value=10)@9;
+factory()@10;
+transfer(from=0xB2, to=0xC3, value=4453)@11;
+
+// Trace 18: 8 different operations
+rescueToken(param1=0xD4, param2=63)@0;
+balanceOf(account=0xD4)@1;
+approve(owner=0xC3, spender=0xB2, amount=128)@2;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=31, param2=19, param3=0xA1, param4=0xD4, param5=28)@3;
+transfer(from=0xD4, to=0xA1, value=1770)@4;
+transfer(from=0xD4, to=0xB2, value=20)@5;
+addLiquidity(param1=0xB2, param2=0xB2, param3=60, param4=29, param5=5)@6;
+transfer(from=0xB2, to=0xD4, value=30)@7;
+transfer(from=0xD4, to=0xB2, value=20)@8;
+transfer(from=0xD4, to=0xA1, value=10)@9;
+factory()@10;
+createPair(param1=0xC3, param2=0xA1)@11;
+
+// Trace 19: 10 different operations
+balanceOf(account=0xC3)@0;
+transfer(from=0xB2, to=0xA1, value=2676)@1;
+factory()@2;
+mint(account=0xB2, amount=500)@3;
+burn(account=0xA1, amount=100)@4;
+approve(owner=0xB2, spender=0xD4, amount=136)@5;
+rescueToken(param1=0xD4, param2=6)@6;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=50, param2=82, param3=0xB2, param4=0xB2, param5=63)@7;
+transfer(from=0xB2, to=0xC3, value=30)@8;
+transfer(from=0xD4, to=0xB2, value=10)@9;
+createPair(param1=0xD4, param2=0xC3)@10;
+mint(account=0xA1, amount=500)@11;
+burn(account=0xA1, amount=100)@12;
+addLiquidity(param1=0xC3, param2=0xD4, param3=92, param4=75, param5=12)@13;
+
+// Trace 20: 10 different operations
+addLiquidity(param1=0xB2, param2=0xC3, param3=39, param4=8, param5=74)@0;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=43, param2=28, param3=0xC3, param4=0xC3, param5=42)@1;
+mint(account=0xC3, amount=500)@2;
+burn(account=0xB2, amount=100)@3;
+balanceOf(account=0xA1)@4;
+transfer(from=0xB2, to=0xA1, value=1146)@5;
+approve(owner=0xB2, spender=0xA1, amount=26)@6;
+rescueToken(param1=0xB2, param2=22)@7;
+approve(owner=0xA1, spender=0xC3, amount=100)@8;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@9;
+createPair(param1=0xC3, param2=0xC3)@10;
+approve(owner=0xA1, spender=0xA1, amount=100)@11;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@12;
+
+// Trace 21: 10 different operations
+rescueToken(param1=0xA1, param2=65)@0;
+balanceOf(account=0xD4)@1;
+transfer(from=0xB2, to=0xC3, value=30)@2;
+transfer(from=0xC3, to=0xB2, value=20)@3;
+transfer(from=0xA1, to=0xB2, value=10)@4;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=64, param2=71, param3=0xD4, param4=0xC3, param5=75)@5;
+createPair(param1=0xA1, param2=0xB2)@6;
+approve(owner=0xD4, spender=0xB2, amount=141)@7;
+addLiquidity(param1=0xB2, param2=0xD4, param3=30, param4=3, param5=64)@8;
+factory()@9;
+transfer(from=0xD4, to=0xC3, value=154)@10;
+addLiquidity(param1=0xB2, param2=0xB2, param3=20, param4=18, param5=46)@11;
+transfer(from=0xD4, to=0xA1, value=1269)@12;
+mint(account=0xB2, amount=500)@13;
+transfer(from=0xC3, to=0xA1, value=200)@14;
+burn(account=0xB2, amount=100)@15;
+
+// Trace 22: 9 different operations
+factory()@0;
+balanceOf(account=0xB2)@1;
+mint(account=0xA1, amount=500)@2;
+transfer(from=0xD4, to=0xA1, value=200)@3;
+burn(account=0xA1, amount=100)@4;
+addLiquidity(param1=0xC3, param2=0xC3, param3=83, param4=44, param5=15)@5;
+mint(account=0xC3, amount=500)@6;
+transfer(from=0xD4, to=0xB2, value=200)@7;
+burn(account=0xC3, amount=100)@8;
+rescueToken(param1=0xB2, param2=82)@9;
+createPair(param1=0xB2, param2=0xB2)@10;
+approve(owner=0xD4, spender=0xB2, amount=124)@11;
+
+// Trace 23: 9 different operations
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=37, param2=35, param3=0xC3, param4=0xD4, param5=97)@0;
+balanceOf(account=0xC3)@1;
+transfer(from=0xD4, to=0xB2, value=633)@2;
+createPair(param1=0xC3, param2=0xD4)@3;
+addLiquidity(param1=0xB2, param2=0xB2, param3=39, param4=32, param5=33)@4;
+rescueToken(param1=0xD4, param2=23)@5;
+approve(owner=0xA1, spender=0xB2, amount=114)@6;
+factory()@7;
+approve(owner=0xD4, spender=0xA1, amount=100)@8;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@9;
+rescueToken(param1=0xC3, param2=45)@10;
+
+// Trace 24: 11 different operations
+balanceOf(account=0xB2)@0;
+addLiquidity(param1=0xC3, param2=0xD4, param3=74, param4=87, param5=48)@1;
+mint(account=0xC3, amount=500)@2;
+transfer(from=0xC3, to=0xB2, value=200)@3;
+burn(account=0xB2, amount=100)@4;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=95, param2=3, param3=0xB2, param4=0xD4, param5=24)@5;
+approve(owner=0xB2, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@7;
+rescueToken(param1=0xD4, param2=63)@8;
+factory()@9;
+createPair(param1=0xA1, param2=0xB2)@10;
+mint(account=0xA1, amount=500)@11;
+transfer(from=0xC3, to=0xB2, value=200)@12;
+burn(account=0xD4, amount=100)@13;
+transfer(from=0xB2, to=0xC3, value=1099)@14;
+approve(owner=0xD4, spender=0xB2, amount=100)@15;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@16;
+
+// Trace 25: 7 different operations
+rescueToken(param1=0xD4, param2=7)@0;
+addLiquidity(param1=0xB2, param2=0xD4, param3=77, param4=70, param5=38)@1;
+transfer(from=0xB2, to=0xC3, value=30)@2;
+transfer(from=0xC3, to=0xB2, value=20)@3;
+transfer(from=0xA1, to=0xC3, value=10)@4;
+createPair(param1=0xA1, param2=0xD4)@5;
+balanceOf(account=0xC3)@6;
+transfer(from=0xC3, to=0xA1, value=30)@7;
+transfer(from=0xD4, to=0xA1, value=10)@8;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=68, param2=43, param3=0xA1, param4=0xD4, param5=27)@9;
+factory()@10;
+transfer(from=0xC3, to=0xD4, value=30)@11;
+transfer(from=0xC3, to=0xB2, value=20)@12;
+transfer(from=0xA1, to=0xD4, value=10)@13;
+
+// Trace 26: 11 different operations
+addLiquidity(param1=0xD4, param2=0xD4, param3=73, param4=49, param5=36)@0;
+createPair(param1=0xD4, param2=0xB2)@1;
+transfer(from=0xC3, to=0xA1, value=1362)@2;
+balanceOf(account=0xD4)@3;
+approve(owner=0xD4, spender=0xB2, amount=100)@4;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@5;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=25, param2=15, param3=0xC3, param4=0xC3, param5=20)@6;
+approve(owner=0xC3, spender=0xD4, amount=100)@7;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@8;
+rescueToken(param1=0xB2, param2=41)@9;
+factory()@10;
+mint(account=0xC3, amount=500)@11;
+transfer(from=0xD4, to=0xB2, value=200)@12;
+burn(account=0xD4, amount=100)@13;
+transfer(from=0xD4, to=0xA1, value=267)@14;
+
+// Trace 27: 9 different operations
+createPair(param1=0xD4, param2=0xC3)@0;
+transfer(from=0xD4, to=0xC3, value=223)@1;
+approve(owner=0xD4, spender=0xB2, amount=100)@2;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@3;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=1, param2=69, param3=0xA1, param4=0xA1, param5=47)@4;
+addLiquidity(param1=0xD4, param2=0xC3, param3=38, param4=74, param5=61)@5;
+balanceOf(account=0xD4)@6;
+rescueToken(param1=0xD4, param2=38)@7;
+factory()@8;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=35, param2=41, param3=0xB2, param4=0xD4, param5=71)@9;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=39, param2=77, param3=0xB2, param4=0xB2, param5=47)@10;
+rescueToken(param1=0xC3, param2=32)@11;
+
+// Trace 28: 11 different operations
+rescueToken(param1=0xD4, param2=42)@0;
+balanceOf(account=0xC3)@1;
+transfer(from=0xD4, to=0xA1, value=23)@2;
+factory()@3;
+approve(owner=0xD4, spender=0xA1, amount=100)@4;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@5;
+addLiquidity(param1=0xA1, param2=0xB2, param3=97, param4=1, param5=98)@6;
+createPair(param1=0xA1, param2=0xC3)@7;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=4, param2=1, param3=0xB2, param4=0xA1, param5=80)@8;
+transfer(from=0xB2, to=0xC3, value=1027)@9;
+transfer(from=0xB2, to=0xD4, value=127)@10;
+balanceOf(account=0xC3)@11;
+transfer(from=0xD4, to=0xB2, value=49)@12;
+mint(account=0xC3, amount=500)@13;
+burn(account=0xB2, amount=100)@14;
+
+// Trace 29: 8 different operations
+factory()@0;
+balanceOf(account=0xD4)@1;
+addLiquidity(param1=0xA1, param2=0xD4, param3=77, param4=80, param5=32)@2;
+rescueToken(param1=0xA1, param2=8)@3;
+transfer(from=0xD4, to=0xA1, value=56)@4;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=66, param2=80, param3=0xD4, param4=0xB2, param5=10)@5;
+transfer(from=0xC3, to=0xB2, value=20)@6;
+createPair(param1=0xA1, param2=0xB2)@7;
+approve(owner=0xA1, spender=0xC3, amount=127)@8;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=63, param2=89, param3=0xD4, param4=0xA1, param5=24)@9;
+transfer(from=0xB2, to=0xC3, value=291)@10;
+approve(owner=0xB2, spender=0xC3, amount=15)@11;
+transfer(from=0xC3, to=0xD4, value=30)@12;
+transfer(from=0xB2, to=0xD4, value=20)@13;
+transfer(from=0xD4, to=0xA1, value=10)@14;
+transfer(from=0xA1, to=0xD4, value=6404)@15;
+balanceOf(account=0xC3)@16;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=7, param2=25, param3=0xD4, param4=0xC3, param5=19)@17;
+
+// Trace 30: 10 different operations
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=68, param2=38, param3=0xB2, param4=0xD4, param5=13)@0;
+approve(owner=0xB2, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@2;
+transfer(from=0xA1, to=0xD4, value=5413)@3;
+addLiquidity(param1=0xD4, param2=0xD4, param3=49, param4=61, param5=30)@4;
+transfer(from=0xC3, to=0xA1, value=30)@5;
+transfer(from=0xA1, to=0xB2, value=10)@6;
+rescueToken(param1=0xC3, param2=15)@7;
+factory()@8;
+mint(account=0xC3, amount=500)@9;
+transfer(from=0xC3, to=0xA1, value=200)@10;
+burn(account=0xD4, amount=100)@11;
+createPair(param1=0xA1, param2=0xC3)@12;
+
+// Trace 31: 11 different operations
+balanceOf(account=0xD4)@0;
+mint(account=0xB2, amount=500)@1;
+transfer(from=0xD4, to=0xA1, value=200)@2;
+burn(account=0xD4, amount=100)@3;
+addLiquidity(param1=0xB2, param2=0xB2, param3=35, param4=37, param5=8)@4;
+createPair(param1=0xD4, param2=0xA1)@5;
+transfer(from=0xA1, to=0xC3, value=30)@6;
+transfer(from=0xD4, to=0xB2, value=20)@7;
+transfer(from=0xA1, to=0xD4, value=10)@8;
+rescueToken(param1=0xD4, param2=24)@9;
+approve(owner=0xB2, spender=0xC3, amount=100)@10;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@11;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=87, param2=60, param3=0xA1, param4=0xB2, param5=88)@12;
+mint(account=0xD4, amount=500)@13;
+transfer(from=0xA1, to=0xD4, value=200)@14;
+burn(account=0xC3, amount=100)@15;
+factory()@16;
+
+// Trace 32: 11 different operations
+createPair(param1=0xD4, param2=0xA1)@0;
+rescueToken(param1=0xA1, param2=36)@1;
+transfer(from=0xC3, to=0xD4, value=2842)@2;
+addLiquidity(param1=0xA1, param2=0xB2, param3=44, param4=7, param5=34)@3;
+balanceOf(account=0xD4)@4;
+approve(owner=0xA1, spender=0xB2, amount=100)@5;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@6;
+factory()@7;
+mint(account=0xB2, amount=500)@8;
+transfer(from=0xB2, to=0xA1, value=200)@9;
+burn(account=0xD4, amount=100)@10;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=96, param2=28, param3=0xC3, param4=0xA1, param5=89)@11;
+transfer(from=0xB2, to=0xC3, value=358)@12;
+approve(owner=0xC3, spender=0xD4, amount=182)@13;
+transfer(from=0xA1, to=0xB2, value=30)@14;
+transfer(from=0xD4, to=0xC3, value=10)@15;
+
+// Trace 33: 8 different operations
+approve(owner=0xD4, spender=0xA1, amount=178)@0;
+addLiquidity(param1=0xB2, param2=0xD4, param3=31, param4=21, param5=27)@1;
+balanceOf(account=0xB2)@2;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=6, param2=38, param3=0xB2, param4=0xC3, param5=39)@3;
+createPair(param1=0xD4, param2=0xD4)@4;
+transfer(from=0xD4, to=0xA1, value=211)@5;
+rescueToken(param1=0xD4, param2=62)@6;
+factory()@7;
+transfer(from=0xD4, to=0xB2, value=30)@8;
+transfer(from=0xC3, to=0xB2, value=10)@9;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=48, param2=45, param3=0xA1, param4=0xA1, param5=56)@10;
+transfer(from=0xD4, to=0xA1, value=19)@11;
+
+// Trace 34: 8 different operations
+balanceOf(account=0xD4)@0;
+createPair(param1=0xB2, param2=0xD4)@1;
+approve(owner=0xC3, spender=0xC3, amount=100)@2;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@3;
+rescueToken(param1=0xC3, param2=28)@4;
+transfer(from=0xD4, to=0xA1, value=4495)@5;
+addLiquidity(param1=0xA1, param2=0xD4, param3=25, param4=4, param5=9)@6;
+transfer(from=0xA1, to=0xB2, value=30)@7;
+transfer(from=0xC3, to=0xA1, value=20)@8;
+transfer(from=0xD4, to=0xC3, value=10)@9;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=83, param2=31, param3=0xC3, param4=0xA1, param5=45)@10;
+
+// Trace 35: 10 different operations
+factory()@0;
+transfer(from=0xA1, to=0xB2, value=30)@1;
+transfer(from=0xC3, to=0xD4, value=20)@2;
+balanceOf(account=0xA1)@3;
+approve(owner=0xD4, spender=0xA1, amount=181)@4;
+mint(account=0xA1, amount=500)@5;
+transfer(from=0xD4, to=0xB2, value=200)@6;
+burn(account=0xB2, amount=100)@7;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=52, param2=77, param3=0xD4, param4=0xC3, param5=85)@8;
+createPair(param1=0xD4, param2=0xD4)@9;
+transfer(from=0xA1, to=0xC3, value=30)@10;
+transfer(from=0xC3, to=0xB2, value=20)@11;
+transfer(from=0xB2, to=0xC3, value=10)@12;
+addLiquidity(param1=0xB2, param2=0xC3, param3=63, param4=89, param5=40)@13;
+rescueToken(param1=0xB2, param2=17)@14;
+
+// Trace 36: 9 different operations
+factory()@0;
+approve(owner=0xA1, spender=0xD4, amount=100)@1;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@2;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=2, param2=62, param3=0xA1, param4=0xC3, param5=78)@3;
+balanceOf(account=0xD4)@4;
+transfer(from=0xD4, to=0xA1, value=2051)@5;
+addLiquidity(param1=0xB2, param2=0xA1, param3=17, param4=31, param5=40)@6;
+rescueToken(param1=0xC3, param2=30)@7;
+createPair(param1=0xB2, param2=0xA1)@8;
+transfer(from=0xD4, to=0xC3, value=2148)@9;
+transfer(from=0xA1, to=0xD4, value=5222)@10;
+factory()@11;
+factory()@12;
+
+// Trace 37: 10 different operations
+rescueToken(param1=0xA1, param2=49)@0;
+balanceOf(account=0xB2)@1;
+mint(account=0xA1, amount=500)@2;
+transfer(from=0xB2, to=0xC3, value=200)@3;
+burn(account=0xD4, amount=100)@4;
+approve(owner=0xD4, spender=0xA1, amount=96)@5;
+mint(account=0xA1, amount=500)@6;
+transfer(from=0xA1, to=0xB2, value=200)@7;
+burn(account=0xC3, amount=100)@8;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=33, param2=13, param3=0xB2, param4=0xC3, param5=33)@9;
+createPair(param1=0xB2, param2=0xB2)@10;
+factory()@11;
+addLiquidity(param1=0xA1, param2=0xA1, param3=10, param4=24, param5=17)@12;
+
+// Trace 38: 10 different operations
+addLiquidity(param1=0xD4, param2=0xA1, param3=13, param4=44, param5=88)@0;
+mint(account=0xC3, amount=500)@1;
+transfer(from=0xD4, to=0xB2, value=200)@2;
+burn(account=0xB2, amount=100)@3;
+balanceOf(account=0xA1)@4;
+createPair(param1=0xB2, param2=0xC3)@5;
+approve(owner=0xB2, spender=0xA1, amount=118)@6;
+rescueToken(param1=0xA1, param2=55)@7;
+factory()@8;
+mint(account=0xC3, amount=500)@9;
+transfer(from=0xC3, to=0xA1, value=200)@10;
+burn(account=0xB2, amount=100)@11;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=48, param2=91, param3=0xD4, param4=0xC3, param5=40)@12;
+transfer(from=0xC3, to=0xD4, value=30)@13;
+transfer(from=0xC3, to=0xB2, value=20)@14;
+
+// Trace 39: 9 different operations
+createPair(param1=0xB2, param2=0xD4)@0;
+approve(owner=0xC3, spender=0xA1, amount=183)@1;
+transfer(from=0xB2, to=0xC3, value=427)@2;
+addLiquidity(param1=0xC3, param2=0xB2, param3=67, param4=62, param5=21)@3;
+approve(owner=0xC3, spender=0xA1, amount=100)@4;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@5;
+rescueToken(param1=0xD4, param2=29)@6;
+balanceOf(account=0xD4)@7;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=40, param2=24, param3=0xB2, param4=0xB2, param5=10)@8;
+factory()@9;
+transfer(from=0xA1, to=0xB2, value=1713)@10;
+
+// Trace 40: 9 different operations
+rescueToken(param1=0xA1, param2=59)@0;
+transfer(from=0xD4, to=0xC3, value=5094)@1;
+createPair(param1=0xA1, param2=0xC3)@2;
+transfer(from=0xB2, to=0xD4, value=20)@3;
+transfer(from=0xB2, to=0xA1, value=10)@4;
+balanceOf(account=0xC3)@5;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=51, param2=1, param3=0xB2, param4=0xA1, param5=51)@6;
+addLiquidity(param1=0xA1, param2=0xB2, param3=10, param4=7, param5=26)@7;
+factory()@8;
+approve(owner=0xA1, spender=0xB2, amount=100)@9;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@10;
+balanceOf(account=0xA1)@11;
+balanceOf(account=0xD4)@12;
+transfer(from=0xA1, to=0xC3, value=1506)@13;
+transfer(from=0xA1, to=0xD4, value=1658)@14;
+balanceOf(account=0xC3)@15;
+
+// Trace 41: 8 different operations
+balanceOf(account=0xD4)@0;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=24, param2=73, param3=0xB2, param4=0xD4, param5=64)@1;
+createPair(param1=0xD4, param2=0xD4)@2;
+factory()@3;
+approve(owner=0xA1, spender=0xC3, amount=181)@4;
+transfer(from=0xC3, to=0xA1, value=3041)@5;
+transfer(from=0xB2, to=0xC3, value=30)@6;
+transfer(from=0xA1, to=0xC3, value=20)@7;
+transfer(from=0xD4, to=0xC3, value=10)@8;
+addLiquidity(param1=0xC3, param2=0xB2, param3=6, param4=89, param5=70)@9;
+rescueToken(param1=0xD4, param2=46)@10;
+transfer(from=0xA1, to=0xD4, value=30)@11;
+transfer(from=0xB2, to=0xC3, value=10)@12;
+createPair(param1=0xA1, param2=0xD4)@13;
+rescueToken(param1=0xD4, param2=58)@14;
+
+// Trace 42: 8 different operations
+rescueToken(param1=0xD4, param2=77)@0;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=82, param2=70, param3=0xC3, param4=0xB2, param5=70)@1;
+approve(owner=0xC3, spender=0xA1, amount=168)@2;
+transfer(from=0xD4, to=0xC3, value=3392)@3;
+factory()@4;
+balanceOf(account=0xD4)@5;
+createPair(param1=0xC3, param2=0xA1)@6;
+addLiquidity(param1=0xA1, param2=0xD4, param3=68, param4=26, param5=13)@7;
+transfer(from=0xB2, to=0xD4, value=30)@8;
+transfer(from=0xD4, to=0xA1, value=10)@9;
+transfer(from=0xD4, to=0xC3, value=1489)@10;
+transfer(from=0xC3, to=0xB2, value=6574)@11;
+
+// Trace 43: 10 different operations
+approve(owner=0xC3, spender=0xA1, amount=66)@0;
+addLiquidity(param1=0xB2, param2=0xC3, param3=37, param4=70, param5=4)@1;
+mint(account=0xC3, amount=500)@2;
+transfer(from=0xB2, to=0xD4, value=200)@3;
+burn(account=0xD4, amount=100)@4;
+factory()@5;
+rescueToken(param1=0xD4, param2=84)@6;
+balanceOf(account=0xB2)@7;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=81, param2=71, param3=0xC3, param4=0xA1, param5=9)@8;
+createPair(param1=0xC3, param2=0xD4)@9;
+rescueToken(param1=0xD4, param2=71)@10;
+balanceOf(account=0xC3)@11;
+
+// Trace 44: 11 different operations
+addLiquidity(param1=0xB2, param2=0xB2, param3=39, param4=19, param5=6)@0;
+transfer(from=0xB2, to=0xD4, value=845)@1;
+balanceOf(account=0xB2)@2;
+approve(owner=0xB2, spender=0xC3, amount=100)@3;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@4;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=24, param2=82, param3=0xD4, param4=0xA1, param5=8)@5;
+mint(account=0xC3, amount=500)@6;
+transfer(from=0xC3, to=0xB2, value=200)@7;
+burn(account=0xA1, amount=100)@8;
+createPair(param1=0xB2, param2=0xD4)@9;
+rescueToken(param1=0xA1, param2=9)@10;
+factory()@11;
+approve(owner=0xB2, spender=0xC3, amount=100)@12;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@13;
+
+// Trace 45: 11 different operations
+approve(owner=0xA1, spender=0xD4, amount=139)@0;
+transfer(from=0xA1, to=0xB2, value=1059)@1;
+mint(account=0xB2, amount=500)@2;
+transfer(from=0xB2, to=0xA1, value=200)@3;
+burn(account=0xA1, amount=100)@4;
+factory()@5;
+approve(owner=0xA1, spender=0xB2, amount=100)@6;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@7;
+rescueToken(param1=0xC3, param2=82)@8;
+createPair(param1=0xD4, param2=0xD4)@9;
+addLiquidity(param1=0xC3, param2=0xC3, param3=45, param4=33, param5=57)@10;
+balanceOf(account=0xB2)@11;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=68, param2=42, param3=0xB2, param4=0xD4, param5=22)@12;
+mint(account=0xB2, amount=500)@13;
+transfer(from=0xB2, to=0xD4, value=200)@14;
+burn(account=0xD4, amount=100)@15;
+
+// Trace 46: 10 different operations
+createPair(param1=0xC3, param2=0xC3)@0;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=30, param2=52, param3=0xD4, param4=0xA1, param5=43)@1;
+factory()@2;
+mint(account=0xC3, amount=500)@3;
+transfer(from=0xD4, to=0xA1, value=200)@4;
+burn(account=0xC3, amount=100)@5;
+approve(owner=0xC3, spender=0xD4, amount=200)@6;
+mint(account=0xC3, amount=500)@7;
+transfer(from=0xB2, to=0xA1, value=200)@8;
+burn(account=0xB2, amount=100)@9;
+balanceOf(account=0xC3)@10;
+rescueToken(param1=0xA1, param2=98)@11;
+addLiquidity(param1=0xA1, param2=0xD4, param3=72, param4=28, param5=40)@12;
+transfer(from=0xD4, to=0xB2, value=1706)@13;
+
+// Trace 47: 10 different operations
+transfer(from=0xB2, to=0xD4, value=4795)@0;
+mint(account=0xB2, amount=500)@1;
+transfer(from=0xB2, to=0xA1, value=200)@2;
+burn(account=0xA1, amount=100)@3;
+rescueToken(param1=0xA1, param2=12)@4;
+transfer(from=0xA1, to=0xD4, value=30)@5;
+transfer(from=0xB2, to=0xC3, value=10)@6;
+approve(owner=0xD4, spender=0xB2, amount=61)@7;
+balanceOf(account=0xA1)@8;
+createPair(param1=0xA1, param2=0xB2)@9;
+addLiquidity(param1=0xB2, param2=0xC3, param3=27, param4=61, param5=18)@10;
+factory()@11;
+mint(account=0xC3, amount=500)@12;
+transfer(from=0xA1, to=0xC3, value=200)@13;
+burn(account=0xB2, amount=100)@14;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=41, param2=11, param3=0xC3, param4=0xA1, param5=66)@15;
+
+// Trace 48: 10 different operations
+balanceOf(account=0xD4)@0;
+transfer(from=0xD4, to=0xC3, value=1619)@1;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=58, param2=13, param3=0xB2, param4=0xB2, param5=5)@2;
+mint(account=0xD4, amount=500)@3;
+burn(account=0xB2, amount=100)@4;
+factory()@5;
+rescueToken(param1=0xB2, param2=5)@6;
+approve(owner=0xB2, spender=0xD4, amount=138)@7;
+transfer(from=0xB2, to=0xC3, value=30)@8;
+transfer(from=0xC3, to=0xD4, value=20)@9;
+transfer(from=0xC3, to=0xB2, value=10)@10;
+addLiquidity(param1=0xD4, param2=0xB2, param3=93, param4=31, param5=57)@11;
+mint(account=0xB2, amount=500)@12;
+transfer(from=0xD4, to=0xB2, value=200)@13;
+burn(account=0xD4, amount=100)@14;
+createPair(param1=0xB2, param2=0xD4)@15;
+mint(account=0xB2, amount=500)@16;
+transfer(from=0xA1, to=0xB2, value=200)@17;
+burn(account=0xB2, amount=100)@18;
+
+// Trace 49: 10 different operations
+rescueToken(param1=0xA1, param2=71)@0;
+transfer(from=0xA1, to=0xB2, value=718)@1;
+createPair(param1=0xB2, param2=0xD4)@2;
+addLiquidity(param1=0xB2, param2=0xB2, param3=75, param4=78, param5=77)@3;
+balanceOf(account=0xB2)@4;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=14, param2=66, param3=0xA1, param4=0xA1, param5=97)@5;
+factory()@6;
+mint(account=0xD4, amount=500)@7;
+transfer(from=0xC3, to=0xA1, value=200)@8;
+burn(account=0xD4, amount=100)@9;
+approve(owner=0xD4, spender=0xA1, amount=193)@10;
+approve(owner=0xB2, spender=0xD4, amount=53)@11;
+transfer(from=0xA1, to=0xD4, value=1184)@12;
+
+// Trace 50: 9 different operations
+balanceOf(account=0xA1)@0;
+transfer(from=0xD4, to=0xB2, value=2385)@1;
+approve(owner=0xC3, spender=0xB2, amount=100)@2;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@3;
+rescueToken(param1=0xA1, param2=16)@4;
+createPair(param1=0xB2, param2=0xC3)@5;
+approve(owner=0xC3, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@7;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=31, param2=10, param3=0xD4, param4=0xD4, param5=35)@8;
+mint(account=0xB2, amount=500)@9;
+transfer(from=0xA1, to=0xC3, value=200)@10;
+burn(account=0xD4, amount=100)@11;
+
+// Trace 51: 9 different operations
+transfer(from=0xB2, to=0xC3, value=2337)@0;
+balanceOf(account=0xD4)@1;
+createPair(param1=0xC3, param2=0xD4)@2;
+rescueToken(param1=0xA1, param2=12)@3;
+factory()@4;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=7, param2=64, param3=0xC3, param4=0xA1, param5=85)@5;
+approve(owner=0xA1, spender=0xD4, amount=100)@6;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@7;
+addLiquidity(param1=0xD4, param2=0xC3, param3=92, param4=14, param5=61)@8;
+rescueToken(param1=0xD4, param2=68)@9;
+transfer(from=0xA1, to=0xB2, value=483)@10;
+transfer(from=0xA1, to=0xD4, value=30)@11;
+transfer(from=0xB2, to=0xD4, value=20)@12;
+transfer(from=0xC3, to=0xB2, value=10)@13;
+
+// Trace 52: 10 different operations
+factory()@0;
+transfer(from=0xB2, to=0xA1, value=5312)@1;
+approve(owner=0xB2, spender=0xC3, amount=27)@2;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=17, param2=27, param3=0xB2, param4=0xA1, param5=23)@3;
+balanceOf(account=0xD4)@4;
+mint(account=0xD4, amount=500)@5;
+burn(account=0xB2, amount=100)@6;
+createPair(param1=0xC3, param2=0xC3)@7;
+rescueToken(param1=0xD4, param2=88)@8;
+mint(account=0xA1, amount=500)@9;
+burn(account=0xC3, amount=100)@10;
+addLiquidity(param1=0xB2, param2=0xA1, param3=85, param4=12, param5=37)@11;
+
+// Trace 53: 9 different operations
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=67, param2=70, param3=0xD4, param4=0xC3, param5=12)@0;
+approve(owner=0xC3, spender=0xD4, amount=80)@1;
+balanceOf(account=0xA1)@2;
+transfer(from=0xA1, to=0xB2, value=3787)@3;
+addLiquidity(param1=0xC3, param2=0xC3, param3=92, param4=91, param5=77)@4;
+mint(account=0xD4, amount=500)@5;
+transfer(from=0xD4, to=0xC3, value=200)@6;
+burn(account=0xA1, amount=100)@7;
+factory()@8;
+createPair(param1=0xB2, param2=0xA1)@9;
+mint(account=0xC3, amount=500)@10;
+transfer(from=0xD4, to=0xC3, value=200)@11;
+burn(account=0xB2, amount=100)@12;
+
+// Trace 54: 11 different operations
+transfer(from=0xC3, to=0xB2, value=2281)@0;
+balanceOf(account=0xB2)@1;
+addLiquidity(param1=0xD4, param2=0xC3, param3=61, param4=88, param5=9)@2;
+approve(owner=0xC3, spender=0xA1, amount=100)@3;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@4;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=39, param2=38, param3=0xC3, param4=0xB2, param5=56)@5;
+factory()@6;
+mint(account=0xD4, amount=500)@7;
+burn(account=0xD4, amount=100)@8;
+createPair(param1=0xB2, param2=0xD4)@9;
+rescueToken(param1=0xC3, param2=10)@10;
+transfer(from=0xC3, to=0xD4, value=20)@11;
+transfer(from=0xA1, to=0xB2, value=10)@12;
+approve(owner=0xB2, spender=0xA1, amount=70)@13;
+balanceOf(account=0xB2)@14;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=16, param2=2, param3=0xD4, param4=0xA1, param5=68)@15;
+transfer(from=0xA1, to=0xC3, value=30)@16;
+transfer(from=0xB2, to=0xC3, value=20)@17;
+transfer(from=0xC3, to=0xA1, value=10)@18;
+
+// Trace 55: 9 different operations
+createPair(param1=0xD4, param2=0xC3)@0;
+approve(owner=0xD4, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@2;
+transfer(from=0xD4, to=0xC3, value=2182)@3;
+rescueToken(param1=0xA1, param2=53)@4;
+addLiquidity(param1=0xA1, param2=0xB2, param3=70, param4=44, param5=74)@5;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=45, param2=34, param3=0xD4, param4=0xD4, param5=30)@6;
+factory()@7;
+balanceOf(account=0xB2)@8;
+balanceOf(account=0xB2)@9;
+approve(owner=0xC3, spender=0xD4, amount=100)@10;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@11;
+balanceOf(account=0xA1)@12;
+
+// Trace 56: 10 different operations
+factory()@0;
+balanceOf(account=0xC3)@1;
+mint(account=0xD4, amount=500)@2;
+transfer(from=0xC3, to=0xB2, value=200)@3;
+burn(account=0xD4, amount=100)@4;
+rescueToken(param1=0xD4, param2=90)@5;
+approve(owner=0xB2, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@7;
+addLiquidity(param1=0xC3, param2=0xC3, param3=24, param4=89, param5=80)@8;
+approve(owner=0xC3, spender=0xD4, amount=100)@9;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@10;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=94, param2=41, param3=0xC3, param4=0xD4, param5=98)@11;
+
+// Trace 57: 9 different operations
+factory()@0;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=14, param2=48, param3=0xD4, param4=0xB2, param5=94)@1;
+addLiquidity(param1=0xB2, param2=0xB2, param3=57, param4=57, param5=40)@2;
+createPair(param1=0xA1, param2=0xD4)@3;
+transfer(from=0xD4, to=0xB2, value=568)@4;
+balanceOf(account=0xA1)@5;
+rescueToken(param1=0xB2, param2=80)@6;
+approve(owner=0xC3, spender=0xD4, amount=100)@7;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@8;
+rescueToken(param1=0xA1, param2=66)@9;
+createPair(param1=0xC3, param2=0xD4)@10;
+transfer(from=0xC3, to=0xD4, value=3944)@11;
+approve(owner=0xB2, spender=0xD4, amount=100)@12;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@13;
+
+// Trace 58: 11 different operations
+transfer(from=0xD4, to=0xB2, value=1121)@0;
+mint(account=0xB2, amount=500)@1;
+burn(account=0xD4, amount=100)@2;
+addLiquidity(param1=0xC3, param2=0xD4, param3=10, param4=37, param5=28)@3;
+approve(owner=0xA1, spender=0xB2, amount=92)@4;
+balanceOf(account=0xC3)@5;
+createPair(param1=0xC3, param2=0xC3)@6;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=72, param2=80, param3=0xA1, param4=0xC3, param5=91)@7;
+factory()@8;
+approve(owner=0xD4, spender=0xC3, amount=100)@9;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@10;
+rescueToken(param1=0xD4, param2=70)@11;
+transfer(from=0xD4, to=0xB2, value=868)@12;
+
+// Trace 59: 10 different operations
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=26, param2=87, param3=0xC3, param4=0xA1, param5=97)@0;
+transfer(from=0xA1, to=0xB2, value=2486)@1;
+transfer(from=0xC3, to=0xB2, value=30)@2;
+transfer(from=0xC3, to=0xD4, value=20)@3;
+addLiquidity(param1=0xA1, param2=0xD4, param3=66, param4=47, param5=31)@4;
+balanceOf(account=0xC3)@5;
+approve(owner=0xA1, spender=0xD4, amount=128)@6;
+createPair(param1=0xD4, param2=0xD4)@7;
+rescueToken(param1=0xD4, param2=26)@8;
+factory()@9;
+balanceOf(account=0xB2)@10;
+addLiquidity(param1=0xD4, param2=0xA1, param3=24, param4=36, param5=98)@11;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=54, param2=81, param3=0xC3, param4=0xA1, param5=18)@12;
+mint(account=0xA1, amount=500)@13;
+transfer(from=0xB2, to=0xC3, value=200)@14;
+burn(account=0xC3, amount=100)@15;
+
+// Trace 60: 9 different operations
+approve(owner=0xB2, spender=0xD4, amount=187)@0;
+balanceOf(account=0xC3)@1;
+transfer(from=0xA1, to=0xD4, value=30)@2;
+transfer(from=0xB2, to=0xD4, value=20)@3;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=90, param2=80, param3=0xD4, param4=0xC3, param5=76)@4;
+rescueToken(param1=0xD4, param2=80)@5;
+approve(owner=0xB2, spender=0xD4, amount=100)@6;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@7;
+factory()@8;
+createPair(param1=0xD4, param2=0xB2)@9;
+addLiquidity(param1=0xB2, param2=0xD4, param3=70, param4=85, param5=21)@10;
+
+// Trace 61: 10 different operations
+rescueToken(param1=0xB2, param2=22)@0;
+approve(owner=0xC3, spender=0xA1, amount=26)@1;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=34, param2=92, param3=0xB2, param4=0xC3, param5=1)@2;
+factory()@3;
+addLiquidity(param1=0xB2, param2=0xD4, param3=57, param4=77, param5=55)@4;
+createPair(param1=0xD4, param2=0xB2)@5;
+transfer(from=0xD4, to=0xB2, value=933)@6;
+balanceOf(account=0xA1)@7;
+createPair(param1=0xC3, param2=0xD4)@8;
+transfer(from=0xD4, to=0xA1, value=635)@9;
+transfer(from=0xC3, to=0xA1, value=30)@10;
+transfer(from=0xC3, to=0xB2, value=20)@11;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=84, param2=34, param3=0xA1, param4=0xB2, param5=19)@12;
+createPair(param1=0xB2, param2=0xD4)@13;
+mint(account=0xA1, amount=500)@14;
+burn(account=0xC3, amount=100)@15;
+
+// Trace 62: 10 different operations
+factory()@0;
+addLiquidity(param1=0xA1, param2=0xA1, param3=18, param4=45, param5=40)@1;
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=58, param2=12, param3=0xD4, param4=0xC3, param5=34)@2;
+mint(account=0xB2, amount=500)@3;
+transfer(from=0xD4, to=0xB2, value=200)@4;
+burn(account=0xD4, amount=100)@5;
+approve(owner=0xD4, spender=0xB2, amount=169)@6;
+balanceOf(account=0xC3)@7;
+mint(account=0xB2, amount=500)@8;
+transfer(from=0xA1, to=0xB2, value=200)@9;
+burn(account=0xA1, amount=100)@10;
+rescueToken(param1=0xB2, param2=14)@11;
+createPair(param1=0xD4, param2=0xB2)@12;
+
+// Trace 63: 5 different operations
+swapExactTokensForTokensSupportingFeeOnTransferTokens(param1=15, param2=16, param3=0xC3, param4=0xB2, param5=3)@0;
+createPair(param1=0xC3, param2=0xD4)@1;
+rescueToken(param1=0xA1, param2=39)@2;
+approve(owner=0xD4, spender=0xB2, amount=100)@3;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@4;
+

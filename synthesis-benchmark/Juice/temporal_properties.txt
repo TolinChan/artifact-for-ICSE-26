@@ -1,0 +1,19 @@
+□(stake(p, amount, stakeWeek) → stakingStartTime(t) ∧ t > 0)
+
+□(stake(p, amount, stakeWeek) → stakingEndTime(t) ∧ now() ≤ t)
+
+□(harvest(p, stakeIndex) → unstakeStatus(p, stakeIndex, 0))
+
+□(unstake(p, stakeIndex) → endTime(p, stakeIndex, e) ∧ now() ≥ e)
+
+□(harvest(p, stakeIndex) → stakedAmount(p, stakeIndex, a) ∧ a > 0)
+
+□(harvest(p, stakeIndex) → balanceOf(contract, c) ∧ c ≥ pendingReward(p, stakeIndex, _, _))
+
+□(stake(p, amount, _) → balanceOf(p, b) ∧ b ≥ amount)
+
+□(unstake(p, stakeIndex) → unstakeStatus(p, stakeIndex, 1))
+
+□(stake(p, amount, _) → balanceOf(contract, c) ∧ c' = c + amount)
+
+□(unstake(p, stakeIndex) → balanceOf(contract, c) ∧ c' = c - stakedAmount(p, stakeIndex, _))

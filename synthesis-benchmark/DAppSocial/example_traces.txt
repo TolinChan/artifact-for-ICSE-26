@@ -1,0 +1,11 @@
+depositNative(p=0x123456, amount=500)@1;
+withdrawNative(p=0x123456, amount=200)@2;
+transferNative(from=0x123456, to=0x789ABC, amount=100)@3;
+holdNative(p=0x123456, amount=50)@4;
+releaseNative(p=0x123456, amount=50)@5;
+
+depositToken(p=0x567DEF, t=0xABC123, amount=1000)@1;
+withdrawToken(p=0x567DEF, t=0xABC123, amount=500)@2;
+transferToken(t=0xABC123, from=0x567DEF, to=0x789ABC, amount=300)@3;
+holdToken(t=0xABC123, p=0x567DEF, amount=100)@4;
+releaseToken(t=0xABC123, p=0x567DEF, amount=50)@5;

@@ -1,0 +1,12 @@
+.vscode/
+.bsp/
+.metals/
+out/
+target/
+*.log
+*.copy
+
+# Synthesis output files
+synthesis_output/
+test_results_*.json
+batch_test_report_*.json

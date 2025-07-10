@@ -1,0 +1,87 @@
+// Parameters
+.decl *owner(p: address)
+.decl *erc721(p: address)
+.decl *feeTo(p: address)
+.decl *maxSupply(n: uint)
+.decl *maxErc20Tokens(n: uint)
+.decl *transformPrice(n: uint)
+.decl *transformLoseRate(n: uint)
+.decl *maxNftMint(n: uint)
+.decl *maxMintValue(n: uint)
+.decl *mintPrice(n: uint)
+.decl *nftMinted(n: uint)
+.decl constructor()
+
+// Views
+.decl balanceOf(p: address, n: uint)[0]
+.decl ownerOf(tokenId: uint, p: address)[0]
+.decl totalSupplyErc721(n: uint)[0]
+.decl allowlist(p: address, allowed: bool)[0]
+.decl mintedAmount(p: address, n: uint)[0]
+
+// Transactions
+.decl transfer(from: address, to: address, amount: uint)
+.decl transferFrom(from: address, to: address, tokenId: uint)
+.decl transform(tokenIdOrValue: uint)
+.decl mintNFT(p: address, ethPaid: uint)
+.decl burn(tokenId: uint)
+.decl approve(owner: address, spender: address, tokenIdOrValue: uint)
+.decl setApprovalForAll(owner: address, operator: address, approved: bool)
+
+// Rules
+owner(s) :- constructor().
+feeTo(s) :- constructor().
+
+// ERC20 Token Transactions
+transfer(from, to, n) :- balanceOf(from, b), balanceOf(to, c), 
+                          b1 := b - n, c1 := c + n.
+
+balanceOf(p, s) :- balanceOf(p, s).
+
+// ERC721 Ownership
+ownerOf(tokenId, p) :- ownerOf(tokenId, p).
+
+// Transform ERC20 <-> ERC721
+transform(tokenIdOrValue) :-
+    transform(tokenIdOrValue).
+
+// Minting ERC721
+mintNFT(p, ethPaid) :-
+    mintedAmount(p, oldAmount),
+    nftMinted(oldMinted),
+    minted := ethPaid / mintPrice,
+    newMinted := oldMinted + minted,
+    newAmount := oldAmount + ethPaid.
+
+mintedAmount(p, s) :- mintedAmount(p, s).
+nftMinted(s) :- nftMinted(s).
+
+// Transfer and Burn NFTs
+transferFrom(from, to, tokenId) :-
+    ownerOf(tokenId, from).
+
+burn(tokenId) :-
+    transferFrom(from, contract, tokenId),
+    ownerOf(tokenId, _).
+
+// ERC20 -> ERC721
+transform(amount) :-
+    transfer(from, contract, amount),
+    nfts := amount / transformPrice,
+    _burn(contract, amount).
+
+// ERC721 -> ERC20
+transform(tokenId) :-
+    transferFrom(from, contract, tokenId),
+    burn(tokenId),
+    balanceOf(from, b),
+    newBalance := b + ((transformPrice * (10000 - transformLoseRate)) / 10000).
+
+balanceOf(p, s) :- transfer(_, p, s).
+
+// Approval
+approve(owner, spender, tokenIdOrValue) :-
+    IERC721(erc721).approve(spender, tokenIdOrValue).
+
+setApprovalForAll(owner, operator, approved) :-
+    IERC721(erc721).setApprovalForAll(operator, approved).

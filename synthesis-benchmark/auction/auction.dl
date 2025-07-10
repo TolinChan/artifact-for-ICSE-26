@@ -1,0 +1,33 @@
+// Configs
+.decl *owner(p: address)
+.decl *beneficiary(p: address)
+.decl *endTime(t: uint)
+.decl constructor(beneficiary: address, biddingTime: uint)
+
+// Transactions
+.decl bid(bidder: address, amount: uint)
+.decl withdraw(bidder: address, amount: uint)
+.decl endAuction()
+
+// Views
+.decl *highestBid(bidder: address, amount: uint)
+.decl balance(p: address, n: uint)[0]
+
+// Rules
+owner(s) :- constructor(_, _).
+endTime(t) :- endTime(t).
+beneficiary(p) :- constructor(p,_).
+
+highestBid(p, m) :- bid(p, m).
+
+withdraw(p, n) :- withdraw(p, n).
+endAuction() :- endAuction().
+
+// Total balance calculations
+.decl bidTotal(p: address, n: uint)[0]
+.decl withdrawTotal(p: address, n: uint)[0]
+
+bidTotal(p, s) :- bid(p, _), s = sum n: bid(p, n).
+withdrawTotal(p, s) :- withdraw(p, _), s = sum n: withdraw(p, n).
+
+balance(p, s) :- bidTotal(p, b), withdrawTotal(p, w), s := b - w.

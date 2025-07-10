@@ -1,0 +1,9 @@
+
+// Ensuring release happens only after start time
+□(release(n) → now(t) ∧ start(a) → t ≥ a)
+
+// Ensuring total released amount is non-negative
+□(released(n) → n ≥ 0)
+
+// Ensuring no early release
+□(earlyRelease(e) → e = 0)

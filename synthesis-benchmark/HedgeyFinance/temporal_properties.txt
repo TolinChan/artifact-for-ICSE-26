@@ -1,0 +1,19 @@
+□(claimRewards(p, n, true) → totalStaked(m) ∧ maxPercentage(mp) ∧ n ≤ (m * mp / 100))
+
+□(unstake(p, i, _) → stake(p, _, t) ∧ now(d) ∧ d ≥ t)
+
+□(stake(p, amount, lockPeriod) → amount > 0)
+
+□(claimRewards(p, n, _) → balanceOf(p, b) ∧ n ≤ b)
+
+□(claimAffiliateEarnings(p, amount) → amount ≥ 0)
+
+□(claimRewards(p, n, _) → totalRewardsClaimed(s) ∧ s' = s + n)
+
+□(claimRewards(p, n, _) → maxPercentage(mp) ∧ balanceOf(p, b) ∧ n ≤ (b * mp / 100))
+
+□(claimRewards(p, n, _) → balanceOf(p, b) ∧ b' = b - n ∧ b' ≥ 0)
+
+□(unstake(p, i, amount) → totalStaked(s) ∧ s' = s - amount ∧ s' ≥ 0)
+
+□(unstake(p, i, amount) → stake(p, m, _) ∧ m ≥ amount)

@@ -1,0 +1,1002 @@
+// Trace 1: 13 different operations
+fyToken()@0;
+divest()@1;
+restart()@2;
+maturity()@3;
+approve(owner=0xA1, spender=0xC3, amount=100)@4;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@5;
+burn(account=0xC3, amount=2451)@6;
+redeem(param1=0xC3, param2=36)@7;
+base()@8;
+init(param1=0xC3)@9;
+buyFYToken(param1=0xD4, param2=0xB2)@10;
+mint(account=0xB2, amount=871)@11;
+mint(account=0xB2, amount=500)@12;
+transfer(from=0xD4, to=0xB2, value=200)@13;
+burn(account=0xD4, amount=100)@14;
+
+// Trace 2: 11 different operations
+eject()@0;
+underlying()@1;
+mint(account=0xA1, amount=500)@2;
+burn(account=0xC3, amount=100)@3;
+redeem(param1=0xC3, param2=55)@4;
+base()@5;
+balanceOf(account=0xA1)@6;
+transfer(from=0xB2, to=0xD4, value=30)@7;
+transfer(from=0xB2, to=0xA1, value=20)@8;
+transfer(from=0xD4, to=0xA1, value=10)@9;
+divest()@10;
+init(param1=0xD4)@11;
+restart()@12;
+transfer(from=0xB2, to=0xA1, value=30)@13;
+transfer(from=0xD4, to=0xC3, value=20)@14;
+transfer(from=0xD4, to=0xA1, value=10)@15;
+
+// Trace 3: 10 different operations
+init(param1=0xB2)@0;
+restart()@1;
+transfer(from=0xB2, to=0xA1, value=30)@2;
+transfer(from=0xD4, to=0xA1, value=20)@3;
+transfer(from=0xA1, to=0xC3, value=10)@4;
+mint(account=0xA1, amount=150)@5;
+burn(account=0xD4, amount=579)@6;
+redeem(param1=0xB2, param2=74)@7;
+fyToken()@8;
+approve(owner=0xB2, spender=0xD4, amount=100)@9;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@10;
+buyFYToken(param1=0xB2, param2=0xD4)@11;
+
+// Trace 4: 8 different operations
+eject()@0;
+transfer(from=0xB2, to=0xC3, value=30)@1;
+transfer(from=0xB2, to=0xC3, value=10)@2;
+balanceOf(account=0xB2)@3;
+mint(account=0xA1, amount=500)@4;
+burn(account=0xD4, amount=100)@5;
+redeem(param1=0xA1, param2=44)@6;
+mint(account=0xD4, amount=500)@7;
+transfer(from=0xC3, to=0xD4, value=200)@8;
+burn(account=0xD4, amount=100)@9;
+restart()@10;
+transfer(from=0xC3, to=0xA1, value=20)@11;
+invest(param1=0)@12;
+transfer(from=0xD4, to=0xA1, value=10)@13;
+
+// Trace 5: 13 different operations
+burn(account=0xB2, amount=789)@0;
+underlying()@1;
+buyFYToken(param1=0xD4, param2=0xA1)@2;
+restart()@3;
+fyToken()@4;
+mint(account=0xC3, amount=198)@5;
+base()@6;
+transfer(from=0xA1, to=0xB2, value=20)@7;
+transfer(from=0xC3, to=0xB2, value=10)@8;
+redeem(param1=0xA1, param2=22)@9;
+init(param1=0xB2)@10;
+approve(owner=0xA1, spender=0xB2, amount=100)@11;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@12;
+balanceOf(account=0xA1)@13;
+approve(owner=0xC3, spender=0xC3, amount=100)@14;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@15;
+
+// Trace 6: 9 different operations
+transfer(from=0xD4, to=0xC3, value=1268)@0;
+mint(account=0xC3, amount=500)@1;
+transfer(from=0xB2, to=0xC3, value=200)@2;
+burn(account=0xC3, amount=100)@3;
+underlying()@4;
+mint(account=0xD4, amount=500)@5;
+transfer(from=0xD4, to=0xB2, value=200)@6;
+burn(account=0xA1, amount=100)@7;
+fyToken()@8;
+restart()@9;
+divest()@10;
+buyFYToken(param1=0xA1, param2=0xC3)@11;
+redeem(param1=0xB2, param2=52)@12;
+
+// Trace 7: 7 different operations
+balanceOf(account=0xA1)@0;
+transfer(from=0xA1, to=0xD4, value=30)@1;
+transfer(from=0xA1, to=0xD4, value=20)@2;
+transfer(from=0xB2, to=0xC3, value=10)@3;
+burn(account=0xB2, amount=660)@4;
+init(param1=0xD4)@5;
+transfer(from=0xC3, to=0xA1, value=30)@6;
+transfer(from=0xA1, to=0xB2, value=20)@7;
+transfer(from=0xD4, to=0xB2, value=10)@8;
+invest(param1=0)@9;
+eject()@10;
+fyToken()@11;
+
+// Trace 8: 8 different operations
+fyToken()@0;
+burn(account=0xA1, amount=871)@1;
+restart()@2;
+mint(account=0xA1, amount=439)@3;
+transfer(from=0xB2, to=0xA1, value=30)@4;
+transfer(from=0xB2, to=0xA1, value=20)@5;
+transfer(from=0xC3, to=0xB2, value=10)@6;
+divest()@7;
+mint(account=0xC3, amount=500)@8;
+transfer(from=0xB2, to=0xC3, value=200)@9;
+burn(account=0xD4, amount=100)@10;
+underlying()@11;
+balanceOf(account=0xA1)@12;
+
+// Trace 9: 10 different operations
+invest(param1=0)@0;
+divest()@1;
+approve(owner=0xD4, spender=0xD4, amount=100)@2;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@3;
+transfer(from=0xA1, to=0xB2, value=3601)@4;
+redeem(param1=0xA1, param2=90)@5;
+init(param1=0xA1)@6;
+burn(account=0xC3, amount=2502)@7;
+underlying()@8;
+base()@9;
+transfer(from=0xB2, to=0xC3, value=30)@10;
+transfer(from=0xA1, to=0xB2, value=20)@11;
+transfer(from=0xC3, to=0xB2, value=10)@12;
+
+// Trace 10: 12 different operations
+base()@0;
+balanceOf(account=0xC3)@1;
+mint(account=0xA1, amount=500)@2;
+transfer(from=0xC3, to=0xD4, value=200)@3;
+burn(account=0xC3, amount=100)@4;
+maturity()@5;
+redeem(param1=0xC3, param2=25)@6;
+mint(account=0xB2, amount=500)@7;
+transfer(from=0xB2, to=0xC3, value=200)@8;
+burn(account=0xD4, amount=100)@9;
+init(param1=0xA1)@10;
+buyFYToken(param1=0xA1, param2=0xB2)@11;
+transfer(from=0xC3, to=0xB2, value=30)@12;
+transfer(from=0xD4, to=0xA1, value=20)@13;
+underlying()@14;
+approve(owner=0xC3, spender=0xB2, amount=100)@15;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@16;
+
+// Trace 11: 9 different operations
+restart()@0;
+underlying()@1;
+fyToken()@2;
+approve(owner=0xA1, spender=0xA1, amount=100)@3;
+transferFrom(sender=0xC3, from=0xC3, to=50, value=50)@4;
+base()@5;
+approve(owner=0xC3, spender=0xC3, amount=100)@6;
+transferFrom(sender=0xB2, from=0xD4, to=50, value=50)@7;
+maturity()@8;
+burn(account=0xA1, amount=80)@9;
+approve(owner=0xD4, spender=0xA1, amount=100)@10;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@11;
+buyFYToken(param1=0xD4, param2=0xB2)@12;
+
+// Trace 12: 9 different operations
+balanceOf(account=0xC3)@0;
+invest(param1=0)@1;
+burn(account=0xD4, amount=1741)@2;
+mint(account=0xB2, amount=500)@3;
+burn(account=0xB2, amount=100)@4;
+fyToken()@5;
+eject()@6;
+underlying()@7;
+init(param1=0xB2)@8;
+transfer(from=0xD4, to=0xC3, value=20)@9;
+transfer(from=0xB2, to=0xA1, value=10)@10;
+
+// Trace 13: 13 different operations
+invest(param1=0)@0;
+burn(account=0xB2, amount=289)@1;
+base()@2;
+mint(account=0xD4, amount=500)@3;
+transfer(from=0xC3, to=0xA1, value=200)@4;
+burn(account=0xD4, amount=100)@5;
+underlying()@6;
+buyFYToken(param1=0xA1, param2=0xB2)@7;
+maturity()@8;
+approve(owner=0xC3, spender=0xA1, amount=100)@9;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@10;
+balanceOf(account=0xC3)@11;
+redeem(param1=0xD4, param2=41)@12;
+fyToken()@13;
+
+// Trace 14: 13 different operations
+buyFYToken(param1=0xA1, param2=0xD4)@0;
+redeem(param1=0xC3, param2=88)@1;
+approve(owner=0xA1, spender=0xD4, amount=100)@2;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@3;
+invest(param1=0)@4;
+transfer(from=0xB2, to=0xC3, value=10)@5;
+divest()@6;
+fyToken()@7;
+base()@8;
+eject()@9;
+maturity()@10;
+mint(account=0xA1, amount=500)@11;
+transfer(from=0xC3, to=0xD4, value=200)@12;
+burn(account=0xD4, amount=100)@13;
+
+// Trace 15: 8 different operations
+invest(param1=0)@0;
+redeem(param1=0xC3, param2=4)@1;
+fyToken()@2;
+maturity()@3;
+transfer(from=0xB2, to=0xC3, value=30)@4;
+transfer(from=0xB2, to=0xA1, value=20)@5;
+init(param1=0xC3)@6;
+divest()@7;
+mint(account=0xC3, amount=403)@8;
+transfer(from=0xA1, to=0xD4, value=30)@9;
+transfer(from=0xA1, to=0xD4, value=20)@10;
+transfer(from=0xD4, to=0xA1, value=10)@11;
+
+// Trace 16: 11 different operations
+init(param1=0xD4)@0;
+mint(account=0xA1, amount=500)@1;
+transfer(from=0xA1, to=0xC3, value=200)@2;
+burn(account=0xB2, amount=100)@3;
+restart()@4;
+maturity()@5;
+base()@6;
+fyToken()@7;
+invest(param1=0)@8;
+balanceOf(account=0xC3)@9;
+eject()@10;
+
+// Trace 17: 11 different operations
+base()@0;
+approve(owner=0xB2, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@2;
+buyFYToken(param1=0xD4, param2=0xA1)@3;
+mint(account=0xC3, amount=500)@4;
+transfer(from=0xB2, to=0xC3, value=200)@5;
+burn(account=0xB2, amount=100)@6;
+underlying()@7;
+fyToken()@8;
+redeem(param1=0xA1, param2=17)@9;
+maturity()@10;
+mint(account=0xA1, amount=500)@11;
+transfer(from=0xC3, to=0xA1, value=200)@12;
+burn(account=0xB2, amount=100)@13;
+
+// Trace 18: 9 different operations
+init(param1=0xC3)@0;
+restart()@1;
+transfer(from=0xB2, to=0xA1, value=707)@2;
+underlying()@3;
+mint(account=0xB2, amount=500)@4;
+transfer(from=0xD4, to=0xA1, value=200)@5;
+burn(account=0xA1, amount=100)@6;
+redeem(param1=0xC3, param2=50)@7;
+transfer(from=0xA1, to=0xB2, value=20)@8;
+transfer(from=0xD4, to=0xB2, value=10)@9;
+base()@10;
+eject()@11;
+transfer(from=0xD4, to=0xB2, value=30)@12;
+transfer(from=0xC3, to=0xB2, value=20)@13;
+transfer(from=0xB2, to=0xC3, value=10)@14;
+
+// Trace 19: 13 different operations
+mint(account=0xD4, amount=804)@0;
+invest(param1=0)@1;
+transfer(from=0xD4, to=0xA1, value=2031)@2;
+mint(account=0xD4, amount=500)@3;
+transfer(from=0xA1, to=0xB2, value=200)@4;
+burn(account=0xB2, amount=100)@5;
+redeem(param1=0xC3, param2=84)@6;
+buyFYToken(param1=0xC3, param2=0xB2)@7;
+eject()@8;
+maturity()@9;
+divest()@10;
+balanceOf(account=0xD4)@11;
+approve(owner=0xB2, spender=0xA1, amount=100)@12;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@13;
+restart()@14;
+
+// Trace 20: 10 different operations
+eject()@0;
+redeem(param1=0xB2, param2=95)@1;
+mint(account=0xC3, amount=908)@2;
+transfer(from=0xB2, to=0xA1, value=2312)@3;
+fyToken()@4;
+buyFYToken(param1=0xD4, param2=0xB2)@5;
+approve(owner=0xC3, spender=0xD4, amount=100)@6;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@7;
+init(param1=0xB2)@8;
+invest(param1=0)@9;
+
+// Trace 21: 13 different operations
+buyFYToken(param1=0xC3, param2=0xA1)@0;
+mint(account=0xA1, amount=500)@1;
+transfer(from=0xB2, to=0xA1, value=200)@2;
+burn(account=0xC3, amount=100)@3;
+restart()@4;
+init(param1=0xB2)@5;
+transfer(from=0xB2, to=0xA1, value=10)@6;
+invest(param1=0)@7;
+balanceOf(account=0xD4)@8;
+base()@9;
+underlying()@10;
+redeem(param1=0xB2, param2=59)@11;
+approve(owner=0xD4, spender=0xA1, amount=100)@12;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@13;
+
+// Trace 22: 11 different operations
+invest(param1=0)@0;
+transfer(from=0xD4, to=0xC3, value=30)@1;
+transfer(from=0xA1, to=0xD4, value=20)@2;
+transfer(from=0xD4, to=0xA1, value=10)@3;
+balanceOf(account=0xC3)@4;
+mint(account=0xD4, amount=757)@5;
+transfer(from=0xA1, to=0xD4, value=30)@6;
+transfer(from=0xB2, to=0xD4, value=20)@7;
+transfer(from=0xA1, to=0xB2, value=10)@8;
+buyFYToken(param1=0xB2, param2=0xC3)@9;
+maturity()@10;
+underlying()@11;
+burn(account=0xD4, amount=712)@12;
+approve(owner=0xB2, spender=0xD4, amount=100)@13;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@14;
+eject()@15;
+
+// Trace 23: 12 different operations
+burn(account=0xA1, amount=4201)@0;
+maturity()@1;
+redeem(param1=0xD4, param2=9)@2;
+underlying()@3;
+mint(account=0xA1, amount=500)@4;
+burn(account=0xC3, amount=100)@5;
+init(param1=0xC3)@6;
+transfer(from=0xB2, to=0xA1, value=1733)@7;
+buyFYToken(param1=0xD4, param2=0xA1)@8;
+transfer(from=0xA1, to=0xC3, value=10)@9;
+balanceOf(account=0xC3)@10;
+divest()@11;
+fyToken()@12;
+transfer(from=0xA1, to=0xB2, value=30)@13;
+transfer(from=0xA1, to=0xC3, value=20)@14;
+transfer(from=0xC3, to=0xB2, value=10)@15;
+invest(param1=0)@16;
+
+// Trace 24: 10 different operations
+redeem(param1=0xA1, param2=84)@0;
+restart()@1;
+transfer(from=0xB2, to=0xC3, value=30)@2;
+transfer(from=0xA1, to=0xC3, value=20)@3;
+init(param1=0xB2)@4;
+burn(account=0xC3, amount=2120)@5;
+balanceOf(account=0xA1)@6;
+base()@7;
+underlying()@8;
+invest(param1=0)@9;
+maturity()@10;
+
+// Trace 25: 10 different operations
+burn(account=0xA1, amount=157)@0;
+transfer(from=0xB2, to=0xD4, value=753)@1;
+maturity()@2;
+transfer(from=0xC3, to=0xD4, value=30)@3;
+transfer(from=0xB2, to=0xD4, value=20)@4;
+transfer(from=0xC3, to=0xD4, value=10)@5;
+restart()@6;
+invest(param1=0)@7;
+underlying()@8;
+fyToken()@9;
+balanceOf(account=0xA1)@10;
+mint(account=0xA1, amount=423)@11;
+mint(account=0xC3, amount=500)@12;
+burn(account=0xB2, amount=100)@13;
+base()@14;
+transfer(from=0xD4, to=0xB2, value=30)@15;
+transfer(from=0xA1, to=0xC3, value=20)@16;
+transfer(from=0xC3, to=0xA1, value=10)@17;
+
+// Trace 26: 7 different operations
+burn(account=0xD4, amount=942)@0;
+eject()@1;
+maturity()@2;
+underlying()@3;
+mint(account=0xC3, amount=500)@4;
+transfer(from=0xB2, to=0xA1, value=200)@5;
+burn(account=0xC3, amount=100)@6;
+base()@7;
+transfer(from=0xC3, to=0xD4, value=30)@8;
+transfer(from=0xB2, to=0xA1, value=20)@9;
+transfer(from=0xD4, to=0xA1, value=10)@10;
+
+// Trace 27: 13 different operations
+base()@0;
+balanceOf(account=0xC3)@1;
+fyToken()@2;
+transfer(from=0xD4, to=0xB2, value=30)@3;
+transfer(from=0xB2, to=0xD4, value=20)@4;
+eject()@5;
+buyFYToken(param1=0xC3, param2=0xC3)@6;
+restart()@7;
+burn(account=0xB2, amount=337)@8;
+underlying()@9;
+approve(owner=0xB2, spender=0xA1, amount=100)@10;
+transferFrom(sender=0xD4, from=0xA1, to=50, value=50)@11;
+mint(account=0xA1, amount=364)@12;
+maturity()@13;
+
+// Trace 28: 9 different operations
+init(param1=0xB2)@0;
+base()@1;
+burn(account=0xC3, amount=675)@2;
+transfer(from=0xD4, to=0xB2, value=30)@3;
+transfer(from=0xD4, to=0xC3, value=10)@4;
+mint(account=0xC3, amount=166)@5;
+maturity()@6;
+mint(account=0xB2, amount=500)@7;
+transfer(from=0xD4, to=0xB2, value=200)@8;
+burn(account=0xD4, amount=100)@9;
+buyFYToken(param1=0xD4, param2=0xB2)@10;
+mint(account=0xA1, amount=500)@11;
+transfer(from=0xB2, to=0xC3, value=200)@12;
+burn(account=0xC3, amount=100)@13;
+redeem(param1=0xB2, param2=43)@14;
+restart()@15;
+mint(account=0xD4, amount=500)@16;
+transfer(from=0xD4, to=0xA1, value=200)@17;
+burn(account=0xD4, amount=100)@18;
+
+// Trace 29: 9 different operations
+restart()@0;
+redeem(param1=0xD4, param2=85)@1;
+mint(account=0xB2, amount=500)@2;
+transfer(from=0xD4, to=0xC3, value=200)@3;
+burn(account=0xD4, amount=100)@4;
+base()@5;
+mint(account=0xA1, amount=500)@6;
+transfer(from=0xC3, to=0xA1, value=200)@7;
+burn(account=0xD4, amount=100)@8;
+balanceOf(account=0xD4)@9;
+invest(param1=0)@10;
+underlying()@11;
+
+// Trace 30: 10 different operations
+buyFYToken(param1=0xA1, param2=0xD4)@0;
+approve(owner=0xD4, spender=0xB2, amount=100)@1;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@2;
+transfer(from=0xC3, to=0xA1, value=113)@3;
+fyToken()@4;
+approve(owner=0xA1, spender=0xC3, amount=100)@5;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@6;
+burn(account=0xC3, amount=1112)@7;
+restart()@8;
+maturity()@9;
+transfer(from=0xA1, to=0xB2, value=30)@10;
+transfer(from=0xB2, to=0xC3, value=20)@11;
+transfer(from=0xC3, to=0xB2, value=10)@12;
+invest(param1=0)@13;
+approve(owner=0xC3, spender=0xA1, amount=100)@14;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@15;
+redeem(param1=0xA1, param2=40)@16;
+
+// Trace 31: 13 different operations
+fyToken()@0;
+invest(param1=0)@1;
+init(param1=0xD4)@2;
+mint(account=0xA1, amount=108)@3;
+buyFYToken(param1=0xB2, param2=0xD4)@4;
+underlying()@5;
+base()@6;
+divest()@7;
+eject()@8;
+redeem(param1=0xC3, param2=38)@9;
+burn(account=0xC3, amount=875)@10;
+transfer(from=0xA1, to=0xC3, value=3131)@11;
+transfer(from=0xA1, to=0xD4, value=30)@12;
+transfer(from=0xB2, to=0xC3, value=10)@13;
+balanceOf(account=0xB2)@14;
+
+// Trace 32: 8 different operations
+eject()@0;
+burn(account=0xD4, amount=77)@1;
+init(param1=0xA1)@2;
+invest(param1=0)@3;
+fyToken()@4;
+base()@5;
+transfer(from=0xA1, to=0xD4, value=30)@6;
+transfer(from=0xD4, to=0xB2, value=20)@7;
+transfer(from=0xB2, to=0xA1, value=10)@8;
+restart()@9;
+transfer(from=0xD4, to=0xC3, value=30)@10;
+transfer(from=0xB2, to=0xC3, value=20)@11;
+transfer(from=0xD4, to=0xC3, value=10)@12;
+
+// Trace 33: 8 different operations
+redeem(param1=0xD4, param2=50)@0;
+approve(owner=0xC3, spender=0xB2, amount=100)@1;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@2;
+mint(account=0xD4, amount=923)@3;
+divest()@4;
+burn(account=0xC3, amount=1096)@5;
+approve(owner=0xC3, spender=0xA1, amount=100)@6;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@7;
+eject()@8;
+maturity()@9;
+
+// Trace 34: 10 different operations
+maturity()@0;
+fyToken()@1;
+base()@2;
+transfer(from=0xB2, to=0xD4, value=30)@3;
+transfer(from=0xA1, to=0xB2, value=10)@4;
+burn(account=0xC3, amount=571)@5;
+eject()@6;
+mint(account=0xB2, amount=908)@7;
+invest(param1=0)@8;
+divest()@9;
+mint(account=0xC3, amount=500)@10;
+burn(account=0xA1, amount=100)@11;
+buyFYToken(param1=0xA1, param2=0xC3)@12;
+
+// Trace 35: 17 different operations
+redeem(param1=0xA1, param2=25)@0;
+buyFYToken(param1=0xD4, param2=0xD4)@1;
+init(param1=0xB2)@2;
+restart()@3;
+balanceOf(account=0xB2)@4;
+mint(account=0xA1, amount=500)@5;
+burn(account=0xA1, amount=100)@6;
+eject()@7;
+approve(owner=0xB2, spender=0xC3, amount=100)@8;
+transferFrom(sender=0xC3, from=0xB2, to=50, value=50)@9;
+underlying()@10;
+invest(param1=0)@11;
+divest()@12;
+maturity()@13;
+base()@14;
+transfer(from=0xA1, to=0xC3, value=4252)@15;
+fyToken()@16;
+mint(account=0xD4, amount=500)@17;
+transfer(from=0xB2, to=0xA1, value=200)@18;
+burn(account=0xC3, amount=100)@19;
+
+// Trace 36: 9 different operations
+maturity()@0;
+transfer(from=0xD4, to=0xB2, value=30)@1;
+transfer(from=0xC3, to=0xB2, value=10)@2;
+redeem(param1=0xC3, param2=68)@3;
+invest(param1=0)@4;
+balanceOf(account=0xD4)@5;
+base()@6;
+approve(owner=0xB2, spender=0xA1, amount=100)@7;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@8;
+divest()@9;
+transfer(from=0xD4, to=0xC3, value=30)@10;
+transfer(from=0xC3, to=0xB2, value=20)@11;
+
+// Trace 37: 10 different operations
+fyToken()@0;
+transfer(from=0xC3, to=0xA1, value=3737)@1;
+mint(account=0xA1, amount=500)@2;
+burn(account=0xC3, amount=100)@3;
+underlying()@4;
+init(param1=0xA1)@5;
+transfer(from=0xC3, to=0xD4, value=30)@6;
+transfer(from=0xB2, to=0xA1, value=20)@7;
+transfer(from=0xA1, to=0xC3, value=10)@8;
+redeem(param1=0xD4, param2=42)@9;
+eject()@10;
+mint(account=0xA1, amount=500)@11;
+burn(account=0xA1, amount=100)@12;
+divest()@13;
+mint(account=0xC3, amount=500)@14;
+burn(account=0xA1, amount=100)@15;
+maturity()@16;
+
+// Trace 38: 9 different operations
+buyFYToken(param1=0xB2, param2=0xD4)@0;
+underlying()@1;
+mint(account=0xD4, amount=500)@2;
+transfer(from=0xA1, to=0xB2, value=200)@3;
+burn(account=0xC3, amount=100)@4;
+divest()@5;
+balanceOf(account=0xD4)@6;
+transfer(from=0xC3, to=0xD4, value=20)@7;
+transfer(from=0xD4, to=0xC3, value=10)@8;
+redeem(param1=0xA1, param2=47)@9;
+mint(account=0xD4, amount=500)@10;
+burn(account=0xB2, amount=100)@11;
+fyToken()@12;
+
+// Trace 39: 10 different operations
+burn(account=0xB2, amount=505)@0;
+mint(account=0xB2, amount=500)@1;
+burn(account=0xB2, amount=100)@2;
+base()@3;
+init(param1=0xD4)@4;
+approve(owner=0xB2, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@6;
+invest(param1=0)@7;
+underlying()@8;
+mint(account=0xB2, amount=500)@9;
+transfer(from=0xC3, to=0xD4, value=200)@10;
+burn(account=0xA1, amount=100)@11;
+divest()@12;
+mint(account=0xD4, amount=500)@13;
+transfer(from=0xD4, to=0xA1, value=200)@14;
+burn(account=0xC3, amount=100)@15;
+
+// Trace 40: 13 different operations
+mint(account=0xD4, amount=626)@0;
+transfer(from=0xC3, to=0xD4, value=30)@1;
+init(param1=0xD4)@2;
+eject()@3;
+buyFYToken(param1=0xA1, param2=0xA1)@4;
+maturity()@5;
+mint(account=0xD4, amount=500)@6;
+burn(account=0xD4, amount=100)@7;
+redeem(param1=0xD4, param2=46)@8;
+underlying()@9;
+balanceOf(account=0xD4)@10;
+fyToken()@11;
+invest(param1=0)@12;
+restart()@13;
+mint(account=0xA1, amount=500)@14;
+transfer(from=0xA1, to=0xB2, value=200)@15;
+burn(account=0xD4, amount=100)@16;
+
+// Trace 41: 16 different operations
+buyFYToken(param1=0xA1, param2=0xD4)@0;
+underlying()@1;
+transfer(from=0xA1, to=0xD4, value=4376)@2;
+redeem(param1=0xD4, param2=80)@3;
+mint(account=0xD4, amount=500)@4;
+transfer(from=0xC3, to=0xD4, value=200)@5;
+burn(account=0xD4, amount=100)@6;
+restart()@7;
+base()@8;
+fyToken()@9;
+maturity()@10;
+balanceOf(account=0xD4)@11;
+init(param1=0xD4)@12;
+eject()@13;
+approve(owner=0xA1, spender=0xD4, amount=100)@14;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@15;
+invest(param1=0)@16;
+mint(account=0xD4, amount=500)@17;
+transfer(from=0xA1, to=0xC3, value=200)@18;
+burn(account=0xD4, amount=100)@19;
+
+// Trace 42: 12 different operations
+base()@0;
+eject()@1;
+init(param1=0xC3)@2;
+balanceOf(account=0xA1)@3;
+approve(owner=0xC3, spender=0xA1, amount=100)@4;
+transferFrom(sender=0xC3, from=0xA1, to=50, value=50)@5;
+buyFYToken(param1=0xD4, param2=0xB2)@6;
+burn(account=0xB2, amount=969)@7;
+fyToken()@8;
+approve(owner=0xD4, spender=0xC3, amount=100)@9;
+transferFrom(sender=0xA1, from=0xB2, to=50, value=50)@10;
+restart()@11;
+transfer(from=0xA1, to=0xC3, value=919)@12;
+approve(owner=0xA1, spender=0xC3, amount=100)@13;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@14;
+underlying()@15;
+
+// Trace 43: 9 different operations
+init(param1=0xB2)@0;
+underlying()@1;
+buyFYToken(param1=0xD4, param2=0xC3)@2;
+balanceOf(account=0xC3)@3;
+redeem(param1=0xB2, param2=20)@4;
+burn(account=0xB2, amount=371)@5;
+transfer(from=0xC3, to=0xD4, value=3617)@6;
+mint(account=0xA1, amount=500)@7;
+transfer(from=0xD4, to=0xC3, value=200)@8;
+burn(account=0xD4, amount=100)@9;
+eject()@10;
+mint(account=0xD4, amount=500)@11;
+transfer(from=0xC3, to=0xD4, value=200)@12;
+burn(account=0xC3, amount=100)@13;
+
+// Trace 44: 13 different operations
+burn(account=0xB2, amount=95)@0;
+buyFYToken(param1=0xD4, param2=0xA1)@1;
+invest(param1=0)@2;
+balanceOf(account=0xA1)@3;
+transfer(from=0xA1, to=0xB2, value=1941)@4;
+fyToken()@5;
+eject()@6;
+mint(account=0xB2, amount=991)@7;
+mint(account=0xB2, amount=500)@8;
+transfer(from=0xC3, to=0xB2, value=200)@9;
+burn(account=0xC3, amount=100)@10;
+base()@11;
+divest()@12;
+init(param1=0xC3)@13;
+maturity()@14;
+redeem(param1=0xA1, param2=38)@15;
+
+// Trace 45: 12 different operations
+buyFYToken(param1=0xA1, param2=0xC3)@0;
+redeem(param1=0xA1, param2=25)@1;
+fyToken()@2;
+maturity()@3;
+approve(owner=0xD4, spender=0xA1, amount=100)@4;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@5;
+eject()@6;
+underlying()@7;
+init(param1=0xD4)@8;
+burn(account=0xD4, amount=1493)@9;
+transfer(from=0xA1, to=0xC3, value=20)@10;
+transfer(from=0xC3, to=0xA1, value=10)@11;
+mint(account=0xA1, amount=766)@12;
+
+// Trace 46: 12 different operations
+fyToken()@0;
+maturity()@1;
+burn(account=0xA1, amount=1470)@2;
+buyFYToken(param1=0xC3, param2=0xB2)@3;
+approve(owner=0xD4, spender=0xC3, amount=100)@4;
+transferFrom(sender=0xC3, from=0xD4, to=50, value=50)@5;
+invest(param1=0)@6;
+transfer(from=0xC3, to=0xD4, value=1512)@7;
+approve(owner=0xD4, spender=0xD4, amount=100)@8;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@9;
+restart()@10;
+redeem(param1=0xC3, param2=99)@11;
+approve(owner=0xA1, spender=0xB2, amount=100)@12;
+transferFrom(sender=0xA1, from=0xD4, to=50, value=50)@13;
+init(param1=0xA1)@14;
+mint(account=0xC3, amount=500)@15;
+transfer(from=0xA1, to=0xD4, value=200)@16;
+burn(account=0xD4, amount=100)@17;
+
+// Trace 47: 10 different operations
+invest(param1=0)@0;
+balanceOf(account=0xC3)@1;
+approve(owner=0xD4, spender=0xA1, amount=100)@2;
+transferFrom(sender=0xA1, from=0xC3, to=50, value=50)@3;
+redeem(param1=0xB2, param2=27)@4;
+buyFYToken(param1=0xC3, param2=0xD4)@5;
+burn(account=0xA1, amount=893)@6;
+transfer(from=0xA1, to=0xD4, value=30)@7;
+transfer(from=0xA1, to=0xD4, value=20)@8;
+transfer(from=0xB2, to=0xC3, value=10)@9;
+underlying()@10;
+approve(owner=0xD4, spender=0xA1, amount=100)@11;
+transferFrom(sender=0xB2, from=0xB2, to=50, value=50)@12;
+divest()@13;
+
+// Trace 48: 10 different operations
+burn(account=0xD4, amount=211)@0;
+base()@1;
+balanceOf(account=0xA1)@2;
+maturity()@3;
+invest(param1=0)@4;
+transfer(from=0xC3, to=0xA1, value=435)@5;
+transfer(from=0xD4, to=0xA1, value=30)@6;
+transfer(from=0xA1, to=0xC3, value=20)@7;
+transfer(from=0xB2, to=0xA1, value=10)@8;
+redeem(param1=0xD4, param2=66)@9;
+eject()@10;
+divest()@11;
+mint(account=0xD4, amount=500)@12;
+transfer(from=0xB2, to=0xD4, value=200)@13;
+burn(account=0xD4, amount=100)@14;
+
+// Trace 49: 10 different operations
+restart()@0;
+underlying()@1;
+transfer(from=0xB2, to=0xD4, value=30)@2;
+transfer(from=0xB2, to=0xD4, value=20)@3;
+mint(account=0xC3, amount=468)@4;
+transfer(from=0xD4, to=0xC3, value=30)@5;
+transfer(from=0xD4, to=0xB2, value=20)@6;
+transfer(from=0xD4, to=0xC3, value=10)@7;
+divest()@8;
+eject()@9;
+fyToken()@10;
+balanceOf(account=0xB2)@11;
+redeem(param1=0xC3, param2=16)@12;
+buyFYToken(param1=0xB2, param2=0xB2)@13;
+
+// Trace 50: 13 different operations
+redeem(param1=0xA1, param2=75)@0;
+buyFYToken(param1=0xD4, param2=0xD4)@1;
+underlying()@2;
+eject()@3;
+burn(account=0xA1, amount=126)@4;
+approve(owner=0xC3, spender=0xD4, amount=100)@5;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@6;
+base()@7;
+fyToken()@8;
+approve(owner=0xC3, spender=0xA1, amount=100)@9;
+transferFrom(sender=0xD4, from=0xB2, to=50, value=50)@10;
+divest()@11;
+balanceOf(account=0xB2)@12;
+transfer(from=0xD4, to=0xA1, value=30)@13;
+transfer(from=0xD4, to=0xC3, value=10)@14;
+maturity()@15;
+
+// Trace 51: 14 different operations
+base()@0;
+divest()@1;
+mint(account=0xA1, amount=500)@2;
+transfer(from=0xD4, to=0xB2, value=200)@3;
+burn(account=0xC3, amount=100)@4;
+restart()@5;
+fyToken()@6;
+invest(param1=0)@7;
+eject()@8;
+maturity()@9;
+approve(owner=0xA1, spender=0xC3, amount=100)@10;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@11;
+underlying()@12;
+balanceOf(account=0xA1)@13;
+
+// Trace 52: 16 different operations
+init(param1=0xA1)@0;
+burn(account=0xB2, amount=575)@1;
+transfer(from=0xA1, to=0xC3, value=1216)@2;
+mint(account=0xC3, amount=937)@3;
+invest(param1=0)@4;
+redeem(param1=0xA1, param2=22)@5;
+balanceOf(account=0xD4)@6;
+base()@7;
+maturity()@8;
+underlying()@9;
+buyFYToken(param1=0xB2, param2=0xC3)@10;
+eject()@11;
+transfer(from=0xB2, to=0xA1, value=30)@12;
+transfer(from=0xA1, to=0xB2, value=20)@13;
+transfer(from=0xA1, to=0xC3, value=10)@14;
+restart()@15;
+approve(owner=0xA1, spender=0xA1, amount=100)@16;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@17;
+divest()@18;
+approve(owner=0xC3, spender=0xA1, amount=100)@19;
+transferFrom(sender=0xB2, from=0xA1, to=50, value=50)@20;
+
+// Trace 53: 15 different operations
+balanceOf(account=0xD4)@0;
+maturity()@1;
+underlying()@2;
+eject()@3;
+transfer(from=0xB2, to=0xD4, value=20)@4;
+transfer(from=0xA1, to=0xC3, value=10)@5;
+burn(account=0xD4, amount=1429)@6;
+mint(account=0xA1, amount=361)@7;
+base()@8;
+invest(param1=0)@9;
+restart()@10;
+fyToken()@11;
+init(param1=0xD4)@12;
+divest()@13;
+redeem(param1=0xD4, param2=6)@14;
+buyFYToken(param1=0xA1, param2=0xA1)@15;
+transfer(from=0xD4, to=0xC3, value=5999)@16;
+transfer(from=0xA1, to=0xC3, value=788)@17;
+
+// Trace 54: 10 different operations
+underlying()@0;
+transfer(from=0xB2, to=0xA1, value=34)@1;
+restart()@2;
+redeem(param1=0xB2, param2=19)@3;
+transfer(from=0xA1, to=0xD4, value=30)@4;
+transfer(from=0xD4, to=0xA1, value=20)@5;
+divest()@6;
+invest(param1=0)@7;
+eject()@8;
+transfer(from=0xC3, to=0xB2, value=20)@9;
+transfer(from=0xB2, to=0xA1, value=10)@10;
+mint(account=0xB2, amount=598)@11;
+balanceOf(account=0xD4)@12;
+mint(account=0xA1, amount=500)@13;
+transfer(from=0xA1, to=0xB2, value=200)@14;
+burn(account=0xC3, amount=100)@15;
+
+// Trace 55: 11 different operations
+maturity()@0;
+restart()@1;
+transfer(from=0xD4, to=0xB2, value=2869)@2;
+fyToken()@3;
+redeem(param1=0xD4, param2=86)@4;
+invest(param1=0)@5;
+divest()@6;
+burn(account=0xC3, amount=1008)@7;
+init(param1=0xA1)@8;
+mint(account=0xA1, amount=322)@9;
+eject()@10;
+
+// Trace 56: 9 different operations
+redeem(param1=0xD4, param2=29)@0;
+approve(owner=0xB2, spender=0xC3, amount=100)@1;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@2;
+burn(account=0xC3, amount=2753)@3;
+mint(account=0xD4, amount=420)@4;
+underlying()@5;
+fyToken()@6;
+transfer(from=0xC3, to=0xA1, value=30)@7;
+transfer(from=0xB2, to=0xC3, value=20)@8;
+transfer(from=0xD4, to=0xB2, value=10)@9;
+init(param1=0xA1)@10;
+
+// Trace 57: 14 different operations
+fyToken()@0;
+restart()@1;
+buyFYToken(param1=0xD4, param2=0xD4)@2;
+approve(owner=0xC3, spender=0xC3, amount=100)@3;
+transferFrom(sender=0xA1, from=0xA1, to=50, value=50)@4;
+balanceOf(account=0xD4)@5;
+divest()@6;
+transfer(from=0xD4, to=0xC3, value=3286)@7;
+transfer(from=0xC3, to=0xD4, value=30)@8;
+burn(account=0xA1, amount=220)@9;
+mint(account=0xB2, amount=500)@10;
+transfer(from=0xD4, to=0xB2, value=200)@11;
+burn(account=0xD4, amount=100)@12;
+eject()@13;
+transfer(from=0xA1, to=0xD4, value=30)@14;
+base()@15;
+invest(param1=0)@16;
+redeem(param1=0xC3, param2=39)@17;
+transfer(from=0xD4, to=0xB2, value=30)@18;
+transfer(from=0xB2, to=0xD4, value=20)@19;
+transfer(from=0xB2, to=0xD4, value=10)@20;
+
+// Trace 58: 8 different operations
+base()@0;
+fyToken()@1;
+redeem(param1=0xA1, param2=98)@2;
+invest(param1=0)@3;
+maturity()@4;
+transfer(from=0xA1, to=0xB2, value=30)@5;
+transfer(from=0xD4, to=0xA1, value=20)@6;
+transfer(from=0xB2, to=0xA1, value=10)@7;
+buyFYToken(param1=0xC3, param2=0xA1)@8;
+burn(account=0xB2, amount=3014)@9;
+
+// Trace 59: 10 different operations
+fyToken()@0;
+approve(owner=0xD4, spender=0xA1, amount=100)@1;
+transferFrom(sender=0xB2, from=0xC3, to=50, value=50)@2;
+invest(param1=0)@3;
+underlying()@4;
+redeem(param1=0xA1, param2=16)@5;
+init(param1=0xB2)@6;
+balanceOf(account=0xD4)@7;
+approve(owner=0xC3, spender=0xA1, amount=100)@8;
+transferFrom(sender=0xD4, from=0xD4, to=50, value=50)@9;
+buyFYToken(param1=0xD4, param2=0xC3)@10;
+transfer(from=0xB2, to=0xA1, value=30)@11;
+transfer(from=0xB2, to=0xD4, value=20)@12;
+transfer(from=0xC3, to=0xB2, value=10)@13;
+
+// Trace 60: 11 different operations
+init(param1=0xB2)@0;
+transfer(from=0xB2, to=0xC3, value=30)@1;
+transfer(from=0xD4, to=0xC3, value=10)@2;
+redeem(param1=0xA1, param2=98)@3;
+burn(account=0xB2, amount=1859)@4;
+divest()@5;
+invest(param1=0)@6;
+base()@7;
+transfer(from=0xD4, to=0xA1, value=30)@8;
+transfer(from=0xC3, to=0xB2, value=20)@9;
+transfer(from=0xC3, to=0xB2, value=10)@10;
+underlying()@11;
+approve(owner=0xA1, spender=0xC3, amount=100)@12;
+transferFrom(sender=0xD4, from=0xC3, to=50, value=50)@13;
+eject()@14;
+
+// Trace 61: 5 different operations
+restart()@0;
+mint(account=0xD4, amount=500)@1;
+transfer(from=0xD4, to=0xC3, value=200)@2;
+burn(account=0xB2, amount=100)@3;
+buyFYToken(param1=0xD4, param2=0xC3)@4;
+mint(account=0xD4, amount=500)@5;
+transfer(from=0xC3, to=0xA1, value=200)@6;
+burn(account=0xD4, amount=100)@7;
+

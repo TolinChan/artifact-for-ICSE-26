@@ -1,0 +1,46 @@
+
+// Parameters
+.decl *totalShare(n: uint)
+.decl *crowdsaleShare(n: uint)
+.decl *foundationShare(n: uint)
+.decl *initialRate(n: uint)
+.decl *endRate(n: uint)
+.decl *preferentialRate(n: uint)
+.decl buyerRate(p: address, n: uint)[0]
+.decl *weiRaised(n: uint)
+.decl *totalSupply(n: uint)
+.decl *finalSupply(n: uint)
+
+// Transactions
+.decl setBuyerRate(p: address, n: uint)
+.decl setInitialRate(n: uint)
+.decl setEndRate(n: uint)
+.decl buyTokens(beneficiary: address, weiAmount: uint)
+.decl setWallet(wallet: address)
+.decl finalization()
+
+// Rules
+totalShare(100).
+crowdsaleShare(40).
+foundationShare(60).
+
+setBuyerRate(p, n) :- setBuyerRate(p, n).
+setInitialRate(n) :- setInitialRate(n).
+setEndRate(n) :- setEndRate(n).
+buyTokens(b, w) :- buyTokens(b, w).
+setWallet(w) :- setWallet(w).
+finalization() :- finalization().
+
+// Rate Calculation
+.decl rate(p: address, r: uint)[0]
+rate(p, r) :- buyerRate(p, r), r != 0.
+rate(p, r) :- buyerRate(p, 0), preferentialRate(r).
+rate(p, r) :- buyerRate(p, 0), preferentialRate(0), 
+              initialRate(i), endRate(e),
+              elapsedBlocks(b), totalBlocks(t),
+              rateRange := i - e, 
+              r := i - (rateRange * b / t).
+
+// Total Supply Calculation after Finalization
+finalSupply(s) :- finalization(), totalSupply(t),
+                  s := (100 * t) / 40.
