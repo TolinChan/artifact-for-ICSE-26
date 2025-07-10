@@ -113,8 +113,8 @@ def create_simple_candidate_contract(benchmark_name, candidate_id):
                 shutil.copy2(candidate_sol, output_file)
                 return output_file
             else:
-                print(f"    Synthesis failed, falling back to template")
-                return create_fallback_contract(benchmark_name, candidate_id, output_dir)
+                print(f"    Synthesis failed, no candidate generated (Scala only, no Python fallback)")
+                return None
                 
         finally:
             # Clean up temp directory
@@ -122,7 +122,7 @@ def create_simple_candidate_contract(benchmark_name, candidate_id):
         
     except Exception as e:
         print(f"    Error in Scala synthesis: {e}")
-        return create_fallback_contract(benchmark_name, candidate_id, output_dir)
+        return None
 
 def run_scala_synthesis(temp_dir, benchmark_name, candidate_id):
     """Run Scala synthesis to generate candidate contract"""
@@ -180,72 +180,6 @@ def check_scala_environment():
         
     except Exception:
         return False
-
-def create_fallback_contract(benchmark_name, candidate_id, output_dir):
-    """Create a fallback contract template when Scala synthesis fails"""
-    try:
-        # Create a simple ERC20-like contract as fallback
-        contract_content = f"""// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-// Fallback contract for {benchmark_name} - Candidate {candidate_id}
-// Generated when Scala synthesis was not available
-
-contract {benchmark_name.capitalize()}Candidate{candidate_id} {{
-    mapping(address => uint256) public balanceOf;
-    mapping(address => mapping(address => uint256)) public allowance;
-    uint256 public totalSupply;
-    string public name;
-    string public symbol;
-    uint8 public decimals;
-    
-    event Transfer(address indexed from, address indexed to, uint256 value);
-    event Approval(address indexed owner, address indexed spender, uint256 value);
-    
-    constructor() {{
-        name = "{benchmark_name.capitalize()}";
-        symbol = "{benchmark_name.upper()}";
-        decimals = 18;
-        totalSupply = 1000000 * 10**18;
-        balanceOf[msg.sender] = totalSupply;
-    }}
-    
-    function transfer(address to, uint256 amount) public returns (bool) {{
-        require(balanceOf[msg.sender] >= amount, "Insufficient balance");
-        balanceOf[msg.sender] -= amount;
-        balanceOf[to] += amount;
-        emit Transfer(msg.sender, to, amount);
-        return true;
-    }}
-    
-    function approve(address spender, uint256 amount) public returns (bool) {{
-        allowance[msg.sender][spender] = amount;
-        emit Approval(msg.sender, spender, amount);
-        return true;
-    }}
-    
-    function transferFrom(address from, address to, uint256 amount) public returns (bool) {{
-        require(balanceOf[from] >= amount, "Insufficient balance");
-        require(allowance[from][msg.sender] >= amount, "Insufficient allowance");
-        balanceOf[from] -= amount;
-        balanceOf[to] += amount;
-        allowance[from][msg.sender] -= amount;
-        emit Transfer(from, to, amount);
-        return true;
-    }}
-}}
-"""
-        
-        # Write contract to file
-        contract_file = f"{output_dir}/candidate_{candidate_id}.sol"
-        with open(contract_file, 'w') as f:
-            f.write(contract_content)
-        
-        return contract_file
-        
-    except Exception as e:
-        print(f"    Error creating fallback contract: {e}")
-        return None
 
 def generate_traces_for_candidates(candidates, benchmark_name):
     """Generate traces for each candidate using tmp.py"""
@@ -363,12 +297,12 @@ def simulate_verification(candidate):
         if verification_result is not None:
             return verification_result
         else:
-            print(f"    Verification failed, using fallback")
-            return simulate_fallback_verification(candidate)
+            print(f"    Verification failed, no passing rate (Scala only, no Python fallback)")
+            return 0.0
             
     except Exception as e:
         print(f"    Error in verification: {e}")
-        return simulate_fallback_verification(candidate)
+        return 0.0
 
 def extract_benchmark_name_from_path(candidate_path):
     """Extract benchmark name from candidate file path"""

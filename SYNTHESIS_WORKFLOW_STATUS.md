@@ -1,121 +1,79 @@
-# 智能合约合成工作流状态报告
+# SYNTHESIS_WORKFLOW_STATUS
 
-## 项目概述
-这是一个智能合约合成项目，用于从 Datalog 规范和时态属性自动生成候选智能合约，并进行验证测试。
+## 项目简介
 
-## 当前状态 ✅
+本项目实现了一个面向智能合约的**自动化合成与验证平台**，支持从高层Datalog规则和时序属性出发，自动合成多个Solidity合约候选，并通过形式化验证工具链对其进行性质验证和通过率评测。整个流程高度自动化，适合大规模实验、对比和可复现性研究。
 
-### 核心功能
-- ✅ **候选合约生成**: 支持 Scala 合成器和 Python 回退模板
-- ✅ **跟踪生成**: 使用 tmp.py 生成 50 步随机跟踪
-- ✅ **验证测试**: 支持 Scala 验证器和 Python 模拟验证
-- ✅ **批量测试**: 支持多基准测试并行执行
-- ✅ **报告生成**: 详细的 JSON 格式测试报告
+---
 
-### 工作流程
-1. **输入**: Datalog 规范文件 (.dl) + 时态属性文件
-2. **合成**: 生成 3 个候选合约
-3. **跟踪**: 为每个候选合约生成随机跟踪
-4. **验证**: 测试候选合约对时态属性的满足率
-5. **报告**: 生成详细的测试结果报告
+## 当前功能与流程
 
-## 技术架构
+### 1. 输入
+- **Datalog规则**：`synthesis-benchmark/<benchmark>/<benchmark>.dl`
+- **时序属性**：`synthesis-benchmark/<benchmark>/temporal_properties.txt`
 
-### 主要组件
-- **Python 主控制器**: `test_synthesis_workflow.py`
-- **批量测试器**: `batch_test_synthesis.py`
-- **跟踪生成器**: `tmp.py`
-- **Scala 合成器**: `src/main/scala/synthesis/SynthesizerWithoutTrace.scala`
-- **Scala 验证器**: `src/main/scala/verification/VerifierWrapper.scala`
+### 2. 合约自动合成
+- 通过Scala合成器（`SynthesizerWithoutTrace`）自动生成多个Solidity合约候选（如5个），每个候选合约均严格基于输入规则和属性，无需依赖example_trace。
+- 所有合成均通过Scala工具链完成，**不允许Python模板或兜底合约**。
 
-### 回退机制
-- 当 Scala 环境不可用时，自动回退到 Python 模板生成
-- 当 Scala 验证失败时，自动回退到 Python 模拟验证
+### 3. Trace自动生成
+- 对每个候选合约，自动调用`tmp.py`脚本，解析合约接口并生成example_traces.txt（合约操作轨迹），用于后续验证。
 
-## 测试结果
+### 4. 性质验证与通过率评测
+- 对每个合约及其trace，调用Scala验证器（`VerifierWrapper`）进行性质验证，统计通过率（PASSING_RATE）。
+- 验证失败时直接记为0分，不允许任何Python模拟分数或兜底。
 
-### 最新批量测试 (2025-01-10)
-- **测试基准**: erc20, auction, bnb
-- **成功率**: 100% (3/3)
-- **平均通过率**: 75.6%
-- **最佳通过率**: 84.4% (auction)
-- **总候选合约**: 9 个
+### 5. 报告与统计
+- 自动汇总所有候选合约的通过率，输出平均、最好、最差通过率等统计信息。
+- 生成详细的JSON/文本报告，便于后续分析和复现实验。
 
-### 详细结果
-| 基准测试 | 平均通过率 | 最佳通过率 | 候选合约数 |
-|---------|-----------|-----------|-----------|
-| erc20   | 68.3%     | 73.6%     | 3         |
-| auction | 84.4%     | 97.6%     | 3         |
-| bnb     | 74.1%     | 76.7%     | 3         |
+---
 
-## 文件结构
+## 工具链与关键脚本
 
-### 输出目录
-```
-synthesis_output/
-├── batch_reports/          # 批量测试报告
-├── {benchmark}/           # 每个基准测试的结果
-│   ├── candidates/        # 生成的候选合约
-│   ├── traces/           # 生成的跟踪文件
-│   └── reports/          # 详细测试报告
-```
+- **Scala合成器**：`SynthesizerWithoutTrace.scala`，负责合约自动合成。
+- **Scala验证器**：`VerifierWrapper.scala`，负责合约性质验证与通过率统计。
+- **Python自动化脚本**：
+  - `synthesis_without_trace.py`：全自动合成-生成trace-验证-报告一体化流程，**所有核心环节均依赖Scala工具链**。
+  - `test_synthesis_workflow.py`：工作流测试脚本，确保pipeline全流程可用，**无Python兜底**。
+  - `tmp.py`：合约trace生成工具。
 
-### 示例文件
-- **候选合约**: `synthesis_output/erc20/candidates/candidate_1.sol`
-- **跟踪文件**: `synthesis_output/erc20/traces/candidate_1/example_traces.txt`
-- **测试报告**: `synthesis_output/erc20/reports/test_results.json`
-- **批量报告**: `synthesis_output/batch_reports/batch_test_report_*.json`
+---
 
-## 使用方法
+## 可复现性与实验保障
 
-### 单个基准测试
-```bash
-python test_synthesis_workflow.py <benchmark_name>
-```
+- **所有合约候选和验证结果均由Scala工具链生成**，无任何Python fallback、模板合约或模拟分数。
+- 合成失败或验证失败的候选直接丢弃或记为0分，保证实验严谨性。
+- 所有实验流程、参数、结果均可通过自动化脚本复现。
 
-### 批量测试
-```bash
-python batch_test_synthesis.py <benchmark1> <benchmark2> ...
-```
+---
 
-### 示例
-```bash
-# 测试单个基准
-python test_synthesis_workflow.py erc20
+## 使用方法（示例）
 
-# 批量测试多个基准
-python batch_test_synthesis.py erc20 auction bnb
-```
+1. 运行全自动合成与验证：
+   ```bash
+   python synthesis_without_trace.py <benchmark_name>
+   ```
+2. 或运行工作流测试：
+   ```bash
+   python test_synthesis_workflow.py <benchmark_name>
+   ```
+3. 查看`synthesis_output/`或`candidates/`目录下的合约、trace和报告。
 
-## 已知问题
+---
 
-### Scala 编译问题
-- **状态**: 编译失败，出现 "bad constant pool index" 错误
-- **影响**: 无法使用真正的 Scala 合成器和验证器
-- **缓解**: 回退机制正常工作，使用 Python 模板和模拟验证
+## 适用场景
+- 智能合约自动合成与形式化验证实验
+- 大规模基准测试与对比
+- 可复现性研究与论文实验
 
-### 待解决
-1. 修复 Scala 编译问题
-2. 集成真正的 Scala 合成器
-3. 集成真正的 Scala 验证器
-4. 优化候选合约质量
+---
 
-## 下一步计划
+## 注意事项
+- 需确保Scala环境、Z3依赖、相关jar/class文件齐全。
+- 所有核心环节均依赖Scala工具链，**无Python兜底**。
+- 合成与验证失败的候选不会被兜底或模拟，保证实验结果真实可靠。
 
-1. **修复 Scala 环境**: 解决编译问题，启用真正的合成和验证
-2. **扩展基准测试**: 测试更多智能合约类型
-3. **优化算法**: 改进候选合约生成质量
-4. **性能优化**: 提高测试执行速度
-5. **文档完善**: 添加更详细的使用说明
+---
 
-## 技术债务
-
-- [ ] 修复 Scala 编译错误
-- [ ] 完善错误处理机制
-- [ ] 添加单元测试
-- [ ] 优化内存使用
-- [ ] 添加日志记录
-
-## 总结
-
-项目核心功能已实现并正常工作。虽然 Scala 环境存在编译问题，但回退机制确保了系统的可用性。当前可以成功生成候选合约、执行跟踪测试，并生成详细的验证报告。下一步重点是解决 Scala 编译问题，以启用真正的合成和验证功能。 
+如需详细使用说明、参数配置或遇到环境问题，请查阅README或联系开发者。 

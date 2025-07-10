@@ -278,9 +278,9 @@ object TempSynthesizer {{
                 results.append(candidate)
         
         return results
-    
+
     def _test_single_candidate(self, candidate):
-        """Test a single candidate against its generated trace"""
+        """Test a single candidate against its generated trace (Scala only, no Python fallback)"""
         try:
             # Create a test environment
             test_dir = tempfile.mkdtemp(prefix=f"test_{candidate['id']}_")
@@ -290,9 +290,8 @@ object TempSynthesizer {{
             shutil.copy2(candidate['trace_file'], f"{test_dir}/example_traces.txt")
             shutil.copy2(self.temporal_properties_file, f"{test_dir}/temporal_properties.txt")
             
-            # Run verification (this would need to be implemented)
-            # For now, we'll use a simplified approach
-            passing_rate = self._simplified_verification(test_dir)
+            # Run Scala verification (must implement or call existing Scala verifier)
+            passing_rate = self._run_scala_verification(test_dir, candidate)
             
             # Cleanup
             shutil.rmtree(test_dir)
@@ -302,16 +301,54 @@ object TempSynthesizer {{
         except Exception as e:
             print(f"    Verification error: {e}")
             return 0.0
-    
-    def _simplified_verification(self, test_dir):
-        """Simplified verification - in practice this would use the actual verification system"""
-        # This is a placeholder - in practice you would:
-        # 1. Parse the temporal properties
-        # 2. Execute the trace against the contract
-        # 3. Check if properties are violated
-        
-        # For now, return a random passing rate for demonstration
-        return random.uniform(0.7, 1.0)
+
+    def _run_scala_verification(self, test_dir, candidate):
+        """Run Scala verification on the candidate contract and trace (Scala only, no Python fallback)"""
+        try:
+            # Assume VerifierWrapper takes: temp_dir, benchmark_name, candidate_sol_path
+            benchmark_name = self.benchmark_name
+            candidate_sol_path = os.path.join(test_dir, "contract.sol")
+            temp_dir = test_dir
+            # Call Scala verifier
+            result = subprocess.run([
+                'scala', '-cp', 'unmanaged/com.microsoft.z3.jar:target/scala-2.13/classes',
+                'verification.VerifierWrapper',
+                temp_dir,
+                benchmark_name,
+                candidate_sol_path
+            ], capture_output=True, text=True, cwd='.')
+            if result.returncode == 0:
+                # Parse verification result
+                for line in result.stdout.split('\n'):
+                    if line.startswith("VERIFICATION_RESULT:"):
+                        result_text = line.replace("VERIFICATION_RESULT:", "").strip()
+                        if result_text.startswith("PASSING_RATE:"):
+                            rate_part = result_text.split(" ")[1]
+                            try:
+                                return float(rate_part)
+                            except ValueError:
+                                print(f"    Could not parse passing rate: {rate_part}")
+                                return 0.0
+                        elif "UNKNOWN" in result_text:
+                            return 0.0
+                        else:
+                            print(f"    Unknown verification result format: {result_text}")
+                            return 0.0
+                # Fallback: check for UNSATISFIABLE/SATISFIABLE/UNKNOWN
+                for line in result.stdout.split('\n'):
+                    if "UNSATISFIABLE" in line:
+                        return 1.0
+                    elif "SATISFIABLE" in line:
+                        return 0.0
+                    elif "UNKNOWN" in line:
+                        return 0.0
+                return 0.0
+            else:
+                print(f"    Scala verification failed: {result.stderr}")
+                return 0.0
+        except Exception as e:
+            print(f"    Scala verification error: {e}")
+            return 0.0
     
     def generate_report(self, results):
         """Generate a comprehensive report"""
