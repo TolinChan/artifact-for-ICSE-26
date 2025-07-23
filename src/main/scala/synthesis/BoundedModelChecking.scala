@@ -31,6 +31,7 @@ object BoundedModelChecking {
 
   def bmc(ctx: Context, init: BoolExpr, trans: BoolExpr, goal: BoolExpr,
           fvs: Array[Expr[_]], xs: Array[Expr[_]], xns: Array[Expr[_]]): Array[mutable.Map[String, Expr[_]]] = {
+    
     val solver = ctx.mkSolver()
     // solver.reset("timeout", 2000)
     solver.add(init)

@@ -5,6 +5,7 @@ import verification.TransitionSystem
 import synthesis.BoundedModelChecking
 import util.Misc.parseProgram
 import verification.Verifier._
+import verification.Z3Helper._
 import datalog.{Program, Rule}
 import java.io._
 import scala.util.control.Breaks._
@@ -331,10 +332,10 @@ class StateMachine(name: String, ctx: Context) {
       val model = s.getModel()
       transitions.foreach { tr =>
         if (candidates.contains(tr)) {
-          candidates(tr).foreach { c =>
+        candidates(tr).foreach { c =>
             if (candidateConditionGuards.contains(tr) && candidateConditionGuards(tr).nonEmpty) {
               if (model.eval(candidateConditionGuards(tr).head, true).isTrue) {
-                addGuard(tr, c)
+            addGuard(tr, c)
               }
             }
           }
@@ -357,36 +358,36 @@ class StateMachine(name: String, ctx: Context) {
     var iter = 0
     
     breakable {
-      while (true) {
-        iter += 1
-        val startTime = System.nanoTime()
-      
-        synthesize(pos, neg, candidate_guard)
-        val endTime = System.nanoTime()
-        val elapsedTimeMs = (endTime - startTime) / 1e9
-        syn_time = syn_time + elapsedTimeMs
-        var new_ntraces = List[List[List[Expr[BoolSort]]]]()
-        val startTime2 = System.nanoTime()
-        properties.foreach { p =>
-          val ntrace = bmc(ctx.mkNot(p))
-          if (ntrace.isEmpty) {
-            println("√") // Property verified
-          } else {
-            new_ntraces = new_ntraces :+ ntrace.get
-            println("×") // Property not verified
-          }
+    while (true) {
+      iter += 1
+      val startTime = System.nanoTime()
+    
+      synthesize(pos, neg, candidate_guard)
+      val endTime = System.nanoTime()
+      val elapsedTimeMs = (endTime - startTime) / 1e9
+      syn_time = syn_time + elapsedTimeMs
+      var new_ntraces = List[List[List[Expr[BoolSort]]]]()
+      val startTime2 = System.nanoTime()
+      properties.foreach { p =>
+        val ntrace = bmc(ctx.mkNot(p))
+        if (ntrace.isEmpty) {
+          println("√") // Property verified
+        } else {
+          new_ntraces = new_ntraces :+ ntrace.get
+          println("×") // Property not verified
         }
-        val endTime2 = System.nanoTime()
+      }
+      val endTime2 = System.nanoTime()
         val elapsedTimeMs2 = (endTime2 - startTime2) / 1e9
-        bmc_time = bmc_time + elapsedTimeMs2
-        if (new_ntraces.isEmpty) {
-          println("All properties verified!")
+      bmc_time = bmc_time + elapsedTimeMs2
+      if (new_ntraces.isEmpty) {
+        println("All properties verified!")
           break()
-        }
+      }
 
-        // Update negative traces
-        new_ntraces.foreach { negtrace =>
-          neg :+= simulate(negtrace, candidate_guard)
+      // Update negative traces
+      new_ntraces.foreach { negtrace =>
+        neg :+= simulate(negtrace, candidate_guard)
         }
       }
     }
@@ -513,43 +514,125 @@ class StateMachine(name: String, ctx: Context) {
     }
   }
 
-  // 添加缺失的辅助方法
+  // 添加简化的contains方法
   private def contains(expr: Expr[_], in: Expr[_]): Boolean = {
-    // 简化实现 - 检查表达式是否包含某个子表达式
+    // 简化实现 - 应该是AST结构分析
     expr.toString.contains(in.toString)
   }
 
-  private def isArray(expr: Any): Boolean = {
-    expr match {
-      case e: Expr[_] => e.getSort.isInstanceOf[ArraySort[_, _]]
-      case _ => false
-    }
+  // 添加类型检查方法
+  private def isArray(expr: Expr[_]): Boolean = {
+    expr.getSort.isInstanceOf[ArraySort[_, _]]
   }
 
-  private def isBool(expr: Any): Boolean = {
-    expr match {
-      case e: Expr[_] => e.getSort.isInstanceOf[BoolSort]
-      case _ => false
-    }
+  private def isBool(expr: Expr[_]): Boolean = {
+    expr.getSort.isInstanceOf[BoolSort]
   }
 
-  private def getSolidityType(sort: Sort): String = sort match {
-    case _: BitVecSort => "uint256"
-    case _: IntSort    => "int256"
-    case s if s.getName.toString == "String" => "string"
-    case _: ArraySort[_, _]  => "mapping(uint256 => uint256)"
-    case _            => "bytes"
-  }
-
-  // 添加占位符方法（这些应该在其他地方实现）
   def readFromProgram(p: Program): Unit = {
-    // 占位符实现
-    println("readFromProgram method called")
+    // 从Datalog程序中读取状态和转换
+    println(s"Reading program: ${p.name}")
+    
+    // 1. 从relations中提取状态变量
+    p.relations.foreach { relation =>
+      relation match {
+        case sr: datalog.SimpleRelation =>
+          // 为每个SimpleRelation创建状态变量
+          val sort = verification.Z3Helper.getSort(ctx, sr, p.relationIndices.getOrElse(sr, List()))
+          addState(sr.name, sort)
+          println(s"Added state: ${sr.name} with sort: ${sort}")
+          
+        case singleton: datalog.SingletonRelation =>
+          // 为SingletonRelation创建状态变量
+          val sort = verification.Z3Helper.getSort(ctx, singleton, List())
+          addState(singleton.name, sort)
+          println(s"Added singleton state: ${singleton.name}")
+          
+        case reserved: datalog.ReservedRelation =>
+          // 保留关系通常不需要作为状态变量
+          println(s"Skipping reserved relation: ${reserved.name}")
+      }
+    }
+    
+    // 2. 从rules中提取转换
+    val transactionRules = p.transactionRules()
+    transactionRules.foreach { rule =>
+      // 查找事务相关的字面量
+      val transactionLiterals = rule.body.filter(_.relation.name.startsWith("tr"))
+      
+      transactionLiterals.foreach { transactionLit =>
+        val trName = transactionLit.relation.name.stripPrefix("tr").toLowerCase
+        
+        // 提取参数
+        val parameters = transactionLit.fields.map { field =>
+          field match {
+            case datalog.Variable(fieldType, fieldName) =>
+              ctx.mkConst(fieldName, verification.Z3Helper.typeToSort(ctx, fieldType))
+            case datalog.Constant(fieldType, fieldName) =>
+              verification.Z3Helper.paramToConst(ctx, field, "")._1
+          }
+        }
+        
+        // 生成基本的保护条件（可以根据rule的functors进一步完善）
+        val guard = if (rule.functors.nonEmpty) {
+          val functorExprs = rule.functors.map { functor =>
+            verification.Z3Helper.functorToZ3(ctx, functor, "")
+          }
+          ctx.mkAnd(functorExprs.toSeq: _*)
+        } else {
+          ctx.mkTrue()
+        }
+        
+        // 生成转换函数（基于rule的head）
+        val headRelation = rule.head.relation
+        val transferFunc = headRelation match {
+          case sr: datalog.SimpleRelation =>
+            // 为SimpleRelation生成更新逻辑
+            if (states.contains(sr.name)) {
+              val (state, stateOut) = states(sr.name)
+              ctx.mkEq(stateOut, state) // 简化：保持状态不变
+            } else {
+              ctx.mkTrue()
+            }
+          case _ =>
+            ctx.mkTrue()
+        }
+        
+        // 添加转换
+        addTr(trName, parameters.toList, guard, transferFunc)
+        println(s"Added transition: $trName")
+      }
+    }
+    
+    // 3. 设置初始状态
+    val initConstraints = states.map { case (stateName, (state, _)) =>
+      // 根据状态类型设置初始值
+      state.getSort match {
+        case intSort if intSort == ctx.mkIntSort() =>
+          ctx.mkEq(state, ctx.mkInt(0))
+        case boolSort if boolSort == ctx.mkBoolSort() =>
+          ctx.mkEq(state.asInstanceOf[Expr[BoolSort]], ctx.mkFalse())
+        case arraySort if arraySort.isInstanceOf[ArraySort[_, _]] =>
+          // 对于数组类型，设置为默认值
+          ctx.mkTrue() // 简化处理
+        case _ =>
+          ctx.mkTrue()
+      }
+    }.toList
+    
+    val initialState = if (initConstraints.nonEmpty) {
+      ctx.mkAnd(initConstraints: _*)
+    } else {
+      ctx.mkTrue()
+    }
+    
+    setInit(initialState)
+    println(s"Set initial state with ${initConstraints.length} constraints")
   }
 
   def inductive_prove(properties: List[Expr[BoolSort]]): Unit = {
     // 占位符实现
     println("inductive_prove method called")
   }
-
 }
+

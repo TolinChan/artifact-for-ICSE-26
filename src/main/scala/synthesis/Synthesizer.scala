@@ -14,7 +14,7 @@ case class Synthesizer() {
     val propertypath = s"./synthesis-benchmark/$name/temporal_properties.txt"
     val tracepath = s"./synthesis-benchmark/$name/example_traces.txt"
     val solpath = s"./output/$name.sol"
-    
+
     val dl = parseProgram(datalogpath)
     val stateMachine = new StateMachine(dl.name, new com.microsoft.z3.Context())
     stateMachine.readFromProgram(dl)
