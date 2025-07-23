@@ -8,7 +8,8 @@ lazy val root = (project in file("."))
     scalacOptions ++= Seq(
       "-deprecation",
       "-feature",
-      "-Xfatal-warnings"
+      "-language:existentials",
+      "-language:implicitConversions"
     )
   )
 

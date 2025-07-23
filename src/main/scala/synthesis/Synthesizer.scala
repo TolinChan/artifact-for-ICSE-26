@@ -1,35 +1,35 @@
 package synthesis
 
-import datalog.Program
-import verification.{TransitionSystem, Verifier}
-import synthesis.StateMachine
-import synthesis.Parser
+import com.microsoft.z3._
 import util.Misc.parseProgram
+import verification.Verifier._
+import synthesis.Parser
 
 case class Synthesizer() {
 
-  def synthesize(name: String) = {
-    print(name)
-    val startTime = System.nanoTime()
-    // val temporalProperties: TemporalProperty = TemporalProperty()
-    val datalogpath = "./synthesis-benchmark/" + name + "/" + name + ".dl"
-    val propertypath = "./synthesis-benchmark/" + name + "/temporal_properties.txt"
-    val tracepath = "./synthesis-benchmark/" + name + "/example_traces.txt"
-    val solpath = "./synthesis-benchmark/" + name + name + ".dl"
-
+  def synthesize(name: String): Unit = {
+    val start = System.nanoTime()
+    
+    val datalogpath = s"./synthesis-benchmark/$name/$name.dl"
+    val propertypath = s"./synthesis-benchmark/$name/temporal_properties.txt"
+    val tracepath = s"./synthesis-benchmark/$name/example_traces.txt"
+    val solpath = s"./output/$name.sol"
+    
     val dl = parseProgram(datalogpath)
+    val stateMachine = new StateMachine(dl.name, new com.microsoft.z3.Context())
     stateMachine.readFromProgram(dl)
-    /** The CEGIS loop.  */
+    
     val property = Parser.parseProperty(propertypath)
     val postrace = Parser.parseTrace(tracepath)
-    statemachine.addOnce()
-    statemachine.generate_candidate_guards()
-    stateMachine.cegis(property, postrace)
+    stateMachine.addOnce()
+    val candidates = stateMachine.generate_candidate_guards(List("<", "<=", ">", ">=", "="), array = true)
+    stateMachine.cegis(property, List(List(postrace)), candidates)
     stateMachine.inductive_prove(property)
-    val endTime = System.nanoTime()
-    val elapsedTimeMs = (endTime - startTime) / 1e9
-    print(s" $elapsedTimeMs")
-    statemachine.writefile(solpath)
-
+    
+    val end = System.nanoTime()
+    println(s"Synthesis time: ${(end - start) / 1e9} seconds")
+    
+    stateMachine.writefile(solpath)
   }
+
 }
