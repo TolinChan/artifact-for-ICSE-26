@@ -10,7 +10,11 @@ lazy val root = (project in file("."))
       "-feature",
       "-language:existentials",
       "-language:implicitConversions"
-    )
+    ),
+    javaOptions ++= Seq(
+      "-Djava.library.path=."
+    ),
+    fork := true
   )
 
 libraryDependencies ++= Seq(

@@ -1,11 +1,1 @@
-□(stake(p, n) → balanceOf(p, b) → b < b@prev)
-
-□(rePledge(p, n) → totalSupply(s) → s > s@prev)
-
-□(withdraw(p) → pendingReward(p, r) → r = 0)
-
-□(unstakeNFT(p, tokenId) → totalSupply(n) → n < n@prev)
-
-□(stakeNFT(p, tokenId) → totalSupply(n) < maxNftAmount)
-
-□(stakeNFT(p, tokenId) → ownerOf(tokenId) = p) ∧ (unstakeNFT(p, tokenId) → ownerOf(tokenId) = contract)
+box(stake(p, n) -> balanceOf(p, b) -> b < b@prev) box(rePledge(p, n) -> totalSupply(s) -> s > s@prev) box(withdraw(p) -> pendingReward(p, r) -> r == 0) box(unstakeNFT(p, tokenId) -> totalSupply(n) -> n < n@prev) box(stakeNFT(p, tokenId) -> totalSupply(n) < maxNftAmount) box(stakeNFT(p, tokenId) -> ownerOf(tokenId) == p) && (unstakeNFT(p, tokenId) -> ownerOf(tokenId) == contract)

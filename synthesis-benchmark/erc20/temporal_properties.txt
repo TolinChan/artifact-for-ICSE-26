@@ -1,12 +1,11 @@
-
 // Ensuring total balances do not exceed total supply
-□(totalSupply(n) ∧ balanceSum(s) → s ≤ n)
+box(totalSupply(n) && balanceSum(s) -> s <= n)
 
 // Ensuring allowance cannot be exceeded
-□(allowance(o, s, n) ∧ transferFrom(o, r, s, m) → m ≤ n)
+box(allowance(o, s, n) && transferFrom(o, r, s, m) -> m <= n)
 
 // Ensuring no negative balances
-□(balanceOf(p, n) → n ≥ 0)
+box(balanceOf(p, n) -> n >= 0)
 
 // Ensuring total balances match total supply
-□(totalBalances(s) ∧ totalSupply(n) → s == n)
+box(totalBalances(s) && totalSupply(n) -> s == n)

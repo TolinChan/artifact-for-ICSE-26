@@ -1,6 +1,8 @@
 import synthesis.StateMachine
-import com.microsoft.z3._
+import com.microsoft.z3.{Context, Status, BoolExpr, ArithSort, BoolSort}
+import com.microsoft.z3.{Expr => Z3Expr}
 import datalog._
+
 
 object TestStateMachineSimulate {
   def main(args: Array[String]): Unit = {
@@ -27,18 +29,18 @@ object TestStateMachineSimulate {
   
   def testBasicStateMachine(ctx: Context, sm: StateMachine): Unit = {
     try {
-      // 添加状态
+      // 添加状�?
       val (balance, balanceOut) = sm.addState("balance", ctx.mkIntSort())
       println(s"Added state: balance")
       
-      // 设置初始状态
+      // 设置初始状�?
       sm.setInit(ctx.mkEq(balance, ctx.mkInt(1000)))
       println("Set initial state: balance = 1000")
       
       // 添加转换
       val transferParams = List(ctx.mkIntConst("amount"))
-      val transferGuard = ctx.mkGt(balance.asInstanceOf[Expr[ArithSort]], ctx.mkInt(0))
-      val transferFunc = ctx.mkEq(balanceOut, ctx.mkSub(balance.asInstanceOf[Expr[ArithSort]], ctx.mkIntConst("amount")))
+      val transferGuard = ctx.mkGt(balance.asInstanceOf[Z3Expr[ArithSort]], ctx.mkInt(0))
+      val transferFunc = ctx.mkEq(balanceOut, ctx.mkSub(balance.asInstanceOf[Z3Expr[ArithSort]], ctx.mkIntConst("amount")))
       sm.addTr("transfer", transferParams, transferGuard, transferFunc)
       println("Added transition: transfer")
       
@@ -101,20 +103,20 @@ object TestStateMachineSimulate {
       
       val incParams = List()
       val incGuard = ctx.mkTrue()
-      val incFunc = ctx.mkEq(counterOut, ctx.mkAdd(counter.asInstanceOf[Expr[ArithSort]], ctx.mkInt(1)))
+      val incFunc = ctx.mkEq(counterOut, ctx.mkAdd(counter.asInstanceOf[Z3Expr[ArithSort]], ctx.mkInt(1)))
       sm.addTr("increment", incParams, incGuard, incFunc)
       sm.addOnce()
       
       // 创建轨迹
       val trace = List(
         List(
-          ctx.mkString("increment").asInstanceOf[Expr[BoolSort]],
-          ctx.mkGt(sm.nowOut.asInstanceOf[Expr[ArithSort]], sm.now.asInstanceOf[Expr[ArithSort]]).asInstanceOf[Expr[BoolSort]]
+          ctx.mkString("increment").asInstanceOf[Z3Expr[BoolSort]],
+          ctx.mkGt(sm.nowOut.asInstanceOf[Z3Expr[ArithSort]], sm.now.asInstanceOf[Z3Expr[ArithSort]]).asInstanceOf[Z3Expr[BoolSort]]
         )
       )
       
       val candidates = Map(
-        "increment" -> List(ctx.mkTrue().asInstanceOf[Expr[BoolSort]])
+        "increment" -> List(ctx.mkTrue().asInstanceOf[Z3Expr[BoolSort]])
       )
       
       // 测试simulate
@@ -129,3 +131,4 @@ object TestStateMachineSimulate {
     }
   }
 } 
+ 

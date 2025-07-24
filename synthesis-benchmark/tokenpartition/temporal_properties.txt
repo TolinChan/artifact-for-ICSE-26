@@ -1,9 +1,3 @@
-
-// Ensuring total balances per partition do not exceed total supply per partition
-□(totalSupplyByPartition(q, n) ∧ totalBalancesByPartition(q, s) → s ≤ n)
-
-// Ensuring no negative balances by partition
-□(balanceOfByPartition(p, q, n) → n ≥ 0)
-
-// Ensuring total balances match total supply per partition
-□(totalBalancesByPartition(q, s) ∧ totalSupplyByPartition(q, n) → s == n)
+//Ensuring total balances per partition do not exceed total supply per partition box(totalSupplyByPartition(q, n) && totalBalancesByPartition(q, s) -> s <= n)
+//Ensuring no negative balances by partition box(balanceOfByPartition(p, q, n) -> n >= 0)
+//Ensuring total balances match total supply per partition box(totalBalancesByPartition(q, s) && totalSupplyByPartition(q, n) -> s == n)

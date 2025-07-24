@@ -1,15 +1,5 @@
-
-// Ensuring crowdsale starts before token creation
-□(createTokens(p, n) → crowdsaleStarted(true))
-
-// Ensuring tokens are only minted before crowdsale ends
-□(createTokens(p, n) → ¬crowdsaleEnded(true))
-
-// Ensuring total supply is always increasing
-□(createTokens(p, e) → newTotalSupply(s) ∧ totalSupply(t) → s ≥ t)
-
-// Ensuring no negative balances
-□(balanceOf(p, n) → n ≥ 0)
-
-// Ensuring decimals can only be set after crowdsale ends
-□(setDecimals(n) → crowdsaleEnded(true))
+//Ensuring crowdsale starts before token creation box(createTokens(p, n) -> crowdsaleStarted(true))
+//Ensuring tokens are only minted before crowdsale ends box(createTokens(p, n) -> !crowdsaleEnded(true))
+//Ensuring total supply is always increasing box(createTokens(p, e) -> newTotalSupply(s) && totalSupply(t) -> s >= t)
+//Ensuring no negative balances box(balanceOf(p, n) -> n >= 0)
+//Ensuring decimals can only be set after crowdsale ends box(setDecimals(n) -> crowdsaleEnded(true))

@@ -119,7 +119,16 @@ object Z3Helper {
 
 
   def getArraySort(ctx: Context, relation: Relation, indices: List[Int]): (Sort, Array[Sort], Sort) = {
-    require(indices.nonEmpty)
+    if (indices.isEmpty) {
+      // 如果没有索引，返回一个简单的排序
+      if (relation.sig.isEmpty) {
+        // 如果关系签名也是空的，返回一个默认的布尔排序
+        (ctx.mkBoolSort(), Array(), ctx.mkBoolSort())
+      } else {
+        val valueSort = typeToSort(ctx, relation.sig.head)
+        (valueSort, Array(), valueSort)
+      }
+    } else {
     val keyTypes = indices.map(i => relation.sig(i))
     val valueIndices = relation.sig.indices.filterNot(i=>indices.contains(i)).toList
     val valueTypes = valueIndices.map(i=>relation.sig(i))
@@ -133,6 +142,7 @@ object Z3Helper {
       makeTupleSort(ctx, relation, valueTypes.toArray, fieldNames.toArray)
     }
     (ctx.mkArraySort(keySorts, valueSort), keySorts, valueSort)
+    }
   }
 
 

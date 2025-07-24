@@ -1,0 +1,57 @@
+{
+  "benchmark": "erc20",
+  "timestamp": 1753339850.5517523,
+  "statistics": {
+    "total_candidates": 5,
+    "average_passing_rate": 0.0,
+    "max_passing_rate": 0.0,
+    "min_passing_rate": 0.0
+  },
+  "candidates": [
+    {
+      "id": 0,
+      "sol_file": "./synthesized_contracts/erc20/candidate_0/contract.sol",
+      "temp_dir": "C:\\Users\\Windows\\AppData\\Local\\Temp\\candidate_0_ztb_s_ky",
+      "generation_time": 1753339816.6595347,
+      "trace_file": "C:\\Users\\Windows\\AppData\\Local\\Temp\\trace_0_jnl4blne/example_traces.txt",
+      "trace_dir": "C:\\Users\\Windows\\AppData\\Local\\Temp\\trace_0_jnl4blne",
+      "passing_rate": 0.0
+    },
+    {
+      "id": 1,
+      "sol_file": "./synthesized_contracts/erc20/candidate_1/contract.sol",
+      "temp_dir": "C:\\Users\\Windows\\AppData\\Local\\Temp\\candidate_1_2gcr6txf",
+      "generation_time": 1753339825.660498,
+      "trace_file": "C:\\Users\\Windows\\AppData\\Local\\Temp\\trace_1_bq5r9dvd/example_traces.txt",
+      "trace_dir": "C:\\Users\\Windows\\AppData\\Local\\Temp\\trace_1_bq5r9dvd",
+      "passing_rate": 0.0
+    },
+    {
+      "id": 2,
+      "sol_file": "./synthesized_contracts/erc20/candidate_2/contract.sol",
+      "temp_dir": "C:\\Users\\Windows\\AppData\\Local\\Temp\\candidate_2_3fzregb9",
+      "generation_time": 1753339833.681135,
+      "trace_file": "C:\\Users\\Windows\\AppData\\Local\\Temp\\trace_2_fmbo480z/example_traces.txt",
+      "trace_dir": "C:\\Users\\Windows\\AppData\\Local\\Temp\\trace_2_fmbo480z",
+      "passing_rate": 0.0
+    },
+    {
+      "id": 3,
+      "sol_file": "./synthesized_contracts/erc20/candidate_3/contract.sol",
+      "temp_dir": "C:\\Users\\Windows\\AppData\\Local\\Temp\\candidate_3_0hkiv2v9",
+      "generation_time": 1753339841.5983713,
+      "trace_file": "C:\\Users\\Windows\\AppData\\Local\\Temp\\trace_3_8op3iiiv/example_traces.txt",
+      "trace_dir": "C:\\Users\\Windows\\AppData\\Local\\Temp\\trace_3_8op3iiiv",
+      "passing_rate": 0.0
+    },
+    {
+      "id": 4,
+      "sol_file": "./synthesized_contracts/erc20/candidate_4/contract.sol",
+      "temp_dir": "C:\\Users\\Windows\\AppData\\Local\\Temp\\candidate_4_i1l9n161",
+      "generation_time": 1753339849.6144361,
+      "trace_file": "C:\\Users\\Windows\\AppData\\Local\\Temp\\trace_4_kxj3haap/example_traces.txt",
+      "trace_dir": "C:\\Users\\Windows\\AppData\\Local\\Temp\\trace_4_kxj3haap",
+      "passing_rate": 0.0
+    }
+  ]
+}

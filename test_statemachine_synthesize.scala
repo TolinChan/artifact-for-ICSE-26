@@ -1,6 +1,6 @@
 import synthesis.StateMachine
-import com.microsoft.z3._
-import datalog._
+import com.microsoft.z3.{Context, Status, BoolExpr, ArithSort, BoolSort, BitVecSort}
+import com.microsoft.z3.{Expr => Z3Expr}
 
 object TestStateMachineSynthesize {
   def main(args: Array[String]): Unit = {
@@ -18,7 +18,7 @@ object TestStateMachineSynthesize {
     println("\n=== Test 3: Learning from Negative Traces ===")
     testNegativeTraceLearning()
     
-    // 测试4: 多转换合成
+    // 测试4: 多转换合�?
     println("\n=== Test 4: Multi-Transition Synthesis ===")
     testMultiTransitionSynthesis()
     
@@ -38,32 +38,32 @@ object TestStateMachineSynthesize {
       val ctx = new Context()
       val sm = new StateMachine("BasicSynthesis", ctx)
       
-      // 创建简单的计数器
+      // 创建简单的计数�?
       val (counter, counterOut) = sm.addState("counter", ctx.mkIntSort())
       sm.setInit(ctx.mkEq(counter, ctx.mkInt(0)))
       
       // 添加increment转换
       val incParams = List()
       val incGuard = ctx.mkTrue()
-      val incFunc = ctx.mkEq(counterOut, ctx.mkAdd(counter.asInstanceOf[Expr[ArithSort]], ctx.mkInt(1)))
+      val incFunc = ctx.mkEq(counterOut, ctx.mkAdd(counter.asInstanceOf[Z3Expr[ArithSort]], ctx.mkInt(1)))
       sm.addTr("increment", incParams, incGuard, incFunc)
       
       sm.addOnce()
       
-      // 空轨迹测试
-      val pos = List[List[List[Expr[BoolSort]]]]()
-      val neg = List[List[List[Expr[BoolSort]]]]()
-      val candidates = Map[String, List[Expr[BoolSort]]](
+      // 空轨迹测�?
+      val pos = List[List[List[Z3Expr[BoolSort]]]]()
+      val neg = List[List[List[Z3Expr[BoolSort]]]]()
+      val candidates = Map[String, List[Z3Expr[BoolSort]]](
         "increment" -> List(ctx.mkTrue(), ctx.mkFalse())
       )
       
       sm.synthesize(pos, neg, candidates)
       
-      println("✓ Basic synthesis completed without errors")
+      println("�?Basic synthesis completed without errors")
       ctx.close()
     } catch {
       case e: Exception =>
-        println(s"✗ Basic synthesis failed: ${e.getMessage}")
+        println(s"�?Basic synthesis failed: ${e.getMessage}")
         e.printStackTrace()
     }
   }
@@ -80,7 +80,7 @@ object TestStateMachineSynthesize {
       // 添加deposit转换
       val depositParams = List(ctx.mkIntConst("amount"))
       val depositGuard = ctx.mkTrue()
-      val depositFunc = ctx.mkEq(balanceOut, ctx.mkAdd(balance.asInstanceOf[Expr[ArithSort]], ctx.mkIntConst("amount")))
+      val depositFunc = ctx.mkEq(balanceOut, ctx.mkAdd(balance.asInstanceOf[Z3Expr[ArithSort]], ctx.mkIntConst("amount")))
       sm.addTr("deposit", depositParams, depositGuard, depositFunc)
       
       sm.addOnce()
@@ -89,15 +89,15 @@ object TestStateMachineSynthesize {
       val posTrace = List(
         List(
           List(
-            ctx.mkString("deposit").asInstanceOf[Expr[BoolSort]],
-            ctx.mkEq(ctx.mkIntConst("amount"), ctx.mkInt(50)).asInstanceOf[Expr[BoolSort]],
-            ctx.mkGt(ctx.mkIntConst("amount"), ctx.mkInt(0)).asInstanceOf[Expr[BoolSort]]
+            ctx.mkString("deposit").asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkEq(ctx.mkIntConst("amount"), ctx.mkInt(50)).asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkGt(ctx.mkIntConst("amount"), ctx.mkInt(0)).asInstanceOf[Z3Expr[BoolSort]]
           )
         )
       )
       
-      val neg = List[List[List[Expr[BoolSort]]]]()
-      val candidates = Map[String, List[Expr[BoolSort]]](
+      val neg = List[List[List[Z3Expr[BoolSort]]]]()
+      val candidates = Map[String, List[Z3Expr[BoolSort]]](
         "deposit" -> List(
           ctx.mkTrue(),
           ctx.mkGt(ctx.mkIntConst("amount"), ctx.mkInt(0)),
@@ -105,7 +105,7 @@ object TestStateMachineSynthesize {
         )
       )
       
-      // 设置候选条件保护
+      // 设置候选条件保�?
       sm.candidateConditionGuards("deposit") = candidates("deposit")
       
       println("Before synthesis:")
@@ -115,12 +115,12 @@ object TestStateMachineSynthesize {
       
       println("After synthesis:")
       println(s"  Updated guard: ${sm.conditionGuards("deposit")}")
-      println("✓ Positive trace learning completed")
+      println("�?Positive trace learning completed")
       
       ctx.close()
     } catch {
       case e: Exception =>
-        println(s"✗ Positive trace learning failed: ${e.getMessage}")
+        println(s"�?Positive trace learning failed: ${e.getMessage}")
         e.printStackTrace()
     }
   }
@@ -137,7 +137,7 @@ object TestStateMachineSynthesize {
       // 添加withdraw转换
       val withdrawParams = List(ctx.mkIntConst("amount"))
       val withdrawGuard = ctx.mkTrue()
-      val withdrawFunc = ctx.mkEq(balanceOut, ctx.mkSub(balance.asInstanceOf[Expr[ArithSort]], ctx.mkIntConst("amount")))
+      val withdrawFunc = ctx.mkEq(balanceOut, ctx.mkSub(balance.asInstanceOf[Z3Expr[ArithSort]], ctx.mkIntConst("amount")))
       sm.addTr("withdraw", withdrawParams, withdrawGuard, withdrawFunc)
       
       sm.addOnce()
@@ -146,9 +146,9 @@ object TestStateMachineSynthesize {
       val posTrace = List(
         List(
           List(
-            ctx.mkString("withdraw").asInstanceOf[Expr[BoolSort]],
-            ctx.mkEq(ctx.mkIntConst("amount"), ctx.mkInt(50)).asInstanceOf[Expr[BoolSort]],
-            ctx.mkGe(balance.asInstanceOf[Expr[ArithSort]], ctx.mkIntConst("amount")).asInstanceOf[Expr[BoolSort]]
+            ctx.mkString("withdraw").asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkEq(ctx.mkIntConst("amount"), ctx.mkInt(50)).asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkGe(balance.asInstanceOf[Z3Expr[ArithSort]], ctx.mkIntConst("amount")).asInstanceOf[Z3Expr[BoolSort]]
           )
         )
       )
@@ -157,22 +157,22 @@ object TestStateMachineSynthesize {
       val negTrace = List(
         List(
           List(
-            ctx.mkString("withdraw").asInstanceOf[Expr[BoolSort]],
-            ctx.mkEq(ctx.mkIntConst("amount"), ctx.mkInt(200)).asInstanceOf[Expr[BoolSort]],
-            ctx.mkLt(balance.asInstanceOf[Expr[ArithSort]], ctx.mkIntConst("amount")).asInstanceOf[Expr[BoolSort]]
+            ctx.mkString("withdraw").asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkEq(ctx.mkIntConst("amount"), ctx.mkInt(200)).asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkLt(balance.asInstanceOf[Z3Expr[ArithSort]], ctx.mkIntConst("amount")).asInstanceOf[Z3Expr[BoolSort]]
           )
         )
       )
       
-      val candidates = Map[String, List[Expr[BoolSort]]](
+      val candidates = Map[String, List[Z3Expr[BoolSort]]](
         "withdraw" -> List(
           ctx.mkTrue(),
-          ctx.mkGe(balance.asInstanceOf[Expr[ArithSort]], ctx.mkIntConst("amount")),
+          ctx.mkGe(balance.asInstanceOf[Z3Expr[ArithSort]], ctx.mkIntConst("amount")),
           ctx.mkGt(ctx.mkIntConst("amount"), ctx.mkInt(0))
         )
       )
       
-      // 设置候选条件保护
+      // 设置候选条件保�?
       sm.candidateConditionGuards("withdraw") = candidates("withdraw")
       
       println("Before synthesis:")
@@ -184,12 +184,12 @@ object TestStateMachineSynthesize {
       
       println("After synthesis:")
       println(s"  Updated guard: ${sm.conditionGuards("withdraw")}")
-      println("✓ Negative trace learning completed")
+      println("�?Negative trace learning completed")
       
       ctx.close()
     } catch {
       case e: Exception =>
-        println(s"✗ Negative trace learning failed: ${e.getMessage}")
+        println(s"�?Negative trace learning failed: ${e.getMessage}")
         e.printStackTrace()
     }
   }
@@ -199,7 +199,7 @@ object TestStateMachineSynthesize {
       val ctx = new Context()
       val sm = new StateMachine("MultiTransition", ctx)
       
-      // 创建多状态变量
+      // 创建多状态变�?
       val (balance, balanceOut) = sm.addState("balance", ctx.mkIntSort())
       val (locked, lockedOut) = sm.addState("locked", ctx.mkBoolSort())
       
@@ -212,7 +212,7 @@ object TestStateMachineSynthesize {
       val depositParams = List(ctx.mkIntConst("amount"))
       val depositGuard = ctx.mkTrue()
       val depositFunc = ctx.mkAnd(
-        ctx.mkEq(balanceOut, ctx.mkAdd(balance.asInstanceOf[Expr[ArithSort]], ctx.mkIntConst("amount"))),
+        ctx.mkEq(balanceOut, ctx.mkAdd(balance.asInstanceOf[Z3Expr[ArithSort]], ctx.mkIntConst("amount"))),
         ctx.mkEq(lockedOut, locked)
       )
       sm.addTr("deposit", depositParams, depositGuard, depositFunc)
@@ -232,19 +232,19 @@ object TestStateMachineSynthesize {
       val posTrace = List(
         List(
           List(
-            ctx.mkString("deposit").asInstanceOf[Expr[BoolSort]],
-            ctx.mkEq(ctx.mkIntConst("amount"), ctx.mkInt(100)).asInstanceOf[Expr[BoolSort]],
-            ctx.mkEq(locked, ctx.mkFalse()).asInstanceOf[Expr[BoolSort]]
+            ctx.mkString("deposit").asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkEq(ctx.mkIntConst("amount"), ctx.mkInt(100)).asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkEq(locked, ctx.mkFalse()).asInstanceOf[Z3Expr[BoolSort]]
           ),
           List(
-            ctx.mkString("lock").asInstanceOf[Expr[BoolSort]],
-            ctx.mkGt(balance.asInstanceOf[Expr[ArithSort]], ctx.mkInt(0)).asInstanceOf[Expr[BoolSort]],
-            ctx.mkEq(locked, ctx.mkFalse()).asInstanceOf[Expr[BoolSort]]
+            ctx.mkString("lock").asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkGt(balance.asInstanceOf[Z3Expr[ArithSort]], ctx.mkInt(0)).asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkEq(locked, ctx.mkFalse()).asInstanceOf[Z3Expr[BoolSort]]
           )
         )
       )
       
-      val candidates = Map[String, List[Expr[BoolSort]]](
+      val candidates = Map[String, List[Z3Expr[BoolSort]]](
         "deposit" -> List(
           ctx.mkTrue(),
           ctx.mkEq(locked, ctx.mkFalse()),
@@ -253,11 +253,11 @@ object TestStateMachineSynthesize {
         "lock" -> List(
           ctx.mkTrue(),
           ctx.mkEq(locked, ctx.mkFalse()),
-          ctx.mkGt(balance.asInstanceOf[Expr[ArithSort]], ctx.mkInt(0))
+          ctx.mkGt(balance.asInstanceOf[Z3Expr[ArithSort]], ctx.mkInt(0))
         )
       )
       
-      // 设置候选条件保护
+      // 设置候选条件保�?
       sm.candidateConditionGuards("deposit") = candidates("deposit")
       sm.candidateConditionGuards("lock") = candidates("lock")
       
@@ -266,18 +266,18 @@ object TestStateMachineSynthesize {
       println(s"  Lock guard: ${sm.conditionGuards("lock")}")
       println(s"  Number of transitions: ${sm.transitions.length}")
       
-      val neg = List[List[List[Expr[BoolSort]]]]()
+      val neg = List[List[List[Z3Expr[BoolSort]]]]()
       sm.synthesize(posTrace, neg, candidates)
       
       println("After synthesis:")
       println(s"  Deposit guard: ${sm.conditionGuards("deposit")}")
       println(s"  Lock guard: ${sm.conditionGuards("lock")}")
-      println("✓ Multi-transition synthesis completed")
+      println("�?Multi-transition synthesis completed")
       
       ctx.close()
     } catch {
       case e: Exception =>
-        println(s"✗ Multi-transition synthesis failed: ${e.getMessage}")
+        println(s"�?Multi-transition synthesis failed: ${e.getMessage}")
         e.printStackTrace()
     }
   }
@@ -299,18 +299,18 @@ object TestStateMachineSynthesize {
       ))
       
       // 添加bid转换
-      val bidParams = List(ctx.mkIntConst("bidAmount"), ctx.mkBitVecConst("newBidder", 256))
+      val bidParams = List(ctx.mkIntConst("bidAmount"), ctx.mkBVConst("newBidder", 256))
       val bidGuard = ctx.mkTrue()
       val bidFunc = ctx.mkAnd(
         ctx.mkEq(highestBidOut, ctx.mkITE(
-          ctx.mkGt(ctx.mkIntConst("bidAmount"), highestBid.asInstanceOf[Expr[ArithSort]]),
+          ctx.mkGt(ctx.mkIntConst("bidAmount"), highestBid.asInstanceOf[Z3Expr[ArithSort]]),
           ctx.mkIntConst("bidAmount"),
-          highestBid.asInstanceOf[Expr[ArithSort]]
+          highestBid.asInstanceOf[Z3Expr[ArithSort]]
         )),
         ctx.mkEq(bidderOut, ctx.mkITE(
-          ctx.mkGt(ctx.mkIntConst("bidAmount"), highestBid.asInstanceOf[Expr[ArithSort]]),
-          ctx.mkBitVecConst("newBidder", 256),
-          bidder.asInstanceOf[Expr[BitVecSort]]
+          ctx.mkGt(ctx.mkIntConst("bidAmount"), highestBid.asInstanceOf[Z3Expr[ArithSort]]),
+          ctx.mkBVConst("newBidder", 256),
+          bidder.asInstanceOf[Z3Expr[BitVecSort]]
         )),
         ctx.mkEq(auctionEndOut, auctionEnd)
       )
@@ -332,44 +332,44 @@ object TestStateMachineSynthesize {
       val posTrace = List(
         List(
           List(
-            ctx.mkString("bid").asInstanceOf[Expr[BoolSort]],
-            ctx.mkEq(ctx.mkIntConst("bidAmount"), ctx.mkInt(100)).asInstanceOf[Expr[BoolSort]],
-            ctx.mkEq(auctionEnd, ctx.mkFalse()).asInstanceOf[Expr[BoolSort]],
-            ctx.mkGt(ctx.mkIntConst("bidAmount"), highestBid.asInstanceOf[Expr[ArithSort]]).asInstanceOf[Expr[BoolSort]]
+            ctx.mkString("bid").asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkEq(ctx.mkIntConst("bidAmount"), ctx.mkInt(100)).asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkEq(auctionEnd, ctx.mkFalse()).asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkGt(ctx.mkIntConst("bidAmount"), highestBid.asInstanceOf[Z3Expr[ArithSort]]).asInstanceOf[Z3Expr[BoolSort]]
           ),
           List(
-            ctx.mkString("endAuction").asInstanceOf[Expr[BoolSort]],
-            ctx.mkGt(highestBid.asInstanceOf[Expr[ArithSort]], ctx.mkInt(0)).asInstanceOf[Expr[BoolSort]],
-            ctx.mkEq(auctionEnd, ctx.mkFalse()).asInstanceOf[Expr[BoolSort]]
+            ctx.mkString("endAuction").asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkGt(highestBid.asInstanceOf[Z3Expr[ArithSort]], ctx.mkInt(0)).asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkEq(auctionEnd, ctx.mkFalse()).asInstanceOf[Z3Expr[BoolSort]]
           )
         )
       )
       
-      // 负轨迹：拍卖结束后不能出价
+      // 负轨迹：拍卖结束后不能出�?
       val negTrace = List(
         List(
           List(
-            ctx.mkString("bid").asInstanceOf[Expr[BoolSort]],
-            ctx.mkEq(auctionEnd, ctx.mkTrue()).asInstanceOf[Expr[BoolSort]]
+            ctx.mkString("bid").asInstanceOf[Z3Expr[BoolSort]],
+            ctx.mkEq(auctionEnd, ctx.mkTrue()).asInstanceOf[Z3Expr[BoolSort]]
           )
         )
       )
       
-      val candidates = Map[String, List[Expr[BoolSort]]](
+      val candidates = Map[String, List[Z3Expr[BoolSort]]](
         "bid" -> List(
           ctx.mkTrue(),
           ctx.mkEq(auctionEnd, ctx.mkFalse()),
-          ctx.mkGt(ctx.mkIntConst("bidAmount"), highestBid.asInstanceOf[Expr[ArithSort]]),
+          ctx.mkGt(ctx.mkIntConst("bidAmount"), highestBid.asInstanceOf[Z3Expr[ArithSort]]),
           ctx.mkGt(ctx.mkIntConst("bidAmount"), ctx.mkInt(0))
         ),
         "endAuction" -> List(
           ctx.mkTrue(),
           ctx.mkEq(auctionEnd, ctx.mkFalse()),
-          ctx.mkGt(highestBid.asInstanceOf[Expr[ArithSort]], ctx.mkInt(0))
+          ctx.mkGt(highestBid.asInstanceOf[Z3Expr[ArithSort]], ctx.mkInt(0))
         )
       )
       
-      // 设置候选条件保护
+      // 设置候选条件保�?
       sm.candidateConditionGuards("bid") = candidates("bid")
       sm.candidateConditionGuards("endAuction") = candidates("endAuction")
       
@@ -384,12 +384,12 @@ object TestStateMachineSynthesize {
       println("After synthesis:")
       println(s"  Bid guard: ${sm.conditionGuards("bid")}")
       println(s"  EndAuction guard: ${sm.conditionGuards("endAuction")}")
-      println("✓ Complex constraint synthesis completed")
+      println("�?Complex constraint synthesis completed")
       
       ctx.close()
     } catch {
       case e: Exception =>
-        println(s"✗ Complex constraint synthesis failed: ${e.getMessage}")
+        println(s"�?Complex constraint synthesis failed: ${e.getMessage}")
         e.printStackTrace()
     }
   }
@@ -403,49 +403,48 @@ object TestStateMachineSynthesize {
       sm.setInit(ctx.mkTrue())
       
       // 测试空候选集
-      val pos = List[List[List[Expr[BoolSort]]]]()
-      val neg = List[List[List[Expr[BoolSort]]]]()
-      val emptyCandidates = Map[String, List[Expr[BoolSort]]]()
+      val pos = List[List[List[Z3Expr[BoolSort]]]]()
+      val neg = List[List[List[Z3Expr[BoolSort]]]]()
+      val emptyCandidates = Map[String, List[Z3Expr[BoolSort]]]()
       
       println("Testing empty candidates...")
       sm.synthesize(pos, neg, emptyCandidates)
       
-      // 添加一个转换但提供矛盾的轨迹
+      // 添加一个转换但提供矛盾的轨�?
       val (state, stateOut) = sm.addState("state", ctx.mkIntSort())
       val trParams = List()
       val trGuard = ctx.mkTrue()
-      val trFunc = ctx.mkEq(stateOut, ctx.mkAdd(state.asInstanceOf[Expr[ArithSort]], ctx.mkInt(1)))
+      val trFunc = ctx.mkEq(stateOut, ctx.mkAdd(state.asInstanceOf[Z3Expr[ArithSort]], ctx.mkInt(1)))
       sm.addTr("transition", trParams, trGuard, trFunc)
       
       sm.addOnce()
       
       // 矛盾的轨迹：同一个状态既在正轨迹又在负轨迹中
       val contradictoryTrace = List(
-        List(
-          ctx.mkString("transition").asInstanceOf[Expr[BoolSort]],
-          ctx.mkEq(state, ctx.mkInt(0)).asInstanceOf[Expr[BoolSort]]
-        )
+        ctx.mkString("transition").asInstanceOf[Z3Expr[BoolSort]],
+        ctx.mkEq(state, ctx.mkInt(0)).asInstanceOf[Z3Expr[BoolSort]]
       )
       
       val posContra = List(List(contradictoryTrace))
       val negContra = List(List(contradictoryTrace))
-      val candidates = Map[String, List[Expr[BoolSort]]](
+      val candidates = Map[String, List[Z3Expr[BoolSort]]](
         "transition" -> List(ctx.mkTrue(), ctx.mkFalse())
       )
       
-      // 设置候选条件保护
+      // 设置候选条件保�?
       sm.candidateConditionGuards("transition") = candidates("transition")
       
       println("Testing contradictory traces...")
       sm.synthesize(posContra, negContra, candidates)
       
-      println("✓ Error handling completed - no crashes")
+      println("�?Error handling completed - no crashes")
       
       ctx.close()
     } catch {
       case e: Exception =>
-        println(s"✗ Error handling test failed: ${e.getMessage}")
+        println(s"�?Error handling test failed: ${e.getMessage}")
         e.printStackTrace()
     }
   }
 } 
+ 

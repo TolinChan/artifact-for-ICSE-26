@@ -1,12 +1,4 @@
-
-// Ensuring total balances do not exceed total supply
-□(totalSupply(n) ∧ totalBalances(s) → s ≤ n)
-
-// Ensuring no negative balances
-□(balanceOf(p, n) → n ≥ 0)
-
-// Ensuring total balances match total supply
-□(totalBalances(s) ∧ totalSupply(n) → s == n)
-
-// Ensuring transfers respect blacklisting
-□(isBlackListed(p, true) → ¬transfer(p, _, _))
+//Ensuring total balances do not exceed total supply box(totalSupply(n) && totalBalances(s) -> s <= n)
+//Ensuring no negative balances box(balanceOf(p, n) -> n >= 0)
+//Ensuring total balances match total supply box(totalBalances(s) && totalSupply(n) -> s == n)
+//Ensuring transfers respect blacklisting box(isBlackListed(p, true) -> !transfer(p, _, _))

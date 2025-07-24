@@ -102,7 +102,7 @@ def categorizePModel(pmodel: Map[String, Expr[_]]): Array[mutable.Map[String, Ex
       else 0
     maxrd = math.max(maxrd, rd)
   }
-  val categorized = Array.fill(maxrd-1)(mutable.Map[String, Expr[_]]())
+  val categorized = Array.fill(math.max(1, maxrd+1))(mutable.Map[String, Expr[_]]())
   // categorized.foreach(map => println(map.mkString(", ")))
   pmodel.foreach { case (key, value) =>
     if (pureName(key) == "P") {}

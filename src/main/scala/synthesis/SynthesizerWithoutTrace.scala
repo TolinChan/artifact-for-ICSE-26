@@ -14,10 +14,11 @@ case class SynthesizerWithoutTrace() {
       val solpath = s"$tempDir/candidate_$candidateId.sol"
       
       val dl = parseProgram(datalogpath)
-      val stateMachine = new StateMachine(dl.name, new com.microsoft.z3.Context())
+      val ctx = new com.microsoft.z3.Context()
+      val stateMachine = new StateMachine(dl.name, ctx)
       stateMachine.readFromProgram(dl)
       
-      val property = Parser.parsePropertyWithoutTrace(propertypath)
+      val property = Parser.parsePropertyWithoutTrace(propertypath, ctx)
       stateMachine.addOnce()
       stateMachine.generate_candidate_guards_from_properties(property)
       
@@ -70,4 +71,27 @@ case class SynthesizerWithoutTrace() {
     }
   }
 
+} 
+
+object SynthesizerWithoutTrace {
+  def main(args: Array[String]): Unit = {
+    if (args.length != 2) {
+      println("Usage: SynthesizerWithoutTrace <tempDir> <candidateId>")
+      System.exit(1)
+    }
+    
+    val tempDir = args(0)
+    val candidateId = args(1).toInt
+    
+    val synthesizer = new SynthesizerWithoutTrace()
+    val result = synthesizer.synthesizeWithoutTrace(tempDir, candidateId)
+    
+    if (result) {
+      println("SUCCESS")
+      System.exit(0)
+    } else {
+      println("FAILED")
+      System.exit(1)
+    }
+  }
 } 

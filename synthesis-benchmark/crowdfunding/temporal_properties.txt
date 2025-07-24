@@ -1,11 +1,4 @@
-// Ensuring total balance matches raised funds before closure
-□(totalBalance(n) ∧ raised(r) ∧ closed(b) ∧ b==false → n == r)
-
-// Ensuring withdraw happens only once
-□(♦Withdraw() → ¬♦(withdraw()))
-
-// Ensuring refund and withdraw do not happen together
-□(¬(♦Withdraw() ∧ ♦Refund()))
-
-// Ensuring refund happens only when raised < target
-□(♦Refund() → raised(r) ∧ target(t) → r < t)
+//Ensuring total balance matches raised funds before closure box(totalBalance(n) && raised(r) && closed(b) && b == false -> n == r)
+//Ensuring withdraw happens only once box(diamondWithdraw() -> !diamond(withdraw()))
+//Ensuring refund and withdraw do not happen together box(!(diamondWithdraw() && diamondRefund()))
+//Ensuring refund happens only when raised < target box(diamondRefund() -> raised(r) && target(t) -> r < t)

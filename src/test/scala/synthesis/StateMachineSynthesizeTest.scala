@@ -3,7 +3,7 @@ package synthesis
 import com.microsoft.z3._
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers
-import datalog._
+import datalog.{Expr => DatalogExpr}
 
 class StateMachineSynthesizeTest extends AnyFunSuite with Matchers {
 

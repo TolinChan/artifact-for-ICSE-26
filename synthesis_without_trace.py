@@ -19,10 +19,10 @@ class SynthesisWithoutTrace:
         self.benchmark_dir = f"./synthesis-benchmark/{benchmark_name}"
         self.datalog_file = f"{self.benchmark_dir}/{benchmark_name}.dl"
         self.temporal_properties_file = f"{self.benchmark_dir}/temporal_properties.txt"
-        self.candidates_dir = f"./candidates/{benchmark_name}"
+        self.synthesized_contracts_dir = f"./synthesized_contracts/{benchmark_name}"
         
-        # Create candidates directory
-        os.makedirs(self.candidates_dir, exist_ok=True)
+        # Create synthesized contracts directory
+        os.makedirs(self.synthesized_contracts_dir, exist_ok=True)
         
     def generate_candidate_contracts(self, num_candidates=5):
         """Generate multiple candidate contracts without example_trace dependency"""
@@ -38,7 +38,7 @@ class SynthesisWithoutTrace:
             
             try:
                 # Copy datalog and temporal properties to temp directory
-                shutil.copy2(self.datalog_file, f"{temp_dir}/{self.benchmark_name}.dl")
+                shutil.copy2(self.datalog_file, f"{temp_dir}/benchmark.dl")
                 shutil.copy2(self.temporal_properties_file, f"{temp_dir}/temporal_properties.txt")
                 
                 # Create a modified temporal properties file without trace dependency
@@ -48,9 +48,15 @@ class SynthesisWithoutTrace:
                 candidate_sol = self._run_synthesis_without_trace(temp_dir, i)
                 
                 if candidate_sol:
+                    # Copy the generated contract to synthesized contracts directory
+                    candidate_dir = f"{self.synthesized_contracts_dir}/candidate_{i}"
+                    os.makedirs(candidate_dir, exist_ok=True)
+                    candidate_sol_final = f"{candidate_dir}/contract.sol"
+                    shutil.copy2(candidate_sol, candidate_sol_final)
+                    
                     candidate_info = {
                         'id': i,
-                        'sol_file': candidate_sol,
+                        'sol_file': candidate_sol_final,
                         'temp_dir': temp_dir,
                         'generation_time': time.time()
                     }
@@ -69,94 +75,46 @@ class SynthesisWithoutTrace:
     def _create_modified_properties(self, temp_dir):
         """Create modified temporal properties that don't depend on example_trace"""
         original_props = f"{temp_dir}/temporal_properties.txt"
-        modified_props = f"{temp_dir}/temporal_properties_modified.txt"
         
-        with open(original_props, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Remove any trace-dependent properties and keep only core temporal properties
-        lines = content.split('\n')
-        modified_lines = []
-        
-        for line in lines:
-            line = line.strip()
-            if not line or line.startswith('//'):
-                modified_lines.append(line)
-                continue
-            
-            # Keep only invariant and safety properties that don't depend on traces
-            if any(keyword in line.lower() for keyword in ['□', 'always', 'invariant', 'safety']):
-                modified_lines.append(line)
-            elif '→' in line or '->' in line:  # Implication properties
-                modified_lines.append(line)
-            elif '∧' in line or 'and' in line:  # Conjunction properties
-                modified_lines.append(line)
-            elif '∨' in line or 'or' in line:  # Disjunction properties
-                modified_lines.append(line)
-        
-        with open(modified_props, 'w', encoding='utf-8') as f:
-            f.write('\n'.join(modified_lines))
-        
-        # Replace original with modified
-        shutil.move(modified_props, original_props)
+        # For now, we'll use the original properties as-is
+        # The Parser has been updated to handle the ASCII format
+        print(f"    Using original properties from {original_props}")
     
     def _run_synthesis_without_trace(self, temp_dir, candidate_id):
         """Run synthesis without example_trace dependency"""
         try:
-            # Create a temporary synthesis script that doesn't require example_trace
-            synthesis_script = self._create_synthesis_script(temp_dir, candidate_id)
-            
-            # Run the synthesis
+            # Use SBT to run the synthesis
             result = subprocess.run([
-                'scala', '-cp', 'unmanaged/com.microsoft.z3.jar:target/scala-2.13/classes',
-                'synthesis.SynthesizerWithoutTrace',
-                temp_dir,
-                str(candidate_id)
-            ], capture_output=True, text=True, cwd='.')
+                'sbt', f'runMain synthesis.SynthesizerWithoutTrace {temp_dir} {candidate_id}'
+            ], capture_output=True, text=True, cwd='.', timeout=300, shell=True, encoding='utf-8', errors='ignore')
             
-            if result.returncode == 0:
-                # Look for generated Solidity file
-                sol_files = list(Path(temp_dir).glob("*.sol"))
-                if sol_files:
-                    return str(sol_files[0])
+            print(f"    SBT command executed with return code: {result.returncode}")
+            print(f"    Working directory: {os.getcwd()}")
+            print(f"    Temp directory: {temp_dir}")
+            print(f"    Files in temp dir: {list(Path(temp_dir).glob('*'))}")
+            
+            # Look for generated Solidity file
+            sol_files = list(Path(temp_dir).glob("*.sol"))
+            if sol_files:
+                return str(sol_files[0])
+            
+            print(f"    Synthesis output: {result.stdout}")
+            if result.stderr:
+                print(f"    Synthesis error: {result.stderr}")
             
             return None
             
+        except subprocess.TimeoutExpired:
+            print(f"    Synthesis timed out")
+            return None
         except Exception as e:
             print(f"    Synthesis error: {e}")
             return None
     
-    def _create_synthesis_script(self, temp_dir, candidate_id):
-        """Create a temporary synthesis script"""
-        script_content = f"""
-import synthesis.SynthesizerWithoutTrace
-import util.Misc.parseProgram
 
-object TempSynthesizer {{
-  def main(args: Array[String]): Unit = {{
-    val tempDir = args(0)
-    val candidateId = args(1).toInt
-    
-    val synthesizer = new SynthesizerWithoutTrace()
-    val result = synthesizer.synthesizeWithoutTrace(tempDir, candidateId)
-    
-    if (result) {{
-      println("SUCCESS")
-    }} else {{
-      println("FAILED")
-    }}
-  }}
-}}
-"""
-        
-        script_file = f"{temp_dir}/TempSynthesizer.scala"
-        with open(script_file, 'w') as f:
-            f.write(script_content)
-        
-        return script_file
     
     def generate_traces_for_candidates(self, candidates):
-        """Generate example_traces for each candidate using tmp.py"""
+        """Generate example_traces for each candidate using trace_generator.py"""
         print(f"Generating traces for {len(candidates)} candidates...")
         
         trace_results = []
@@ -171,7 +129,7 @@ object TempSynthesizer {{
                 # Copy the Solidity file to trace directory
                 shutil.copy2(candidate['sol_file'], f"{trace_dir}/contract.sol")
                 
-                # Generate trace using tmp.py
+                # Generate trace using trace_generator.py
                 trace_file = self._generate_trace_with_tmp(trace_dir)
                 
                 if trace_file:
@@ -188,15 +146,20 @@ object TempSynthesizer {{
         return trace_results
     
     def _generate_trace_with_tmp(self, trace_dir):
-        """Generate trace using tmp.py"""
+        """Generate trace using trace_generator.py"""
         try:
-            # Create a modified tmp.py that works with our setup
+            # Create a modified trace_generator.py that works with our setup
             modified_tmp = self._create_modified_tmp(trace_dir)
             
-            # Run the modified tmp.py
+            # Run the modified trace_generator.py
             result = subprocess.run([
                 'python', modified_tmp
             ], capture_output=True, text=True, cwd=trace_dir)
+            
+            print(f"    Trace generation return code: {result.returncode}")
+            print(f"    Trace generation stdout: {result.stdout}")
+            if result.stderr:
+                print(f"    Trace generation stderr: {result.stderr}")
             
             if result.returncode == 0:
                 trace_file = f"{trace_dir}/example_traces.txt"
@@ -210,9 +173,9 @@ object TempSynthesizer {{
             return None
     
     def _create_modified_tmp(self, trace_dir):
-        """Create a modified version of tmp.py for trace generation"""
-        # Read the original tmp.py
-        with open('tmp.py', 'r', encoding='utf-8') as f:
+        """Create a modified version of trace_generator.py for trace generation"""
+        # Read the original trace_generator.py
+        with open('trace_generator.py', 'r', encoding='utf-8') as f:
             tmp_content = f.read()
         
         # Modify the batch_generate function to work with our setup
@@ -250,8 +213,8 @@ object TempSynthesizer {{
         print(f"Trace written to {output_file}")'''
         )
         
-        # Write modified tmp.py
-        modified_tmp = f"{trace_dir}/modified_tmp.py"
+        # Write modified trace_generator.py
+        modified_tmp = f"{trace_dir}/modified_trace_generator.py"
         with open(modified_tmp, 'w', encoding='utf-8') as f:
             f.write(modified_content)
         
@@ -377,7 +340,7 @@ object TempSynthesizer {{
             print(f"  {i+1}. Candidate {result['id']}: {result['passing_rate']:.2%}")
         
         # Save detailed results
-        report_file = f"{self.candidates_dir}/synthesis_report.json"
+        report_file = f"{self.synthesized_contracts_dir}/synthesis_report.json"
         with open(report_file, 'w') as f:
             json.dump({
                 'benchmark': self.benchmark_name,

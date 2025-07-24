@@ -1,18 +1,6 @@
-
-// Ensuring total balances do not exceed total supply
-□(totalSupply(n) ∧ balanceSum(s) → s ≤ n)
-
-// Ensuring allowance cannot be exceeded
-□(allowance(o, s, n) ∧ transferFrom(o, r, s, m) → m ≤ n)
-
-// Ensuring no negative balances
-□(balanceOf(p, n) → n ≥ 0)
-
-// Ensuring finalization only occurs once
-□(onceFinalize(true) → ¬♦(finalize()))
-
-// Ensuring no token purchase after finalization
-□(onceFinalize(true) → ¬♦(buyToken(_, _)))
-
-// Ensuring illegal finalization is prevented
-□(onceFinalize(true) → now(t) ∧ end(e) ∧ t ≥ e ∨ raised(r) ∧ cap(c) ∧ r ≥ c)
+//Ensuring total balances do not exceed total supply box(totalSupply(n) && balanceSum(s) -> s <= n)
+//Ensuring allowance cannot be exceeded box(allowance(o, s, n) && transferFrom(o, r, s, m) -> m <= n)
+//Ensuring no negative balances box(balanceOf(p, n) -> n >= 0)
+//Ensuring finalization only occurs once box(onceFinalize(true) -> !diamond(finalize()))
+//Ensuring no token purchase after finalization box(onceFinalize(true) -> !diamond(buyToken(_, _)))
+//Ensuring illegal finalization is prevented box(onceFinalize(true) -> now(t) && end(e) && t >= e || raised(r) && cap(c) && r >= c)
