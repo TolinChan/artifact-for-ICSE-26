@@ -1,0 +1,64 @@
+contract:
+    crowdfunding
+
+states:
+    address owner, beneficiary;
+    mapping(address => uint256) deposits;
+    enum State {OPEN, SUCCESS, REFUND} state;
+    uint256 raised;
+    uint256 goal;
+    uint256 closeTime;
+
+transactions:
+    init():
+    {
+        state <- OPEN;
+        raised <- 0;
+        raised <- 0;
+        goal <- 10000;
+        closeTime <- 10000;
+    }
+    invest(value: uint256, v: bool):
+    {
+        raised <- raised + value;
+        deposits[sender] <- deposits[sender] + value;
+        balance <- balance + value;
+    }
+    close():
+    {
+        state <- SUCCESS if (raised >= goal) else REFUND
+    }
+    claimrefund(p: address):
+    {
+        p.balance <- p.balance + deposits[p]
+        deposits[p] <- 0;
+    }
+    withdraw():
+    {
+        beneficiary.balance <- beneficiary.balance + balance;
+        balance <- 0;
+    }
+
+traces:
+    {
+        invest(now = 1, sender = 0x114514, value = 100);
+        invest(now = 2, sender = 0x114515, value = 10000);
+        close(now = 3, sender = 0x20);
+        withdraw(now = 4, sender = 0x20);
+    }
+    {
+        invest(now = 1, sender = 0x114514, value = 100);
+        invest(now = 2, sender = 0x114515, value = 10000);
+        close(now = 10001, sender = 0x20);
+        withdraw(now = 10002, sender = 0x20);
+    }
+    {
+        invest(now = 1, sender = 0x114514, value = 100);
+        invest(now = 2, sender = 0x114515, value = 100);
+        close(now = 10001, sender = 0x20);
+        claimrefund(now = 10002, sender = 0x20, p = 0x114514);
+    }
+    
+properties:
+    (raised >= goal) => !once(invest());
+    !(once(claimrefund()) and once(withdraw()));

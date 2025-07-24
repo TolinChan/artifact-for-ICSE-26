@@ -113,74 +113,116 @@ class StateMachine(name: String, ctx: Context) {
   }
   
   def transfer(trName: String, candidates: Map[String, List[Expr[BoolSort]]], next: List[Expr[BoolSort]], parameters: Expr[BoolSort]*): Option[List[Expr[BoolSort]]] = {
+    // Step 1: 检查success条件，对应Python: success = z3.And(self.now_state, self.condition_guards[tr_name], self.nowOut > self.now, z3.And(*parameters))
     val guard = conditionGuards.getOrElse(trName, ctx.mkTrue())
-    val success = ctx.mkAnd(nowStateExpr, guard, ctx.mkGt(nowOut.asInstanceOf[Expr[ArithSort]], now.asInstanceOf[Expr[ArithSort]]), ctx.mkAnd(parameters: _*))
-    val s = ctx.mkSolver()
-    s.add(success)
-    val result = s.check()
-
-    if (result == Status.UNSATISFIABLE) {
+    val parametersAnd = if (parameters.nonEmpty) ctx.mkAnd(parameters: _*) else ctx.mkTrue()
+    val success = ctx.mkAnd(
+      nowStateExpr,
+      guard,
+      ctx.mkGt(nowOut.asInstanceOf[Expr[ArithSort]], now.asInstanceOf[Expr[ArithSort]]),
+      parametersAnd
+    )
+    
+    val s1 = ctx.mkSolver()
+    s1.add(success)
+    val result1 = s1.check()
+    
+    // 如果不可满足，返回None，对应Python: if result == z3.unsat: return None
+    if (result1 == Status.UNSATISFIABLE) {
       return None
+    }
+    
+    // Step 2: 检查转换函数，对应Python: s.add(z3.And(self.now_state, self.transfer_func[tr_name], z3.And(*parameters)))
+    val s2 = ctx.mkSolver()
+    val transferFunction = transferFunc.getOrElse(trName, ctx.mkTrue())
+    s2.add(ctx.mkAnd(nowStateExpr, transferFunction, parametersAnd))
+    val result2 = s2.check()
+    val model = s2.getModel()
+    
+    // Step 3: 更新now_state，对应Python: self.now_state = z3.BoolVal(True); for v in self.states.values(): self.now_state = z3.And(self.now_state, v[0] == m[v[1]])
+    nowStateExpr = ctx.mkTrue()
+    states.foreach { case (_, (state, stateOut)) =>
+      nowStateExpr = ctx.mkAnd(nowStateExpr, ctx.mkEq(state, model.eval(stateOut, true)))
+    }
+    nowStateExpr = nowStateExpr.simplify().asInstanceOf[Expr[BoolSort]]
+    
+    // Step 4: 检查next条件，对应Python: s.add(self.now_state); s.add(next[1:])
+    val s3 = ctx.mkSolver()
+    s3.add(nowStateExpr)
+    if (next.length > 1) {
+      s3.add(ctx.mkAnd(next.tail: _*))
+    }
+    val result3 = s3.check()
+    
+    // Step 5: 如果可满足，评估candidates，对应Python: if result == z3.sat: newline = []; for c in candidates[next[0]]: newline.append(m.eval(c))
+    if (result3 == Status.SATISFIABLE) {
+      val m = s3.getModel()
+      val nextFuncName = next.head.toString.replaceAll("\"", "") // 移除引号
+      val candidateList = candidates.getOrElse(nextFuncName, List())
+      val newline = candidateList.map(c => m.eval(c, true).asInstanceOf[Expr[BoolSort]])
+      Some(newline)
     } else {
-      s.reset()
-      val transfer = transferFunc.getOrElse(trName, ctx.mkTrue())
-      s.add(ctx.mkAnd(nowStateExpr, transfer, ctx.mkAnd(parameters: _*)))
-      val result2 = s.check()
-      val model = s.getModel()
-      nowStateExpr = ctx.mkTrue()
-      states.foreach { case (_, (state, _)) =>
-        nowStateExpr = ctx.mkAnd(nowStateExpr, ctx.mkEq(state, model.eval(state, true)))
-      }
-      nowStateExpr = nowStateExpr.simplify().asInstanceOf[Expr[BoolSort]]
-
-      s.reset()
-      s.add(nowStateExpr)
-      s.add(ctx.mkAnd(next.tail: _*))
-      val finalCheck = s.check()
-
-      if (finalCheck == Status.SATISFIABLE) {
-        val m = s.getModel()
-        val funcName = next.head.toString
-        val candidateList = candidates.getOrElse(funcName, List(ctx.mkTrue().asInstanceOf[Expr[BoolSort]]))
-        val newLine = candidateList.map(c => m.eval(c, true).asInstanceOf[Expr[BoolSort]])
-        Some(newLine)
-      } else {
-        println("error")
-        None
-      }
+      println("error")
+      Some(List())
     }
   }
 
   def simulate(trace: List[List[Expr[BoolSort]]], candidates: Map[String, List[Expr[BoolSort]]]): List[List[Expr[BoolSort]]] = {
     var res: List[List[Expr[BoolSort]]] = List()
-    nowStateExpr = ts.getInit()
-
-    // 处理空轨迹的情况
+    
+    // 处理空轨迹
     if (trace.isEmpty) {
       return res
     }
-
+    
+    // Step 1: 初始化状态，对应Python: self.now_state = self.ts.Init
+    nowStateExpr = ts.getInit()
+    
+    // Step 2: 处理第一个轨迹项，对应Python: s.add(self.now_state); s.add(trace[0][1:])
     val s = ctx.mkSolver()
     s.add(nowStateExpr)
-    s.add(ctx.mkAnd(trace.head.tail: _*))
-    if (s.check() == Status.SATISFIABLE) {
-      val m = s.getModel()
-      val funcName = trace.head.head.toString
-      val candidateList = candidates.getOrElse(funcName, List(ctx.mkTrue().asInstanceOf[Expr[BoolSort]]))
-      val newline = candidateList.map(c => m.eval(c, true).asInstanceOf[Expr[BoolSort]])
-      res = List(newline)
+    if (trace.head.length > 1) {
+      s.add(ctx.mkAnd(trace.head.tail: _*))
     }
-
-    for (i <- trace.indices.dropRight(1)) {
-      val trName = trace(i).head.toString
-      val newline = List(ctx.mkString(trName).asInstanceOf[Expr[BoolSort]]) ++ res.head
-      res = res :+ newline
-      val nextLine = transfer(trName, candidates, trace(i + 1), trace(i).tail: _*)
-      if (nextLine.isEmpty) {
+    val result = s.check()
+    
+    // Step 3: 初始化newline，对应Python: if result == z3.sat: m = s.model(); newline = []; for c in candidates[trace[0][0]]: newline.append(m.eval(c))
+    var newline: List[Expr[BoolSort]] = List()
+    if (result == Status.SATISFIABLE) {
+      val m = s.getModel()
+      val firstFuncName = trace.head.head.toString.replaceAll("\"", "") // 移除引号
+      val candidateList = candidates.getOrElse(firstFuncName, List())
+      newline = candidateList.map(c => m.eval(c, true).asInstanceOf[Expr[BoolSort]])
+    }
+    
+    // Step 4: 主循环，对应Python: for tr_name, *parameters in trace
+    var i = 0
+    trace.foreach { traceItem =>
+      // 提取转换名称和参数，对应Python: tr_name, *parameters
+      val trName = traceItem.head.toString.replaceAll("\"", "") // 移除引号
+      val parameters = if (traceItem.length > 1) traceItem.tail else List()
+      
+      // 构建结果行，对应Python: newline = [tr_name] + newline; res.append(newline)
+      val resultLine = ctx.mkString(trName).asInstanceOf[Expr[BoolSort]] :: newline
+      res = res :+ resultLine
+      
+      // 检查是否是最后一项，对应Python: if i == len(trace) - 1: break
+      if (i == trace.length - 1) {
         return res
       }
-      res = res :+ nextLine.get
+      
+      // 调用transfer获取下一步，对应Python: newline = self.transfer(tr_name, candidates, trace[i+1], parameters)
+      val nextTrace = if (i + 1 < trace.length) trace(i + 1) else List()
+      val transferResult = transfer(trName, candidates, nextTrace, parameters: _*)
+      
+      transferResult match {
+        case Some(nextNewline) => newline = nextNewline
+        case None => return res // 如果transfer失败，提前返回
+      }
+      
+      i += 1
     }
+    
     res
   }
 
